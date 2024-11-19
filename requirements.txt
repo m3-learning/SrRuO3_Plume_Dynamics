@@ -1,4 +1,12 @@
-ChromaPalette==0.1.1
+# ChromaPalette==0.1.1
+tqdm
+h5py
+numpy
+pandas
+seaborn
+plotly
+scikit-learn
+scikit-image
 datafed==3.0.0
 igor==0.3
 imagej==0.3.1
@@ -15,17 +23,10 @@ tox==4.21.2
 virtualenv==20.26.6
 wget==3.2
 xrayutilities==1.7.8
-pandas
-seaborn
-mpl_toolkits
-plotly
+# mpl_toolkits
 opencv-python
-h5py
-tqdm
-scikit-learn
-numpy
 mp_api
 
--e git+https://github.com/m3-learning/AFM-Learn.git@a33ccf2#egg=AFM_Learn
--e git+https://github.com/m3-learning/Plume-Learn.git@ea6df39#egg=Plume_Learn
--e git+https://github.com/m3-learning/XRD-Learn.git@27ce9dd#egg=XRD_Learn
+# -e git+https://github.com/m3-learning/AFM-Learn.git@a33ccf2#egg=AFM_Learn
+# -e git+https://github.com/m3-learning/Plume-Learn.git@ea6df39#egg=Plume_Learn
+# -e git+https://github.com/m3-learning/XRD-Learn.git@27ce9dd#egg=XRD_Learn

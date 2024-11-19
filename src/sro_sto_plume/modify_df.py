@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from plume_learn.plume_utils.manage_plume import remove_all_0_plume
 
-def modify_df(df_in, growth_id, growth_name):
+def modify_df(df_in):
     """
     Modify the dataframe with real unit (distance, time) from pixel.
     
@@ -27,7 +27,7 @@ def modify_df(df_in, growth_id, growth_name):
     df.rename(columns={'Area': 'Area (a.u.)'}, inplace=True)
     
     df = remove_all_0_plume(df.reset_index(), index_label='Plume Index', metric='Area (a.u.)', viz=False)
-    df.rename(columns={'Growth': 'Growth Name'}, inplace=True)
+    # df.rename(columns={'Growth': 'Sample Name'}, inplace=True)
     
     # df['Growth ID'] = growth_id
     # df['Growth Name'] = growth_name

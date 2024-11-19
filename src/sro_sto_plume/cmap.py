@@ -4,6 +4,25 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 
+def define_white_viridis(viz=False):
+
+    # Get the viridis colormap
+    viridis = plt.cm.get_cmap('viridis', 256)
+    data = np.linspace(0, 1, 100).reshape(10, 10)
+
+    # Define a custom colormap that goes from white to viridis
+    colors = [(1, 1, 1), viridis(0.75), viridis(0.5), viridis(0.25), viridis(0)]  # white to full viridis
+    white_viridis = LinearSegmentedColormap.from_list('white_viridis', colors, N=256)
+
+    if viz:
+        # Plot with the new colormap
+        plt.imshow(data, cmap=white_viridis)
+        plt.colorbar()
+        plt.show()
+    
+    return white_viridis
+
+
 class ScientificColourMaps:
     def __init__(self, cmap_dir):
         self.cmap_dir = cmap_dir
