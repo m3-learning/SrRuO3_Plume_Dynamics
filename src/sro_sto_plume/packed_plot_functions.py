@@ -1,6 +1,7 @@
 # import re
 import glob
 import numpy as np
+from pathlib import Path
 from skimage.feature import peak_local_max
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -29,7 +30,7 @@ from afm_learn.afm_utils import parse_ibw, format_func
 colors = colormaps.get_cmap('tab10').colors[:6]
 
 
-def plot_temporal_heatmaps(df_sample, sample_names):
+def plot_temporal_heatmaps(df_sample, sample_names, label=True):
     figsize = (10, 6)  # Adjusted figure size for combined plots
     subfigures_dict = { # [left, bottom, width, height]
         '1_1': {"position": [0, 3, 1.7, 2.6], 'skip_margin': True, 'margin_pts': 5},  
@@ -57,7 +58,8 @@ def plot_temporal_heatmaps(df_sample, sample_names):
             set_labels(ax, xlabel="Time (µs)", ylabel="Plume Index", label_fontsize=10, ticklabel_fontsize=8, yaxis_style='float', show_ticks=False, tick_padding=2)
         else:
             set_labels(ax, xlabel="Time (µs)", ylabel="", label_fontsize=10, ticklabel_fontsize=8, yaxis_style='float', show_ticks=False, tick_padding=2)
-        labelfigs(axes=ax, number=i, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
+        if label:
+            labelfigs(axes=ax, number=i, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
     set_cbar(fig, axes_1[-1], cbar_label='Area\n(a.u.)', scientific_notation=True, tick_in=True, ticklabel_fontsize=8, labelpad=0, fontsize=8)
 
     # Plot heatmaps for Velocity
@@ -73,14 +75,15 @@ def plot_temporal_heatmaps(df_sample, sample_names):
         else:
             set_labels(ax, xlabel="Time (µs)", ylabel="", label_fontsize=10, ticklabel_fontsize=8, yaxis_style='float', show_ticks=False, tick_padding=2)
         
-        labelfigs(axes=ax, number=i, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
+        if label:
+            labelfigs(axes=ax, number=i, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
         
     set_cbar(fig, axes_2[-1], cbar_label='Velocity\n(m/s)', scientific_notation=True, tick_in=True, logscale=True, ticklabel_fontsize=8, labelpad=0, fontsize=8)
 
     return fig, axes_dict
 
 
-def plot_temporal_violins(df_plume_metrics):
+def plot_temporal_violins(df_plume_metrics, label=True):
 
     fig, axes = layout_fig(2, 1, figsize=(8, 6), subplot_style='gridspec', spacing=(0, 0.3), layout='tight')
 
@@ -89,19 +92,21 @@ def plot_temporal_violins(df_plume_metrics):
     mean_max_area = df_plume_metrics.groupby('Sample Name')['Max Area (a.u.)'].mean()
     label_violinplot(axes[0], mean_max_area, label_type='average_value', text_pos='center', value_format='scientific', text_size=10, offset_parms={'x_type': 'fixed', 'x_value': 0, 'y_type': 'ratio', 'y_value': -0.05})
 
-    labelfigs(axes=axes[0], number=0, size=15, style='bw', loc='tr', inset_fraction=(0.15, 0.05))
+    if label:
+        labelfigs(axes=axes[0], number=0, size=15, style='bw', loc='tr', inset_fraction=(0.15, 0.05))
 
     sns.violinplot(x='Sample Name', y='Incident Velocity (m/s)', data=df_plume_metrics, width=0.9, ax=axes[1], palette='deep', hue='Sample Name', legend=False)
 
     mean_incident_velocity = df_plume_metrics.groupby('Sample Name')['Incident Velocity (m/s)'].mean()
     label_violinplot(axes[1], mean_incident_velocity, label_type='average_value', text_pos='center', value_format='scientific', text_size=10, offset_parms={'x_type': 'fixed', 'x_value': 0, 'y_type': 'ratio', 'y_value': -0.05})
 
-    labelfigs(axes=axes[1], number=1, size=15, style='bw', loc='br', inset_fraction=(0.12, 0.05))
+    if label:
+        labelfigs(axes=axes[1], number=1, size=15, style='bw', loc='br', inset_fraction=(0.12, 0.05))
 
     return fig, axes
 
 
-def plot_combined_plume_inhomogeneity(df_plume_metrics, df_sample, sample_names, custom_palette):
+def plot_combined_plume_inhomogeneity(df_plume_metrics, df_sample, sample_names, custom_palette, label=True):
     figsize = (8, 6)  # Adjusted figure size for combined plots
     subfigures_dict = { # [left, bottom, width, height]
         '1_1': {"position": [0, 2.8, 3.6, 1.8], 'skip_margin': True, 'margin_pts': 5},  # Violin plot for area, 
@@ -123,7 +128,8 @@ def plot_combined_plume_inhomogeneity(df_plume_metrics, df_sample, sample_names,
     label_violinplot(ax_area_violin, mean_area, label_type='average_value', text_pos='center', value_format='scientific',
                      text_size=10, offset_parms={'x_type': 'fixed', 'x_value': 0, 'y_type': 'fixed', 'y_value': -1000})
     set_labels(ax_area_violin, xlabel='', ylabel='Max Area (a.u.)', label_fontsize=10, ticklabel_fontsize=8, yaxis_style='sci', show_ticks=True, tick_padding=2)
-    labelfigs(axes=ax_area_violin, number=0, size=15, style='bw', loc='tr', inset_fraction=(0.12, 0.08))
+    if label:
+        labelfigs(axes=ax_area_violin, number=0, size=15, style='bw', loc='tr', inset_fraction=(0.12, 0.08))
 
     # Plot violinplot - Velocity
     sns.violinplot(x='Sample Name', y='Incident Velocity (m/s)', data=df_plume_metrics, width=0.5, ax=ax_velocity_violin, 
@@ -132,7 +138,8 @@ def plot_combined_plume_inhomogeneity(df_plume_metrics, df_sample, sample_names,
     label_violinplot(ax_velocity_violin, mean_velocity, label_type='average_value', text_pos='center', value_format='scientific',
                      text_size=10, offset_parms={'x_type': 'fixed', 'x_value': 0, 'y_type': 'fixed', 'y_value': -800})
     set_labels(ax_velocity_violin, xlabel='', ylabel='Incident Velocity (m/s)', label_fontsize=10, ticklabel_fontsize=8, yaxis_style='sci', show_ticks=True, tick_padding=2)
-    labelfigs(axes=ax_velocity_violin, number=1, size=15, style='bw', loc='tr', inset_fraction=(0.12, 0.08))
+    if label:
+        labelfigs(axes=ax_velocity_violin, number=1, size=15, style='bw', loc='tr', inset_fraction=(0.12, 0.08))
 
     # Plot heatmaps for Area
     for i, ax, sample in zip([2,3], [ax_area_heatmap1, ax_area_heatmap2], ['t5/s1', 's2']):
@@ -143,7 +150,8 @@ def plot_combined_plume_inhomogeneity(df_plume_metrics, df_sample, sample_names,
             set_labels(ax, xlabel="Time (µs)", ylabel="Plume Index", label_fontsize=10, ticklabel_fontsize=8, yaxis_style='float', show_ticks=False, tick_padding=2)
         else:
             set_labels(ax, xlabel="Time (µs)", ylabel="", label_fontsize=10, ticklabel_fontsize=8, yaxis_style='float', show_ticks=False, tick_padding=2)
-        labelfigs(axes=ax, number=i, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
+        if label:
+            labelfigs(axes=ax, number=i, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
     set_cbar(fig, ax_area_heatmap2, cbar_label='Area\n(a.u.)', scientific_notation=True, tick_in=True, ticklabel_fontsize=8, labelpad=0, fontsize=8)
 
     # Plot heatmaps for Velocity
@@ -154,7 +162,8 @@ def plot_combined_plume_inhomogeneity(df_plume_metrics, df_sample, sample_names,
         
         sns.heatmap(df_pivot, cmap='viridis', cbar=False, ax=ax, norm=LogNorm(vmin=200, vmax=29257))
         set_labels(ax, xlabel="Time (µs)", ylabel="", label_fontsize=10, ticklabel_fontsize=8, yaxis_style='float', show_ticks=False, tick_padding=2)
-        labelfigs(axes=ax, number=i, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
+        if label:
+            labelfigs(axes=ax, number=i, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
         
     set_cbar(fig, ax_velocity_heatmap2, cbar_label='Velocity\n(m/s)', scientific_notation=True, tick_in=True, logscale=True, ticklabel_fontsize=8, labelpad=0, fontsize=8)
 
@@ -162,7 +171,7 @@ def plot_combined_plume_inhomogeneity(df_plume_metrics, df_sample, sample_names,
 
 
 # plot the spatial inhomogeneity of the plume
-def plot_plume_inhomogeneity_area(df_plume_metrics, df_sample, sample_names, custom_palette):
+def plot_plume_inhomogeneity_area(df_plume_metrics, df_sample, sample_names, custom_palette, label=True):
     figsize = (8, 4)
     subfigures_dict = {
         '1': {"position": [0, 2.5, 6, 1.5], 'skip_margin': False, 'margin_pts':5}, # [left, bottom, width, height]
@@ -179,7 +188,8 @@ def plot_plume_inhomogeneity_area(df_plume_metrics, df_sample, sample_names, cus
 
     label_violinplot(ax0, mean_max_area, label_type='average_value', text_pos='center', value_format='scientific', text_size=10,
                     offset_parms={'x_type': 'fixed', 'x_value': 0, 'y_type': 'fixed', 'y_value': -1000})
-    set_labels(ax0, xlabel='', ylabel='Max Area (a.u.)', label_fontsize=11, yaxis_style='sci', show_ticks=True)
+    if label:
+        set_labels(ax0, xlabel='', ylabel='Max Area (a.u.)', label_fontsize=11, yaxis_style='sci', show_ticks=True)
     # ax0.xaxis.set_ticks([])
     labelfigs(axes=ax0, number=0, size=15, style='bw', loc='tr', inset_fraction=(0.15, 0.05))
     ax0.tick_params(axis="x", direction="in", length=5, labelsize=12)
@@ -192,7 +202,8 @@ def plot_plume_inhomogeneity_area(df_plume_metrics, df_sample, sample_names, cus
     sns.heatmap(df_pivot, cmap='viridis', cbar=False, ax=ax1, vmin=0, vmax=17152)  # Disable seaborn's default colorbar 
     set_labels(ax1, xlabel="Time (µs)", ylabel="Plume Index", label_fontsize=11, yaxis_style='float', show_ticks=False)
     # set_cbar(fig, ax1, cbar_label='Intensity (a.u.)', scientific_notation=True)
-    labelfigs(axes=ax1, number=1, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
+    if label:
+        labelfigs(axes=ax1, number=1, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
 
     # Plot heatmap - '2_2'
     df_pivot = df_sample[df_sample['Sample Name']=='s2'].pivot(index="Plume Index", columns="Time (µs)", values='Area (a.u.)')
@@ -200,7 +211,8 @@ def plot_plume_inhomogeneity_area(df_plume_metrics, df_sample, sample_names, cus
     sns.heatmap(df_pivot, cmap='viridis', cbar=False, ax=ax2, vmin=0, vmax=17152)  # Disable seaborn's default colorbar
     set_labels(ax2, xlabel="Time (µs)", ylabel="", label_fontsize=11, yaxis_style='float', show_ticks=False)
     set_cbar(fig, ax2, cbar_label='Area (a.u.)', scientific_notation=True, tick_in=True)
-    labelfigs(axes=ax2, number=2, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
+    if label:
+        labelfigs(axes=ax2, number=2, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
     
     # Plot heatmap - '2_1'
     # df_pivot = df_sample[df_sample['Sample Name']=='t5/s1'].pivot(index="Time (µs)", columns="Plume Index", values='Area (a.u.)')
@@ -220,7 +232,7 @@ def plot_plume_inhomogeneity_area(df_plume_metrics, df_sample, sample_names, cus
     # labelfigs(axes=ax2, number=2, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
     return fig, axes_dict
     
-def plot_plume_inhomogeneity_velocity(df_plume_metrics, df_sample, sample_names, custom_palette):
+def plot_plume_inhomogeneity_velocity(df_plume_metrics, df_sample, sample_names, custom_palette, label=True):
     figsize = (8, 6)
     subfigures_dict = {
         '1': {"position": [0, 4, 6, 2], 'skip_margin': False, 'margin_pts':5}, # [left, bottom, width, height]
@@ -237,7 +249,8 @@ def plot_plume_inhomogeneity_velocity(df_plume_metrics, df_sample, sample_names,
 
     label_violinplot(ax0, mean_max_area, label_type='average_value', text_pos='center', value_format='scientific', text_size=10, offset_parms={'x_type': 'fixed', 'x_value': 0, 'y_type': 'fixed', 'y_value': -800})
     set_labels(ax0, xlabel='', ylabel='Area (a.u.)', label_fontsize=11, yaxis_style='sci', show_ticks=True)
-    labelfigs(axes=ax0, number=0, size=15, style='bw', loc='tr', inset_fraction=(0.15, 0.05))
+    if label:
+        labelfigs(axes=ax0, number=0, size=15, style='bw', loc='tr', inset_fraction=(0.15, 0.05))
     ax0.tick_params(axis="x", direction="in", length=5, labelsize=12)
 
 
@@ -250,7 +263,8 @@ def plot_plume_inhomogeneity_velocity(df_plume_metrics, df_sample, sample_names,
     heatmap = sns.heatmap(df_pivot, cmap='viridis', cbar=False, ax=ax1, norm=LogNorm(vmin=200, vmax=29257))
     set_labels(ax1, xlabel="Time (µs)", ylabel="Plume Index", label_fontsize=11, yaxis_style='float', show_ticks=False)
     # set_cbar(fig, ax1, cbar_label='Intensity (a.u.)', scientific_notation=True)
-    labelfigs(axes=ax1, number=1, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
+    if label:
+        labelfigs(axes=ax1, number=1, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
 
 
     # Plot heatmap - '2_2'
@@ -261,7 +275,8 @@ def plot_plume_inhomogeneity_velocity(df_plume_metrics, df_sample, sample_names,
     heatmap = sns.heatmap(df_pivot, cmap='viridis', cbar=False, ax=ax2, norm=LogNorm(vmin=200, vmax=29257))  # Disable seaborn's default colorbar
     set_labels(ax2, xlabel="Time (µs)", ylabel="", label_fontsize=11, yaxis_style='float', show_ticks=False)
     set_cbar(fig, ax2, cbar_label='Velocity (m/s)', scientific_notation=True, tick_in=True, logscale=True)
-    labelfigs(axes=ax2, number=2, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
+    if label:
+        labelfigs(axes=ax2, number=2, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
     
     return fig, axes_dict
 
@@ -271,7 +286,7 @@ from plume_learn.plume_analyzer.PlumeDataset import plume_dataset
 from plume_learn.plume_analyzer.Velocity import VelocityCalculator
 from sro_sto_plume.cmap import define_white_viridis
 
-def plume_metrics_summary(df_frame_metrics, plume_recording_root):
+def plume_metrics_summary(df_frame_metrics, plume_recording_root, label=True):
     figsize = (6.8, 8)
     subfigures_dict = {
         '1': {"position": [0, 4, 6.55, 1.82], 'skip_margin': False, 'margin_pts':5}, # [left, bottom, width, height]
@@ -287,7 +302,8 @@ def plume_metrics_summary(df_frame_metrics, plume_recording_root):
     lineplot = sns.lineplot(x="Time (µs)", y="Area (a.u.)", hue='Sample Name', data=df_filtered, ax=axes_dict['1'])
     set_labels(axes_dict['1'], yaxis_style='sci', xlim=(0, 8), ylim=(-6000, 18000), legend=False)
     axes_dict['1'].legend(fontsize=8, frameon=False)
-    labelfigs(axes=axes_dict['1'], number=0 , size=15, style='bw', inset_fraction=(0.2, 0.05))
+    if label:
+        labelfigs(axes=axes_dict['1'], number=0 , size=15, style='bw', inset_fraction=(0.2, 0.05))
 
     file = f'{plume_recording_root}/YG065_YichenGuo_09102024.h5'
     plume_ds = plume_dataset(file_path=file, group_name='PLD_Plumes')
@@ -309,7 +325,8 @@ def plume_metrics_summary(df_frame_metrics, plume_recording_root):
     lineplot = sns.lineplot(x="Time (µs)", y="Distance (m)", hue='Sample Name', data=df_filtered, ax=axes_dict['2'])
     set_labels(axes_dict['2'], yaxis_style='sci', xlim=(0, 8), ylim=(-0.01, 0.038), legend=False)
     axes_dict['2'].get_legend().remove()
-    labelfigs(axes=axes_dict['2'], number=1, size=15, style='bw', inset_fraction=(0.2, 0.05))
+    if label:
+        labelfigs(axes=axes_dict['2'], number=1, size=15, style='bw', inset_fraction=(0.2, 0.05))
 
     coords_root = '../data/Plumes/frame_normalize_dataset/'
     coords_path = coords_root + 'YG065_coords.npy'
@@ -332,9 +349,11 @@ def plume_metrics_summary(df_frame_metrics, plume_recording_root):
         
     # plume velocity plot
     lineplot = sns.lineplot(x="Distance (m)", y="Velocity (m/s)", hue='Sample Name', data=df_frame_metrics, ax=axes_dict['3'])
-    set_labels(axes_dict['3'], yaxis_style='sci', ylim=(-3000, 30000), legend=False)
+    if label:
+        set_labels(axes_dict['3'], yaxis_style='sci', ylim=(-3000, 30000), legend=False)
     axes_dict['3'].get_legend().remove()
-    labelfigs(axes=axes_dict['3'], number=2, size=15, style='bw', inset_fraction=(0.2, 0.05))
+    if label:
+        labelfigs(axes=axes_dict['3'], number=2, size=15, style='bw', inset_fraction=(0.2, 0.05))
     axes_dict['3'].axvline(x=0.029, color='red', ymin=0.15, ymax=0.38, linestyle='--', linewidth=0.8)
     axes_dict['3'].axvline(x=0.030, color='red', ymin=0.15, ymax=0.38, linestyle='--', linewidth=0.8)
     axes_dict['3'].text(0.0295, 1e4, 'Estimated\nIncident Velocity', fontsize=8, color='red', ha='center', bbox=dict(facecolor='none', edgecolor='none'))
@@ -343,7 +362,7 @@ def plume_metrics_summary(df_frame_metrics, plume_recording_root):
 
 
 # afm section
-def plot_afm_figure_lineprofile(afm_visualizer, files_ibw, files_txt, sample_names, colors, line_ax_indexes, line_profile_txt, line_coords):
+def plot_afm_figure_lineprofile(afm_visualizer, files_ibw, files_txt, sample_names, colors, line_ax_indexes, line_profile_txt, line_coords, label=True):
     figsize = (8, 4)
     width, height = 2, 2
     w_spacing, v_spacing = 0.2, 0.1
@@ -380,7 +399,8 @@ def plot_afm_figure_lineprofile(afm_visualizer, files_ibw, files_txt, sample_nam
         afm_imgs, sample_name, labels_correct, scan_size = parse_ibw(file_ibw)
         
         afm_visualizer.viz(img=img, scan_size=scan_size, fig=fig, ax=ax, title=None)
-        labelfigs(ax, number=i, style='wb', size=15, loc='tr', inset_fraction=(0.12, 0.15))
+        if label:
+            labelfigs(ax, number=i, style='wb', size=15, loc='tr', inset_fraction=(0.12, 0.15))
         
     for ax, sample_name, color, text_pos, marker_pos in zip(axes_dict.values(), sample_names, colors, text_pos_list, marker_pos_list):
         marker_line_label = Line2D([0], [0], color=color, linestyle='-', linewidth=2, marker='o', markersize=5, 
@@ -413,12 +433,13 @@ def plot_afm_figure_lineprofile(afm_visualizer, files_ibw, files_txt, sample_nam
             set_labels(ax_line, xlabel='X (a.u.)', ylabel='', label_fontsize=9, ticklabel_fontsize=9, yaxis_style='float', show_ticks=True)
         ax_line.tick_params(pad=1)  # Adjust label distance
 
-        labelfigs(ax_line, number=i+6, style='bw', size=15, loc='tl', inset_fraction=(0.2, 0.1))
+        if label:
+            labelfigs(ax_line, number=i+6, style='bw', size=15, loc='tl', inset_fraction=(0.2, 0.1))
         
     return fig, axes_dict
 
 # afm section
-def plot_afm_figure(afm_visualizer, files_ibw, files_txt, sample_names, colors, plot_roughness=True, roughness_ylim=None, roughness_label_loc='tr'):
+def plot_afm_figure(afm_visualizer, files_ibw, files_txt, files_roughness_txt, sample_names, colors, plot_roughness=True, roughness_ylim=None, roughness_label_loc='tr', label=True):
     width, height = 2, 2
     lineplot_height = 1.5
     w_spacing, v_spacing = 0.2, 0.1
@@ -445,14 +466,16 @@ def plot_afm_figure(afm_visualizer, files_ibw, files_txt, sample_names, colors, 
 
     # AFM
     roughness_list = []
-    for i, (ax, file_txt, file_ibw) in enumerate(zip(axes_dict.values(), files_txt, files_ibw)):
+    for i, (ax, file_txt, file_roughness_txt, file_ibw) in enumerate(zip(axes_dict.values(), files_txt, files_roughness_txt, files_ibw)):
         img = np.loadtxt(file_txt)
-        roughness = afm_RMS_roughness(img)
+        img_roughness = np.loadtxt(file_roughness_txt)
+        roughness = afm_RMS_roughness(img_roughness)
         roughness_list.append(roughness*1e9) # convert to nm
         afm_imgs, sample_name, labels_correct, scan_size = parse_ibw(file_ibw)
         
         afm_visualizer.viz(img=img, scan_size=scan_size, fig=fig, ax=ax, title=None)
-        labelfigs(ax, number=i, style='wb', size=15, loc='tr', inset_fraction=(0.12, 0.15))
+        if label:
+            labelfigs(ax, number=i, style='wb', size=15, loc='tr', inset_fraction=(0.12, 0.15))
         roughness_str = f"{roughness:.2e}"
         # add_text_to_figure(fig, roughness_str, (1.2*i, 0.8), fontsize=8)
         
@@ -481,68 +504,140 @@ def plot_afm_figure(afm_visualizer, files_ibw, files_txt, sample_names, colors, 
 
 # xrd section
 
-def plot_xrd_multiple():
+def plot_xrd_multiple(xrd_files, rocking_curve_files, rsm002_files, rsm103_files, label=True):
     sample_IDs = ['YG065', 'YG066', 'YG067', 'YG068', 'YG069', 'YG063']
     sample_names = ['t1', 't2', 't3', 't4', 't5/s1', 's2']
 
     figsize = (7.5, 9)
     subfigures_dict = {
-        '1_1': {"position": [0, 6.1, 3.55, 2.6], 'skip_margin': False, 'margin_pts':5}, # [left, bottom, width, height]
-        '1_2': {"position": [3.85, 6.1, 3.65, 2.6], 'skip_margin': False, 'margin_pts':5},
-        '2': {"position": [0, 3, 7.2, 2.8], 'skip_margin': False, 'margin_pts':5},
-        '3': {"position": [0, 0, 7.2, 2.8], 'skip_margin': False, 'margin_pts':5},
+        '1':   {"position": [0, 5.9, 7.2, 2.8], 'skip_margin': False, 'margin_pts':5},  # RSM (002)
+        '2_1': {"position": [0, 3, 3.55, 2.6], 'skip_margin': False, 'margin_pts':5},   # XRD
+        '2_2': {"position": [3.85, 3, 3.65, 2.6], 'skip_margin': False, 'margin_pts':5},# Rocking
+        '3':   {"position": [0, 0, 7.2, 2.8], 'skip_margin': False, 'margin_pts':5},    # RSM (103)
     }
+
+
     fig_all, axes_dict = layout_subfigures_inches(figsize, subfigures_dict)
     for ax in axes_dict.values():
         ax.axis('off')
 
-    # XRD
-    files = ['../data/XRD_RSM/YG065/YG065_2theta-Omega_42-49degree.xrdml',
-            '../data/XRD_RSM/YG066/YG066 2theta-Omega_Path1_42-49 degree_slow_2.xrdml',
-            '../data/XRD_RSM/YG067/YG067 2theta-Omega_Path1_42-49 degree_slow_2 1.xrdml',
-            '../data/XRD_RSM/YG068/YG068 2theta-Omega_Path1_42-49 degree_slow_2.xrdml',
-            '../data/XRD_RSM/YG069/YG069 2theta-Omega_Path1_42-49 degree_slow_2.xrdml',
-            '../data/XRD_RSM/YG063/YG063_2theta-Omega_42-49degree.xrdml',]
-    fig, ax = layout_fig(graph=1, mod=1, figsize=(3.9, 3), parent_ax=axes_dict['1_1'], layout='tight')
-    plot_xrd_figure(files, sample_names, fig_all, ax, xrange=(44.2, 48), yrange=None, title=None, filename=None)
-    xrange, yrange = (44.1, 48.1), (5, 1e18)
-    ax.set_xlim(*xrange)
-    ax.set_ylim(*yrange)
-    labelfigs(ax, number=0, style='bw', size=15, inset_fraction=(0.99, 0.1), loc='tl')
-
-    # Rocking curve
-    files = glob.glob('../data/XRD_RSM/YG06*/YG06*Rokcing*1_32*')
-    files = sorted(files, key=lambda x: sample_IDs.index(x.split('\\')[1].split('_')[0]))
-    fig, ax = layout_fig(graph=1, mod=1, figsize=(3.9, 3), parent_ax=axes_dict['1_2'], layout='tight')
-    plot_rocking_curve_figure(sample_names, files, fig_all, ax, inset_coords=[0.87, 0.855, 0.122, 0.108])
-    labelfigs(ax, number=1, style='bw', size=15, inset_fraction=(0.6, 0.1), loc='tl')
-
-    # RSM 103 phi-angle4
-    files = glob.glob('../data/XRD_RSM/YG06*/*RSM-103_phi-angle4*')
-    files = sorted(files, key=lambda x: sample_IDs.index(x.split('\\')[1].split('_')[0]))
-    plot_params_103 = {"xlim": (1.582, 1.64), "ylim": (4.72, 4.86), "vmax": 3000, 
-                    'lineplot_xlim': (1.595, 1.621), 'lineplot_ylim': (-100, 900),
-                    'label_fontsize': 10, 'tick_fontsize': 8}
-    plotter = RSMPlotter(plot_params_103)
+    # RSM (002) plot (moved from row 3 to row 1)
+    # files = glob.glob('../../data/XRD_RSM/YG06*/*002*.xrdml')
+    rsm002_files = sorted(rsm002_files, key=lambda x: sample_IDs.index(Path(x).parts[-2]))
+    plot_params_002 = {"xlim": (-0.014, 0.015), "ylim": (3.05, 3.28), "vmax": 30000, 'label_fontsize': 10, 'tick_fontsize': 8}
+    plotter = RSMPlotter(plot_params_002)
     graph, mod = 7, 7
     width_ratios = [1, 1, 1, 1, 1, 1, 0.1]
-    text_locs = [(1.1+1.138*i, 3.38) for i in range(6)]
-    fig, axes = layout_fig(graph=graph, mod=mod, figsize=(8, 3), parent_ax=axes_dict['2'], subplot_style='gridspec', width_ratios=width_ratios, spacing=(0.2, 0.2), layout='tight')
-    Qx_lines, intensity_lines = plot_rsm_figure(plotter, fig_all, axes, files, sample_names, cbar_ax=axes[-1], peak_z_range=(4.78, 4.80), draw_peak=True, draw_peak_line=False, i_start=2, text_locs=text_locs)
+    text_locs = [(1.1+1.138*i, 6.25) for i in range(6)]
+    fig, axes = layout_fig(graph=graph, mod=mod, figsize=(2.4, 2.6), parent_ax=axes_dict['1'], subplot_style='gridspec', width_ratios=width_ratios, spacing=(0.2, 0.2), layout='tight')
+    Qx_lines, intensity_lines = plot_rsm_figure(plotter, fig_all, axes, rsm002_files, sample_names, cbar_ax=axes[-1], peak_z_range=(3.15, 3.20), draw_peak=True, draw_peak_line=False, i_start=0, text_locs=text_locs, label=label)
 
-    # (002) plane
-    files = glob.glob('../data/XRD_RSM/YG06*/*002*.xrdml')
-    files = sorted(files, key=lambda x: sample_IDs.index(x.split('\\')[1].split('_')[0]))
-    plot_params_002 = {"xlim": (-0.014, 0.015), "ylim": (3.05, 3.28), "vmax": 30000,
-                    'label_fontsize': 10, 'tick_fontsize': 8}
-    plotter = RSMPlotter(plot_params_002)
+
+    # XRD plot
+    # files = ['../../data/XRD_RSM/YG065/YG065_2theta-Omega_42-49degree.xrdml',
+    #          '../../data/XRD_RSM/YG066/YG066 2theta-Omega_Path1_42-49 degree_slow_2.xrdml',
+    #          '../../data/XRD_RSM/YG067/YG067 2theta-Omega_Path1_42-49 degree_slow_2 1.xrdml',
+    #          '../../data/XRD_RSM/YG068/YG068 2theta-Omega_Path1_42-49 degree_slow_2.xrdml',
+    #          '../../data/XRD_RSM/YG069/YG069 2theta-Omega_Path1_42-49 degree_slow_2.xrdml',
+    #          '../../data/XRD_RSM/YG063/YG063_2theta-Omega_42-49degree.xrdml']
+    fig, ax = layout_fig(graph=1, mod=1, figsize=(2.4, 2.6), parent_ax=axes_dict['2_1'], layout='tight')
+    plot_xrd_figure(xrd_files, sample_names, fig_all, ax, xrange=(44.2, 48), yrange=None, title=None, filename=None)
+    ax.set_xlim(44.1, 48.1)
+    ax.set_ylim(5, 1e18)
+    if label:
+        labelfigs(ax, number=6, style='bw', size=15, inset_fraction=(0.99, 0.1), loc='tl')
+
+    # Rocking curve plot
+    # files = glob.glob('../../data/XRD_RSM/YG06*/YG06*Rokcing*1_32*')
+    rocking_curve_files = sorted(rocking_curve_files, key=lambda x: sample_IDs.index(Path(x).parts[-2]))
+    # files = sorted(rocking_curve_files, key=lambda x: sample_IDs.index(x.split('\\')[1].split('_')[0]))
+    fig, ax = layout_fig(graph=1, mod=1, figsize=(2.4, 2.6), parent_ax=axes_dict['2_2'], layout='tight')
+    plot_rocking_curve_figure(sample_names, rocking_curve_files, fig_all, ax, inset_coords=[0.87, 0.51, 0.122, 0.108]) # [left, bottom, width, height]
+    if label:
+        labelfigs(ax, number=7, style='bw', size=15, inset_fraction=(0.6, 0.1), loc='tl')
+
+    # RSM 103 phi-angle4 (now on second row)
+    # files = glob.glob('../../data/XRD_RSM/YG06*/*RSM-103_phi-angle4*')
+    rsm103_files = sorted(rsm103_files, key=lambda x: sample_IDs.index(Path(x).parts[-2]))
+    plot_params_103 = {"xlim": (1.582, 1.64), "ylim": (4.72, 4.86), "vmax": 3000, 'lineplot_xlim': (1.595, 1.621), 'lineplot_ylim': (-100, 900), 'label_fontsize': 10, 'tick_fontsize': 8}
+    plotter = RSMPlotter(plot_params_103)
     graph, mod = 7, 7
     width_ratios = [1, 1, 1, 1, 1, 1, 0.1]
     text_locs = [(1.1+1.138*i, 0.38) for i in range(6)]
     fig, axes = layout_fig(graph=graph, mod=mod, figsize=(8, 3), parent_ax=axes_dict['3'], subplot_style='gridspec', width_ratios=width_ratios, spacing=(0.2, 0.2), layout='tight')
-    Qx_lines, intensity_lines = plot_rsm_figure(plotter, fig_all, axes, files, sample_names, cbar_ax=axes[-1], peak_z_range=(3.15, 3.20), draw_peak=True, draw_peak_line=False, i_start=8, text_locs=text_locs)
+    Qx_lines, intensity_lines = plot_rsm_figure(plotter, fig_all, axes, rsm103_files, sample_names, cbar_ax=axes[-1], peak_z_range=(4.78, 4.80), draw_peak=True, draw_peak_line=False, draw_ideal_Qz_line=True, ideal_Qz=4.78, i_start=8, text_locs=text_locs, label=label)
 
     return fig_all, axes_dict
+
+
+
+# def plot_xrd_multiple(xrd_files, rocking_curve_files, rsm002_files, rsm103_files, label=True):
+#     sample_IDs = ['YG065', 'YG066', 'YG067', 'YG068', 'YG069', 'YG063']
+#     sample_names = ['t1', 't2', 't3', 't4', 't5/s1', 's2']
+
+#     figsize = (7.5, 9)
+#     subfigures_dict = {
+#         '1_1': {"position": [0, 6.1, 3.55, 2.6], 'skip_margin': False, 'margin_pts':5}, # [left, bottom, width, height]
+#         '1_2': {"position": [3.85, 6.1, 3.65, 2.6], 'skip_margin': False, 'margin_pts':5},
+#         '2': {"position": [0, 3, 7.2, 2.8], 'skip_margin': False, 'margin_pts':5},
+#         '3': {"position": [0, 0, 7.2, 2.8], 'skip_margin': False, 'margin_pts':5},
+#     }
+#     fig_all, axes_dict = layout_subfigures_inches(figsize, subfigures_dict)
+#     for ax in axes_dict.values():
+#         ax.axis('off')
+
+#     # XRD
+#     # files = ['../data/XRD_RSM/YG065/YG065_2theta-Omega_42-49degree.xrdml',
+#     #         '../data/XRD_RSM/YG066/YG066 2theta-Omega_Path1_42-49 degree_slow_2.xrdml',
+#     #         '../data/XRD_RSM/YG067/YG067 2theta-Omega_Path1_42-49 degree_slow_2 1.xrdml',
+#     #         '../data/XRD_RSM/YG068/YG068 2theta-Omega_Path1_42-49 degree_slow_2.xrdml',
+#     #         '../data/XRD_RSM/YG069/YG069 2theta-Omega_Path1_42-49 degree_slow_2.xrdml',
+#     #         '../data/XRD_RSM/YG063/YG063_2theta-Omega_42-49degree.xrdml',]
+#     fig, ax = layout_fig(graph=1, mod=1, figsize=(3.9, 3), parent_ax=axes_dict['1_1'], layout='tight')
+#     plot_xrd_figure(xrd_files, sample_names, fig_all, ax, xrange=(44.2, 48), yrange=None, title=None, filename=None)
+#     xrange, yrange = (44.1, 48.1), (5, 1e18)
+#     ax.set_xlim(*xrange)
+#     ax.set_ylim(*yrange)
+#     if label:
+#         labelfigs(ax, number=0, style='bw', size=15, inset_fraction=(0.99, 0.1), loc='tl')
+
+#     # Rocking curve
+#     # files = glob.glob('../data/XRD_RSM/YG06*/YG06*Rokcing*1_32*')
+#     # files = sorted(files, key=lambda x: sample_IDs.index(x.split('\\')[1].split('_')[0]))
+#     rocking_curve_files = sorted(rocking_curve_files, key=lambda x: sample_IDs.index(Path(x).parts[-2]))
+
+#     fig, ax = layout_fig(graph=1, mod=1, figsize=(3.9, 3), parent_ax=axes_dict['1_2'], layout='tight')
+#     plot_rocking_curve_figure(sample_names, rocking_curve_files, fig_all, ax, inset_coords=[0.87, 0.855, 0.122, 0.108])
+#     if label:
+#         labelfigs(ax, number=1, style='bw', size=15, inset_fraction=(0.6, 0.1), loc='tl')
+
+#     # RSM 103 phi-angle4
+#     # files = glob.glob('../data/XRD_RSM/YG06*/*RSM-103_phi-angle4*')
+#     # files = sorted(files, key=lambda x: sample_IDs.index(x.split('\\')[1].split('_')[0]))
+    
+#     rsm103_files = sorted(rsm103_files, key=lambda x: sample_IDs.index(Path(x).parts[-2]))
+#     plot_params_103 = {"xlim": (1.582, 1.64), "ylim": (4.72, 4.86), "vmax": 3000, 'lineplot_xlim': (1.595, 1.621), 'lineplot_ylim': (-100, 900), 'label_fontsize': 10, 'tick_fontsize': 8}
+#     plotter = RSMPlotter(plot_params_103)
+#     graph, mod = 7, 7
+#     width_ratios = [1, 1, 1, 1, 1, 1, 0.1]
+#     text_locs = [(1.1+1.138*i, 3.38) for i in range(6)]
+#     fig, axes = layout_fig(graph=graph, mod=mod, figsize=(8, 3), parent_ax=axes_dict['2'], subplot_style='gridspec', width_ratios=width_ratios, spacing=(0.2, 0.2), layout='tight')
+#     Qx_lines, intensity_lines = plot_rsm_figure(plotter, fig_all, axes, rsm103_files, sample_names, cbar_ax=axes[-1], peak_z_range=(4.78, 4.80), draw_peak=True, draw_peak_line=False, i_start=2, text_locs=text_locs, label=label)
+
+#     # (002) plane
+#     # files = glob.glob('../data/XRD_RSM/YG06*/*002*.xrdml')
+#     # files = sorted(files, key=lambda x: sample_IDs.index(x.split('\\')[1].split('_')[0]))
+#     rsm002_files = sorted(rsm002_files, key=lambda x: sample_IDs.index(Path(x).parts[-2]))
+
+#     plot_params_002 = {"xlim": (-0.014, 0.015), "ylim": (3.05, 3.28), "vmax": 30000, 'label_fontsize': 10, 'tick_fontsize': 8}
+#     plotter = RSMPlotter(plot_params_002)
+#     graph, mod = 7, 7
+#     width_ratios = [1, 1, 1, 1, 1, 1, 0.1]
+#     text_locs = [(1.1+1.138*i, 0.38) for i in range(6)]
+#     fig, axes = layout_fig(graph=graph, mod=mod, figsize=(8, 3), parent_ax=axes_dict['3'], subplot_style='gridspec', width_ratios=width_ratios, spacing=(0.2, 0.2), layout='tight')
+#     Qx_lines, intensity_lines = plot_rsm_figure(plotter, fig_all, axes, rsm002_files, sample_names, cbar_ax=axes[-1], peak_z_range=(3.15, 3.20), draw_peak=True, draw_peak_line=False, i_start=8, text_locs=text_locs, label=label)
+
+#     return fig_all, axes_dict
 
 
 
@@ -592,6 +687,8 @@ def plot_xrd_figure(files, sample_index, fig, ax, xrange, yrange, title, filenam
         peak_y = np.array(peak_y)*diff**(len(Ys)-i-1)
         # plt.plot(peak_x[0], peak_y[0]*3, '*', color=color)
         ax.plot(peak_x[1], peak_y[1]*3, '+', color=color)
+        
+        print(f'Sample: {sample_name}, STO FWHM: {fwhm_sto:.4f}, SRO FWHM: {fwhm_sro:.4f}, peak_x[0]: {peak_x[0]:.4f}, peak_x[1]: {peak_x[1]:.4f}')
         
     # plt.legend(legend, fontsize=9, loc='upper right', frameon=False)
     if filename:
@@ -677,7 +774,7 @@ def set_fig_axes():
     fig, axes_dict = layout_subfigures_inches((8,6), subfigures_dict)
     return fig, axes_dict
 
-def plot_rsm_figure(plotter, fig, axes, files, sample_names, cbar_ax, peak_z_range=None, draw_peak=True, draw_peak_line=True, i_start=0, text_locs=None):
+def plot_rsm_figure(plotter, fig, axes, files, sample_names, cbar_ax, peak_z_range=None, draw_peak=True, draw_peak_line=True, draw_ideal_Qz_line=False, ideal_Qz=4.79, i_start=0, text_locs=None, label=True):
     
     # n_plot_fisrt_row = 7
     # n_plot_second_row = 6
@@ -690,7 +787,8 @@ def plot_rsm_figure(plotter, fig, axes, files, sample_names, cbar_ax, peak_z_ran
         else:
             Qx, Qz, intensity = plotter.plot(file, ax, figsize=None, cbar_ax=cbar_ax, ignore_yaxis=True)
             
-        labelfigs(ax, i_start+i, size=15, inset_fraction=(0.08, 0.15), loc='tr')
+        if label:
+            labelfigs(ax, i_start+i, size=15, inset_fraction=(0.08, 0.15), loc='tr')
 
     # Mark peaks with red '+' and draw a horizontal line
         # Mark peaks with red '+'
@@ -726,6 +824,12 @@ def plot_rsm_figure(plotter, fig, axes, files, sample_names, cbar_ax, peak_z_ran
         Qx_lines.append(Qx_line)
         Qz_lines.append(Qz_line)
         intensity_lines.append(intensity_line)
+        
+        if draw_ideal_Qz_line:
+            ideal_line = np.ones_like(Qx_line) * ideal_Qz
+            ax.plot(Qx_line, ideal_line, 'b--', lw=1)
+        
+        print(f'{title}: Qx_target={Qx_target[0]:.4f}nm, Qz_target={Qz_target[0]:.4f}nm')
         
     if text_locs:
         for i, (ax, sample_name, color, text_loc) in enumerate(zip(axes, sample_names, colors, text_locs)):
@@ -823,7 +927,7 @@ def plot_fwhm_trend_figure(plotter, ax, sample_index, FWHM_list):
     ax_right.yaxis.get_offset_text().set_x(1)  # Adjust offset for clarity
     
     
-def show_sample_frames(plumes, n_plumes=40, n_frames=25):
+def show_sample_frames(plumes, n_plumes=40, n_frames=25, figsize=(8, 12)):
         
     plume_index_list = np.round(np.linspace(0, len(plumes)-1, n_plumes)).astype(int)
     sample_frames = plumes[plume_index_list, :n_frames]
@@ -831,7 +935,7 @@ def show_sample_frames(plumes, n_plumes=40, n_frames=25):
     labels = np.arange(n_frames)*500e-3
     labels = [f'{l:.0f}µs' for l in labels]
     labels = labels*n_plumes
-    fig, axes = layout_fig(n_plumes*n_frames, mod=n_frames, figsize=(8, 12), subplot_style='gridspec', spacing=(0.02, 0.02), layout='tight')
+    fig, axes = layout_fig(n_plumes*n_frames, mod=n_frames, figsize=figsize, subplot_style='gridspec', spacing=(0.02, 0.02), layout='tight')
     for i, (ax, img, label) in enumerate(zip(axes, sample_frames, labels)):
         ax.imshow(img)
         ax.axis('off')
