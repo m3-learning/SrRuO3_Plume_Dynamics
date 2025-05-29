@@ -10,3 +10,6 @@
 [submodule "src/M3Learning-Util"]
 	path = src/M3Learning-Util
 	url = https://github.com/m3-learning/M3Learning-Util.git
+[submodule "m3-jupyter-book-template"]
+	path = m3-jupyter-book-template
+	url = https://github.com/m3-learning/m3-jupyter-book-template.git
