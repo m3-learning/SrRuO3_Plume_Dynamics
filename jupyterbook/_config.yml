@@ -40,3 +40,9 @@ html:
 sphinx:
   config:
     bibtex_reference_style: super
+    numfig: true
+    numfig_format:
+      figure: "Figure %s"
+      table: "Table %s"
+      code-block: "Listing %s"
+      section: "Section %s"
