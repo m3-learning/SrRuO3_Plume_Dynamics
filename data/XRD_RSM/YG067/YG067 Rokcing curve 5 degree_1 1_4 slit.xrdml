@@ -1,0 +1,132 @@
+﻿<?xml version="1.0"?>
+<xrdMeasurements xmlns="http://www.xrdml.com/XRDMeasurement/2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xrdml.com/XRDMeasurement/2.2 http://www.xrdml.com/XRDMeasurement/2.2/XRDMeasurement.xsd" status="Completed" recordIdentifier="{32E9C1E7-0515-451E-BD22-1713A3D29E43}">
+	<comment>
+		<entry>Configuration=3-axes Cradle_Reflection, Owner=lw627, Creation date=9/2/2021 3:55:24 PM</entry>
+		<entry>Goniometer=Theta/Theta; Minimum step size 2Theta:0.0001; Minimum step size Omega:0.0001</entry>
+		<entry>Sample stage=Chi-Phi-z stage 240 mm (reflection); Minimum step size Phi:0.01; Minimum step size Chi:0.01; Minimum step size Z:0.001</entry>
+		<entry>Diffractometer system=EMPYREAN</entry>
+		<entry>Measurement program=C:\PANalytical\Data Collector\Programs\Liyan Wu\Film programs\Rokcing curve 5 degree.xrdmp, Identifier={8F144B62-8FF1-401A-88D6-F611F333AA44}</entry>
+	</comment>
+	<sample type="To be analyzed">
+		<id></id>
+		<name></name>
+		<preparedBy></preparedBy>
+	</sample>
+	<xrdMeasurement measurementType="Scan" status="Completed" sampleMode="Reflection">
+		<comment>
+			<entry>PHD Lower Level = 4.02 (keV), PHD Upper Level = 11.27 (keV)</entry>
+		</comment>
+		<usedWavelength intended="K-Alpha 1">
+			<kAlpha1 unit="Angstrom">1.5405980</kAlpha1>
+			<kAlpha2 unit="Angstrom">1.5444260</kAlpha2>
+			<kBeta unit="Angstrom">1.3922500</kBeta>
+			<ratioKAlpha2KAlpha1>0.0000</ratioKAlpha2KAlpha1>
+		</usedWavelength>
+		<incidentBeamPath>
+			<radius unit="mm">240.00</radius>
+			<xRayTube id="1010048" name="Empyrean Cu LFF HR (9430 033 7310x) DK432574">
+				<tension unit="kV">45.0</tension>
+				<current unit="mA">40.0</current>
+				<anodeMaterial>Cu</anodeMaterial>
+				<focus type="Line">
+					<length unit="mm">12.0</length>
+					<width unit="mm">0.4</width>
+					<takeOffAngle unit="deg">4.4</takeOffAngle>
+				</focus>
+			</xRayTube>
+			<xRayMirror id="27080001" name="Inc. Beam Cu W/Si (hybrid MPD)" hybrid="true">
+				<crystal type="Graded" shape="Parabolic">W/Si</crystal>
+				<acceptanceAngle unit="deg">0.800</acceptanceAngle>
+				<length unit="mm">55.3</length>
+			</xRayMirror>
+			<monochromator id="23090002" name="Hybrid monochr. 2xGe220 Cu asym." hybrid="true">
+				<crystal type="Asymmetric" shape="Flat">Ge</crystal>
+				<numberOfReflections>2</numberOfReflections>
+				<hkl>
+					<h>2</h>
+					<k>2</k>
+					<l>0</l>
+				</hkl>
+			</monochromator>
+			<mask id="22030008" name="Fixed mask 4 mm">
+				<distanceToSample unit="mm">171.00</distanceToSample>
+				<width unit="mm">4.00</width>
+			</mask>
+			<divergenceSlit id="22010005" name="Fixed slit 1/4°" xsi:type="fixedDivergenceSlitType">
+				<distanceToSample unit="mm">179.30</distanceToSample>
+				<height unit="mm">0.38</height>
+			</divergenceSlit>
+		</incidentBeamPath>
+		<diffractedBeamPath>
+			<radius unit="mm">240.00</radius>
+			<antiScatterSlit id="22060009" name="Programmable anti-scatter slit" xsi:type="fixedAntiScatterSlitType">
+				<angle unit="deg">0.0625</angle>
+			</antiScatterSlit>
+			<detector id="7010020" name="PIXcel3D-Medipix3 1x1 detector" xsi:type="areaDetectorType">
+				<phd unit="%">
+					<lowerLevel>25.0</lowerLevel>
+					<upperLevel>70.0</upperLevel>
+				</phd>
+				<mode>Receiving slit</mode>
+				<activeChannelsEquatorial>21</activeChannelsEquatorial>
+				<activeChannelsAxial>255</activeChannelsAxial>
+				<pitchEquatorial unit="mm">0.05500</pitchEquatorial>
+				<pitchAxial unit="mm">0.05500</pitchAxial>
+				<readOutPeriod unit="seconds">0.050</readOutPeriod>
+			</detector>
+		</diffractedBeamPath>
+		<scan appendNumber="0" mode="Continuous" scanAxis="Omega" status="Completed">
+			<header>
+				<startTimeStamp>2024-11-01T15:44:35-04:00</startTimeStamp>
+				<endTimeStamp>2024-11-01T15:49:38-04:00</endTimeStamp>
+				<author>
+					<name>lw627</name>
+				</author>
+				<source>
+					<applicationSoftware version="7.1">Data Collector</applicationSoftware>
+					<instrumentControlSoftware version="8.2  20201204">EMPYREAN</instrumentControlSoftware>
+					<instrumentID>0000000011260721</instrumentID>
+				</source>
+			</header>
+			<scanAxisCenter>
+				<position axis="Omega" unit="deg">22.9697</position>
+			</scanAxisCenter>
+			<reflection>
+				<material>SrTiO3 [001]</material>
+				<hkl>
+					<h>1</h>
+					<k>0</k>
+					<l>3</l>
+				</hkl>
+				<unitCell>
+					<alpha unit="deg">90.00000</alpha>
+					<beta unit="deg">90.00000</beta>
+					<gamma unit="deg">90.00000</gamma>
+					<a unit="Angstrom">3.90500</a>
+					<b unit="Angstrom">3.90500</b>
+					<c unit="Angstrom">3.90500</c>
+				</unitCell>
+			</reflection>
+			<dataPoints>
+				<positions axis="2Theta" unit="deg">
+					<commonPosition>45.9394</commonPosition>
+				</positions>
+				<positions axis="Omega" unit="deg">
+					<startPosition>21.4747</startPosition>
+					<endPosition>24.4647</endPosition>
+				</positions>
+				<positions axis="Phi" unit="deg">
+					<commonPosition>-93.06</commonPosition>
+				</positions>
+				<positions axis="Chi" unit="deg">
+					<commonPosition>0.00</commonPosition>
+				</positions>
+				<positions axis="Z" unit="mm">
+					<commonPosition>8.390</commonPosition>
+				</positions>
+				<commonCountingTime unit="seconds">0.440</commonCountingTime>
+				<counts unit="counts">17 14 10 14 12 13 13 12 13 15 9 11 16 9 13 10 17 9 15 21 12 19 14 17 10 14 14 14 15 20 19 14 17 22 18 19 16 14 24 20 15 24 8 17 14 22 20 18 16 16 17 14 18 12 11 17 18 12 9 23 14 22 17 19 14 32 18 19 22 10 12 12 28 16 21 13 27 16 20 21 26 19 21 27 18 21 22 24 25 21 24 24 21 19 27 28 26 29 30 27 28 35 28 26 22 28 28 34 23 34 20 32 25 21 24 29 22 30 24 37 32 33 41 31 36 31 46 24 37 42 40 47 48 26 34 32 32 50 46 56 47 32 35 44 42 42 40 54 37 51 21 45 47 38 43 46 47 32 39 39 34 40 44 43 41 49 39 49 48 50 44 56 53 51 49 47 48 53 62 56 72 49 44 65 53 49 52 45 54 56 56 51 68 68 77 65 72 65 52 66 60 64 59 64 55 72 71 59 78 84 86 83 91 94 85 104 78 90 93 94 100 114 91 110 136 130 132 140 136 174 141 150 183 179 180 183 200 254 230 261 258 276 321 302 289 346 351 407 424 483 458 531 536 532 648 651 721 733 863 950 1000 1171 1305 1387 1544 1619 1827 2116 2383 3020 3860 4570 5312 5862 6463 6988 7741 8425 9310 10076 10483 11378 11941 12636 13143 14720 16325 18864 23103 27845 34637 41647 47933 53848 59163 64188 68017 69776 70425 68106 65619 60413 54860 47475 40329 33036 25503 18865 13471 9580 7083 5493 4472 3652 3197 2738 2363 2030 1835 1616 1461 1320 1180 1067 956 891 781 814 714 668 605 571 524 471 453 449 392 378 353 323 302 303 274 251 224 200 208 208 192 195 192 159 143 141 161 133 138 98 121 130 102 99 102 80 78 94 78 85 67 70 66 61 73 70 56 67 59 55 59 52 45 44 56 54 48 48 42 53 41 46 39 50 43 46 45 44 35 43 52 40 40 35 28 32 28 40 32 33 35 39 38 18 23 39 24 26 27 19 26 24 24 34 28 34 16 29 25 31 28 22 22 22 28 31 19 29 34 31 25 27 22 29 24 28 34 23 21 23 17 25 16 16 16 21 22 27 21 20 18 23 18 18 17 22 18 21 19 22 24 24 17 20 22 18 27 21 18 19 17 29 17 16 23 24 20 20 20 18 15 15 17 15 20 11 13 13 19 18 12 22 19 16 14 22 23 20 18 20 17 18 14 22 10 13 13 15 20 16 13 17 13 15 12 18 9 20 19 14 10 19 23 12 15 17 18 16 19 15 13 9 8 13 8 15 9 15 18 11 15 13 12 18 17 13 12 18 11 15 21 12 14 13 16 14 19 13 12 14 11 12 13 10 28 9 6 16 17 13 13 12 13 12 14 17 10 15 14 14 16 12 6 17 17 20 13 12 15 15 13</counts>
+			</dataPoints>
+		</scan>
+	</xrdMeasurement>
+</xrdMeasurements>
