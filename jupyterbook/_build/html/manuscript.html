@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>To Sand, or Not to Sand: SrRuO3 Pulsed Laser Deposition with Full-Frame Plume Dynamic Imaging &#8212; Insert Title Here</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/theme.css?v=d998f4ab" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=24f22f23" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'manuscript';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/m3-light.png" class="logo__image only-light" alt="Insert Title Here - Home"/>
+    <script>document.write(`<img src="_static/m3-light.png" class="logo__image only-dark" alt="Insert Title Here - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">To Sand, or Not to Sand: SrRuO3 Pulsed Laser Deposition with Full-Frame Plume Dynamic Imaging</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/manuscript.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>To Sand, or Not to Sand: SrRuO3 Pulsed Laser Deposition with Full-Frame Plume Dynamic Imaging</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="to-sand-or-not-to-sand-srruo3-pulsed-laser-deposition-with-full-frame-plume-dynamic-imaging">
+<h1>To Sand, or Not to Sand: SrRuO3 Pulsed Laser Deposition with Full-Frame Plume Dynamic Imaging<a class="headerlink" href="#to-sand-or-not-to-sand-srruo3-pulsed-laser-deposition-with-full-frame-plume-dynamic-imaging" title="Link to this heading">#</a></h1>
+<p><em><em>Yichen Guo<sup>†1,2</sup>, Liyan Wu<sup>†2</sup>, Julian Goddy<sup>2</sup>, Theo Beers<sup>2</sup>, Lane Martin<sup>4,5,6,7</sup>, Jonathan Spanier<sup>2,3</sup>, Joshua Agar<sup>2</em></sup></em>*</p>
+<p><sup>†</sup> Authors contributed equally to this work<br />
+<sup>1</sup> Department of Materials Science and Engineering, Lehigh University, Bethlehem, PA 18015, USA<br />
+<sup>2</sup> Department of Mechanical Engineering and Mechanics, Drexel University, Philadelphia, PA 19104, USA<br />
+<sup>3</sup> Department of Materials Science and Engineering, Drexel University, Philadelphia, PA 19104, USA<br />
+<sup>4</sup> Department of Materials Science and Engineering, University of California, Berkeley, CA 94720, USA<br />
+<sup>5</sup> Materials Sciences Division, Lawrence Berkeley National Laboratory, Berkeley, California 94720, USA<br />
+<sup>6</sup> Department of Materials Science and Nanoengineering, Rice University, Houston, TX 77005, USA<br />
+<sup>7</sup> Rice Advanced Materials Institute, Rice University, Houston, TX 77005, USA<br />
+<sup>8</sup> Department of Physics and Astronomy, Rice University, Houston, TX 77005, USA<br />
+<sup>*</sup> Email address: <a class="reference external" href="mailto:jca92&#37;&#52;&#48;drexel&#46;edu">jca92<span>&#64;</span>drexel<span>&#46;</span>edu</a></p>
+<section id="abstract">
+<h2>Abstract<a class="headerlink" href="#abstract" title="Link to this heading">#</a></h2>
+<p>High-quality thin films growth via pulsed laser deposition (PLD) requires precise control over plume dynamics, which are influenced by temporal and spatial variations in target surface morphology. We employed a Full-Frame Plume Dynamic Imaging (PDI) platform to investigate the effects of target surface evolution on plume dynamics and the subsequent impact on film quality and structure. Using SrRuO<sub>3</sub> as a model system, we develop automated computer-vision pipelines to extract statistical metrics, such as maximum plume area and incident velocity, under varying conditions, including pre-ablation pulsing and inadvertent target contamination. Repeated ablation improves plume dynamics stability, correlating with enhanced crystalline quality and reduced surface roughness, confirmed by XRD and AFM. Conversely, spatial inhomogeneities, such as target surface contamination, induce instabilities in plume dynamics, resulting in poor crystalline quality, higher surface roughness, and disrupted growth dynamics. Through statistical analysis and heatmap visualization, we establish a direct link between plume stability and thin-film reproducibility. Our findings underscore the necessity of rigorous target surface conditioning and real-time plume diagnostics to enable deterministic control over crystallographic and domain architectures. We posit those stochastic variations in plume dynamics-typically unquantified-constitute a dominant mechanism underlying reproducibility crisis and impediments to extending the design space for bespoke heterostructures and heterointerfaces. Furthermore, the integration of advanced diagnostic tools, such as PDI, offers a robust pathway for achieving precise control in thin-film synthesis, providing a pathway for control of non-equilibrium synthesis processes pervasive in semiconductor manufacturing.</p>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Epitaxial complex oxide thin films have become indispensable in next-generation electronics, catalysis, and energy storage, owing to their tunable electronic, magnetic, and ionic transport properties, which can be precisely engineered through strain, stoichiometry, and defects <span id="id1"><sup><a class="reference internal" href="#id76" title="A. P. Mackenzie, J. W. Reiner, A. W. Tyler, L. M. Galvin, S. R. Julian, M. R. Beasley, T. H. Geballe, and A. Kapitulnik. Observation of quantum oscillations in the electrical resistivity of SrRuO\(_3\). Phys. Rev. B Condens. Matter, 58(20):R13318–R13321, November 1998.">1</a></sup></span>.   Most of these materials require far-from-equilibrium synthesis methods to achieve complex stoichiometry, finely tuned heterointerfaces, superlattices, and compositional gradients—all of which are essential for enabling emergent functionalities. While many non-equilibrium thin-film synthesis techniques exist, pulsed laser deposition (PLD) is distinguished by its ability to reproducibly deposit complex stoichiometry with relative simplicity in a laboratory setting—some systems even extending this capability to the wafer scale .13 PLD operates by directing a high-intensity pulsed laser onto a target material under low—typically oxidizing—ambient pressure. This process generates a highly energetic plasma plume (5,000-20,000K)  that transfers ablated species onto a substrate. The inherently non-equilibrium nature of PLD enables fine-tuning of stoichiometry, crystallographic orientation, and surface morphology through extreme sensitivity to growth parameters, but this same sensitivity also poses significant challenges for high-reproducibility growth, as minor fluctuations in plume dynamics, ambient conditions, or target surface state can substantially impact film quality. 14–19
+PLD is highly sensitive to key growth parameters—including laser fluence, repetition rate, ambient gas pressure, and substrate temperature—necessitating precise optimization to regulate plume energetics and adatom surface kinetics, thereby enabling the reproducible growth of high-crystallinity films with controlled defect densities that can be strategically leveraged to engineer emergent functionalities. 18,20–29 In typical PLD processes, only average growth properties are recorded, with little attention given to statistical variances or outliers—such as fluctuations in laser spot profile, stability, and plume dynamics—which can critically influence thin-film quality, microstructural uniformity, and growth reproducibility. 30–33 Instrument-specific constraints, combined with unreported or unaccounted-for exogenic factors, introduce uncertainty into growth processes, resulting structures, and overall reproducibility. As a result, nominally identical experiments—even when conducted by the same researcher in the same laboratory—can produce substantially divergent outcomes without any readily identifiable cause. Furthermore, this is not merely a problem for reproducibility, it also imposes upper bounds on the complexity of the systems which can be realized.
+The next paradigm shift in our ability to design bespoke heterostructures will likely arise from the integration of advanced in situ diagnostics with real-time control systems. Plume Dynamic Imaging (PDI) has emerged as a powerful technique for real-time monitoring of plume evolution and subtle variations in growth conditions, enabling data-driven optimization of synthesis protocol.18,34–36 Compared to other in-situ characterization techniques, such as Reflection High-Energy Electron Diffraction (RHEED),27–29,37–39 which probes the structural state of the growing film, PDI directly measures mass transport and plume energetics, providing a powerful framework for elucidating synthesis-structure-property relationships. PDI has enabled investigations into phenomena such as plume rebound and flip-over effects, yielding critical insights into plume-substrate interactions.30,40  Additionally, studies of plume evolution under varying oxygen partial pressures have demonstrated how oxygen regulates film stoichiometry by modulating the formation and dissociation kinetics of transition-metal oxides.15,17  However, previous PDI implementations faced a significant limitation: earlier cameras could capture only a few (&lt;3) frames per pulse,34,40–44 albeit with precisely controlled delay times. As a result, reconstructing complete plume dynamics required stitching together data from multiple pulses under the assumption of minimal plume-to-plume variability—an approach that inherently limited the ability to observe transient, stochastic plume phenomena.
+In contrast, full-frame PDI (FF-PDI)-capturing more than 60 frames per laser pulse-enables detailed temporal resolution of plume evolution during ablation, while simultaneously revealing pulse-to-pulse variability that critically impacts growth reproducibility. This enhanced diagnostic capability is particularly valuable for the deposition of complex multi-element oxide heterostructures, such as SrTiO3/LaAlO3 interfaces, and compositionally-graded heterostructures where precise and discontinuous modulation of stoichiometry, substrate temperature, and ambient pressure is essential.37–39 This paradigm shift redefines PLD from a static “Set-It &amp; Forget-It” process, one amenable for dynamic real-time control. FF-PDI provides a pathway for integrating artificial intelligence (AI)—particularly real-time machine learning on edge computing hardware40–54—to enable intelligent control of synthesis dynamics. Recent studies have shown that machine learning algorithms can significantly enhance deposition precision by facilitating automated, real-time recognition of plume characteristics, deterministic feedback control, and dynamic adjustment of growth parameters. Collectively, these advances position PLD as a dynamic, adaptive synthesis platform-analogous to self-driving laboratories, but tailored for real-time control of non-equilibrium growth processes-substantially enhancing reproducibility and establishing a foundation for intelligent, AI-driven materials fabrication.67–70
+To explore the novel capabilities afforded by FF-PDI, we have engineered a comprehensive, full-stack PDI platform including hardware designs and software. This system uniquely enables synchronized high-speed plume acquisition, meticulous logging of experimental parameters, and precise quantification of plume dynamics. At its core, our platform leverages the Shimadzu HyperVision HPX-2 high-speed camera, distinguished by its ability to record bursts of up to 128 frames at exceptional temporal resolutions approaching 10 million frames per second.
+SrRuO3 thin films were selected as a representative model system due to their widespread use as functional electrode layers in oxide electronics, where their ferromagnetic and conductive properties can be critical for enabling spintronic devices and high-performance heterostructures.67–73  SrRuO3 exhibits several advantageous properties, including temperature-dependent electrical conductivity,29,67, favorable lattice matching to a range of substrates (orthorhombic unit cell: a=5.56Å,b=5.530Å,c=7.845Å), and exceptional structural stability, making it highly suitable for integration into multilayer oxide architectures and ferroelectric devices. Furthermore, SrRuO3 displays notable magnetic and electronic phenomena, such as the anomalous Hall effect near 160 K,75 achievable without extrinsic doping in both bulk and epitaxial thin-film forms. Its high thermal stability (up to ~1200 K76) and robust chemical resilience. Finally, SrRuO3 is widely employed as a lattice-matched oxide electrode in ferroelectric devices, where its crystallographic and electronic properties critically influence heterostructure morphology, functional responses, and device performance through mechanisms such as strain transfer and interfacial electronic screening.
+Despite its numerous advantages, the reproducible synthesis of SrRuO3 thin films remains highly dependent on experimental expertise and empirical tuning—often accompanied by elements of speculation and a degree of mysticism. Although SrRuO3 is often cited for its relatively broad deposition condition window, synthesis outcomes exhibit substantial variability in literature.14,15,66 While system-level growth parameters-such as laser fluence and substrate temperature-are extensively reported, critical factors such as target defect evolution, target density, and local stoichiometric deviations are often overlooked, despite their substantial influence on ablation dynamics, plume evolution, and ultimately film quality.
+A common point of contention among PLD practitioners is whether “to sand, or not to sand” targets prior to growth. Target ablation progressively degrades the surface, modifying ablation dynamics, altering plume energetics, and ultimately impacting film microstructure and stoichiometry. During extended deposition, the initially polished target surface undergoes morphological degradation (e.g., increased roughness, crater formation) and chemical heterogeneity due to plume-induced selective redeposition, selective ablation processes, and laser-induced surface chemical reactions, resulting in localized off-stoichiometric regions.27 Sanding the target surface between deposition cycles resets the surface morphology by removing damaged layers, thereby reestablishing a uniform and stoichiometrically consistent ablation front. Nevertheless, this approach may introduce greater variations in surface conditions during deposition that potentially affects reproducibility. To mitigate initial variations resulting from mechanical resurfacing, pre-ablation-applying laser pulses to the target prior to film growth-is commonly used to stabilize the ablation front by eliminating transient surface contamination and establishing steady-state plume dynamics. Despite their widespread use, pre-ablation protocols are predominantly guided by empirical heuristics, lacking a rigorous, quantitative framework for assessing their influence on plume dynamics or deposition reproducibility. Consequently, precise characterization and control of target surface evolution-particularly the spatiotemporal inhomogeneities introduced during laser-target interaction-remain essential to achieving deterministic, high-fidelity thin-film growth.
+Plume stability is intrinsically linked to the spatial homogeneity of the target surface, which governs the stoichiometry, temporal coherence, and chemical-spatial distributions of the ablation plume. Surface degradation or compositional inhomogeneity can lead to transient deviations in the local ablation rate, resulting in non-stoichiometric transfer, erratic plume dynamics, and fluctuations in deposition flux. These perturbations propagate directly into the film microstructure, altering the crystallinity, interfacial coherence, and electronic transport properties. Remarkably, periodic modulations in plume behavior attributable to target inhomogeneity are often observable even without advanced diagnostics. They are regularly visible to the naked eye, allowing direct observation of significant changes in plume size, which serve as an indicator of the time-averaged emissivity of the plume. Nevertheless, the systematic, high-resolution spatiotemporal mapping of these phenomena remains largely unexplored-primarily due to the absence of diagnostic infrastructure capable of capturing these dynamics in operando.
+We investigate two perturbative conditions: (1) varying pre-ablation pulse counts to probe ablation history effects on plume dynamics and film crystallinity, and (2) introducing controlled surface contamination to simulate stoichiometric and defect inhomogeneity. Utilizing a full-frame PDI platform with high-speed imaging, we capture temporally resolved, single-pulse plume dynamics, eliminating the need for ensemble averaging. This enables quantitative extraction of plume velocity, emission area, and intensity, which we correlate with structural and electronic properties of SrRuO3 films grown on SrTiO3.78 Integration of plume metrics with machine learning provides a framework for real-time feedback and process control, advancing toward autonomous, closed-loop thin-film synthesis. This approach holds the potential to enable access to architected oxide materials previously inaccessible via conventional PLD workflows.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id2">
+<div role="list" class="citation-list">
+<div class="citation" id="id76" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>A. P. Mackenzie, J. W. Reiner, A. W. Tyler, L. M. Galvin, S. R. Julian, M. R. Beasley, T. H. Geballe, and A. Kapitulnik. Observation of quantum oscillations in the electrical resistivity of SrRuO\(_3\). <em>Phys. Rev. B Condens. Matter</em>, 58(20):R13318–R13321, November 1998.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Joshua C. Agar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
