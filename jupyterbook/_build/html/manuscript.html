@@ -35,8 +35,8 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/theme.css?v=d998f4ab" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=24f22f23" />
+    <link rel="stylesheet" type="text/css" href="_static/theme.css?v=d998f4ab" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -334,13 +334,22 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results-and-discussion">Results and Discussion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-design-for-ff-pdi">Experiment Design for FF-PDI</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plume-dynamics-introduction">Plume Dynamics Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results-and-discussion">Results and Discussion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-design-for-ff-pdi">Experiment Design for FF-PDI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plume-dynamics-introduction">Plume Dynamics Introduction</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plume-dynamics-correlation-with-time-resolved-target-surface">Plume Dynamics Correlation with Time-Resolved Target Surface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plume-dynamics-correlation-with-spatial-variation-in-the-target-surface">Plume Dynamics Correlation with Spatial Variation in the Target Surface</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods">Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-preparation">Sample Preparation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#x-ray-diffraction">X-ray Diffraction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scanning-probe-microscopy">Scanning Probe Microscopy</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supporting-information">Supporting Information</a></li>
 </ul>
             </nav>
         </div>
@@ -423,7 +432,7 @@ Integration of plume metrics with machine learning provides a framework for real
 <section id="results-and-discussion">
 <h2>Results and Discussion<a class="headerlink" href="#results-and-discussion" title="Link to this heading">#</a></h2>
 <p>Five <span class="math notranslate nohighlight">\(\text{SrRuO}_3/\text{SrTiO}_3\)</span> (001) thin films (denoted as growth G1–G5) were sequentially deposited using the same <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span> target, without sanding or restoring the target surface between growths, while keeping all other deposition conditions constant. This set of samples (<a class="reference internal" href="#figure1"><span class="std std-numref">Figure 1</span></a>a–e) was used to evaluate the effects of progressive target surface degradation on film growth. In addition, a separate comparison was made between a film deposited using sample G5 and another deposited after the same target was used to grow other chemistries (denoted as contaminated growth C-G6; <a class="reference internal" href="#figure1"><span class="std std-numref">Figure 1</span></a>e, f). This comparison explores how spatial variations in the target’s surface chemistry and morphology influence the resulting film properties (G5 vs. C-G6). All films were grown under identical, optimized deposition conditions, with the only variable being the condition of the target surface. The substrate temperature was maintained at <span class="math notranslate nohighlight">\(700^\circ\text{C}\)</span>, and deposition was carried out at a background pressure of 100 <span class="math notranslate nohighlight">\(\text{mTorr}\)</span> in an oxygen atmosphere, using a laser fluence of <span class="math notranslate nohighlight">\(1.6\,\text{mJ/cm}^2\)</span>. These parameters align with reported values in prior studies.The laser spot had a rectangular shape, measuring 0.93 mm in width and 2.46 <span class="math notranslate nohighlight">\(\text{mm}\)</span> in height. A computer-controlled motion scanner was used to evenly ablate the target surface.
-Additional experimental details are provided in <a class="reference internal" href="#section-65"><span class="xref myst">Section 6.5</span></a>.  <!-- Update link target based on section title --></p>
+Additional experimental details are provided in <em>Methods</em>.</p>
 <figure class="align-default" id="figure1">
 <img alt="_images/Figure1-Samples_experiment_setup.png" src="_images/Figure1-Samples_experiment_setup.png" />
 <figcaption>
@@ -476,28 +485,27 @@ By fitting the diffraction peaks, we extract the in-plane (Q<span class="math no
 <figure class="align-default" id="figure2">
 <img alt="_images/Figure2-XRD_RSM.png" src="_images/Figure2-XRD_RSM.png" />
 <figcaption>
-<p><span class="caption-number">Figure 2 </span><span class="caption-text">X-ray diffraction (XRD) and reciprocal space mapping (RSM) results. (a) <span class="math notranslate nohighlight">\(2\theta\)</span> scans for samples G1–G5, with peaks of <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span> thin films, SrTiO<span class="math notranslate nohighlight">\(_3\)</span> substrates, and bulk <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span> labeled. (b) X-ray <span class="math notranslate nohighlight">\(\omega\)</span> rocking curve scans for the samples, with full width at half maximum (FWHM) plotted in the inset at the top right corner. (c–h) RSMs along the (103) diffraction condition for samples t1, t2, t3, t4, t5/s1, and s2, respectively. (i–n) RSMs along the (002) diffraction condition for samples t1, t2, t3, t4, t5/s1, and s2, respectively. <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span> peak centers are labeled with red “+” markers in all RSMs. The reference position for well-strained <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span> is indicated by blue dashed lines.</span><a class="headerlink" href="#figure2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figure 2 </span><span class="caption-text">X-ray diffraction (XRD) and reciprocal space mapping (RSM) results. (a) <span class="math notranslate nohighlight">\(2\theta\)</span> scans for samples G1–G5, with peaks of <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span> thin films, SrTiO<span class="math notranslate nohighlight">\(_3\)</span> substrates, and bulk <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span> labeled. (b) X-ray <span class="math notranslate nohighlight">\(\omega\)</span> rocking curve scans for the samples, with full width at half maximum (FWHM) plotted in the inset at the top right corner. (c–h) RSMs along the (103) diffraction condition for samples G1, G2, G3, G4, G5, C-G6, respectively. (i–n) RSMs along the (002) diffraction condition for samples G1, G2, G3, G4, G5, C-G6, respectively. <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span> peak centers are labeled with red “+” markers in all RSMs. The reference position for well-strained <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span> is indicated by blue dashed lines.</span><a class="headerlink" href="#figure2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Additionally, the surface morphology of the films was characterized using tapping mode atomic force microscopy (AFM) (<a class="reference internal" href="#figure3"><span class="std std-numref">Figure 3</span></a>). A comparison of samples G1 through G5 reveals a progressive decrease in surface roughness with each subsequent deposition. This trend is accompanied by a noticeable reduction in the density of surface pits or holes. Such holes are typically attributed to insufficient deposition rates. Paradoxically, however, one would expect a slight reduction in growth rate with successive depositions until a steady state is reached. Counterintuitively—and despite current understanding of plume dynamics evolution—the observed morphology is often proposed to be mitigated by increasing the growth rate, which can be achieved through higher laser repetition rates, increased fluence, or lower ambient pressure.</p>
-<p>Further analysis of interpolated line traces from AFM scans (<code class="xref std std-numref docutils literal notranslate"><span class="pre">figure3g</span></code>) revealed that these holes likely penetrate to the substrate surface. Such features likely result from non-ideal deposition dynamics during the initial growth stages of <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span>. One plausible hypothesis is that initial instability in the deposition conditions leads to unstable plume dynamics, disrupting proper adatom bonding to the SrTiO<span class="math notranslate nohighlight">\(_3\)</span> substrate—an essential requirement for layer-by-layer growth during the early stages. As a result, subsequent adatoms struggle to deposit uniformly due to the persistent holes. Overall, our observations point to a marked improvement in thin film quality over time, consistent with conclusions drawn from XRD analyses. Additionally, the comparison between samples G1 and G2 suggests that target inhomogeneity plays a significant role in increasing surface roughness.</p>
-<p>Distinct differences in growth mode were also observed among the samples. In <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure3a</span></code>, the surface exhibits an island-like step-flow morphology, where step orientation appears to radiate from the center of circular clusters. This results in hybrid growth behavior combining features of both 2D and 3D growth. In contrast, <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure3c</span></code> and <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure3f</span></code> show step bunching, where several atomic steps coalesce to form terraces of greater height at irregular intervals. These features are more clearly resolved in the larger-area (10 <span class="math notranslate nohighlight">\(\mu\text{m}\)</span> × 10 <span class="math notranslate nohighlight">\(\mu\text{m}\)</span>) image of <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure3a</span></code> and the higher-resolution (5 <span class="math notranslate nohighlight">\(\mu\text{m}\)</span> × 5 <span class="math notranslate nohighlight">\(\mu\text{m}\)</span>) scans in <code class="xref std std-numref docutils literal notranslate"><span class="pre">figureS1</span></code> . Deviations from uniform step-flow growth—such as island nucleation or step bunching—are often associated with less desirable film quality.</p>
+<p>Further analysis of interpolated line traces from AFM scans (<a class="reference internal" href="#figure3"><span class="std std-numref">Figure 3</span></a>)g revealed that these holes likely penetrate to the substrate surface. Such features likely result from non-ideal deposition dynamics during the initial growth stages of <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span>. One plausible hypothesis is that initial instability in the deposition conditions leads to unstable plume dynamics, disrupting proper adatom bonding to the SrTiO<span class="math notranslate nohighlight">\(_3\)</span> substrate—an essential requirement for layer-by-layer growth during the early stages. As a result, subsequent adatoms struggle to deposit uniformly due to the persistent holes. Overall, our observations point to a marked improvement in thin film quality over time, consistent with conclusions drawn from XRD analyses. Additionally, the comparison between samples G1 and G2 suggests that target inhomogeneity plays a significant role in increasing surface roughness.
+Further analysis of interpolated line traces from AFM scans (<a class="reference internal" href="#figure3"><span class="std std-numref">Figure 3</span></a>g) revealed that these holes likely penetrate to the substrate surface. Such features likely result from non-ideal deposition dynamics during the initial growth stages of <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span>. One plausible hypothesis is that initial instability in the deposition conditions leads to unstable plume dynamics, disrupting proper adatom bonding to the SrTiO<span class="math notranslate nohighlight">\(_3\)</span> substrate—an essential requirement for layer-by-layer growth during the early stages. As a result, subsequent adatoms struggle to deposit uniformly due to the persistent holes. Overall, our observations point to a marked improvement in thin film quality over time, consistent with conclusions drawn from XRD analyses. Additionally, the comparison between samples G1 and G2 suggests that target inhomogeneity plays a significant role in increasing surface roughness.</p>
+<p>Distinct differences in growth mode were also observed among the samples. In <a class="reference internal" href="#figure3"><span class="std std-numref">Figure 3</span></a>a, the surface exhibits an island-like step-flow morphology, where step orientation appears to radiate from the center of circular clusters. This results in hybrid growth behavior combining features of both 2D and 3D growth. In contrast, <a class="reference internal" href="#figure3"><span class="std std-numref">Figure 3</span></a>c and <a class="reference internal" href="#figure3"><span class="std std-numref">Figure 3</span></a>f show step bunching, where several atomic steps coalesce to form terraces of greater height at irregular intervals. These features are more clearly resolved in the larger-area (10 <span class="math notranslate nohighlight">\(\mu\text{m}\)</span> × 10 <span class="math notranslate nohighlight">\(\mu\text{m}\)</span>) image of <a class="reference internal" href="#figure3"><span class="std std-numref">Figure 3</span></a>a and the higher-resolution (5 <span class="math notranslate nohighlight">\(\mu\text{m}\)</span> × 5 <span class="math notranslate nohighlight">\(\mu\text{m}\)</span>) scans in <a class="reference internal" href="#figures1"><span class="std std-numref">Figure 7</span></a> . Deviations from uniform step-flow growth—such as island nucleation or step bunching—are often associated with less desirable film quality.</p>
 <figure class="align-default" id="figure3">
 <img alt="_images/Figure3-AFM_10um.png" src="_images/Figure3-AFM_10um.png" />
 <figcaption>
-<p><span class="caption-number">Figure 3 </span><span class="caption-text">(a–f) AFM scans of 10 <span class="math notranslate nohighlight">\(\mu\text{m}\)</span> × 10 <span class="math notranslate nohighlight">\(\mu\text{m}\)</span> areas of samples t1–t5 (s1) and s2.<br />
-(g) Surface roughness calculated based on the 10 <span class="math notranslate nohighlight">\(\mu\text{m}\)</span> × 10 <span class="math notranslate nohighlight">\(\mu\text{m}\)</span> areas of the samples.</span><a class="headerlink" href="#figure3" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figure 3 </span><span class="caption-text">(a–f) AFM scans of 10 <span class="math notranslate nohighlight">\(\mu\text{m}\)</span> × 10 <span class="math notranslate nohighlight">\(\mu\text{m}\)</span> areas of samples G1, G2, G3, G4, G5, and C-G6. (g) Surface roughness calculated based on the 10 <span class="math notranslate nohighlight">\(\mu\text{m}\)</span> × 10 <span class="math notranslate nohighlight">\(\mu\text{m}\)</span> areas of the samples.</span><a class="headerlink" href="#figure3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-</section>
 <section id="experiment-design-for-ff-pdi">
-<h2>Experiment Design for FF-PDI<a class="headerlink" href="#experiment-design-for-ff-pdi" title="Link to this heading">#</a></h2>
+<h3>Experiment Design for FF-PDI<a class="headerlink" href="#experiment-design-for-ff-pdi" title="Link to this heading">#</a></h3>
 <p>For all growths, we performed full-frame PDI transverse to the plume axis, as shown in <a class="reference internal" href="#figure1"><span class="std std-numref">Figure 1</span></a>g. A Shimadzu Hyper Vision HPV-X2 high-speed video camera was used for plume imaging. This camera is one of the world’s fastest CCD cameras, featuring an FTCMOS2 image sensor and capable of capturing up to 2 million frames per second—or 1 frame per 500 ns (see <em>Methods</em>). The camera is triggered by the laser pulse signal but operates with a continuous rolling acquisition mode, which compensates for triggering delays with 200 ns exposures.</p>
-<p>To improve consistency and reproducibility in the PLD process, we designed a digital logging system to store the growth parameters and instrument conditions in parallel with PDI data. All records are synchronized with the DataFed data management framework, enabling systematic tracking and retrieval of experimental datasets. A schematic of the PLD logging system is provided in <code class="xref std std-numref docutils literal notranslate"><span class="pre">figureS2</span></code>.</p>
+<p>To improve consistency and reproducibility in the PLD process, we designed a digital logging system to store the growth parameters and instrument conditions in parallel with PDI data. All records are synchronized with the DataFed data management framework, enabling systematic tracking and retrieval of experimental datasets. A schematic of the PLD logging system is provided in <a class="reference internal" href="#figures2"><span class="std std-numref">Figure 8</span></a>.</p>
 <p>The interior view of the PLD chamber (<a class="reference internal" href="#figure1"><span class="std std-numref">Figure 1</span></a>g) shows that the target and substrate are aligned in a parallel, face-to-face geometry, enabling direct deposition of ablated material. The sample plume image shown in <a class="reference internal" href="#figure1"><span class="std std-numref">Figure 1</span></a>g was acquired using a conventional CCD camera (not the high-speed system) to provide a broader overview of the interior configuration and general plume evolution under RGB imaging over extended timescales.</p>
 </section>
 <section id="plume-dynamics-introduction">
-<h2>Plume Dynamics Introduction<a class="headerlink" href="#plume-dynamics-introduction" title="Link to this heading">#</a></h2>
+<h3>Plume Dynamics Introduction<a class="headerlink" href="#plume-dynamics-introduction" title="Link to this heading">#</a></h3>
 <p>The dynamics of laser-induced plumes play a critical role in understanding the deposition process, particularly in relation to how target surface morphology influences growth. In this study, plume behavior is analyzed using a custom-developed Python package, <em>Plume-Learn</em>, which enables precise, automated analysis of plume evolution. The acquired plume data consists of full-frame images with a resolution of 1366 × 768 pixels, and each plume event is captured across 128 frames. Under typical deposition conditions, more than 350 full-frame plumes can be recorded per deposition, depending on the data transfer speed and system buffering capacity.</p>
 <p>Based on our observations and previous literature, the plume dynamics can be categorized into four distinct stages:</p>
 <ul class="simple">
@@ -514,15 +522,12 @@ The plume reaches the substrate surface, where various interaction mechanisms ma
 <p>To better describe and quantify intra-plume behavior, we extract several key metrics from each plume sequence, including cross-sectional area, incident velocity, and travel distance. The maximum plume area was determined by analyzing the spatial expansion of the plume over time from high-resolution image sequences (1366 × 768 pixels per frame). This parameter reflects the extent of material ejection and the energy coupling efficiency between the laser and the target.</p>
 <p>Incident velocity was calculated as the average speed of the plume near the end of its visible trajectory, just before dissipation due to energy loss. Specifically, we averaged the velocity when the plume traveled between 2.8 and 2.9 cm from the target surface. Finally, we compute the plume travel distance by converting the plume displacement observed in the acquired image frames to the corresponding physical distance in the chamber. By computing these metrics for each individual plume, we generated statistical distributions indexed by plume number. These summaries serve as valuable indicators of plume stability, helping to identify anomalies and trends in dynamic behavior throughout the deposition process.</p>
 <p>These parameters are visualized using time-resolved line plots in <a class="reference internal" href="#figure4"><span class="std std-numref">Figure 4</span></a>a–<a class="reference internal" href="#figure4"><span class="std std-numref">Figure 4</span></a>c, showing the time-dependent average plume area, plume distance, and velocity as a function of travel distance, respectively. Each plot represents statistical averages computed from approximately 350 full-frame plume sequences recorded during a single deposition. Shaded regions in the plots indicate the range of variation across plume events, capturing pulse-to-pulse fluctuations.</p>
-<p>The temporal evolution of the plume follows the four-stage process described earlier. Since laser ablation occurs on the order of tens of picoseconds—much faster than the 500-nanosecond temporal resolution of our PDI system—only the first available frame at <span class="math notranslate nohighlight">\(t = 1\,\mu\text{s}\)</span> captures the laser incidence on the target. This frame corresponds to the initial appearance of the plume, as shown in the embedded plume image in <a class="reference internal" href="#figure4"><span class="std std-numref">Figure 4</span></a> and representative frames in <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure</span> <span class="pre">S3</span></code>, <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure</span> <span class="pre">S4</span></code>, <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure</span> <span class="pre">S5</span></code>, <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure</span> <span class="pre">S6</span></code>, <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure</span> <span class="pre">S7</span></code>, and <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure</span> <span class="pre">S8</span></code>.</p>
+<p>The temporal evolution of the plume follows the four-stage process described earlier. Since laser ablation occurs on the order of tens of picoseconds—much faster than the 500-nanosecond temporal resolution of our PDI system—only the first available frame at <span class="math notranslate nohighlight">\(t = 1\,\mu\text{s}\)</span> captures the laser incidence on the target. This frame corresponds to the initial appearance of the plume, as shown in the embedded plume image in <a class="reference internal" href="#figure4"><span class="std std-numref">Figure 4</span></a> and representative frames in <a class="reference internal" href="#figures3"><span class="std std-numref">Figure 9</span></a>, <a class="reference internal" href="#figures4"><span class="std std-numref">Figure 10</span></a>, <a class="reference internal" href="#figures5"><span class="std std-numref">Figure 11</span></a>, <a class="reference internal" href="#figures6"><span class="std std-numref">Figure 12</span></a>, <a class="reference internal" href="#figures7"><span class="std std-numref">Figure 13</span></a>, and <a class="reference internal" href="#figures8"><span class="std std-numref">Figure 14</span></a>.</p>
 <p>As the plasma plume forward propagates, the target ejects high-energy ionized atoms and atomic clusters. The plume reaches its maximum volume and velocity around <span class="math notranslate nohighlight">\(t = 3\,\mu\text{s}\)</span>, after which it begins to detach from the target surface. It then propagates toward the substrate, completing the material transfer process. Under certain conditions—such as reduced ambient pressure or elevated laser fluence—plume rebound may occur during substrate interaction. The incident velocity is estimated by averaging the speed of the plume prior to the point at which it becomes untraceable in the recorded sequence.</p>
 <figure class="align-default" id="figure4">
 <img alt="_images/Figure4-Plume_area_distance_velocity_average.png" src="_images/Figure4-Plume_area_distance_velocity_average.png" />
 <figcaption>
-<p><span class="caption-number">Figure 4 </span><span class="caption-text">Plume sample frames and the plume metrics for plume description and evaluation.<br />
-(a) Plume area over time for samples G1–t5 (s1) and C-G6. A series of plume images are included as examples to illustrate how plume area is determined.<br />
-(b) Plume transport distance over time. Example plume images are also shown with markers indicating plume position.<br />
-(c) Plume transport velocity as a function of distance. The red dashed lines mark the velocity range used for estimating the incident velocity.</span><a class="headerlink" href="#figure4" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figure 4 </span><span class="caption-text">Plume sample frames and the plume metrics for plume description and evaluation. (a) Plume area over time for samples G1, G2, G3, G4, G5, and C-G6. A series of plume images are included as examples to illustrate how plume area is determined. (b) Plume transport distance over time. Example plume images are also shown with markers indicating plume position. (c) Plume transport velocity as a function of distance. The red dashed lines mark the velocity range used for estimating the incident velocity.(c) Plume transport velocity as a function of distance. The red dashed lines mark the velocity range used for estimating the incident velocity.</span><a class="headerlink" href="#figure4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>As observed, the differences between growths are relatively minor when averaged over all plumes during the entire deposition process. This suggests consistent growth dynamics and supports the robustness and reliability of our in-situ PDI measurements, as well as the analysis workflow implemented in the <em>Plume-Learn</em> Python package. However, it remains unclear whether averaging may decimate meaningful variations. The reduction of data through temporal averaging could potentially mask transient or anomalous individual plume dynamics that may influence film properties.</p>
@@ -531,10 +536,60 @@ The plume reaches the substrate surface, where various interaction mechanisms ma
 <li><p>The relationship between plume dynamics and the evolving target surface condition over time</p></li>
 <li><p>The correlation between plume behavior and spatial variation across the target surface</p></li>
 </ol>
+</section>
 <section id="plume-dynamics-correlation-with-time-resolved-target-surface">
 <h3>Plume Dynamics Correlation with Time-Resolved Target Surface<a class="headerlink" href="#plume-dynamics-correlation-with-time-resolved-target-surface" title="Link to this heading">#</a></h3>
 <p>To investigate how laser ablation–induced changes in target surface morphology influence the quality of <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span> thin films, we analyzed plume dynamics across sequentially deposited samples G1–G5. While the average plume area, travel distance, and incident velocity appear broadly similar across these samples, this superficial uniformity underscores the importance of statistical analysis to detect subtle but potentially significant variations in plume behavior during deposition.</p>
-<p>To that end, we focused on two critical metrics: maximum plume area and incident velocity. These metrics are statistically represented using violin plots in <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure5</span></code>.</p>
+<p>To that end, we focused on two critical metrics: maximum plume area and incident velocity. These metrics are statistically represented using violin plots in <a class="reference internal" href="#figure5"><span class="std std-numref">Figure 5</span></a>.</p>
+<figure class="align-default" id="figure5">
+<img alt="_images/Figure5-Temporal_variation-violinplot_heatmaps.png" src="_images/Figure5-Temporal_variation-violinplot_heatmaps.png" />
+<figcaption>
+<p><span class="caption-number">Figure 5 </span><span class="caption-text">Violin plots and heatmaps of plume key metrics across samples G1–G5. (a) Statistical summary of maximum plume area throughout the deposition process. (b) Statistical summary of plume incident velocity throughout the deposition process. (c–g) Heatmaps of maximum plume area for samples G1–G5. (h–l) Heatmaps of plume incident velocity for samples G1–G5.</span><a class="headerlink" href="#figure5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Our results reveal a progressive decrease in the pulse-to-pulse standard deviation of both maximum area and incident velocity from G1 to G5. This trend indicates increasingly stable plume behavior with continued use of the same target. The observed stabilization is likely a result of the evolving target surface morphology under repeated laser ablation, which leads to more uniform plume generation. These improvements in plume consistency correlate strongly with enhancements in thin film quality, including higher crystallinity and reduced defect density. To further support this observation, we provide heatmaps of plume maximum area and incident velocity in <a class="reference internal" href="#figure5"><span class="std std-numref">Figure 5</span></a>, which visually demonstrate increased plume stability across the deposition sequence. In particular, sample G1 exhibits clear periodic fluctuations in plume behavior, suggesting plume instability caused by non-uniform target surface morphology during its growth.</p>
+<p>Notably, unstable plume dynamics—characterized by significant variations in maximum area and incident velocity—can disrupt growth processes, result in defects, and alter chemistry. These instabilities may lead to undesirable stoichiometric deviations in the plume composition and inconsistencies in substrate surface dynamics during crystallization, which may alter the structure and growth modes of the heterostructures. This relationship highlights the importance of stability in experimental conditions when determining the resulting thin-film properties.</p>
+<p>While our findings demonstrate a clear correlation between target surface evolution and plume behavior, our analysis of pre-ablation processes remains qualitative. Factors such as target material composition, microstructure, and laser fluence may all influence the evolution of the target surface in ways that vary across different systems. As such, it is difficult to offer specific procedural guidelines for pre-ablation treatment at this stage. Nonetheless, the broader relationship between target conditioning and plume stability is evident. Overall, this analysis highlights the critical role of in-situ characterization in achieving reliable and reproducible thin film synthesis. By providing real-time feedback on plume dynamics, techniques such as PDI allow for early detection and mitigation of growth instabilities, facilitating the deposition of thin films with improved structural and functional properties.</p>
+</section>
+<section id="plume-dynamics-correlation-with-spatial-variation-in-the-target-surface">
+<h3>Plume Dynamics Correlation with Spatial Variation in the Target Surface<a class="headerlink" href="#plume-dynamics-correlation-with-spatial-variation-in-the-target-surface" title="Link to this heading">#</a></h3>
+<p>To further investigate the origins of plume dynamics variability, we examined the correlation between plume behavior and target surface morphology. We hypothesize that non-uniform ablation due to target surface contamination or morphology can introduce fluctuations in plume energy, composition, and deposition efficiency. These fluctuations may, in turn, influence thin film quality. To test this hypothesis, we compared two samples: sample C-G6, which was deposited using a target with localized surface contamination, and sample G5, which was grown under identical conditions but with a more uniform target surface.</p>
+<p>As described in the previous section, sample C-G6 exhibited degraded structural quality, characterized by increased surface roughness, a broader <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span> diffraction peak, and less pronounced Laue fringes. In contrast, sample G5 showed clear signs of superior film quality. To evaluate whether plume behavior reflects these differences, we applied statistical analysis to plume dynamics and visualized the results using violin plots and heatmaps (<a class="reference internal" href="#figure6"><span class="std std-numref">Figure 6</span></a>). The violin plots of maximum plume area and incident velocity show broader and more variable distributions for sample C-G6 compared to G5. These results suggest that plume dynamics were less stable throughout the deposition of C-G6, consistent with its poorer structural quality.</p>
+<p>A more detailed time-resolved analysis, presented in the form of heatmaps, offers further insight. For sample C-G6, the heatmaps reveal periodic increases in plume area and incident velocity, indicating intermittent plume instability linked to spatial inhomogeneities on the target. In contrast, this variability is significantly reduced in sample G5, which exhibits a more consistent and uniform plume profile over time. These observations suggest that spatial irregularities on the target surface can disrupt plume formation in a manner similar to what is observed during the early stages of target usage, before the surface becomes conditioned through repeated ablation. In both cases, such instabilities result in plume fluctuations that negatively impact deposition consistency and film quality.</p>
+<figure class="align-default" id="figure6">
+<img alt="_images/Figure6-Spatial_inhomogeneity_combined.png" src="_images/Figure6-Spatial_inhomogeneity_combined.png" />
+<figcaption>
+<p><span class="caption-number">Figure 6 </span><span class="caption-text">Statistical analysis of plume dynamics.  (a, b) Violin plots showing maximum plume area and incident velocity for samples G5 and C-G6. (c, d) Heatmaps of maximum plume area across plume indices for samples G5 and C-G6. (e, f) Heatmaps of incident velocity across plume indices for samples G5 and C-G6. Each heatmap represents the corresponding plume metric as color intensity using the “viridis” colormap. The x-axis indicates plume index, and the y-axis represents plume evolution time.</span><a class="headerlink" href="#figure6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>This study demonstrates a systematic exploration of the interplay between target surface morphology, laser-induced plume dynamics, and the resulting structural quality of <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span> thin films grown by pulsed laser deposition (PLD). By implementing a high-speed, in-situ Plume Dynamic Imaging (PDI) system and a supporting analysis framework (<em>Plume-Learn</em>), we captured the evolution of plume behavior at the pulse-by-pulse level and correlated it with film quality across a range of target conditions.</p>
+<p>Our results reveal that the condition of the target surface—both over time and across spatial regions—plays a critical role in determining plume stability. As the target is gradually conditioned through repeated laser ablation, plume dynamics become increasingly stable, which coincides with improvements in film crystallinity, surface morphology, and interface coherence. In contrast, spatial inhomogeneities or surface contamination on the target lead to irregular plume characteristics, including fluctuations in cross-sectional area and velocity, which correlate with degraded film quality. Statistical visualization enabled a more nuanced assessment of plume variability, revealing patterns that would be obscured by simple averaging. These analyses provided insight into the underlying mechanisms that govern reproducibility in thin-film deposition, offering both qualitative and quantitative evidence for the importance of stable plume behavior.</p>
+<p>This work highlights the critical value of in-situ diagnostics not only for real-time process monitoring but also as a foundational element for future closed-loop control strategies. By providing immediate feedback on the physical processes driving film growth, tools like PDI allow researchers to identify instabilities before they manifest as structural defects.</p>
+<p>In the broader context of thin-film research, the insights gained here contribute to a deeper understanding of how target conditions and deposition dynamics influence material properties, and they help establish best practices for producing high-quality complex oxide thin films. Looking ahead, the methodology presented in this study lays the groundwork for integration with data-driven optimization and machine learning–assisted synthesis. As such approaches mature, they hold the potential to further automate and refine the thin-film growth process, enabling more precise control over structure, stoichiometry, and functional properties in next-generation oxide heterostructures.</p>
+</section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>This study presents a detailed investigation into how target surface morphology directly impacts plume dynamics and thin-film quality in PLD of SrRuO3, leveraging a high-speed, full-frame PDI system. Through pulse-by-pulse analysis of plume behavior, we establish that both temporal conditioning and spatial uniformity of the target surface are crucial for achieving stable plume characteristics. These, in turn, correlate strongly with improvements in film crystallinity, surface smoothness, and structural coherence.</p>
+<p>The findings underscore the importance of real-time diagnostic tools in modern thin-film synthesis workflows. Plume instability, whether stemming from early ablation irregularities or localized surface contamination, was shown to degrade film quality via fluctuations in plume energy and stoichiometry. By applying statistical analyses and machine learning-enabled metrics, we identified subtle plume variations that conventional averaging might obscure, thereby providing a more nuanced understanding of reproducibility challenges in PLD.</p>
+<p>Ultimately, this work positions PDI as a critical enabler for autonomous, closed-loop control in thin-film growth, offering actionable insights that can be generalized to other complex oxide systems. The methodologies developed here, combining advanced imaging, statistical modeling, and data-driven analysis, pave the way for predictive, adaptive, and highly reproducible oxide film synthesis, thus supporting the broader vision of intelligent materials fabrication platforms.</p>
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Link to this heading">#</a></h2>
+<section id="sample-preparation">
+<h3>Sample Preparation<a class="headerlink" href="#sample-preparation" title="Link to this heading">#</a></h3>
+<p>Heteroepitaxial <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span> thin films were grown from single-crystal <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span> (001) targets on SrTiO<span class="math notranslate nohighlight">\(_3\)</span> (001) substrates by pulsed laser deposition (PLD) at 700 °C in a background pressure of 100 mTorr with an O<span class="math notranslate nohighlight">\(_2\)</span> atmosphere. The laser fluence was 1.6 J/cm<span class="math notranslate nohighlight">\(^2\)</span>, using a spot size of 2.28 mm<span class="math notranslate nohighlight">\(^2\)</span> (0.93 mm width and 2.46 mm height), with a repetition rate of 5 Hz.</p>
+<p>Each <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span> thin film was deposited with 12,357 laser pulses, resulting in a thickness of approximately 60 nm under optimized conditions. The target was scanned horizontally at 5 mm/s and vertically at 1.5 mm/s (at each line end) to ensure uniform ablation across the surface.</p>
+<p>Following deposition, the samples were cooled to room temperature in an oxygen atmosphere at a pressure of up to <span class="math notranslate nohighlight">\(3 \times 10^5\)</span> mTorr.</p>
+<p>For samples G1 through t5, the same <span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span> target was used without polishing between depositions in order to study the effects of target surface evolution. In contrast, sample C-G6 was deposited using a target that had been intentionally contaminated through intermittent use over the course of a month with other oxide materials (e.g., SrTiO<span class="math notranslate nohighlight">\(_3\)</span>), to evaluate the effects of surface inhomogeneity.</p>
+</section>
+<section id="x-ray-diffraction">
+<h3>X-ray Diffraction<a class="headerlink" href="#x-ray-diffraction" title="Link to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(\text{SrRuO}_3\)</span> thin films were characterized by X-ray diffraction using an Empyrean Gen 3 (Malvern Panalytical) instrument with Cu-K<span class="math notranslate nohighlight">\(\alpha\)</span> radiation (<span class="math notranslate nohighlight">\(\lambda = 1.5406\)</span> Å). Measurements included <span class="math notranslate nohighlight">\(\omega\)</span>–2<span class="math notranslate nohighlight">\(\theta\)</span> scans, <span class="math notranslate nohighlight">\(\omega\)</span> rocking curves, and reciprocal space mapping (RSM).</p>
+</section>
+<section id="scanning-probe-microscopy">
+<h3>Scanning Probe Microscopy<a class="headerlink" href="#scanning-probe-microscopy" title="Link to this heading">#</a></h3>
+<p>Thin-film surface morphology was characterized using an Atomic Force Microscope (AFM, Cypher model) from Oxford Instruments.</p>
 </section>
 </section>
 <section id="references">
@@ -863,6 +918,75 @@ The plume reaches the substrate surface, where various interaction mechanisms ma
 </div>
 </div>
 </section>
+<section id="supporting-information">
+<h2>Supporting Information<a class="headerlink" href="#supporting-information" title="Link to this heading">#</a></h2>
+<figure class="align-default" id="figures1">
+<img alt="_images/FigureS1-AFM_5um_lineprofile.png" src="_images/FigureS1-AFM_5um_lineprofile.png" />
+<figcaption>
+<p><span class="caption-number">Figure 7 </span><span class="caption-text">(a-f) AFM scans of 5×5<span class="math notranslate nohighlight">\(\mu\text{m}\)</span> area of sample G1-t5(s1) and C-G6. (g-i) Surface cross section along the indicated line for sample G2, G3 and C-G6.</span><a class="headerlink" href="#figures1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="figures2">
+<img alt="_images/FigureS2-PLD_logging.png" src="_images/FigureS2-PLD_logging.png" />
+<figcaption>
+<p><span class="caption-number">Figure 8 </span><span class="caption-text">Diagram illustration of PLD digital logging system with step procedures.</span><a class="headerlink" href="#figures2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="figures3">
+<img alt="_images/FigureS3-Plume_Sample_Frames-G1.png" src="_images/FigureS3-Plume_Sample_Frames-G1.png" />
+<figcaption>
+<p><span class="caption-number">Figure 9 </span><span class="caption-text">Samples of plume frames for sample G1.</span><a class="headerlink" href="#figures3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="figures4">
+<img alt="_images/FigureS4-Plume_Sample_Frames-G2.png" src="_images/FigureS4-Plume_Sample_Frames-G2.png" />
+<figcaption>
+<p><span class="caption-number">Figure 10 </span><span class="caption-text">Samples of plume frames for sample G2.</span><a class="headerlink" href="#figures4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="figures5">
+<img alt="_images/FigureS5-Plume_Sample_Frames-G3.png" src="_images/FigureS5-Plume_Sample_Frames-G3.png" />
+<figcaption>
+<p><span class="caption-number">Figure 11 </span><span class="caption-text">Samples of plume frames for sample G3.</span><a class="headerlink" href="#figures5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="figures6">
+<img alt="_images/FigureS6-Plume_Sample_Frames-G4.png" src="_images/FigureS6-Plume_Sample_Frames-G4.png" />
+<figcaption>
+<p><span class="caption-number">Figure 12 </span><span class="caption-text">Samples of plume frames for sample G4.</span><a class="headerlink" href="#figures6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="figures7">
+<img alt="_images/FigureS7-Plume_Sample_Frames-G5.png" src="_images/FigureS7-Plume_Sample_Frames-G5.png" />
+<figcaption>
+<p><span class="caption-number">Figure 13 </span><span class="caption-text">Samples of plume frames for sample G5.</span><a class="headerlink" href="#figures7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="figures8">
+<img alt="_images/FigureS8-Plume_Sample_Frames-C_G6.png" src="_images/FigureS8-Plume_Sample_Frames-C_G6.png" />
+<figcaption>
+<p><span class="caption-number">Figure 14 </span><span class="caption-text">Samples of plume frames for sample C-G6.</span><a class="headerlink" href="#figures8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="figures9">
+<img alt="_images/FigureS9-Plume_area_history.png" src="_images/FigureS9-Plume_area_history.png" />
+<figcaption>
+<p><span class="caption-number">Figure 15 </span><span class="caption-text">(a-f) Plume area with time with indexed plume history for sample G1, G2, G3, G4, G5, and C-G6.</span><a class="headerlink" href="#figures9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="figures10">
+<img alt="_images/FigureS10-Plume_distance_history.png" src="_images/FigureS10-Plume_distance_history.png" />
+<figcaption>
+<p><span class="caption-number">Figure 16 </span><span class="caption-text">(a-f) Plume distance with time with indexed plume history for sample G1, G2, G3, G4, G5, and C-G6.</span><a class="headerlink" href="#figures10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="figures11">
+<img alt="_images/FigureS11-Plume_velocity_history.png" src="_images/FigureS11-Plume_velocity_history.png" />
+<figcaption>
+<p><span class="caption-number">Figure 17 </span><span class="caption-text">(a-f) Plume velocity with distance with indexed plume history for sample G1, G2, G3, G4, G5, and C-G6.</span><a class="headerlink" href="#figures11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -922,13 +1046,22 @@ The plume reaches the substrate surface, where various interaction mechanisms ma
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results-and-discussion">Results and Discussion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-design-for-ff-pdi">Experiment Design for FF-PDI</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plume-dynamics-introduction">Plume Dynamics Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results-and-discussion">Results and Discussion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-design-for-ff-pdi">Experiment Design for FF-PDI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plume-dynamics-introduction">Plume Dynamics Introduction</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plume-dynamics-correlation-with-time-resolved-target-surface">Plume Dynamics Correlation with Time-Resolved Target Surface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plume-dynamics-correlation-with-spatial-variation-in-the-target-surface">Plume Dynamics Correlation with Spatial Variation in the Target Surface</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods">Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-preparation">Sample Preparation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#x-ray-diffraction">X-ray Diffraction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scanning-probe-microscopy">Scanning Probe Microscopy</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supporting-information">Supporting Information</a></li>
 </ul>
   </nav></div>
 
