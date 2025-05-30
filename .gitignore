@@ -1,7 +1,10 @@
 draft/
+additional_data/
 local/
 *.tif
 *.tiff
+organized_plume_datasets/
+plume_recordings/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

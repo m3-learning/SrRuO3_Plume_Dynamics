@@ -106,11 +106,90 @@ def plot_temporal_violins(df_plume_metrics, label=True):
     return fig, axes
 
 
+
+def plot_combined_temporal_variation(df_sample, sample_names, df_plume_metrics, label=True):
+    figsize = (8, 6)  # Adjusted figure size for combined plots
+    subfigures_dict = { # [left, bottom, width, height]
+        '1_1': {"position": [0, 3, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5},  
+        '1_2': {"position": [1.8, 3, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5},  
+        '1_3': {"position": [3.6, 3, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5},  
+        '1_4': {"position": [5.4, 3, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5},  
+        '1_5': {"position": [7.2, 3, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5},  
+        
+        '2_1': {"position": [0, 0, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5},  
+        '2_2': {"position": [1.8, 0, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5}, 
+        '2_3': {"position": [3.6, 0, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5},  
+        '2_4': {"position": [5.4, 0, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5},  
+        '2_5': {"position": [7.2, 0, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5},  
+        
+        '3': {"position": [0, 6.2, 8.5, 6], 'skip_margin': True, 'margin_pts': 5},  # Violin plot for area and velocity
+    }
+    
+    fig, axes_dict = layout_subfigures_inches(figsize, subfigures_dict)
+    axes_1 = [axes_dict[f'1_{i}'] for i in range(1, 6)]
+    axes_2 = [axes_dict[f'2_{i}'] for i in range(1, 6)]
+
+    # Plot heatmaps for Area
+    for i, ax, sample in zip(list(range(2,7)), axes_1, sample_names):
+        df_pivot = df_sample[df_sample['Sample Name'] == sample].pivot(index="Plume Index", columns="Time (µs)", values='Area (a.u.)')
+        df_pivot = df_pivot.loc[:, (df_pivot != 0).any(axis=0)]  # Remove columns where all values are 0
+        sns.heatmap(df_pivot, cmap='viridis', cbar=False, ax=ax, vmin=0, vmax=17152)
+        if i == 0:
+            set_labels(ax, xlabel="Time (µs)", ylabel="Plume Index", label_fontsize=10, ticklabel_fontsize=8, yaxis_style='float', show_ticks=False, tick_padding=2)
+        else:
+            set_labels(ax, xlabel="Time (µs)", ylabel="", label_fontsize=10, ticklabel_fontsize=8, yaxis_style='float', show_ticks=False, tick_padding=2)
+        if label:
+            labelfigs(axes=ax, number=i, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
+    set_cbar(fig, axes_1[-1], cbar_label='Area\n(a.u.)', scientific_notation=True, tick_in=True, ticklabel_fontsize=8, labelpad=0, fontsize=8)
+
+    # Plot heatmaps for Velocity
+    for i, ax, sample in zip(list(range(7,12)), axes_2, sample_names):
+        df_pivot = df_sample[df_sample['Sample Name'] == sample].pivot(index="Plume Index", columns="Time (µs)", values='Velocity (m/s)')
+        df_pivot = df_pivot.loc[:, (df_pivot != 0).any(axis=0)]  # Remove columns where all values are 0
+        df_pivot[df_pivot==0] = 200
+        
+        sns.heatmap(df_pivot, cmap='viridis', cbar=False, ax=ax, norm=LogNorm(vmin=200, vmax=29257))
+        
+        if i == 5:
+            set_labels(ax, xlabel="Time (µs)", ylabel="Plume Index", label_fontsize=10, ticklabel_fontsize=8, yaxis_style='float', show_ticks=False, tick_padding=2)
+        else:
+            set_labels(ax, xlabel="Time (µs)", ylabel="", label_fontsize=10, ticklabel_fontsize=8, yaxis_style='float', show_ticks=False, tick_padding=2)
+        
+        if label:
+            labelfigs(axes=ax, number=i, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
+        
+    set_cbar(fig, axes_2[-1], cbar_label='Velocity\n(m/s)', scientific_notation=True, tick_in=True, logscale=True, ticklabel_fontsize=8, labelpad=0, fontsize=8)
+
+    # df_plume_metrics, label=True
+
+    axes_dict['3'].axis('off')  # Create a new subplot for the violin plots
+    fig, axes = layout_fig(2, 1, figsize=(8, 6), subplot_style='subplots', spacing=(0, 0.2), parent_ax=axes_dict['3'], layout='tight')
+
+    sns.violinplot(x='Sample Name', y='Max Area (a.u.)', data=df_plume_metrics, width=0.9, ax=axes[0], palette='deep', hue='Sample Name', legend=False)
+
+    mean_max_area = df_plume_metrics.groupby('Sample Name')['Max Area (a.u.)'].mean()
+    label_violinplot(axes[0], mean_max_area, label_type='average_value', text_pos='center', value_format='scientific', text_size=10, offset_parms={'x_type': 'fixed', 'x_value': 0, 'y_type': 'ratio', 'y_value': -0.05})
+
+    if label:
+        labelfigs(axes=axes[0], number=0, size=15, style='bw', loc='tr', inset_fraction=(0.15, 0.05))
+
+    sns.violinplot(x='Sample Name', y='Incident Velocity (m/s)', data=df_plume_metrics, width=0.9, ax=axes[1], palette='deep', hue='Sample Name', legend=False)
+
+    mean_incident_velocity = df_plume_metrics.groupby('Sample Name')['Incident Velocity (m/s)'].mean()
+    label_violinplot(axes[1], mean_incident_velocity, label_type='average_value', text_pos='center', value_format='scientific', text_size=10, offset_parms={'x_type': 'fixed', 'x_value': 0, 'y_type': 'ratio', 'y_value': -0.05})
+
+    if label:
+        labelfigs(axes=axes[1], number=1, size=15, style='bw', loc='tr', inset_fraction=(0.12, 0.05))
+
+    return fig, axes_dict
+
+
+
 def plot_combined_plume_inhomogeneity(df_plume_metrics, df_sample, sample_names, custom_palette, label=True):
     figsize = (8, 6)  # Adjusted figure size for combined plots
     subfigures_dict = { # [left, bottom, width, height]
-        '1_1': {"position": [0, 2.8, 3.6, 1.8], 'skip_margin': True, 'margin_pts': 5},  # Violin plot for area, 
-        '1_2': {"position": [4.3, 2.8, 3.6, 1.8], 'skip_margin': True, 'margin_pts': 5},  # Violin plot for velocity
+        '1_1': {"position": [0, 2.8, 3.8, 1.8], 'skip_margin': True, 'margin_pts': 5},  # Violin plot for area, 
+        '1_2': {"position": [4.3, 2.8, 3.8, 1.8], 'skip_margin': True, 'margin_pts': 5},  # Violin plot for velocity
         '2_1': {"position": [0.05, 0, 1.65, 2.5], 'skip_margin': True, 'margin_pts': 5},  # Heatmap 1 for area
         '2_2': {"position": [2.0, 0, 1.95, 2.5], 'skip_margin': True, 'margin_pts': 5},  # Heatmap 2 for area
         '2_3': {"position": [4.35, 0, 1.65, 2.5], 'skip_margin': True, 'margin_pts': 5},  # Heatmap 1 for velocity
@@ -142,7 +221,7 @@ def plot_combined_plume_inhomogeneity(df_plume_metrics, df_sample, sample_names,
         labelfigs(axes=ax_velocity_violin, number=1, size=15, style='bw', loc='tr', inset_fraction=(0.12, 0.08))
 
     # Plot heatmaps for Area
-    for i, ax, sample in zip([2,3], [ax_area_heatmap1, ax_area_heatmap2], ['t5/s1', 's2']):
+    for i, ax, sample in zip([2,3], [ax_area_heatmap1, ax_area_heatmap2], sample_names):
         df_pivot = df_sample[df_sample['Sample Name'] == sample].pivot(index="Plume Index", columns="Time (µs)", values='Area (a.u.)')
         df_pivot = df_pivot.loc[:, (df_pivot != 0).any(axis=0)]  # Remove columns where all values are 0
         sns.heatmap(df_pivot, cmap='viridis', cbar=False, ax=ax, vmin=0, vmax=17152)
@@ -155,7 +234,7 @@ def plot_combined_plume_inhomogeneity(df_plume_metrics, df_sample, sample_names,
     set_cbar(fig, ax_area_heatmap2, cbar_label='Area\n(a.u.)', scientific_notation=True, tick_in=True, ticklabel_fontsize=8, labelpad=0, fontsize=8)
 
     # Plot heatmaps for Velocity
-    for i, ax, sample in zip([4,5], [ax_velocity_heatmap1, ax_velocity_heatmap2], ['t5/s1', 's2']):
+    for i, ax, sample in zip([4,5], [ax_velocity_heatmap1, ax_velocity_heatmap2], sample_names):
         df_pivot = df_sample[df_sample['Sample Name'] == sample].pivot(index="Plume Index", columns="Time (µs)", values='Velocity (m/s)')
         df_pivot = df_pivot.loc[:, (df_pivot != 0).any(axis=0)]  # Remove columns where all values are 0
         df_pivot[df_pivot==0] = 200
@@ -506,7 +585,7 @@ def plot_afm_figure(afm_visualizer, files_ibw, files_txt, files_roughness_txt, s
 
 def plot_xrd_multiple(xrd_files, rocking_curve_files, rsm002_files, rsm103_files, label=True):
     sample_IDs = ['YG065', 'YG066', 'YG067', 'YG068', 'YG069', 'YG063']
-    sample_names = ['t1', 't2', 't3', 't4', 't5/s1', 's2']
+    sample_names = ['G1', 'G2', 'G3', 'G4', 'G5', 'C-G6']
 
     figsize = (7.5, 9)
     subfigures_dict = {
@@ -573,7 +652,7 @@ def plot_xrd_multiple(xrd_files, rocking_curve_files, rsm002_files, rsm103_files
 
 # def plot_xrd_multiple(xrd_files, rocking_curve_files, rsm002_files, rsm103_files, label=True):
 #     sample_IDs = ['YG065', 'YG066', 'YG067', 'YG068', 'YG069', 'YG063']
-#     sample_names = ['t1', 't2', 't3', 't4', 't5/s1', 's2']
+#     sample_names = ['G1', 'G2', 'G3', 'G4', 'G5', 'C-G6']
 
 #     figsize = (7.5, 9)
 #     subfigures_dict = {
