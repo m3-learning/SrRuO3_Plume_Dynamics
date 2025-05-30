@@ -114,15 +114,15 @@ def plot_combined_temporal_variation(df_sample, sample_names, df_plume_metrics, 
         '1_2': {"position": [1.8, 3, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5},  
         '1_3': {"position": [3.6, 3, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5},  
         '1_4': {"position": [5.4, 3, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5},  
-        '1_5': {"position": [7.2, 3, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5},  
+        '1_5': {"position": [7.2, 3, 1.7, 2.6], 'skip_margin': True, 'margin_pts': 5},  
         
         '2_1': {"position": [0, 0, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5},  
         '2_2': {"position": [1.8, 0, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5}, 
         '2_3': {"position": [3.6, 0, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5},  
         '2_4': {"position": [5.4, 0, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5},  
-        '2_5': {"position": [7.2, 0, 1.5, 2.6], 'skip_margin': True, 'margin_pts': 5},  
+        '2_5': {"position": [7.2, 0, 1.7, 2.6], 'skip_margin': True, 'margin_pts': 5},  
         
-        '3': {"position": [0, 6.2, 8.5, 6], 'skip_margin': True, 'margin_pts': 5},  # Violin plot for area and velocity
+        '3': {"position": [0.1, 6.2, 8.5, 6], 'skip_margin': True, 'margin_pts': 5},  # Violin plot for area and velocity
     }
     
     fig, axes_dict = layout_subfigures_inches(figsize, subfigures_dict)
@@ -163,7 +163,7 @@ def plot_combined_temporal_variation(df_sample, sample_names, df_plume_metrics, 
     # df_plume_metrics, label=True
 
     axes_dict['3'].axis('off')  # Create a new subplot for the violin plots
-    fig, axes = layout_fig(2, 1, figsize=(8, 6), subplot_style='subplots', spacing=(0, 0.2), parent_ax=axes_dict['3'], layout='tight')
+    _, axes = layout_fig(2, 1, figsize=(8, 6), subplot_style='subplots', spacing=(0, 0.2), parent_ax=axes_dict['3'], layout='tight')
 
     sns.violinplot(x='Sample Name', y='Max Area (a.u.)', data=df_plume_metrics, width=0.9, ax=axes[0], palette='deep', hue='Sample Name', legend=False)
 
