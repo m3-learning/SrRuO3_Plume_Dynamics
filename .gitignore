@@ -6,7 +6,7 @@ local/
 organized_plume_datasets/
 plume_recordings/
 
-_build/
+# _build/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
