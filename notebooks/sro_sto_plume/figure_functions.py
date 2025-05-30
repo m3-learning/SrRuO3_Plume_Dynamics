@@ -1613,7 +1613,7 @@ def plot_afm_figure(
 # XRD section
 ########################################################################################
 
-def plot_xrd_multiple(
+def xrd_figure(
     xrd_files: list[str],
     rocking_curve_files: list[str],
     rsm002_files: list[str],
@@ -1637,6 +1637,7 @@ def plot_xrd_multiple(
     axes_dict: A dictionary containing the axes objects.
     """
     
+    ########################################################################################
     # Parameters
     ########################################################################################
     
