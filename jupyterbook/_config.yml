@@ -38,6 +38,8 @@ html:
       image_dark: _static/m3-dark.png
 
 sphinx:
+  extra_extensions:
+    - supplemental_figure.directive
   config:
     bibtex_reference_style: super
     numfig: true
@@ -46,5 +48,3 @@ sphinx:
       table: "Table %s"
       code-block: "Listing %s"
       section: "Section %s"
-      
-    numfig_secnum_depth: 1
