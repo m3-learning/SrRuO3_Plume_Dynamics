@@ -5,4 +5,5 @@ format: jb-book
 root: intro
 chapters:
 - file: manuscript
+- file: supporting_information
 
