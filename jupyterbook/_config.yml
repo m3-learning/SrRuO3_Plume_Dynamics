@@ -39,8 +39,6 @@ html:
 
 
 sphinx:
-  extra_extensions:
-    - supplemental_figure.directive
   config:
     bibtex_reference_style: super
     numfig: true
