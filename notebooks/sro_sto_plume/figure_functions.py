@@ -1613,19 +1613,39 @@ def plot_afm_figure(
 # XRD section
 ########################################################################################
 
-
 def plot_xrd_multiple(
     xrd_files: list[str],
     rocking_curve_files: list[str],
     rsm002_files: list[str],
     rsm103_files: list[str],
     label: bool = True,
+    **kwargs,
 ):
-    sample_IDs = ["YG065", "YG066", "YG067", "YG068", "YG069", "YG063"]
-    sample_names = ["G1", "G2", "G3", "G4", "G5", "C-G6"]
+    """
+    Plots multiple XRD-related graphs including XRD, rocking curves, and RSM (Reciprocal Space Mapping) data.
 
-    figsize = (7.5, 9)
-    subfigures_dict = {
+    Parameters:
+    xrd_files (list[str]): List of file paths for XRD data.
+    rocking_curve_files (list[str]): List of file paths for rocking curve data.
+    rsm002_files (list[str]): List of file paths for RSM (002) data.
+    rsm103_files (list[str]): List of file paths for RSM (103) data.
+    label (bool): Whether to include labels in the plots. Default is True.
+    **kwargs: Additional keyword arguments.
+    
+    Returns:
+    fig_all: The main figure.
+    axes_dict: A dictionary containing the axes objects.
+    """
+    
+    # Parameters
+    ########################################################################################
+    
+    sample_IDs = kwargs.get("sample_IDs", ["YG065", "YG066", "YG067", "YG068", "YG069", "YG063"])
+    sample_names = kwargs.get("sample_names", ["G1", "G2", "G3", "G4", "G5", "C-G6"])
+
+    figsize = kwargs.get("figsize", (7.5, 9))
+    
+    subfigures_dict = kwargs.get("subfigures_dict", {
         "1": {
             "position": [0, 5.9, 7.2, 2.8],
             "skip_margin": False,
@@ -1646,9 +1666,38 @@ def plot_xrd_multiple(
             "skip_margin": False,
             "margin_pts": 5,
         },  # RSM (103)
-    }
+    })
+    
+    plot_params_002 = kwargs.get("plot_params_002", {
+        "xlim": (-0.014, 0.015),
+        "ylim": (3.05, 3.28),
+        "vmax": 30000,
+        "label_fontsize": 10,
+        "tick_fontsize": 8,
+    })
+    
+    plot_params_103 = kwargs.get("plot_params_103", {
+        "xlim": (1.582, 1.64),
+        "ylim": (4.72, 4.86),
+        "vmax": 3000,
+        "lineplot_xlim": (1.595, 1.621),
+        "lineplot_ylim": (-100, 900),
+        "label_fontsize": 10,
+        "tick_fontsize": 8,
+    })
+    
+    graph = kwargs.get("graph", 7)
+    mod = kwargs.get("mod", 7)
+    width_ratios = kwargs.get("width_ratios", [1, 1, 1, 1, 1, 1, 0.1])
+    text_locs = kwargs.get("text_locs", [(1.1 + 1.138 * i, 6.25) for i in range(6)])
+
+    
+    ########################################################################################
+    # Layout
+    ########################################################################################
 
     fig_all, axes_dict = layout_subfigures_inches(figsize, subfigures_dict)
+    
     for ax in axes_dict.values():
         ax.axis("off")
 
@@ -1657,17 +1706,9 @@ def plot_xrd_multiple(
     rsm002_files = sorted(
         rsm002_files, key=lambda x: sample_IDs.index(Path(x).parts[-2])
     )
-    plot_params_002 = {
-        "xlim": (-0.014, 0.015),
-        "ylim": (3.05, 3.28),
-        "vmax": 30000,
-        "label_fontsize": 10,
-        "tick_fontsize": 8,
-    }
+
     plotter = RSMPlotter(plot_params_002)
-    graph, mod = 7, 7
-    width_ratios = [1, 1, 1, 1, 1, 1, 0.1]
-    text_locs = [(1.1 + 1.138 * i, 6.25) for i in range(6)]
+
     fig, axes = layout_fig(
         graph=graph,
         mod=mod,
@@ -1678,6 +1719,7 @@ def plot_xrd_multiple(
         spacing=(0.2, 0.2),
         layout="tight",
     )
+    
     Qx_lines, intensity_lines = plot_rsm_figure(
         plotter,
         fig_all,
@@ -1693,16 +1735,10 @@ def plot_xrd_multiple(
         label=label,
     )
 
-    # XRD plot
-    # files = ['../../data/XRD_RSM/YG065/YG065_2theta-Omega_42-49degree.xrdml',
-    #          '../../data/XRD_RSM/YG066/YG066 2theta-Omega_Path1_42-49 degree_slow_2.xrdml',
-    #          '../../data/XRD_RSM/YG067/YG067 2theta-Omega_Path1_42-49 degree_slow_2 1.xrdml',
-    #          '../../data/XRD_RSM/YG068/YG068 2theta-Omega_Path1_42-49 degree_slow_2.xrdml',
-    #          '../../data/XRD_RSM/YG069/YG069 2theta-Omega_Path1_42-49 degree_slow_2.xrdml',
-    #          '../../data/XRD_RSM/YG063/YG063_2theta-Omega_42-49degree.xrdml']
     fig, ax = layout_fig(
         graph=1, mod=1, figsize=(2.4, 2.6), parent_ax=axes_dict["2_1"], layout="tight"
     )
+
     plot_xrd_figure(
         xrd_files,
         sample_names,
@@ -1713,52 +1749,45 @@ def plot_xrd_multiple(
         title=None,
         filename=None,
     )
+
     ax.set_xlim(44.1, 48.1)
     ax.set_ylim(5, 1e18)
+
     if label:
         labelfigs(
             ax, number=6, style="bw", size=15, inset_fraction=(0.99, 0.1), loc="tl"
         )
 
     # Rocking curve plot
-    # files = glob.glob('../../data/XRD_RSM/YG06*/YG06*Rokcing*1_32*')
     rocking_curve_files = sorted(
         rocking_curve_files, key=lambda x: sample_IDs.index(Path(x).parts[-2])
     )
-    # files = sorted(rocking_curve_files, key=lambda x: sample_IDs.index(x.split('\\')[1].split('_')[0]))
+
     fig, ax = layout_fig(
         graph=1, mod=1, figsize=(2.4, 2.6), parent_ax=axes_dict["2_2"], layout="tight"
     )
+
     plot_rocking_curve_figure(
         sample_names,
         rocking_curve_files,
         fig_all,
         ax,
         inset_coords=[0.87, 0.51, 0.122, 0.108],
-    )  # [left, bottom, width, height]
+    )  
+
     if label:
         labelfigs(
             ax, number=7, style="bw", size=15, inset_fraction=(0.6, 0.1), loc="tl"
         )
 
     # RSM 103 phi-angle4 (now on second row)
-    # files = glob.glob('../../data/XRD_RSM/YG06*/*RSM-103_phi-angle4*')
     rsm103_files = sorted(
         rsm103_files, key=lambda x: sample_IDs.index(Path(x).parts[-2])
     )
-    plot_params_103 = {
-        "xlim": (1.582, 1.64),
-        "ylim": (4.72, 4.86),
-        "vmax": 3000,
-        "lineplot_xlim": (1.595, 1.621),
-        "lineplot_ylim": (-100, 900),
-        "label_fontsize": 10,
-        "tick_fontsize": 8,
-    }
+
+    
     plotter = RSMPlotter(plot_params_103)
-    graph, mod = 7, 7
-    width_ratios = [1, 1, 1, 1, 1, 1, 0.1]
-    text_locs = [(1.1 + 1.138 * i, 0.38) for i in range(6)]
+    
     fig, axes = layout_fig(
         graph=graph,
         mod=mod,
@@ -1769,6 +1798,7 @@ def plot_xrd_multiple(
         spacing=(0.2, 0.2),
         layout="tight",
     )
+    
     Qx_lines, intensity_lines = plot_rsm_figure(
         plotter,
         fig_all,
@@ -1787,75 +1817,6 @@ def plot_xrd_multiple(
     )
 
     return fig_all, axes_dict
-
-
-# def plot_xrd_multiple(xrd_files, rocking_curve_files, rsm002_files, rsm103_files, label=True):
-#     sample_IDs = ['YG065', 'YG066', 'YG067', 'YG068', 'YG069', 'YG063']
-#     sample_names = ['G1', 'G2', 'G3', 'G4', 'G5', 'C-G6']
-
-#     figsize = (7.5, 9)
-#     subfigures_dict = {
-#         '1_1': {"position": [0, 6.1, 3.55, 2.6], 'skip_margin': False, 'margin_pts':5}, # [left, bottom, width, height]
-#         '1_2': {"position": [3.85, 6.1, 3.65, 2.6], 'skip_margin': False, 'margin_pts':5},
-#         '2': {"position": [0, 3, 7.2, 2.8], 'skip_margin': False, 'margin_pts':5},
-#         '3': {"position": [0, 0, 7.2, 2.8], 'skip_margin': False, 'margin_pts':5},
-#     }
-#     fig_all, axes_dict = layout_subfigures_inches(figsize, subfigures_dict)
-#     for ax in axes_dict.values():
-#         ax.axis('off')
-
-#     # XRD
-#     # files = ['../data/XRD_RSM/YG065/YG065_2theta-Omega_42-49degree.xrdml',
-#     #         '../data/XRD_RSM/YG066/YG066 2theta-Omega_Path1_42-49 degree_slow_2.xrdml',
-#     #         '../data/XRD_RSM/YG067/YG067 2theta-Omega_Path1_42-49 degree_slow_2 1.xrdml',
-#     #         '../data/XRD_RSM/YG068/YG068 2theta-Omega_Path1_42-49 degree_slow_2.xrdml',
-#     #         '../data/XRD_RSM/YG069/YG069 2theta-Omega_Path1_42-49 degree_slow_2.xrdml',
-#     #         '../data/XRD_RSM/YG063/YG063_2theta-Omega_42-49degree.xrdml',]
-#     fig, ax = layout_fig(graph=1, mod=1, figsize=(3.9, 3), parent_ax=axes_dict['1_1'], layout='tight')
-#     plot_xrd_figure(xrd_files, sample_names, fig_all, ax, xrange=(44.2, 48), yrange=None, title=None, filename=None)
-#     xrange, yrange = (44.1, 48.1), (5, 1e18)
-#     ax.set_xlim(*xrange)
-#     ax.set_ylim(*yrange)
-#     if label:
-#         labelfigs(ax, number=0, style='bw', size=15, inset_fraction=(0.99, 0.1), loc='tl')
-
-#     # Rocking curve
-#     # files = glob.glob('../data/XRD_RSM/YG06*/YG06*Rokcing*1_32*')
-#     # files = sorted(files, key=lambda x: sample_IDs.index(x.split('\\')[1].split('_')[0]))
-#     rocking_curve_files = sorted(rocking_curve_files, key=lambda x: sample_IDs.index(Path(x).parts[-2]))
-
-#     fig, ax = layout_fig(graph=1, mod=1, figsize=(3.9, 3), parent_ax=axes_dict['1_2'], layout='tight')
-#     plot_rocking_curve_figure(sample_names, rocking_curve_files, fig_all, ax, inset_coords=[0.87, 0.855, 0.122, 0.108])
-#     if label:
-#         labelfigs(ax, number=1, style='bw', size=15, inset_fraction=(0.6, 0.1), loc='tl')
-
-#     # RSM 103 phi-angle4
-#     # files = glob.glob('../data/XRD_RSM/YG06*/*RSM-103_phi-angle4*')
-#     # files = sorted(files, key=lambda x: sample_IDs.index(x.split('\\')[1].split('_')[0]))
-
-#     rsm103_files = sorted(rsm103_files, key=lambda x: sample_IDs.index(Path(x).parts[-2]))
-#     plot_params_103 = {"xlim": (1.582, 1.64), "ylim": (4.72, 4.86), "vmax": 3000, 'lineplot_xlim': (1.595, 1.621), 'lineplot_ylim': (-100, 900), 'label_fontsize': 10, 'tick_fontsize': 8}
-#     plotter = RSMPlotter(plot_params_103)
-#     graph, mod = 7, 7
-#     width_ratios = [1, 1, 1, 1, 1, 1, 0.1]
-#     text_locs = [(1.1+1.138*i, 3.38) for i in range(6)]
-#     fig, axes = layout_fig(graph=graph, mod=mod, figsize=(8, 3), parent_ax=axes_dict['2'], subplot_style='gridspec', width_ratios=width_ratios, spacing=(0.2, 0.2), layout='tight')
-#     Qx_lines, intensity_lines = plot_rsm_figure(plotter, fig_all, axes, rsm103_files, sample_names, cbar_ax=axes[-1], peak_z_range=(4.78, 4.80), draw_peak=True, draw_peak_line=False, i_start=2, text_locs=text_locs, label=label)
-
-#     # (002) plane
-#     # files = glob.glob('../data/XRD_RSM/YG06*/*002*.xrdml')
-#     # files = sorted(files, key=lambda x: sample_IDs.index(x.split('\\')[1].split('_')[0]))
-#     rsm002_files = sorted(rsm002_files, key=lambda x: sample_IDs.index(Path(x).parts[-2]))
-
-#     plot_params_002 = {"xlim": (-0.014, 0.015), "ylim": (3.05, 3.28), "vmax": 30000, 'label_fontsize': 10, 'tick_fontsize': 8}
-#     plotter = RSMPlotter(plot_params_002)
-#     graph, mod = 7, 7
-#     width_ratios = [1, 1, 1, 1, 1, 1, 0.1]
-#     text_locs = [(1.1+1.138*i, 0.38) for i in range(6)]
-#     fig, axes = layout_fig(graph=graph, mod=mod, figsize=(8, 3), parent_ax=axes_dict['3'], subplot_style='gridspec', width_ratios=width_ratios, spacing=(0.2, 0.2), layout='tight')
-#     Qx_lines, intensity_lines = plot_rsm_figure(plotter, fig_all, axes, rsm002_files, sample_names, cbar_ax=axes[-1], peak_z_range=(3.15, 3.20), draw_peak=True, draw_peak_line=False, i_start=8, text_locs=text_locs, label=label)
-
-#     return fig_all, axes_dict
 
 
 def plot_xrd_figure(files, sample_index, fig, ax, xrange, yrange, title, filename):
