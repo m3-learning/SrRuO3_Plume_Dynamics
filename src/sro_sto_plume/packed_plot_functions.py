@@ -31,6 +31,13 @@ colors = colormaps.get_cmap('tab10').colors[:6]
 
 
 def plot_temporal_heatmaps(df_sample, sample_names, label=True):
+    """
+    Plot temporal heatmaps for Area and Velocity for multiple samples.
+
+    Parameters:
+    - df_sample: DataFrame containing sample data with columns 'Sample Name', 'Plume Index', 'Time (µs)', 'Area (a.u.)', and 'Velocity (m/s)'.
+    """
+    
     figsize = (10, 6)  # Adjusted figure size for combined plots
     subfigures_dict = { # [left, bottom, width, height]
         '1_1': {"position": [0, 3, 1.7, 2.6], 'skip_margin': True, 'margin_pts': 5},  

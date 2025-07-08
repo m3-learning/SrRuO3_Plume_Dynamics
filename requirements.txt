@@ -23,12 +23,12 @@ tox==4.21.2
 virtualenv==20.26.6
 wget==3.2
 xrayutilities==1.7.8
-scipy<1.10
+scipy==1.13.1
 # mpl_toolkits
 opencv-python
 mp_api
-M3Learning-Util==2.0.5
-Plume-Learn
-AFM-Learn
-XRD-Learn
+M3Learning-Util
+# Plume-Learn
+# AFM-Learn
+# XRD-Learn
 ./
