@@ -28,7 +28,7 @@ scipy==1.13.1
 opencv-python
 mp_api
 M3Learning-Util
-# Plume-Learn
-# AFM-Learn
-# XRD-Learn
-./
+Plume-Learn
+AFM-Learn
+XRD-Learn
+-e ./
