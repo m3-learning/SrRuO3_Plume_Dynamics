@@ -34,7 +34,8 @@ def plot_rsm_figure(
     peak_z_range_substrate: Optional[Tuple[float, float]] = None,
     plane: Optional[str] = None,
     ideal_q: Optional[Tuple[float, float]] = None,
-    label: bool = False
+    label: bool = False,
+    label_start: int = 0
 ):
     """
     Draw a strip of RSM panels with a shared colorbar.
@@ -58,7 +59,7 @@ def plot_rsm_figure(
             ax.set_ylim(*ylim_pref)
 
         if label:
-            labelfigs(ax, i, size=15, inset_fraction=(0.08, 0.15), loc='tr')
+            labelfigs(ax, i+label_start, size=15, inset_fraction=(0.08, 0.15), loc='tr')
 
         if ideal_q is not None:
             qx_star, qz_star = ideal_q

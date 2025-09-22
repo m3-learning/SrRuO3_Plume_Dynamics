@@ -218,6 +218,7 @@ def plot_xrd_multiple(xrd_files, rocking_curve_files, rsm103_files, label=True):
         peak_z_range_substrate=(4.82, 4.84),
         plane="103",
         ideal_q=ideal_q,
-        label=label
+        label=label,
+        label_start=2  # continue labeling from previous panels
     )
     return fig_all, axes_dict
