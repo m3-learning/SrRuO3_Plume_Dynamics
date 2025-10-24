@@ -421,7 +421,8 @@ def compute_roughness(height_map: np.ndarray,
                       *,
                       corners: Optional[Sequence[Sequence[float]]] = None,
                       pixel_region: Optional[Tuple[slice, slice]] = None,
-                      unit: str = "um") -> Dict[str, Any]:
+                      unit: str = "um",
+                      detrend: bool = False) -> Dict[str, Any]:
     """Compute basic surface roughness metrics (Ra, Rq, Rz).
 
     Args:
@@ -430,6 +431,8 @@ def compute_roughness(height_map: np.ndarray,
         corners: Iterable of (x, y) pairs describing a rectangular region in `unit` coordinates.
         pixel_region: Alternate way to specify a region using pixel slices (row_slice, col_slice).
         unit: Desired output unit for the statistics (default: micrometers).
+        detrend: If ``True``, remove a best-fit plane from the selected region
+            before computing roughness metrics.
     """
 
     if corners is not None and geometry is None:
@@ -446,6 +449,9 @@ def compute_roughness(height_map: np.ndarray,
     if region_slices is not None:
         row_slice, col_slice = region_slices
         roi = roi[row_slice, col_slice]
+
+    if detrend:
+        roi = _detrend_plane(roi)
 
     finite = roi[np.isfinite(roi)]
     if finite.size == 0:
@@ -485,8 +491,19 @@ def compute_roughness_polygon(height_map: np.ndarray,
                               polygon: Sequence[Sequence[float]],
                               *,
                               polygon_unit: str = "um",
-                              unit: str = "um") -> Dict[str, Any]:
-    """Compute roughness metrics within an arbitrary polygonal region."""
+                              unit: str = "um",
+                              detrend: bool = False) -> Dict[str, Any]:
+    """Compute roughness metrics within an arbitrary polygonal region.
+
+    Args:
+        height_map: Full 2D height map in meters.
+        geometry: Scan metadata describing pixel spacing.
+        polygon: ROI described by (x, y) coordinate pairs.
+        polygon_unit: Unit of the polygon coordinates.
+        unit: Desired output unit for the statistics.
+        detrend: If ``True``, subtract a best-fit plane from the polygonal
+            region prior to computing the metrics.
+    """
 
     if geometry is None:
         raise ValueError("Geometry is required for polygon-based roughness")
@@ -502,7 +519,11 @@ def compute_roughness_polygon(height_map: np.ndarray,
     if not np.any(mask):
         raise ValueError("Polygon selection does not overlap the scan area")
 
-    roi = np.asarray(height_map, dtype=float)[mask]
+    data = np.asarray(height_map, dtype=float)
+    if detrend:
+        data = _detrend_plane(data, mask=mask)
+
+    roi = data[mask]
     finite = roi[np.isfinite(roi)]
     if finite.size == 0:
         raise ValueError("Polygon region does not contain finite data")
@@ -612,6 +633,7 @@ def analyze_surfaces(
     clip_percentile: Optional[float] = None,
     max_cols: int = 2,
     figsize: Optional[Tuple[float, float]] = None,
+    detrend: bool = False,
 ) -> Tuple[List[Dict[str, Any]], Any]:
     """Process multiple surfaces and plot them as subplots with polygon overlays."""
 
@@ -643,11 +665,13 @@ def analyze_surfaces(
             polygon=polygon,
             polygon_unit=polygon_unit,
             unit=roughness_unit,
+            detrend=detrend,
         )
         stats.update({
             "label": label,
-            "datx": str(datx_path),
-            "txt": str(txt_path),
+            "detrended": detrend,
+            # "datx": str(datx_path),
+            # "txt": str(txt_path),
         })
         results.append(stats)
         prepared.append((height_map, geom, polygon, stats))
@@ -673,7 +697,7 @@ def analyze_surfaces(
             clip_percentile=clip_percentile,
             polygons=[polygon],
             polygon_unit=polygon_unit,
-            polygon_style={"color": "orange", "linewidth": 2.0},
+            polygon_style={"color": "red", "linewidth": 1.5},
             polygon_fill_alpha=0.05,
         )
         ax.set_title(
@@ -687,6 +711,100 @@ def analyze_surfaces(
 
     fig.tight_layout()
     return results, fig
+
+
+def build_surfaces(sample_map: Dict[str, Sequence],
+                   area: Optional[str] = None,
+                   data_root: Path | str = "data") -> List[Dict[str, Any]]:
+    """Convert a mapping of ROI definitions into ``analyze_surfaces`` inputs.
+
+    Args:
+        sample_map: mapping of scan/area names to iterables of ROIs. Each ROI
+            may be provided as ``(polygon, label)`` tuple, a mapping with
+            ``"polygon"``/``"label"`` keys, or directly as a polygon iterable.
+        area: optional area key to restrict the output.
+        data_root: base directory containing the ``.datx`` and ``.txt`` files
+            for each area.
+    """
+
+    if not sample_map:
+        raise ValueError("sample_map must contain at least one area definition")
+
+    if area is not None and area not in sample_map:
+        raise KeyError(f"Area '{area}' not found in sample_map")
+
+    root_path = Path(data_root)
+    items = [(area, sample_map[area])] if area else sample_map.items()
+    surfaces: List[Dict[str, Any]] = []
+
+    for area_name, rois in items:
+        for idx, entry in enumerate(rois, start=1):
+            polygon: Any
+            label: str
+
+            if isinstance(entry, tuple):
+                polygon, label = entry
+            elif isinstance(entry, dict):
+                polygon = entry.get("polygon")
+                if polygon is None:
+                    raise ValueError(f"ROI entry for '{area_name}' is missing 'polygon'")
+                label = entry.get("label", f"{area_name}-ROI{idx}")
+            else:
+                polygon, label = entry, f"{area_name}-ROI{idx}"
+
+            if not label.startswith(area_name):
+                label = f"{area_name}-{label}"
+
+            surfaces.append({
+                "area": area_name,
+                "label": label,
+                "datx": str(root_path / f"{area_name}.datx"),
+                "txt": str(root_path / f"{area_name}.txt"),
+                "polygon": polygon,
+            })
+
+    return surfaces
+
+
+# -----------------------------
+# Surface preprocessing helpers
+# -----------------------------
+def _detrend_plane(data: np.ndarray,
+                   mask: Optional[np.ndarray] = None) -> np.ndarray:
+    """Subtract the best-fit plane from ``data``.
+
+    Args:
+        data: 2D height map.
+        mask: optional boolean mask selecting the region to use for the fit.
+
+    Returns:
+        Copy of ``data`` with the fitted plane removed. Values outside ``mask``
+        (if provided) are returned as ``np.nan``.
+    """
+
+    arr = np.asarray(data, dtype=float)
+    result = arr.copy()
+
+    valid = np.isfinite(arr)
+    if mask is not None:
+        valid &= mask
+
+    if not np.any(valid):
+        if mask is not None:
+            result[~mask] = np.nan
+        return result
+
+    yy, xx = np.indices(arr.shape)
+    A = np.column_stack((xx[valid], yy[valid], np.ones(valid.sum())))
+    b = arr[valid]
+    coeffs, *_ = np.linalg.lstsq(A, b, rcond=None)
+    plane = coeffs[0] * xx + coeffs[1] * yy + coeffs[2]
+    result = arr - plane
+
+    if mask is not None:
+        result = np.where(mask, result, np.nan)
+
+    return result
 
 
 # -----------------------------
