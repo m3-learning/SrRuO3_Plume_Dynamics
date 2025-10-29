@@ -185,6 +185,25 @@ def select_dataset(data_dict: Dict[str, Any], name_contains: str) -> Optional[np
 # Processed-surface utilities
 # -----------------------------
 _UNIT_TO_METERS = {"m": 1.0, "mm": 1e-3, "um": 1e-6, "nm": 1e-9}
+_DATX_HEIGHT_UNIT_TO_METERS = {
+    "meters": 1.0,
+    "meter": 1.0,
+    "m": 1.0,
+    "micrometers": 1e-6,
+    "micrometer": 1e-6,
+    "micrometres": 1e-6,
+    "micrometre": 1e-6,
+    "microns": 1e-6,
+    "micron": 1e-6,
+    "nanometers": 1e-9,
+    "nanometer": 1e-9,
+    "nanometres": 1e-9,
+    "nanometre": 1e-9,
+    "millimeters": 1e-3,
+    "millimeter": 1e-3,
+    "millimetres": 1e-3,
+    "millimetre": 1e-3,
+}
 
 
 def _require_h5py():
@@ -805,6 +824,229 @@ def _detrend_plane(data: np.ndarray,
         result = np.where(mask, result, np.nan)
 
     return result
+
+
+# -----------------------------
+# Batch roughness helpers
+# -----------------------------
+def load_datx_height_map(path: Path | str,
+                         dataset_keyword: str = "Surface") -> np.ndarray:
+    """Load a 2D height map from a .datx file and return it in meters."""
+
+    if not _HAS_H5PY:
+        raise RuntimeError("h5py is required to read datx files")
+
+    path = Path(path)
+    if not path.exists():
+        raise FileNotFoundError(f"No such datx file: {path}")
+
+    with h5py.File(path, "r") as h5:
+        matches: List[Tuple[str, int]] = []
+
+        def visitor(name, obj):
+            if isinstance(obj, h5py.Dataset) and obj.ndim == 2:
+                score = obj.size
+                if dataset_keyword.lower() in name.lower():
+                    score += obj.size  # prefer keyword matches
+                matches.append((name, score))
+
+        h5.visititems(visitor)
+
+        if not matches:
+            raise ValueError(f"No 2D datasets found in {path}")
+
+        matches.sort(key=lambda item: item[1], reverse=True)
+        dataset_name = matches[0][0]
+        ds = h5[dataset_name]
+        data = np.asarray(ds[()], dtype=float)
+
+        unit_attr = ds.attrs.get("Unit")
+        unit_str = _decode_attribute_string(unit_attr)
+        scale = None
+        if unit_str:
+            scale = _DATX_HEIGHT_UNIT_TO_METERS.get(unit_str.lower())
+
+        if scale is None:
+            z_converter = ds.attrs.get("Z Converter")
+            if z_converter is not None:
+                try:
+                    params = z_converter[0][-1]
+                    params = np.asarray(params)
+                    if params.size >= 2:
+                        offset, factor = params[:2]
+                        data = offset + data * factor
+                        scale = 1.0
+                except Exception:
+                    pass
+
+        if scale is None:
+            raise ValueError(f"Unsupported or missing vertical unit for dataset '{dataset_name}' in {path}")
+
+        return data * scale
+
+
+def _decode_attribute_string(attr: Any) -> Optional[str]:
+    if attr is None:
+        return None
+    if isinstance(attr, bytes):
+        return attr.decode("utf-8", errors="ignore")
+    if isinstance(attr, str):
+        return attr
+    if isinstance(attr, np.ndarray) and attr.size > 0:
+        value = attr.flat[0]
+        if isinstance(value, bytes):
+            return value.decode("utf-8", errors="ignore")
+        if isinstance(value, str):
+            return value
+    return None
+
+
+def _roughness_stats(values: np.ndarray) -> Dict[str, Any]:
+    """Compute mean, Ra, Rq, Rz for a 1D array of height samples."""
+
+    finite = np.asarray(values, dtype=float).ravel()
+    finite = finite[np.isfinite(finite)]
+    if finite.size == 0:
+        raise ValueError("Input contains no finite samples")
+
+    mean_val = float(np.mean(finite))
+    centered = finite - mean_val
+    ra_val = float(np.mean(np.abs(centered)))
+    rq_val = float(np.sqrt(np.mean(centered ** 2)))
+    rz_val = float(np.max(finite) - np.min(finite))
+
+    return {
+        "count": int(finite.size),
+        "mean": mean_val,
+        "Ra": ra_val,
+        "Rq": rq_val,
+        "Rz": rz_val,
+    }
+
+
+def batch_roughness_from_maps(height_maps: Sequence[np.ndarray],
+                              *,
+                              paths: Optional[Sequence[str]] = None,
+                              detrend: bool = False,
+                              zero_center: bool = False) -> Dict[str, Any]:
+    """Aggregate roughness metrics across multiple height maps.
+
+    Args:
+        height_maps: Sequence of 2D arrays in meters.
+        paths: Optional list of source paths (for reporting).
+        detrend: Remove a best-fit plane from each map.
+        zero_center: Subtract the mean of each map (after detrending) so focus
+            offsets do not inflate pooled roughness.
+    """
+
+    if not height_maps:
+        raise ValueError("height_maps must contain at least one array")
+
+    if paths is not None and len(paths) != len(height_maps):
+        raise ValueError("Length of 'paths' must match number of height maps")
+
+    per_image: List[Dict[str, Any]] = []
+    flattened: List[np.ndarray] = []
+    image_means: List[float] = []
+
+    for idx, arr in enumerate(height_maps):
+        data = np.asarray(arr, dtype=float)
+            
+        # Sanitize now so everything downstream only sees finite numbers
+        data = data.copy()
+        data[~np.isfinite(data)] = np.nan
+
+        if detrend:
+            data = _detrend_plane(data)
+
+        raw_mean = np.nanmean(data)
+
+        if zero_center and np.isfinite(raw_mean):
+            data = data - raw_mean
+
+        stats = _roughness_stats(data)
+        stats["detrended"] = detrend
+        stats["zero_center"] = zero_center
+        if paths is not None:
+            stats["source"] = paths[idx]
+        per_image.append(stats)
+
+        flattened.append(data.ravel())
+        if np.isfinite(raw_mean):
+            image_means.append(raw_mean)
+
+    all_pixels = np.concatenate([vals[np.isfinite(vals)] for vals in flattened])
+    global_stats = _roughness_stats(all_pixels)
+    global_stats["detrended"] = detrend
+    global_stats["zero_center"] = zero_center
+
+    if image_means:
+        image_means_stats = _roughness_stats(np.asarray(image_means, dtype=float))
+        image_means_stats["detrended"] = detrend
+        image_means_stats["zero_center"] = zero_center
+    else:
+        image_means_stats = {
+            "count": 0,
+            "mean": float("nan"),
+            "Ra": float("nan"),
+            "Rq": float("nan"),
+            "Rz": float("nan"),
+            "detrended": detrend,
+            "zero_center": zero_center,
+        }
+
+    return {
+        "global_pixels": global_stats,
+        "per_image": per_image,
+        "image_mean_variation": image_means_stats,
+    }
+
+
+def batch_roughness_from_txt(paths: Sequence[Path | str],
+                             *,
+                             detrend: bool = False,
+                             zero_center: bool = False,
+                             delimiter: Optional[str] = None,
+                             dtype: Any = float) -> Dict[str, Any]:
+    """Load multiple text-based height maps and compute aggregate roughness."""
+
+    if not paths:
+        raise ValueError("paths must contain at least one file")
+
+    maps: List[np.ndarray] = []
+    str_paths: List[str] = []
+    for p in paths:
+        path = Path(p)
+        if not path.exists():
+            raise FileNotFoundError(f"No such file: {path}")
+        maps.append(load_height_txt(str(path), delimiter=delimiter, dtype=dtype))
+        str_paths.append(str(path))
+
+    return batch_roughness_from_maps(maps, paths=str_paths,
+                                     detrend=detrend, zero_center=zero_center)
+
+
+def batch_roughness_from_datx(paths: Sequence[Path | str],
+                              *,
+                              dataset_keyword: str = "Surface",
+                              detrend: bool = False,
+                              zero_center: bool = False) -> Dict[str, Any]:
+    """Load multiple .datx files and compute aggregate roughness."""
+
+    if not paths:
+        raise ValueError("paths must contain at least one datx file")
+
+    maps: List[np.ndarray] = []
+    str_paths: List[str] = []
+    for p in paths:
+        path = Path(p)
+        if not path.exists():
+            raise FileNotFoundError(f"No such file: {path}")
+        maps.append(load_datx_height_map(path, dataset_keyword=dataset_keyword))
+        str_paths.append(str(path))
+
+    return batch_roughness_from_maps(maps, paths=str_paths,
+                                     detrend=detrend, zero_center=zero_center)
 
 
 # -----------------------------
