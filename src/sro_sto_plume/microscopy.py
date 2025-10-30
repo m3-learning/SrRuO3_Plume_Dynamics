@@ -829,6 +829,66 @@ def _detrend_plane(data: np.ndarray,
 # -----------------------------
 # Batch roughness helpers
 # -----------------------------
+def _attr_to_scalar(value: Any) -> Optional[float]:
+    """Best-effort conversion of an HDF5 attribute payload to a float scalar."""
+
+    if value is None:
+        return None
+
+    # Direct numeric types
+    if isinstance(value, (int, float, np.integer, np.floating)):
+        return float(value)
+
+    # Strings/bytes that encode a numeric literal
+    if isinstance(value, (str, bytes, np.bytes_)):
+        try:
+            return float(value.decode() if isinstance(value, (bytes, np.bytes_)) else value)
+        except (ValueError, AttributeError):
+            return None
+
+    try:
+        arr = np.asarray(value)
+    except Exception:
+        return None
+
+    if arr.size == 0:
+        return None
+
+    scalar = arr.flat[0]
+    if isinstance(scalar, (int, float, np.integer, np.floating)):
+        return float(scalar)
+    if isinstance(scalar, (str, bytes, np.bytes_)):
+        try:
+            return float(scalar.decode() if isinstance(scalar, (bytes, np.bytes_)) else scalar)
+        except (ValueError, AttributeError):
+            return None
+
+    return None
+
+
+def _collect_invalid_attribute_values(dataset: "h5py.Dataset") -> List[float]:
+    """
+    Inspect dataset attributes for explicit missing/invalid sentinels.
+    Returns a list of scalars that should be treated as NaN.
+    """
+    invalid_terms = ("invalid", "missing", "blank", "void", "null")
+    values: List[float] = []
+
+    for name, val in getattr(dataset, "attrs", {}).items():
+        name_lower = str(name).lower()
+        if any(term in name_lower for term in invalid_terms):
+            scalar = _attr_to_scalar(val)
+            if scalar is not None:
+                values.append(float(scalar))
+
+    # Deduplicate while preserving order
+    seen: List[float] = []
+    for scalar in values:
+        if scalar not in seen:
+            seen.append(scalar)
+    return seen
+
+
 def load_datx_height_map(path: Path | str,
                          dataset_keyword: str = "Surface") -> np.ndarray:
     """Load a 2D height map from a .datx file and return it in meters."""
@@ -859,6 +919,32 @@ def load_datx_height_map(path: Path | str,
         dataset_name = matches[0][0]
         ds = h5[dataset_name]
         data = np.asarray(ds[()], dtype=float)
+
+        # Replace any known invalid/missing sentinels with NaN prior to scaling.
+        invalid_values = _collect_invalid_attribute_values(ds)
+
+        if np.issubdtype(ds.dtype, np.floating):
+            finfo = np.finfo(ds.dtype)
+            for sentinel in (finfo.min, finfo.max):
+                sentinel_f = float(sentinel)
+                if np.any(data == sentinel_f):
+                    invalid_values.append(sentinel_f)
+        elif np.issubdtype(ds.dtype, np.signedinteger):
+            iinfo = np.iinfo(ds.dtype)
+            for sentinel in (iinfo.min, iinfo.max):
+                sentinel_f = float(sentinel)
+                if np.any(data == sentinel_f):
+                    invalid_values.append(sentinel_f)
+
+        if invalid_values:
+            mask = np.zeros_like(data, dtype=bool)
+            for sentinel in invalid_values:
+                if math.isnan(sentinel):
+                    mask |= np.isnan(data)
+                else:
+                    mask |= data == sentinel
+            if np.any(mask):
+                data[mask] = np.nan
 
         unit_attr = ds.attrs.get("Unit")
         unit_str = _decode_attribute_string(unit_attr)
