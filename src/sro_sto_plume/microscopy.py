@@ -1034,6 +1034,7 @@ def batch_roughness_from_maps(height_maps: Sequence[np.ndarray],
     per_image: List[Dict[str, Any]] = []
     flattened: List[np.ndarray] = []
     image_means: List[float] = []
+    image_rqs: List[float] = []
 
     for idx, arr in enumerate(height_maps):
         data = np.asarray(arr, dtype=float)
@@ -1060,6 +1061,9 @@ def batch_roughness_from_maps(height_maps: Sequence[np.ndarray],
         flattened.append(data.ravel())
         if np.isfinite(raw_mean):
             image_means.append(raw_mean)
+        rq_val = stats.get("Rq")
+        if rq_val is not None and np.isfinite(rq_val):
+            image_rqs.append(float(rq_val))
 
     all_pixels = np.concatenate([vals[np.isfinite(vals)] for vals in flattened])
     global_stats = _roughness_stats(all_pixels)
@@ -1081,10 +1085,43 @@ def batch_roughness_from_maps(height_maps: Sequence[np.ndarray],
             "zero_center": zero_center,
         }
 
+    if image_rqs:
+        rq_array = np.asarray(image_rqs, dtype=float)
+        rq_mean = float(np.mean(rq_array))
+        rq_std = float(np.std(rq_array, ddof=0))
+        rq_min = float(np.min(rq_array))
+        rq_max = float(np.max(rq_array))
+        rq_range = float(rq_max - rq_min)
+        rq_cv = float(rq_std / rq_mean) if rq_mean else float("nan")
+        image_rq_stats = {
+            "count": int(rq_array.size),
+            "mean": rq_mean,
+            "std": rq_std,
+            "min": rq_min,
+            "max": rq_max,
+            "range": rq_range,
+            "cv": rq_cv,
+            "detrended": detrend,
+            "zero_center": zero_center,
+        }
+    else:
+        image_rq_stats = {
+            "count": 0,
+            "mean": float("nan"),
+            "std": float("nan"),
+            "min": float("nan"),
+            "max": float("nan"),
+            "range": float("nan"),
+            "cv": float("nan"),
+            "detrended": detrend,
+            "zero_center": zero_center,
+        }
+
     return {
         "global_pixels": global_stats,
         "per_image": per_image,
         "image_mean_variation": image_means_stats,
+        "image_rq_variation": image_rq_stats,
     }
 
 
