@@ -5,6 +5,7 @@ additional_data/
 local/
 *.tif
 *.tiff
+*.h5
 organized_plume_datasets/
 plume_recordings/
 

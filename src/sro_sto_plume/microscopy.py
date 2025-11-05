@@ -1,9 +1,9 @@
 """Lightweight helpers for Zygo/NewView-style `.datx` files and processed maps.
 
 Example:
-    >>> from sro_sto_plume import microscopy
-    >>> height_map, geom = microscopy.load_processed_surface("G1.datx", "G1.txt")
-    >>> stats = microscopy.compute_roughness(height_map, geometry=geom, unit="um")
+    >>> from sro_sto_plume import oscopy
+    >>> height_map, geom = oscopy.load_processed_surface("G1.datx", "G1.txt")
+    >>> stats = oscopy.compute_roughness(height_map, geometry=geom, unit="um")
 """
 
 from __future__ import annotations
@@ -14,6 +14,7 @@ from typing import Dict, Any, Optional, Tuple, List, Sequence
 import math
 import zipfile
 import numpy as np
+import pandas as pd
 
 try:
     import h5py  # Most .datx files are HDF5 containers
@@ -189,12 +190,12 @@ _DATX_HEIGHT_UNIT_TO_METERS = {
     "meters": 1.0,
     "meter": 1.0,
     "m": 1.0,
-    "micrometers": 1e-6,
-    "micrometer": 1e-6,
-    "micrometres": 1e-6,
-    "micrometre": 1e-6,
-    "microns": 1e-6,
-    "micron": 1e-6,
+    "ometers": 1e-6,
+    "ometer": 1e-6,
+    "ometres": 1e-6,
+    "ometre": 1e-6,
+    "ons": 1e-6,
+    "on": 1e-6,
     "nanometers": 1e-9,
     "nanometer": 1e-9,
     "nanometres": 1e-9,
@@ -449,7 +450,7 @@ def compute_roughness(height_map: np.ndarray,
         geometry: Optional lateral geometry (required if `corners` is given).
         corners: Iterable of (x, y) pairs describing a rectangular region in `unit` coordinates.
         pixel_region: Alternate way to specify a region using pixel slices (row_slice, col_slice).
-        unit: Desired output unit for the statistics (default: micrometers).
+        unit: Desired output unit for the statistics (default: ometers).
         detrend: If ``True``, remove a best-fit plane from the selected region
             before computing roughness metrics.
     """
@@ -1012,9 +1013,7 @@ def _roughness_stats(values: np.ndarray) -> Dict[str, Any]:
 
 def batch_roughness_from_maps(height_maps: Sequence[np.ndarray],
                               *,
-                              paths: Optional[Sequence[str]] = None,
-                              detrend: bool = False,
-                              zero_center: bool = False) -> Dict[str, Any]:
+                              paths: Optional[Sequence[str]] = None) -> Dict[str, Any]:
     """Aggregate roughness metrics across multiple height maps.
 
     Args:
@@ -1038,22 +1037,10 @@ def batch_roughness_from_maps(height_maps: Sequence[np.ndarray],
 
     for idx, arr in enumerate(height_maps):
         data = np.asarray(arr, dtype=float)
-            
-        # Sanitize now so everything downstream only sees finite numbers
         data = data.copy()
-        data[~np.isfinite(data)] = np.nan
-
-        if detrend:
-            data = _detrend_plane(data)
-
         raw_mean = np.nanmean(data)
 
-        if zero_center and np.isfinite(raw_mean):
-            data = data - raw_mean
-
         stats = _roughness_stats(data)
-        stats["detrended"] = detrend
-        stats["zero_center"] = zero_center
         if paths is not None:
             stats["source"] = paths[idx]
         per_image.append(stats)
@@ -1067,13 +1054,9 @@ def batch_roughness_from_maps(height_maps: Sequence[np.ndarray],
 
     all_pixels = np.concatenate([vals[np.isfinite(vals)] for vals in flattened])
     global_stats = _roughness_stats(all_pixels)
-    global_stats["detrended"] = detrend
-    global_stats["zero_center"] = zero_center
 
     if image_means:
         image_means_stats = _roughness_stats(np.asarray(image_means, dtype=float))
-        image_means_stats["detrended"] = detrend
-        image_means_stats["zero_center"] = zero_center
     else:
         image_means_stats = {
             "count": 0,
@@ -1081,8 +1064,6 @@ def batch_roughness_from_maps(height_maps: Sequence[np.ndarray],
             "Ra": float("nan"),
             "Rq": float("nan"),
             "Rz": float("nan"),
-            "detrended": detrend,
-            "zero_center": zero_center,
         }
 
     if image_rqs:
@@ -1101,8 +1082,6 @@ def batch_roughness_from_maps(height_maps: Sequence[np.ndarray],
             "max": rq_max,
             "range": rq_range,
             "cv": rq_cv,
-            "detrended": detrend,
-            "zero_center": zero_center,
         }
     else:
         image_rq_stats = {
@@ -1113,8 +1092,6 @@ def batch_roughness_from_maps(height_maps: Sequence[np.ndarray],
             "max": float("nan"),
             "range": float("nan"),
             "cv": float("nan"),
-            "detrended": detrend,
-            "zero_center": zero_center,
         }
 
     return {
@@ -1144,9 +1121,9 @@ def batch_roughness_from_txt(paths: Sequence[Path | str],
             raise FileNotFoundError(f"No such file: {path}")
         maps.append(load_height_txt(str(path), delimiter=delimiter, dtype=dtype))
         str_paths.append(str(path))
-
-    return batch_roughness_from_maps(maps, paths=str_paths,
-                                     detrend=detrend, zero_center=zero_center)
+        
+    maps = detrend_zero_maps(maps, detrend=detrend, zero_center=zero_center)
+    return maps, batch_roughness_from_maps(maps, paths=str_paths)
 
 
 def batch_roughness_from_datx(paths: Sequence[Path | str],
@@ -1167,9 +1144,135 @@ def batch_roughness_from_datx(paths: Sequence[Path | str],
             raise FileNotFoundError(f"No such file: {path}")
         maps.append(load_datx_height_map(path, dataset_keyword=dataset_keyword))
         str_paths.append(str(path))
+        
+    maps = detrend_zero_maps(maps, detrend=detrend, zero_center=zero_center)
+    return maps, batch_roughness_from_maps(maps, paths=str_paths)
 
-    return batch_roughness_from_maps(maps, paths=str_paths,
-                                     detrend=detrend, zero_center=zero_center)
+def detrend_zero_maps(height_maps: Sequence[np.ndarray],
+                      detrend: bool = False,
+                      zero_center: bool = False) -> List[np.ndarray]:
+    """Detrend and/or zero-center a list of height maps."""
+    
+    processed_maps: List[np.ndarray] = []
+    for arr in height_maps:
+        data = np.asarray(arr, dtype=float)
+            
+        # Sanitize now so everything downstream only sees finite numbers
+        data = data.copy()
+        data[~np.isfinite(data)] = np.nan
+
+        if detrend:
+            data = _detrend_plane(data)
+
+        raw_mean = np.nanmean(data)
+
+        if zero_center and np.isfinite(raw_mean):
+            data = data - raw_mean
+
+        processed_maps.append(data)
+
+    return processed_maps
+
+def analyze_area_folder(folder_path: Path,
+                          name: str | None = None,
+                          *,
+                          pattern: str = "*.txt",
+                          loader: str = "txt",
+                          dataset_keyword: str = "Surface",
+                          detrend: bool = False,
+                          zero_center: bool = False,
+                          scale: float = 1.0,
+                          unit: str = "µm"):
+    '''Compute batch roughness metrics for all height maps in a folder.'''
+
+    folder_path = Path(folder_path)
+    files = sorted(folder_path.glob(pattern))
+    if not files:
+        raise ValueError(f"No files matching {pattern!r} in {folder_path}")
+
+    loader_lower = loader.lower()
+    if loader_lower == "txt":
+        maps, batch = batch_roughness_from_txt(files, detrend=detrend, zero_center=zero_center)
+    elif loader_lower == "datx":
+        maps, batch = batch_roughness_from_datx(files,
+                                             dataset_keyword=dataset_keyword,
+                                             detrend=detrend,
+                                             zero_center=zero_center)
+    else:
+        raise ValueError(f"Unsupported loader '{loader}'. Use 'txt' or 'datx'.")
+
+
+    for data in maps:
+        # Sanitize now so everything downstream only sees finite numbers
+        data = data.copy()
+        data[~np.isfinite(data)] = 0
+
+        if detrend:
+            data = _detrend_plane(data)
+
+        raw_mean = np.nanmean(data)
+
+        if zero_center and np.isfinite(raw_mean):
+            data = data - raw_mean
+
+
+    def scale_record(record: dict[str, float], *, keys: tuple[str, ...] = ("mean", "Ra", "Rq", "Rz")) -> dict[str, float]:
+        rec = record.copy()
+        for key in keys:
+            if key in rec:
+                rec[key] = rec[key] * scale
+        return rec
+
+    folder_label = name or folder_path.name
+
+    global_stats = scale_record(batch["global_pixels"])
+    global_stats.update({
+        "folder": folder_label,
+        "n_images": len(batch["per_image"]),
+        "count": batch["global_pixels"]["count"],
+        "detrended": detrend,
+        "zero_center": zero_center,
+        "unit": unit,
+    })
+
+    mean_stats = scale_record(batch["image_mean_variation"])
+    mean_stats.update({
+        "folder": folder_label,
+        "count": batch["image_mean_variation"]["count"],
+        "detrended": detrend,
+        "zero_center": zero_center,
+        "unit": unit,
+    })
+
+    rq_variation_stats = scale_record(
+        batch["image_rq_variation"],
+        keys=("mean", "std", "min", "max", "range"),
+    )
+    rq_variation_stats.update({
+        "folder": folder_label,
+        "count": batch["image_rq_variation"]["count"],
+        "detrended": detrend,
+        "zero_center": zero_center,
+        "unit": unit,
+    })
+
+    per_image_rows = []
+    for file, record in zip(files, batch["per_image"]):
+        scaled = scale_record(record)
+        scaled.update({
+            "folder": folder_label,
+            "path": str(file),
+            "count": record["count"],
+            "detrended": detrend,
+            "zero_center": zero_center,
+            "unit": unit,
+        })
+        per_image_rows.append(scaled)
+
+    per_image_df = pd.DataFrame(per_image_rows)
+
+    return maps, global_stats, mean_stats, rq_variation_stats, per_image_df
+
 
 
 # -----------------------------
@@ -1192,3 +1295,5 @@ def imshow_2d(arr: np.ndarray, title: str = "Height/Intensity Map"):
     plt.xlabel("x (col)")
     plt.ylabel("y (row)")
     plt.show()
+
+

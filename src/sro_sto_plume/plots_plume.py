@@ -14,6 +14,25 @@ from plume_learn.plume_analyzer.PlumeDataset import plume_dataset
 from plume_learn.plume_analyzer.Velocity import VelocityCalculator
 from sro_sto_plume.cmap import define_white_viridis
 
+
+def show_sample_frames(plumes, n_plumes=40, n_frames=25, figsize=(8, 12)):
+        
+    plume_index_list = np.round(np.linspace(0, len(plumes)-1, n_plumes)).astype(int)
+    sample_frames = plumes[plume_index_list, :n_frames]
+    sample_frames = np.array(sample_frames).reshape(n_plumes*n_frames, plumes.shape[2], plumes.shape[3])
+    labels = np.arange(n_frames)*500e-3
+    labels = [f'{l:.0f}µs' for l in labels]
+    labels = labels*n_plumes
+    fig, axes = layout_fig(n_plumes*n_frames, mod=n_frames, figsize=figsize, subplot_style='gridspec', spacing=(0.02, 0.02), layout='tight')
+    for i, (ax, img, label) in enumerate(zip(axes, sample_frames, labels)):
+        ax.imshow(img)
+        ax.axis('off')
+        if i < n_frames and i % 2 == 0:
+            ax.set_title(label, fontsize=8)
+            
+    return fig, axes
+
+
 # ---------- Heatmaps ----------
 def plot_temporal_heatmaps(df_sample, sample_names, label=True):
     figsize = (10, 6)
@@ -285,13 +304,77 @@ def plot_plume_inhomogeneity_velocity(df_plume_metrics, df_sample, sample_names,
     return fig, axes_dict
 
 # ---------- Plume summary page ----------
+
 def plume_metrics_summary(df_frame_metrics, plume_recording_root, label=True):
     figsize = (6.8, 8)
     subfigures_dict = {
-        '1': {"position": [0, 4, 6.55, 1.82], 'skip_margin': False, 'margin_pts':5},
-        '1_1': {"position": [0.03, 4.05, 6.5, 0.6], 'skip_margin': False, 'margin_pts':5},
+        '1': {"position": [0, 4, 6.55, 1.82], 'skip_margin': False, 'margin_pts':5}, # [left, bottom, width, height]
+        '1_1': {"position": [0.03, 4.05, 6.5, 0.6], 'skip_margin': False, 'margin_pts':5},    
         '2': {"position": [0, 2, 6.55, 1.82], 'skip_margin': False, 'margin_pts':5},
         '2_1': {"position": [0.03, 2.05, 6.5, 0.6], 'skip_margin': False, 'margin_pts':5},
         '3': {"position": [0, 0, 6.55, 1.82], 'skip_margin': False, 'margin_pts':5},
     }
-    fig_all, axes_dict
+    fig_all, axes_dict = layout_subfigures_inches(figsize, subfigures_dict)
+
+    # plume area plot
+    df_filtered = df_frame_metrics[df_frame_metrics['Time (µs)'].isin(range(0, 9))]
+    lineplot = sns.lineplot(x="Time (µs)", y="Area (a.u.)", hue='Sample Name', data=df_filtered, ax=axes_dict['1'])
+    set_labels(axes_dict['1'], yaxis_style='sci', xlim=(0, 8), ylim=(-6000, 18000), legend=False)
+    axes_dict['1'].legend(fontsize=8, frameon=False)
+    if label:
+        labelfigs(axes=axes_dict['1'], number=0 , size=15, style='bw', inset_fraction=(0.2, 0.05))
+
+    file = f'{plume_recording_root}/YG065_YichenGuo_09102024.h5'
+    plume_ds = plume_dataset(file_path=file, group_name='PLD_Plumes')
+    keys = plume_ds.dataset_names()
+    plumes = plume_ds.load_plumes('1-SrRuO3')
+    plumes = plumes[plumes.sum(axis=(1,2,3)) >= np.mean(plumes.sum(axis=(1,2,3))) - 3*np.std(plumes.sum(axis=(1,2,3)))] # remove outliers
+
+    sample_frames = plumes[0][0:17]
+    labels = np.arange(len(sample_frames))*500e-3
+    labels = [f'{l:.1f}µs' for l in labels]
+    labels[0] = 't='+labels[0]
+    fig, axes_1 = layout_fig(17, mod=17, figsize=(9, 3), subplot_style='gridspec', spacing=(0.1, 0.3), parent_ax=axes_dict['1_1'], layout='tight')
+    white_viridis = define_white_viridis()
+    show_images(sample_frames, labels=None, img_per_row=17, title=None, fig=fig, axes=axes_1, label_size=8, cmap=white_viridis)
+    axes_dict['1_1'].axis('off')
+
+        
+    # plume position plot
+    lineplot = sns.lineplot(x="Time (µs)", y="Distance (m)", hue='Sample Name', data=df_filtered, ax=axes_dict['2'])
+    set_labels(axes_dict['2'], yaxis_style='sci', xlim=(0, 8), ylim=(-0.01, 0.038), legend=False)
+    axes_dict['2'].get_legend().remove()
+    if label:
+        labelfigs(axes=axes_dict['2'], number=1, size=15, style='bw', inset_fraction=(0.2, 0.05))
+
+    coords_root = '../data/Plumes/frame_normalize_dataset/'
+    coords_path = coords_root + 'YG065_coords.npy'
+    standard_coords_path = coords_root + 'standard_coords.npy'
+    coords_standard = np.load(standard_coords_path)
+    start_position = np.round(np.mean(coords_standard[:2], axis=0)).astype(np.int32) # start position of plume  (x, y)
+    position_range = np.min(coords_standard[:,0]), np.max(coords_standard[:,0]) # x position range
+    V = VelocityCalculator(start_position, position_range, threshold=200, progress_bar=False)
+    plume_positions, plume_distances, plume_velocities = V.calculate_distance_area_for_plumes(plumes)
+
+    sample_plume_positions = plume_positions[0, :17]
+    fig, axes_2 = layout_fig(17, mod=17, figsize=(9, 3), subplot_style='gridspec', spacing=(0.1, 0.3), parent_ax=axes_dict['2_1'], layout='tight')
+    show_images(sample_frames, labels=None, img_per_row=17, title=None, fig=fig, axes=axes_2, label_size=8, cmap=white_viridis)
+    for i, ax in enumerate(axes_2):
+        if np.sum(sample_plume_positions[i]) == 0:
+            continue
+        x, y = sample_plume_positions[i]
+        ax.vlines(x, 0, y*1.8, linestyles='dashed', colors='red', linewidth=0.8)
+    axes_dict['2_1'].axis('off')
+        
+    # plume velocity plot
+    lineplot = sns.lineplot(x="Distance (m)", y="Velocity (m/s)", hue='Sample Name', data=df_frame_metrics, ax=axes_dict['3'])
+    if label:
+        set_labels(axes_dict['3'], yaxis_style='sci', ylim=(-3000, 30000), legend=False)
+    axes_dict['3'].get_legend().remove()
+    if label:
+        labelfigs(axes=axes_dict['3'], number=2, size=15, style='bw', inset_fraction=(0.2, 0.05))
+    axes_dict['3'].axvline(x=0.029, color='red', ymin=0.15, ymax=0.38, linestyle='--', linewidth=0.8)
+    axes_dict['3'].axvline(x=0.030, color='red', ymin=0.15, ymax=0.38, linestyle='--', linewidth=0.8)
+    axes_dict['3'].text(0.0295, 1e4, 'Estimated\nIncident Velocity', fontsize=8, color='red', ha='center', bbox=dict(facecolor='none', edgecolor='none'))
+    
+    return fig_all, axes_dict
