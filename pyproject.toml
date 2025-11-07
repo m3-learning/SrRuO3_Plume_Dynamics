@@ -8,13 +8,13 @@ version = "0.1.0"
 description = "SrRuO3 plume analysis and plotting utilities"
 readme = "README.md"
 requires-python = ">=3.10"
-authors = [{ name = "Yichen Guo", email = "…" }]
+authors = [{ name = "Yichen Guo", email = "yig319@lehigh.edu" }]
 dependencies = [
     "numpy",
     "pandas",
     "matplotlib",
     "seaborn",
-    # …rest of your install_requires…
 ]
+
 [tool.setuptools.packages.find]
 where = ["src"]
