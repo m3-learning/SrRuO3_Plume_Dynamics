@@ -4,7 +4,7 @@ from m3util.viz.layout import layout_fig
 from m3util.viz.text import labelfigs
 from sro_sto_plume.packed_plot_functions import colors
 
-def plot_target_microscopy(per_image_df, rq_variation_df, order, HEIGHT_UNIT):
+def plot_target_microscopy_std(per_image_df, rq_variation_df, order, HEIGHT_UNIT):
 
     fig, axes = layout_fig(1, 1, figsize=(6.5, 4.5), subplot_style='gridspec', spacing=(0, 0.2), layout='tight')
     ax_scatter = axes[0]
