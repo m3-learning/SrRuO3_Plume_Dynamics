@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sro_sto_plume"
+version = "0.1.0"
+description = "SrRuO3 plume analysis and plotting utilities"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Yichen Guo", email = "…" }]
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "seaborn",
+    # …rest of your install_requires…
+]
+[tool.setuptools.packages.find]
+where = ["src"]
