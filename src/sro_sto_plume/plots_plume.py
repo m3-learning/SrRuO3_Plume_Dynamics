@@ -169,6 +169,84 @@ def plot_combined_temporal_variation(df_sample, sample_names, df_plume_metrics, 
         labelfigs(axes=axes[1], number=1, size=15, style='bw', loc='tr', inset_fraction=(0.12, 0.05))
     return fig, axes_dict
 
+
+
+# ---------- Combined temporal variation ----------
+def plot_combined_violin_heatmap(df_sample, sample_names, df_plume_metrics, label=True):
+    figsize = (8, 12)
+    subfigures_dict = {
+        'violin_area': {"position": [0.1, 9.2, 8.5, 2.4], 'skip_margin': True, 'margin_pts': 5}, # left, bottom, width, height
+        '1_1': {"position": [0.0, 6.1, 1.25, 2.6], 'skip_margin': True, 'margin_pts': 5},
+        '1_2': {"position": [1.5, 6.1, 1.25, 2.6], 'skip_margin': True, 'margin_pts': 5},
+        '1_3': {"position": [3.0, 6.1, 1.25, 2.6], 'skip_margin': True, 'margin_pts': 5},
+        '1_4': {"position": [4.5, 6.1, 1.25, 2.6], 'skip_margin': True, 'margin_pts': 5},
+        '1_5': {"position": [6.0, 6.1, 1.25, 2.6], 'skip_margin': True, 'margin_pts': 5},
+        '1_6': {"position": [7.5, 6.1, 1.3, 2.6], 'skip_margin': True, 'margin_pts': 5},
+        
+        'violin_velocity': {"position": [0.1, 3.1, 8.5, 2.4], 'skip_margin': True, 'margin_pts': 5},
+        '2_1': {"position": [0.0, 0, 1.25, 2.6], 'skip_margin': True, 'margin_pts': 5},
+        '2_2': {"position": [1.5, 0, 1.25, 2.6], 'skip_margin': True, 'margin_pts': 5},
+        '2_3': {"position": [3.0, 0, 1.25, 2.6], 'skip_margin': True, 'margin_pts': 5},
+        '2_4': {"position": [4.5, 0, 1.25, 2.6], 'skip_margin': True, 'margin_pts': 5},
+        '2_5': {"position": [6.0, 0, 1.25, 2.6], 'skip_margin': True, 'margin_pts': 5},
+        '2_6': {"position": [7.5, 0, 1.3, 2.6], 'skip_margin': True, 'margin_pts': 5},
+    }
+    fig, axes_dict = layout_subfigures_inches(figsize, subfigures_dict)
+    axes_1 = [axes_dict[f'1_{i}'] for i in range(1, 7)]
+    axes_2 = [axes_dict[f'2_{i}'] for i in range(1, 7)]
+
+    # axes_dict['3'].axis('off')
+    # _, axes = layout_fig(2, 1, figsize=(8, 6), subplot_style='subplots', spacing=(0, 0.2),
+                        #  parent_ax=axes_dict['3'], layout='tight')
+    ax = axes_dict['violin_area']
+    sns.violinplot(x='Sample Name', y='Max Area (a.u.)', data=df_plume_metrics, width=0.9,
+                   ax=ax, palette='deep', hue='Sample Name', legend=False)
+    mean_max_area = df_plume_metrics.groupby('Sample Name')['Max Area (a.u.)'].mean()
+    label_violinplot(ax, mean_max_area, label_type='average_value', text_pos='center',
+                     value_format='scientific', text_size=10, offset_parms={'x_type':'fixed','x_value':0,'y_type':'ratio','y_value':-0.05})
+    ax.tick_params(axis='both', which='both', direction='in')
+    if label:
+        labelfigs(axes=ax, number=0, size=15, style='bw', loc='tr', inset_fraction=(0.15, 0.05))
+
+
+    for i, ax, sample in zip(range(1,7), axes_1, sample_names):
+        df_pivot = df_sample[df_sample['Sample Name']==sample].pivot(index="Plume Index", columns="Time (µs)", values='Area (a.u.)')
+        df_pivot = df_pivot.loc[:, (df_pivot != 0).any(axis=0)]
+        sns.heatmap(df_pivot, cmap='viridis', cbar=False, ax=ax, vmin=0, vmax=17152)
+        set_labels(ax, xlabel="Time (µs)", ylabel=("Plume Index" if ax is axes_1[0] else ""),
+                   label_fontsize=10, ticklabel_fontsize=8, yaxis_style='float', show_ticks=False, tick_padding=2)
+        if label:
+            labelfigs(ax, number=i, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
+    set_cbar(fig, axes_1[-1], cbar_label='Area\n(a.u.)', scientific_notation=True, tick_in=True,
+             ticklabel_fontsize=8, labelpad=0, fontsize=8)
+
+
+    ax = axes_dict['violin_velocity']
+    sns.violinplot(x='Sample Name', y='Incident Velocity (m/s)', data=df_plume_metrics, width=0.9,
+                   ax=ax, palette='deep', hue='Sample Name', legend=False)
+    mean_incident_velocity = df_plume_metrics.groupby('Sample Name')['Incident Velocity (m/s)'].mean()
+    label_violinplot(ax, mean_incident_velocity, label_type='average_value', text_pos='center',
+                     value_format='scientific', text_size=10,
+                     offset_parms={'x_type':'fixed','x_value':0,'y_type':'ratio','y_value':-0.05})
+    if label:
+        labelfigs(axes=ax, number=7, size=15, style='bw', loc='tr', inset_fraction=(0.12, 0.05))
+    ax.tick_params(axis='both', which='both', direction='in')
+    
+
+    for i, ax, sample in zip(range(8,14), axes_2, sample_names):
+        df_pivot = df_sample[df_sample['Sample Name']==sample].pivot(index="Plume Index", columns="Time (µs)", values='Velocity (m/s)')
+        df_pivot = df_pivot.loc[:, (df_pivot != 0).any(axis=0)]
+        df_pivot[df_pivot==0] = 200
+        sns.heatmap(df_pivot, cmap='viridis', cbar=False, ax=ax, norm=LogNorm(vmin=200, vmax=29257))
+        set_labels(ax, xlabel="Time (µs)", ylabel=("Plume Index" if ax is axes_2[0] else ""),
+                   label_fontsize=10, ticklabel_fontsize=8, yaxis_style='float', show_ticks=False, tick_padding=2)
+        if label:
+            labelfigs(ax, number=i, size=15, style='wb', loc='tr', inset_fraction=(0.08, 0.08))
+    set_cbar(fig, axes_2[-1], cbar_label='Velocity\n(m/s)', scientific_notation=True, tick_in=True,
+             logscale=True, ticklabel_fontsize=8, labelpad=0, fontsize=8)
+
+    return fig, axes_dict
+
 # ---------- Plume inhomogeneity (area + velocity) ----------
 def plot_combined_plume_inhomogeneity(df_plume_metrics, df_sample, sample_names, custom_palette, label=True):
     figsize = (8, 6)
@@ -373,7 +451,7 @@ def plume_metrics_summary(df_frame_metrics, plume_recording_root, label=True):
     axes_dict['3'].get_legend().remove()
     if label:
         labelfigs(axes=axes_dict['3'], number=2, size=15, style='bw', inset_fraction=(0.2, 0.05))
-    axes_dict['3'].axvline(x=0.029, color='red', ymin=0.15, ymax=0.38, linestyle='--', linewidth=0.8)
+    axes_dict['3'].axvline(x=0.028, color='red', ymin=0.15, ymax=0.38, linestyle='--', linewidth=0.8)
     axes_dict['3'].axvline(x=0.030, color='red', ymin=0.15, ymax=0.38, linestyle='--', linewidth=0.8)
     axes_dict['3'].text(0.0295, 1e4, 'Estimated\nIncident Velocity', fontsize=8, color='red', ha='center', bbox=dict(facecolor='none', edgecolor='none'))
     

@@ -25,7 +25,7 @@ def plot_target_microscopy_std(per_image_df, rq_variation_df, order, HEIGHT_UNIT
     ax_scatter.set_xticks(range(len(order)))
     ax_scatter.set_xticklabels(order)
     ax_scatter.tick_params(axis="both", which="both", direction="in", top=True, bottom=True, left=True, right=False, labelbottom=True, labelleft=True)
-    ax_scatter.set_ylim(4.9, 9.4)
+    ax_scatter.set_ylim(0, 9.4)
     legend_handles = [
         Line2D([], [], marker='o', linestyle='None', markersize=6, markerfacecolor='gray', markeredgecolor='black', label='Surface Roughness-RMS', alpha=0.85),
         Line2D([], [], marker='s', linestyle='None', markersize=8, markerfacecolor='gray', markeredgecolor='gray', label='Scan to Scan Variation-Std', alpha=0.35),
