@@ -41,3 +41,12 @@ This repository provides:
 ├── README.md                # Project overview (this file)
 └── LICENSE                  # License information
 ```
+
+## Dataerai preservation and reproducible inputs
+
+Start with [the Dataerai preservation notebook](notebooks/0_Dataerai_Preservation.ipynb)
+and [setup instructions](DATAERAI.md). All existing notebooks retrieve their
+inputs from a version-pinned Dataerai catalogue and preserve executed code,
+outputs, figures, metadata, and results with provenance. Original saved outputs
+and figure files are retained. The six raw plume recordings can be registered
+later using their Dataerai DIDs; notebooks 4 and 5 require those recordings.

@@ -1,0 +1,28 @@
+{
+  "baseline_commit": "d953252941ac80e3e2856e1e31f4aff38ba43f1b",
+  "original_notebooks": 13,
+  "original_cells": 209,
+  "original_code_cells": 65,
+  "preserved_stored_outputs": 236,
+  "unchanged_figure_files": 70,
+  "tests_passed": 31,
+  "live_validation": {
+    "status": "passed",
+    "run_id": "eee37cd3-f3c4-4db6-9c95-dc3e8b3efc36",
+    "run_assets": 11,
+    "saved_svg_asset_id": "e7f41af5-1f03-42b9-8723-807bb248c405",
+    "saved_svg_content_id": "f10568d9-d3dd-44d8-8953-ea78111dd873",
+    "saved_svg_sha256": "6c89e7da54d4698b4081e9b4ec2d8a9779de9c98426859d9576b8dae55af4a80",
+    "checks": [
+      "version-pinned workbook download",
+      "table and NumPy array upload",
+      "rendered plot upload",
+      "original SVG upload and verified download",
+      "continuous cell/output relationships",
+      "completed run summary"
+    ],
+    "run_asset_id": "d97bbff7-3c4c-4de2-83d8-984240d04c66",
+    "summary_asset_id": "bceb59f7-55e8-4fdb-8587-72354f8c71f3"
+  },
+  "scientific_reexecution": "Not performed: raw plume HDF5 recordings will be supplied later by DID."
+}

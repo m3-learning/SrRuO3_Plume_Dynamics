@@ -1,0 +1,3426 @@
+{
+  "schema": "org.dataerai.srruo3-preservation/v1",
+  "repository": "https://github.com/m3-learning/SrRuO3_Plume_Dynamics",
+  "source_commit": "d953252941ac80e3e2856e1e31f4aff38ba43f1b",
+  "source_snapshot": "Working-tree files identified by their SHA-256; source_commit is the Git baseline",
+  "data_source": "Explicit source folder supplied to preservation notebook; see per-file hashes",
+  "samples": {
+    "YG065": "G1",
+    "YG066": "G2",
+    "YG067": "G3",
+    "YG068": "G4",
+    "YG069": "G5",
+    "YG063": "C-G6"
+  },
+  "missing_required_files": [
+    "data/Plumes/plume_recordings/YG063_YichenGuo_08042024.h5",
+    "data/Plumes/plume_recordings/YG065_YichenGuo_09102024.h5",
+    "data/Plumes/plume_recordings/YG066_YichenGuo_09112024.h5",
+    "data/Plumes/plume_recordings/YG067_YichenGuo_09122024.h5",
+    "data/Plumes/plume_recordings/YG068_YichenGuo_09132024.h5",
+    "data/Plumes/plume_recordings/YG069_YichenGuo_09152024.h5"
+  ],
+  "completeness": "missing-raw-recordings",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bundle": "code-and-notebooks",
+      "sha256": "24c7d5af64813f9eda74b81c53d1c159c9f29d0f0e63001710a5286e810e2dbc",
+      "size_bytes": 3529,
+      "sample_ids": []
+    },
+    {
+      "path": ".gitmodules",
+      "bundle": "code-and-notebooks",
+      "sha256": "26b9923a08febf3940e9641becae3ed53670f2627dc136274fd4a28af57e0116",
+      "size_bytes": 586,
+      "sample_ids": []
+    },
+    {
+      "path": "DATAERAI.md",
+      "bundle": "code-and-notebooks",
+      "sha256": "4902bfc2099ad50388a9a6c07fa365e243b4c0ec39b7d6f73761aca2027f1801",
+      "size_bytes": 6209,
+      "sample_ids": []
+    },
+    {
+      "path": "README.md",
+      "bundle": "code-and-notebooks",
+      "sha256": "97e74abae7e2f9769d0c3a84e14099407e2b59b2493be4e020ddbd2d3d8b5e77",
+      "size_bytes": 2938,
+      "sample_ids": []
+    },
+    {
+      "path": "data/AFM/10um/YG063_0044-plain.txt",
+      "bundle": "afm",
+      "sha256": "e7bc91b70b6617abc09ebfb0eb1d0175a9e2fda2fcd09736409dd19b6c227634",
+      "size_bytes": 1200886,
+      "sample_ids": [
+        "YG063"
+      ]
+    },
+    {
+      "path": "data/AFM/10um/YG063_0044-plain_remove_holes.txt",
+      "bundle": "afm",
+      "sha256": "3d770732b8b29021f3d9bb9a1c98b3614f81b22c0d56d27a256800bd712ddf90",
+      "size_bytes": 1666748,
+      "sample_ids": [
+        "YG063"
+      ]
+    },
+    {
+      "path": "data/AFM/10um/YG063_0044.ibw",
+      "bundle": "afm",
+      "sha256": "ae29f2d1c1e10e143feb878f7cce7ec69d33e15042a3b31ea473ec3b1bc9cc02",
+      "size_bytes": 1145407,
+      "sample_ids": [
+        "YG063"
+      ]
+    },
+    {
+      "path": "data/AFM/10um/YG065_0006-plain.txt",
+      "bundle": "afm",
+      "sha256": "41a7c97c69922a0b8ee48887b9d0238821f065ac7373cd5e77e51b9d51ba57ee",
+      "size_bytes": 1201461,
+      "sample_ids": [
+        "YG065"
+      ]
+    },
+    {
+      "path": "data/AFM/10um/YG065_0006-plain_remove_holes.txt",
+      "bundle": "afm",
+      "sha256": "048ccbc44809e7d6e5b05f068c97e4bec1a9c52a6ccc3cdbf86aa33cc14d4bae",
+      "size_bytes": 1667155,
+      "sample_ids": [
+        "YG065"
+      ]
+    },
+    {
+      "path": "data/AFM/10um/YG065_0006.ibw",
+      "bundle": "afm",
+      "sha256": "d3897326c79c40ea25649ab4f119125dc5320e25c4ba3f82832f366dd9d59bbe",
+      "size_bytes": 1145057,
+      "sample_ids": [
+        "YG065"
+      ]
+    },
+    {
+      "path": "data/AFM/10um/YG066_0017-plain.txt",
+      "bundle": "afm",
+      "sha256": "1117de09686c8f2785ba877bd4ff10c4c6423d927a2c08aab7abb5d2283b30cf",
+      "size_bytes": 1197005,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/AFM/10um/YG066_0017-plain_remove_holes.txt",
+      "bundle": "afm",
+      "sha256": "994027304bc78d67c1d3024101ed60324711b07aa3d8dd5ba400436536ef5672",
+      "size_bytes": 1661189,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/AFM/10um/YG066_0017.ibw",
+      "bundle": "afm",
+      "sha256": "aa59a1e4b2ee33cf5e66c76570e12ac071e7750180366dde298f16b8cf1662d7",
+      "size_bytes": 1145490,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/AFM/10um/YG067_0188-plain.txt",
+      "bundle": "afm",
+      "sha256": "ee3408b9293a1487a6df5ef64d971a6708b2c39947decfbd5cc3c365a28e432c",
+      "size_bytes": 1201177,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/AFM/10um/YG067_0188-plain_remove_holes.txt",
+      "bundle": "afm",
+      "sha256": "9dbdcb40427b75bc1f08a7f4456677a7a59af2a069aab938de2687ab044ef016",
+      "size_bytes": 1665682,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/AFM/10um/YG067_0188.ibw",
+      "bundle": "afm",
+      "sha256": "d6bc892d321ba3830fb5e79e4de3a5bbd0aa9f0df5455da7a0b3f098544bbb4b",
+      "size_bytes": 1144969,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/AFM/10um/YG068_0012-plain.txt",
+      "bundle": "afm",
+      "sha256": "53c81065833bf3cc4b6b345a3ce311a516235fd1783e7539c12d752e6ce40eb6",
+      "size_bytes": 1669433,
+      "sample_ids": [
+        "YG068"
+      ]
+    },
+    {
+      "path": "data/AFM/10um/YG068_0012-plain_remove_holes.txt",
+      "bundle": "afm",
+      "sha256": "0808fc975f1d0bd9a8fec94832fb0f3f499a3ddfe9f1182051a82e67c91771c8",
+      "size_bytes": 1669125,
+      "sample_ids": [
+        "YG068"
+      ]
+    },
+    {
+      "path": "data/AFM/10um/YG068_0012.ibw",
+      "bundle": "afm",
+      "sha256": "b62c49f337a1a108dd77c51e82c64a97be166d9c0a7395dbbf490e0b5d7fb40d",
+      "size_bytes": 1145517,
+      "sample_ids": [
+        "YG068"
+      ]
+    },
+    {
+      "path": "data/AFM/10um/YG069_0023-plain.txt",
+      "bundle": "afm",
+      "sha256": "0112676ad4101a6287a10be684b86ccafc908093f9ac009f2c80cedb531e98ae",
+      "size_bytes": 1671091,
+      "sample_ids": [
+        "YG069"
+      ]
+    },
+    {
+      "path": "data/AFM/10um/YG069_0023-plain_remove_holes.txt",
+      "bundle": "afm",
+      "sha256": "a54bfb8be555126cbeff9f48fc8dfb31af7d0e50315b88078cd4f8c056a97661",
+      "size_bytes": 1671044,
+      "sample_ids": [
+        "YG069"
+      ]
+    },
+    {
+      "path": "data/AFM/10um/YG069_0023.ibw",
+      "bundle": "afm",
+      "sha256": "48f346dda85c4843ebbdae9243eeadd8d9f3b7b3fbce328a3ff595b9610855b4",
+      "size_bytes": 1145525,
+      "sample_ids": [
+        "YG069"
+      ]
+    },
+    {
+      "path": "data/AFM/5um/YG063_0045.ibw",
+      "bundle": "afm",
+      "sha256": "8227a41a92cd895328d00dfe9a8db383b202d6d43acef3a2faf9abb527536eea",
+      "size_bytes": 1145432,
+      "sample_ids": [
+        "YG063"
+      ]
+    },
+    {
+      "path": "data/AFM/5um/YG063_0045.txt",
+      "bundle": "afm",
+      "sha256": "17f170c0b821fa2c41e32ea6b244caf1eee3d5e53afd3db740cb1d971fb41b55",
+      "size_bytes": 1203006,
+      "sample_ids": [
+        "YG063"
+      ]
+    },
+    {
+      "path": "data/AFM/5um/YG065_0007.ibw",
+      "bundle": "afm",
+      "sha256": "a5211947b39d35b73f053b7b8dc841b5331bd32bdaae28100dac4f86d1f92aca",
+      "size_bytes": 1145091,
+      "sample_ids": [
+        "YG065"
+      ]
+    },
+    {
+      "path": "data/AFM/5um/YG065_0007.txt",
+      "bundle": "afm",
+      "sha256": "97db1ac475f32f02ac8dde22b7abb488b273472156fff4e18b1acc2086c10227",
+      "size_bytes": 1206936,
+      "sample_ids": [
+        "YG065"
+      ]
+    },
+    {
+      "path": "data/AFM/5um/YG066_0018.ibw",
+      "bundle": "afm",
+      "sha256": "0b9a3025eebd84366d9ea213a8659d0a7c9224ac10ddd1a47dca0af0b1e74ebd",
+      "size_bytes": 1145502,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/AFM/5um/YG066_0018.txt",
+      "bundle": "afm",
+      "sha256": "71e849b72476b8dc3f38799356f1c03a388285b3a1d44d37e9c3411fbd4603c1",
+      "size_bytes": 1185970,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/AFM/5um/YG067_0189.ibw",
+      "bundle": "afm",
+      "sha256": "142a3219409d57e026e81ef95bf3aaaad3677f9390e97524364fe1a5f6ac9f09",
+      "size_bytes": 1144972,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/AFM/5um/YG067_0189.txt",
+      "bundle": "afm",
+      "sha256": "6adb707e40ebb465c7bd85484218f566a818e32595cb67686afbf02139964ad6",
+      "size_bytes": 1199819,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/AFM/5um/YG068_0011.ibw",
+      "bundle": "afm",
+      "sha256": "c59f486d655e60befc0371485d996b388591c2041eaf5ec6740387405da29f61",
+      "size_bytes": 1145546,
+      "sample_ids": [
+        "YG068"
+      ]
+    },
+    {
+      "path": "data/AFM/5um/YG068_0011_.txt",
+      "bundle": "afm",
+      "sha256": "f4e317edbfd4dac06f09ff7569d9d5b8fcbfb64d483cb935b9470b93809bebcc",
+      "size_bytes": 1666282,
+      "sample_ids": [
+        "YG068"
+      ]
+    },
+    {
+      "path": "data/AFM/5um/YG069_0022-340degrees.ibw",
+      "bundle": "afm",
+      "sha256": "c6fdc8ca02401c6fe2b61ccb686e55d5fec8fe3cde804ac0e409daf67503a81b",
+      "size_bytes": 1145545,
+      "sample_ids": [
+        "YG069"
+      ]
+    },
+    {
+      "path": "data/AFM/5um/YG069_0022-340degrees_.txt",
+      "bundle": "afm",
+      "sha256": "61f80ee3c68b5ed4b1c703865c15e4b6f42f33f0b6e0b23879cb74d6270ff99d",
+      "size_bytes": 1671995,
+      "sample_ids": [
+        "YG069"
+      ]
+    },
+    {
+      "path": "data/AFM/5um/flat_YG063_0045.txt",
+      "bundle": "afm",
+      "sha256": "708ffc4e9f1c7b794b29c6ffb79bec2a42ccd30446e13bed71ecd40727953d25",
+      "size_bytes": 1205405,
+      "sample_ids": [
+        "YG063"
+      ]
+    },
+    {
+      "path": "data/AFM/5um/flat_YG066_0018.txt",
+      "bundle": "afm",
+      "sha256": "b2288c2f14aefbd95e6d1ce89dd826424e9d1cdd56a3ba29af2d1ca48215de7b",
+      "size_bytes": 1197671,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/AFM/5um/flat_YG067_0189.txt",
+      "bundle": "afm",
+      "sha256": "01ea392a86479143813cecdca0683ff7464b946fdb26b16681cf8791875b0097",
+      "size_bytes": 1204443,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/Growth_Parameters.xlsx",
+      "bundle": "study-data",
+      "sha256": "2e8b05da1d433d6a2dbafa670445178c9ade006dc85643a77f66fad7357b8f35",
+      "size_bytes": 9779,
+      "sample_ids": []
+    },
+    {
+      "path": "data/Plumes/frame_normalize_dataset/YG063_coords.npy",
+      "bundle": "plume-metrics",
+      "sha256": "aaf4b7aadf10ba4d65511dddda44a0e927e217610ec736c681e1bacb88d81a12",
+      "size_bytes": 192,
+      "sample_ids": [
+        "YG063"
+      ]
+    },
+    {
+      "path": "data/Plumes/frame_normalize_dataset/YG065_coords.npy",
+      "bundle": "plume-metrics",
+      "sha256": "ff9b862942df595ab93630a86e55ffde81852741072d5de0e524e6d3559f4285",
+      "size_bytes": 192,
+      "sample_ids": [
+        "YG065"
+      ]
+    },
+    {
+      "path": "data/Plumes/frame_normalize_dataset/YG066_coords.npy",
+      "bundle": "plume-metrics",
+      "sha256": "ff9b862942df595ab93630a86e55ffde81852741072d5de0e524e6d3559f4285",
+      "size_bytes": 192,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/Plumes/frame_normalize_dataset/YG067_coords.npy",
+      "bundle": "plume-metrics",
+      "sha256": "c35a1d74d2a451f9a70a79138734c5ff06902300f43b9f41aebaec426c9d7649",
+      "size_bytes": 192,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/Plumes/frame_normalize_dataset/YG068_coords.npy",
+      "bundle": "plume-metrics",
+      "sha256": "c35a1d74d2a451f9a70a79138734c5ff06902300f43b9f41aebaec426c9d7649",
+      "size_bytes": 192,
+      "sample_ids": [
+        "YG068"
+      ]
+    },
+    {
+      "path": "data/Plumes/frame_normalize_dataset/YG069_coords.npy",
+      "bundle": "plume-metrics",
+      "sha256": "c35a1d74d2a451f9a70a79138734c5ff06902300f43b9f41aebaec426c9d7649",
+      "size_bytes": 192,
+      "sample_ids": [
+        "YG069"
+      ]
+    },
+    {
+      "path": "data/Plumes/frame_normalize_dataset/standard_coords.npy",
+      "bundle": "plume-metrics",
+      "sha256": "0a5d2d2f7569d4dfe4427bc1a7259f60433ca04c83f5ae3388c25c30124bff3c",
+      "size_bytes": 160,
+      "sample_ids": []
+    },
+    {
+      "path": "data/Plumes/plume_metrics/YG063_metrics.csv",
+      "bundle": "plume-metrics",
+      "sha256": "8cb0e6003f3c0e3d06b8f78f6a754b071d0ee3d3ecc6363232898c8a28a8a01d",
+      "size_bytes": 5345645,
+      "sample_ids": [
+        "YG063"
+      ]
+    },
+    {
+      "path": "data/Plumes/plume_metrics/YG065_metrics.csv",
+      "bundle": "plume-metrics",
+      "sha256": "f16d26ae7b4f504b6c2057af5bf90e9c125e6b4011a2c8acb58082239164f8cf",
+      "size_bytes": 5126554,
+      "sample_ids": [
+        "YG065"
+      ]
+    },
+    {
+      "path": "data/Plumes/plume_metrics/YG066_metrics.csv",
+      "bundle": "plume-metrics",
+      "sha256": "41e3b15dd0e1cf43b445a4f45eb9ae54d28eb35d39c2fe4de738c6093620cbd6",
+      "size_bytes": 5158821,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/Plumes/plume_metrics/YG067_metrics.csv",
+      "bundle": "plume-metrics",
+      "sha256": "d6cbda03f35e3e3e0da7bbaad12d65ee6a512ac9a5607018e6c0bd0907632181",
+      "size_bytes": 5054166,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/Plumes/plume_metrics/YG068_metrics.csv",
+      "bundle": "plume-metrics",
+      "sha256": "08b7c05137b70b542f1ff08a3ae4cf10bf260af99ffd969b42b7c38d429c1607",
+      "size_bytes": 5163884,
+      "sample_ids": [
+        "YG068"
+      ]
+    },
+    {
+      "path": "data/Plumes/plume_metrics/YG069_metrics.csv",
+      "bundle": "plume-metrics",
+      "sha256": "2ab2e360c6eb7fada197196286b344ab00b71c4eb4db5c7484247a64db5799e3",
+      "size_bytes": 3862874,
+      "sample_ids": [
+        "YG069"
+      ]
+    },
+    {
+      "path": "data/TargetMicroscopy/G1/s1.dat",
+      "bundle": "target-microscopy",
+      "sha256": "e1c092b9170b61bed6d6de6273f11aba035f4fd4250c5d5cb26fb0b162641417",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G1/s1.datx",
+      "bundle": "target-microscopy",
+      "sha256": "cf0bedd3a7668c3b1d3a3e9d00305264c7d1d9e3cedaca3fdb28126754c1dbf2",
+      "size_bytes": 25236864,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G1/s4.dat",
+      "bundle": "target-microscopy",
+      "sha256": "897c515c5b67eb5c28de0b474e3788f597ae77fdbf5fac1244303a75103a85f4",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G1/s4.datx",
+      "bundle": "target-microscopy",
+      "sha256": "5e33f6ca0675eefb76bd617af28cf9041b1b231ae027e821ad6476a6d00a4cee",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G1/s5.dat",
+      "bundle": "target-microscopy",
+      "sha256": "bc4e3c816272c62bb2c3bb859a2432d91f8a555ce13a33bb42404a84c0a359f6",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G1/s5.datx",
+      "bundle": "target-microscopy",
+      "sha256": "102b4d2990050476e88effae31b9753ff1dfd452e786dcdd2b0549598321923b",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G1/s8.dat",
+      "bundle": "target-microscopy",
+      "sha256": "4b7d7688baa780d01eeb528e07eb0b91b9638c9ece70517c050b7b970922422b",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G1/s8.datx",
+      "bundle": "target-microscopy",
+      "sha256": "36acfb41a129590ae149a998e3f0d2be5baac26e0ca5b146407255c580b74626",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G2/s2.dat",
+      "bundle": "target-microscopy",
+      "sha256": "952b630119fac2b3a2f7407e4880cc27f85182456b634f27560e30a2737e4327",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G2/s2.datx",
+      "bundle": "target-microscopy",
+      "sha256": "9cd725f9d244067e8859d28ff1dc41727d420180910a5882ca7cc5ed7eb0b01d",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G2/s4.dat",
+      "bundle": "target-microscopy",
+      "sha256": "ca18198dd57d49ab0a7f244cec4bf3a4b1950235dcf9b5432a0e2b21326ea5e6",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G2/s4.datx",
+      "bundle": "target-microscopy",
+      "sha256": "57a72860bd549c56ffe243ee71192e1ff5758128e888fa3d3ac922fbf0168494",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G2/s6.dat",
+      "bundle": "target-microscopy",
+      "sha256": "81d8f3a6c87d8a12821ecc243ae7f33cb413e921234bcbfbe8143e9f73813adb",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G2/s6.datx",
+      "bundle": "target-microscopy",
+      "sha256": "24b7f1e563a860b63f9ef2dd97bccd6a7efcf1286e34a8a2e05c905da46b764b",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G2/s7.dat",
+      "bundle": "target-microscopy",
+      "sha256": "52af3dbcb7e7fa42a65e1d7c50420db3f600511a424d863641a0c19928ecc2e3",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G2/s7.datx",
+      "bundle": "target-microscopy",
+      "sha256": "019a258da4a33bf7a0af812fbd58ba910002d0c395c520c9871687d1e61e2922",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G2/s8.dat",
+      "bundle": "target-microscopy",
+      "sha256": "ad29b6fe4caa929beb1c5d520cf9287dfb6eb231cfe6f278e4c14a5476623962",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G2/s8.datx",
+      "bundle": "target-microscopy",
+      "sha256": "31db898c5bb5aceede4fd49b16af1276252eb948bde59f24337dc7d163ceb9d2",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G3/s1.dat",
+      "bundle": "target-microscopy",
+      "sha256": "226cf59d6b1f5f4932587c97dd12cb27e0b02402a620cbcc2cd3d2609b0fd3ef",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G3/s1.datx",
+      "bundle": "target-microscopy",
+      "sha256": "de219688a246e0788920e8d43a15781727dfcf2f6ec2a0e2df0deb200322e16a",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G3/s3.dat",
+      "bundle": "target-microscopy",
+      "sha256": "dd3985cb245c2dcd1686e8542953f31b1945ff980485685dc22c1103e4e0d7c0",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G3/s3.datx",
+      "bundle": "target-microscopy",
+      "sha256": "b7a6cb21b8078d6a9c8ca16ab61146de30c659442c1199b9f98df043f8fe18bb",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G3/s4.dat",
+      "bundle": "target-microscopy",
+      "sha256": "5860394a4ce445e747f2a5116e930ca0cc2feccc2f878503eac0ce91ac219cc0",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G3/s4.datx",
+      "bundle": "target-microscopy",
+      "sha256": "0b981b7371c218eb7067735f344fd7f2175da76339a13cf3e54d68448628a9b2",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G3/s5.dat",
+      "bundle": "target-microscopy",
+      "sha256": "7c2574553525992aa064285c110c6eea1dff93780f7144967459a6f7fffd80c4",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G3/s5.datx",
+      "bundle": "target-microscopy",
+      "sha256": "01b301a586c9912aa8881d6809824ef9156dc57bc3efc3859a1c27a3de8973c3",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G4/s1.dat",
+      "bundle": "target-microscopy",
+      "sha256": "60aa0f28463e5ab3db811ecfa5c3e276188ed461ffa1d38ca7ceaff309bbd910",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G4/s1.datx",
+      "bundle": "target-microscopy",
+      "sha256": "abb2801f62fea5ca97a5a4fe69abdd0bb26f9064a64b92c31d485f72dccc95ca",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G4/s2.dat",
+      "bundle": "target-microscopy",
+      "sha256": "f259a58290296be57d0a81ee6c1743d0c2b669969d7e15fefe58f37c9472dc45",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G4/s2.datx",
+      "bundle": "target-microscopy",
+      "sha256": "ee6d5b38dfadb2b35d03988ae4cc74236abad546d4c1ec5e133c81095d653f6a",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G4/s4.dat",
+      "bundle": "target-microscopy",
+      "sha256": "b869c301100ca39f8e6ff5d2c7c28a7df15495e84b9fc59e1ab24581dae1b6d1",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G4/s4.datx",
+      "bundle": "target-microscopy",
+      "sha256": "22e1c8b0341464372d3e19ffdec7a51df9174ad672942f112eb1cb996f7b9f7a",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G4/s5.dat",
+      "bundle": "target-microscopy",
+      "sha256": "dcf1b42a78e24321bbb5d1e6ebc45b158282854c14faa1391525a55486083464",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G4/s5.datx",
+      "bundle": "target-microscopy",
+      "sha256": "f8fd7b3827ebce66fcdb2844c463c20497331bb50d0cc3f0b543eb7d9da63ed8",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G5/s1.dat",
+      "bundle": "target-microscopy",
+      "sha256": "5d12584ecd6322855eb3649330789ca83b3bda2acb95af99e997a7098f0c3bc9",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G5/s1.datx",
+      "bundle": "target-microscopy",
+      "sha256": "f3e04c476106268384381a5ed456e09d1e0af7f71eb3007676e647af3813036c",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G5/s2.dat",
+      "bundle": "target-microscopy",
+      "sha256": "eb5f71a153a435230631fb98f8bd75f3fb755a4d79fe2e8925685f6ac64fd5f0",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G5/s2.datx",
+      "bundle": "target-microscopy",
+      "sha256": "acbf138c9d295c7bb45d31a87e13e39b4a17a13175e8b6cdbc780da1fddd5741",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G5/s3.dat",
+      "bundle": "target-microscopy",
+      "sha256": "84c1679efda0c83a9730f7f790c97fa84f80e513ee9d53369129fccd666d5dfc",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G5/s3.datx",
+      "bundle": "target-microscopy",
+      "sha256": "2c929206f02fc01813d2c421b372b4e4fe6a285d3ba3170ca5859c256bba4f21",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G5/s4.dat",
+      "bundle": "target-microscopy",
+      "sha256": "ea9550eec15d70868583a12bf3c42a4aea10beb5485f7e27890470323dc10e79",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/G5/s4.datx",
+      "bundle": "target-microscopy",
+      "sha256": "108b50e159db31af8ddf419e714190fb8cda1e6fd814f4e7d1a522bc996b6a5e",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/Sanded/s1.datx",
+      "bundle": "target-microscopy",
+      "sha256": "602533a008b766dc178f3edbb48cfc315c0c8f47c204aa61e2168f065fdf2827",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/Sanded/s2.datx",
+      "bundle": "target-microscopy",
+      "sha256": "fec805163bf7aa4c2fcd46da67c1e16256778f6dd9235b62adf590f940896abe",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/Sanded/s3.datx",
+      "bundle": "target-microscopy",
+      "sha256": "3531589f7c4499c5e578613a43c5982b9524eb412c90ec3402b74d0f93c518a9",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/Sanded/s4.datx",
+      "bundle": "target-microscopy",
+      "sha256": "f769efeabcc8875cfa1d253c956067329a11ae73e2138113c30e7622f7ab57ab",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/Sanded/s6.dat",
+      "bundle": "target-microscopy",
+      "sha256": "21858f5a7e918c24fe26fdb38776ce7d3866bd42a3a3e9d1b9460b9342159b65",
+      "size_bytes": 6292290,
+      "sample_ids": []
+    },
+    {
+      "path": "data/TargetMicroscopy/Sanded/s6.datx",
+      "bundle": "target-microscopy",
+      "sha256": "6a26f76a1e4dc8ebfc56013845e98c52dc1e8c92ea99d63a1bc664252e36edf1",
+      "size_bytes": 25236632,
+      "sample_ids": []
+    },
+    {
+      "path": "data/XRD_RSM/YG063/YG063 Rokcing curve 5 degree_1 1_32 slit.xrdml",
+      "bundle": "xrd",
+      "sha256": "451aa18dc45a7eecfc0453edfd1dbe68339eb5fdb927e72026aae2fbd8edb59c",
+      "size_bytes": 6916,
+      "sample_ids": [
+        "YG063"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG063/YG063_2theta-Omega_42-49degree.xrdml",
+      "bundle": "xrd",
+      "sha256": "76e0f6a1dfdf800cc552a5786d4558f1f840543b0ecb33e63a71408e2c74de57",
+      "size_bytes": 6002,
+      "sample_ids": [
+        "YG063"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG063/YG063_RSM-002.xrdml",
+      "bundle": "xrd",
+      "sha256": "e79b0b1558e0a74d4b4ebb4349642d8041b455eb2db9ec8408a53253eb90caf4",
+      "size_bytes": 3257786,
+      "sample_ids": [
+        "YG063"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG063/YG063_RSM-103_phi-angle1.xrdml",
+      "bundle": "xrd",
+      "sha256": "29f68dcc96a1d416d2ce49b2c1d6ca88eda00d165a98745de2d2536adee8b6e6",
+      "size_bytes": 3259051,
+      "sample_ids": [
+        "YG063"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG063/YG063_RSM-103_phi-angle2.xrdml",
+      "bundle": "xrd",
+      "sha256": "1877b6cf9c229858f19a1e78d43fce4da46f5ebc722651b6cdd0d943c1b4a7fd",
+      "size_bytes": 3258763,
+      "sample_ids": [
+        "YG063"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG063/YG063_RSM-103_phi-angle3.xrdml",
+      "bundle": "xrd",
+      "sha256": "3741628fa4be0d044264f4341e0399e554e93fd89f5d2ef1c8cea2cb9b93c45b",
+      "size_bytes": 3260764,
+      "sample_ids": [
+        "YG063"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG063/YG063_RSM-103_phi-angle4.xrdml",
+      "bundle": "xrd",
+      "sha256": "e6df887fabebd5644b5864acac0be9397817e5e218015de0bcadcdc7051c0392",
+      "size_bytes": 3259365,
+      "sample_ids": [
+        "YG063"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG065/YG065 Rokcing curve 5 degree_1 1_32 slit.xrdml",
+      "bundle": "xrd",
+      "sha256": "ff3cc762fddc4ba6c0aa672afc4a18c8f84155ac626f9a483ea6127f37bcf2bd",
+      "size_bytes": 7020,
+      "sample_ids": [
+        "YG065"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG065/YG065_2theta-Omega_42-49degree.npy",
+      "bundle": "xrd",
+      "sha256": "95eb00fb9954324c207b8d80e6a8f1048367838b86c5beb22d9e43d9cd03224f",
+      "size_bytes": 4528,
+      "sample_ids": [
+        "YG065"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG065/YG065_2theta-Omega_42-49degree.xrdml",
+      "bundle": "xrd",
+      "sha256": "5d1d9af86380ca1624386e68d7ca87359442195707d9d5bfd14d5b4b728dc84a",
+      "size_bytes": 6059,
+      "sample_ids": [
+        "YG065"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG065/YG065_RSM-002.xrdml",
+      "bundle": "xrd",
+      "sha256": "f35e2d62452b3c9ad7aa01326c9c38ee9e4ed85bffe820d50b749b1190924906",
+      "size_bytes": 3268097,
+      "sample_ids": [
+        "YG065"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG065/YG065_RSM-103_phi-360.xrdml",
+      "bundle": "xrd",
+      "sha256": "e6710227db50f2e7a812e0df523fca0bc4a171d8171adfac42fc4526d427f50d",
+      "size_bytes": 3271526,
+      "sample_ids": [
+        "YG065"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG065/YG065_RSM-103_phi-angle1.xrdml",
+      "bundle": "xrd",
+      "sha256": "ea7f782322459b47d208ebbd684b9a9366d8968187590ac8244a5b4dd204db0a",
+      "size_bytes": 3258222,
+      "sample_ids": [
+        "YG065"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG065/YG065_RSM-103_phi-angle2.xrdml",
+      "bundle": "xrd",
+      "sha256": "270d1861a46074c8c7b71536b43f6a03a5f201da89f6a092eb942fe7f5c6dd0c",
+      "size_bytes": 3257748,
+      "sample_ids": [
+        "YG065"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG065/YG065_RSM-103_phi-angle3.xrdml",
+      "bundle": "xrd",
+      "sha256": "55a0c120764099cccf1482210306e0c667241c3fa7f211104f6a946ce145852e",
+      "size_bytes": 3255741,
+      "sample_ids": [
+        "YG065"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG065/YG065_RSM-103_phi-angle4.xrdml",
+      "bundle": "xrd",
+      "sha256": "a7f75309b53ddb95f61a1f647c77f80b9a2436031dc9cc2ef740805319d0963e",
+      "size_bytes": 3264922,
+      "sample_ids": [
+        "YG065"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG065/YG065_Rokcing curve 5 degree_1.xrdml",
+      "bundle": "xrd",
+      "sha256": "d5eed65a67ddcdaade9def1d689a41b0be36ce9aa654ccf114e03a2e1c20d7ae",
+      "size_bytes": 7617,
+      "sample_ids": [
+        "YG065"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG066/YG066 2theta-Omega_Path1_42-49 degree_slow_2 1.xrdml",
+      "bundle": "xrd",
+      "sha256": "9c777e0aa93c5df7ab572f8888b7911ec3def2ceb05c9357514563f91a73dd9c",
+      "size_bytes": 5976,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG066/YG066 2theta-Omega_Path1_42-49 degree_slow_2.xrdml",
+      "bundle": "xrd",
+      "sha256": "9c777e0aa93c5df7ab572f8888b7911ec3def2ceb05c9357514563f91a73dd9c",
+      "size_bytes": 5976,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG066/YG066 Coarse Z Optimization_1.xrdml",
+      "bundle": "xrd",
+      "sha256": "0f94254882ea74ae2915eb6a7a08e5a735cc727e1451e344aa2779a509f21412",
+      "size_bytes": 6041,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG066/YG066 Rokcing curve 5 degree_1 1_32 slit.xrdml",
+      "bundle": "xrd",
+      "sha256": "84bb44d1e4c5a88b6a745a977842410f6b67e6ccecfaa0e7d7bbfb28b6ff73f6",
+      "size_bytes": 6923,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG066/YG066 Rokcing curve 5 degree_1.xrdml",
+      "bundle": "xrd",
+      "sha256": "98073644f08d7738d555452a23076532a59130abc7e8eb20ddccf62ed1c910b7",
+      "size_bytes": 7516,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG066/YG066 STO 103 phi 360 degree scan.xrdml",
+      "bundle": "xrd",
+      "sha256": "96e73b97abeb4e32de336c9130d093b287b86d10c387adda570936849eb3ce63",
+      "size_bytes": 5358,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG066/YG066_RSM-002.xrdml",
+      "bundle": "xrd",
+      "sha256": "ad4b69de9c8a298c4071a69338af6f9e682c350d4afff2c9508c10bf5a4abed0",
+      "size_bytes": 3260885,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG066/YG066_RSM-103_phi-angle1.xrdml",
+      "bundle": "xrd",
+      "sha256": "19cf7d0492301ca2bfad35c905f0b6f76cc89d50443ea2b7aec745e1f08562fa",
+      "size_bytes": 3253455,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG066/YG066_RSM-103_phi-angle2.xrdml",
+      "bundle": "xrd",
+      "sha256": "e2d243a4576fe7ec8fab36c0b1b86e481dd150ad77c9ce74a0765a1cbf66bcf1",
+      "size_bytes": 3260778,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG066/YG066_RSM-103_phi-angle3.xrdml",
+      "bundle": "xrd",
+      "sha256": "e6e4d692ae4b4c928b062de3a0ce9656aa26bfdaa155837aedcfbb54c77540ea",
+      "size_bytes": 3257951,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG066/YG066_RSM-103_phi-angle4.xrdml",
+      "bundle": "xrd",
+      "sha256": "96b625251e5a8664d4cda955a190c2da8c6c05e404f7cc3bac7e01bda95ccfcb",
+      "size_bytes": 3254238,
+      "sample_ids": [
+        "YG066"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG067/YG067 2theta-Omega_Path1_42-49 degree_slow_2 1.xrdml",
+      "bundle": "xrd",
+      "sha256": "df12c80fe6aa1f372c1edd87bb028d6ce3f296e081a29e9884ce511d3b95a4f9",
+      "size_bytes": 6004,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG067/YG067 Coarse Z Optimization_1 1.xrdml",
+      "bundle": "xrd",
+      "sha256": "66c1b2b4bc98cfaae1a6d98b7f25e5e026445c0e94b12136c29f628f2763d799",
+      "size_bytes": 5642,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG067/YG067 Rokcing curve 5 degree_1 1_32 slit.xrdml",
+      "bundle": "xrd",
+      "sha256": "477efdabec3ef0209bb7008fdb829ff6d91b45183665f457c09269a250376d8e",
+      "size_bytes": 6860,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG067/YG067 Rokcing curve 5 degree_1 1_4 slit.xrdml",
+      "bundle": "xrd",
+      "sha256": "6bbf18405348a948e7521b6b95a2417963ac1017ebed1c6d11c86e4baac10cba",
+      "size_bytes": 7469,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG067/YG067 STO 103 phi_360 degree scan 1.xrdml",
+      "bundle": "xrd",
+      "sha256": "2ad4960abed0b0c64ec2d9ec20c9f37649aab0e891527ad929949082864b55ef",
+      "size_bytes": 5353,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG067/YG067_RSM-002.xrdml",
+      "bundle": "xrd",
+      "sha256": "8aecd1f4e85ed36396afb1c8cb6460d55e7af8b46f6af1e217b865c7a646a2c2",
+      "size_bytes": 3261016,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG067/YG067_RSM-103_phi-angle1.xrdml",
+      "bundle": "xrd",
+      "sha256": "017337e2ea4aa940d78d29b92dfb27c9ae88384e0a8eec7898ee9a62fbe3ea95",
+      "size_bytes": 3255914,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG067/YG067_RSM-103_phi-angle2.xrdml",
+      "bundle": "xrd",
+      "sha256": "aa58c001cde3069667342ea7ce334d6be618e1f9b17f4eb81ce2b8aac48d1963",
+      "size_bytes": 3260337,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG067/YG067_RSM-103_phi-angle3.xrdml",
+      "bundle": "xrd",
+      "sha256": "f461151e6ae7d922558834043d313734729d0a1caeedd1a81445c7d502ea4fa8",
+      "size_bytes": 3259982,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG067/YG067_RSM-103_phi-angle4.xrdml",
+      "bundle": "xrd",
+      "sha256": "2697b0cb43ccc5300cf83fb73cf2c5fb65ad9629c41b66b1b6b74291426771e0",
+      "size_bytes": 3258565,
+      "sample_ids": [
+        "YG067"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG068/YG068 2theta-Omega_Path1_42-49 degree_slow_2.xrdml",
+      "bundle": "xrd",
+      "sha256": "570524bf6049caef8fe5881759181142c92aa81a835678bac09cceba3858ab38",
+      "size_bytes": 5996,
+      "sample_ids": [
+        "YG068"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG068/YG068 Coarse Z Optimization_1.xrdml",
+      "bundle": "xrd",
+      "sha256": "e5bd0d04e8f33a90a1faf56d594e83217ca2cf10743d375c19a130fe33312b97",
+      "size_bytes": 5982,
+      "sample_ids": [
+        "YG068"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG068/YG068 Rokcing curve 5 degree_1 1_32 SLIT.xrdml",
+      "bundle": "xrd",
+      "sha256": "b949de8a108269b167f150fb3085d97390b226d3f36976453588ff308caa7e20",
+      "size_bytes": 6880,
+      "sample_ids": [
+        "YG068"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG068/YG068 Rokcing curve 5 degree_1 1_4 SLIT.xrdml",
+      "bundle": "xrd",
+      "sha256": "c14f330ba2519b2028bbecbf3c87baaa5bf235dbefc2224b6cc8ed649f593182",
+      "size_bytes": 7471,
+      "sample_ids": [
+        "YG068"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG068/YG068 STO 103 phi 360 degree scan.xrdml",
+      "bundle": "xrd",
+      "sha256": "63425cb8febcaf3c3b0a2c921c6121166bbff27c6058607939b347d8de92aac4",
+      "size_bytes": 5363,
+      "sample_ids": [
+        "YG068"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG068/YG068_RSM-002.xrdml",
+      "bundle": "xrd",
+      "sha256": "555d745ee1a5a41d7faf411b665400e14873b223ab010a2b8661f5afdb36bf20",
+      "size_bytes": 3263157,
+      "sample_ids": [
+        "YG068"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG068/YG068_RSM-103_phi-angle1.xrdml",
+      "bundle": "xrd",
+      "sha256": "b8365bba1091636cb59784f2bade71ec45b0bd18a844a6fda4084542bb0e613b",
+      "size_bytes": 3260696,
+      "sample_ids": [
+        "YG068"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG068/YG068_RSM-103_phi-angle2.xrdml",
+      "bundle": "xrd",
+      "sha256": "e927b27c013e95d94cd5cf7b9c7f1cb943e14d9660ed7aa585dd0e4a01e4395f",
+      "size_bytes": 3261021,
+      "sample_ids": [
+        "YG068"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG068/YG068_RSM-103_phi-angle3.xrdml",
+      "bundle": "xrd",
+      "sha256": "f1be5a34d152d491da0b996973b057914e7e7a05e7952801666ae7bdd36ac1eb",
+      "size_bytes": 3260128,
+      "sample_ids": [
+        "YG068"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG068/YG068_RSM-103_phi-angle4.xrdml",
+      "bundle": "xrd",
+      "sha256": "12dfa5c7c5fbf5e02687fd5fe5be911399d7db377c3a7ca444d8f2b2987c14ee",
+      "size_bytes": 3259911,
+      "sample_ids": [
+        "YG068"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG069/YG069 2theta-Omega_Path1_42-49 degree_slow_2.xrdml",
+      "bundle": "xrd",
+      "sha256": "cc7311b31862508e0ec9e805f7928b14250525a9611a71e86ae4155d19803edd",
+      "size_bytes": 5993,
+      "sample_ids": [
+        "YG069"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG069/YG069 Coarse Z Optimization_2.xrdml",
+      "bundle": "xrd",
+      "sha256": "35e73e1f8c990e7ee517db8262dc11e712b9de218c0375d4e0934c42f96fa0bc",
+      "size_bytes": 6188,
+      "sample_ids": [
+        "YG069"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG069/YG069 Rokcing curve 5 degree_1 1_32 slit.xrdml",
+      "bundle": "xrd",
+      "sha256": "b7f10d770104e010cf514d5512a6cf7c85818bddf75e5568d6cde2b386caa7c8",
+      "size_bytes": 6833,
+      "sample_ids": [
+        "YG069"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG069/YG069 Rokcing curve 5 degree_1.xrdml",
+      "bundle": "xrd",
+      "sha256": "0e97297168369f5adc3d2343cc0f61fd847b32f5700e3b731045b0e436c60e45",
+      "size_bytes": 7408,
+      "sample_ids": [
+        "YG069"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG069/YG069_RSM-002.xrdml",
+      "bundle": "xrd",
+      "sha256": "8486adc533128429ee653ba32111e86214560986cdaa2302f0381eebcc0e18a3",
+      "size_bytes": 3258017,
+      "sample_ids": [
+        "YG069"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG069/YG069_RSM-103_phi-angle1.xrdml",
+      "bundle": "xrd",
+      "sha256": "7b0bf6a7baa2368af4bb67ed6a30bacb085bcc9ac0822be81b129278eb80b9c1",
+      "size_bytes": 3254552,
+      "sample_ids": [
+        "YG069"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG069/YG069_RSM-103_phi-angle2.xrdml",
+      "bundle": "xrd",
+      "sha256": "3f9ba71427abd32f78f0eb2c3a1826829e1a1313da01e9bcddbdada72b3c8559",
+      "size_bytes": 3258923,
+      "sample_ids": [
+        "YG069"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG069/YG069_RSM-103_phi-angle3.xrdml",
+      "bundle": "xrd",
+      "sha256": "d4adf6515cc9b4b2de432529b16d59fd1cafba70eba71afedf6e5a0d70e1ed5b",
+      "size_bytes": 3260318,
+      "sample_ids": [
+        "YG069"
+      ]
+    },
+    {
+      "path": "data/XRD_RSM/YG069/YG069_RSM-103_phi-angle4.xrdml",
+      "bundle": "xrd",
+      "sha256": "b06885f723d7e89463417c25bb316752b05a4ce32dd6ac0bfe03ded8a4054734",
+      "size_bytes": 3257850,
+      "sample_ids": [
+        "YG069"
+      ]
+    },
+    {
+      "path": "dataerai_notebook.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "54600498d0bcb21a00d599bd416d9a8a2141d3a0b9c6b315f7e7bcffc783c573",
+      "size_bytes": 67399,
+      "sample_ids": []
+    },
+    {
+      "path": "dataerai_preservation.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "ca7cd045435579b09468581855070e8ddb36dcd6af35ab2cdf0038c2aae0437e",
+      "size_bytes": 25541,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Extra-C_G6_plume_video.mp4",
+      "bundle": "figures",
+      "sha256": "aa8255a029388ee346f291ea0492f85daec665679adf030f5da2281e1b4617c4",
+      "size_bytes": 519826,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Extra-G1_plume_video.mp4",
+      "bundle": "figures",
+      "sha256": "472d881649ac238f5f461df6014b0f195a312256fa5e284a6185686a095c2acd",
+      "size_bytes": 608826,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Extra-G2_plume_video.mp4",
+      "bundle": "figures",
+      "sha256": "b6c30d145248f64715c2450c18974531b7f6d9c0228f5c4b6f20f8b37a00e862",
+      "size_bytes": 952754,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Extra-G3_plume_video.mp4",
+      "bundle": "figures",
+      "sha256": "79aa86db7e9159c346b6c8f392df1c47f820e1fd635bbc654e667d5120069976",
+      "size_bytes": 307303,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Extra-G4_plume_video.mp4",
+      "bundle": "figures",
+      "sha256": "3828fecd57de57f43cad8ef410bac93e15c7cfdde539664150a7d038427e5d66",
+      "size_bytes": 338163,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Extra-G5_plume_video.mp4",
+      "bundle": "figures",
+      "sha256": "aaa6644fa520c9c68238ab4dde669bc9dfa7c26b95eb1cff0b368dd620e2cf13",
+      "size_bytes": 337687,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Extra-Plume_Evolution.svg",
+      "bundle": "figures",
+      "sha256": "d694e65b58cf6f8bb1eecfa6b59511eb42f8b61665868e4250430b32696e8ffb",
+      "size_bytes": 568375,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Extra-Plume_Evolution_position.svg",
+      "bundle": "figures",
+      "sha256": "8a34b1f078d5ce420a5a26df37974cf59551fbd3edbc45faff1972c53d7457bb",
+      "size_bytes": 571222,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Extra-Plume_Sample_Frames-G1-short.png",
+      "bundle": "figures",
+      "sha256": "df405fcd70c3c76d929c395b5b9bdf8d32238c9fac16922f5531a3958e8866d7",
+      "size_bytes": 2308064,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Extra-Plume_Sample_Frames-G1-short.svg",
+      "bundle": "figures",
+      "sha256": "8957eafe03480a853c5d8fc40749d51edff3d65060df16ca32b65d5fb060b0f7",
+      "size_bytes": 2997393,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure1-Samples_experiment_setup.png",
+      "bundle": "figures",
+      "sha256": "3a7878e701c10543f078abc6e76b0a902add1832815253dd1b674419a59f62b0",
+      "size_bytes": 253771,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure1-Samples_experiment_setup.svg",
+      "bundle": "figures",
+      "sha256": "0da4872fffebb271f6359aa16ed010cea7d506f7fa98fa832a1a0ff5e0095e3f",
+      "size_bytes": 9344121,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure2-XRD_RSM-no_labels.png",
+      "bundle": "figures",
+      "sha256": "64053a46b21ff9502f3bdfb7dd9b862fe5486e59faad411bd9029a4102adf9d7",
+      "size_bytes": 1522481,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure2-XRD_RSM-no_labels.svg",
+      "bundle": "figures",
+      "sha256": "0a257e26c0008e78a61ac90b1d1223f8a8af17a91c63af54f79cce7d1cce574a",
+      "size_bytes": 853870,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure2-XRD_RSM-nolabel.png",
+      "bundle": "figures",
+      "sha256": "64053a46b21ff9502f3bdfb7dd9b862fe5486e59faad411bd9029a4102adf9d7",
+      "size_bytes": 1522481,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure2-XRD_RSM-nolabel.svg",
+      "bundle": "figures",
+      "sha256": "aa51fe056eaec41a9a66c94f56ee9263a909a500395477bb83a34d27932e9ce7",
+      "size_bytes": 853870,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure2-XRD_RSM.png",
+      "bundle": "figures",
+      "sha256": "ecaa6ce343a0776f077e31f624046115df964d5bd650da6342bca487d5627e58",
+      "size_bytes": 1549794,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure2-XRD_RSM.svg",
+      "bundle": "figures",
+      "sha256": "c0525e3316e4b1c72849fa5a59d60cb886b2c4743701f91afc65060b948d9a50",
+      "size_bytes": 869460,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure3-AFM_10um.png",
+      "bundle": "figures",
+      "sha256": "0a46c463f3c114f7026e5adbdf514b2a7037cc50a1193ceff29e203dc788b987",
+      "size_bytes": 1723612,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure3-AFM_10um.svg",
+      "bundle": "figures",
+      "sha256": "e2d5da632545b02b5a5e1a51801a45091e4f1c6b7cb5b7fe53a3aa6cd4359c45",
+      "size_bytes": 2033989,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure4-Plume_area_distance_velocity_average.png",
+      "bundle": "figures",
+      "sha256": "01163f2a996e7321c74f6406286c09813d7046af982d74d1c8ae7d69f513c8e1",
+      "size_bytes": 1484346,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure4-Plume_area_distance_velocity_average.svg",
+      "bundle": "figures",
+      "sha256": "fd21cee323a938127863b8950f460f0b25471ebe52c53705494b6f826d53cc31",
+      "size_bytes": 1082731,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure5-Temporal_Spatial_variation-violinplot_heatmaps.png",
+      "bundle": "figures",
+      "sha256": "42c7f31301239f7655224f681f05be420b6fc64467d2a0b02a447d301ae495e0",
+      "size_bytes": 1865939,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure5-Temporal_Spatial_variation-violinplot_heatmaps.svg",
+      "bundle": "figures",
+      "sha256": "1835ae179f14f5503defdca5e13224992290dc74f24f5572e5059ec4624b2020",
+      "size_bytes": 10514766,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure5-Temporal_variation-violinplot_heatmaps.png",
+      "bundle": "figures",
+      "sha256": "42c7f31301239f7655224f681f05be420b6fc64467d2a0b02a447d301ae495e0",
+      "size_bytes": 1865939,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure5-Temporal_variation-violinplot_heatmaps.svg",
+      "bundle": "figures",
+      "sha256": "f327aafe225ee1c5013e3a19fdeeb6a35bbe3f09ed16576e55aa0114d07d00de",
+      "size_bytes": 10514766,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure6-Spatial_inhomogeneity_combined.png",
+      "bundle": "figures",
+      "sha256": "afebf2d4372696731399e66523bb7db1471e4205d5e0ee11f5e391fa23b6795f",
+      "size_bytes": 662296,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/Figure6-Spatial_inhomogeneity_combined.svg",
+      "bundle": "figures",
+      "sha256": "6b515d774215c3f44b00251ba41123965280df9639231601cbfaec070c19265f",
+      "size_bytes": 3350559,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS1-TargetMicroscopy.png",
+      "bundle": "figures",
+      "sha256": "bce35eb6cb09810b7789feb20ce2610186936d62814bc179033a0fb827e8a838",
+      "size_bytes": 260286,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS1-TargetMicroscopy.svg",
+      "bundle": "figures",
+      "sha256": "8502639ed2f056b56e534bf70e570c9f4a16efc931daab5d13eae8b2f946b8f6",
+      "size_bytes": 45391,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS10-Plume_Sample_Frames-G5.png",
+      "bundle": "figures",
+      "sha256": "a6c453230dbd7b2a2539b09992e305df196379be0976446788f37c1638294f2c",
+      "size_bytes": 12567215,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS10-Plume_Sample_Frames-G5.svg",
+      "bundle": "figures",
+      "sha256": "1e5d74d0a9c6e5fa88f2f8ef7235d2cf48d3cd3869811fce131e1a8137ce375f",
+      "size_bytes": 16702115,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS11-Plume_Sample_Frames-C_G6.png",
+      "bundle": "figures",
+      "sha256": "7e3b1ceec03175d73a7e3b94b7a6df980bcc4e4aec6c24ebcd222e00801e6b7d",
+      "size_bytes": 12912449,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS11-Plume_Sample_Frames-C_G6.svg",
+      "bundle": "figures",
+      "sha256": "5ca04d9da9211ad14549a4440e2d28fa46a75d85481aebef352ae64bf19a28e8",
+      "size_bytes": 17149427,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS13-Plume_area_history.png",
+      "bundle": "figures",
+      "sha256": "a0c0bb51c86162f1580bde2c440d688f8853fef00e76b6ef8343bb553133dece",
+      "size_bytes": 3808101,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS13-Plume_area_history.svg",
+      "bundle": "figures",
+      "sha256": "820e615b6324f9f8d36da85e59856629218793c73deff88faa926a8169c417e4",
+      "size_bytes": 1413841,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS14-Plume_distance_history.png",
+      "bundle": "figures",
+      "sha256": "e40988ccae6be8079988ed300949842d8e67c29b201638421ce71ec10e1c74d5",
+      "size_bytes": 1770909,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS14-Plume_distance_history.svg",
+      "bundle": "figures",
+      "sha256": "20fe1c337b1ff22d4b5d0d28549ecaaf6022cd19b60a93b7b7814556a2d8871e",
+      "size_bytes": 1403062,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS15-Plume_velocity_history.png",
+      "bundle": "figures",
+      "sha256": "fde5f963cb39ba916eaf54de5c250a83baa28386477166b63c43b34f1b03e532",
+      "size_bytes": 2782988,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS15-Plume_velocity_history.svg",
+      "bundle": "figures",
+      "sha256": "63c1bd0d8e6095b12b3f872d4442c226ca7bf5a24cbd5d67c1a0a0ba61fff600",
+      "size_bytes": 2130321,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS2-TargetMicroscopy-Maps.png",
+      "bundle": "figures",
+      "sha256": "382471baa3375a3c71df817b78af300891bd41c0bbb0d70172fc5a6a24c6c654",
+      "size_bytes": 29424810,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS2-TargetMicroscopy-Maps.svg",
+      "bundle": "figures",
+      "sha256": "6f576aa5ac752f48db665cd3e6856a1981cc6e96f6ce534f480820c3786bf9f1",
+      "size_bytes": 39528783,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS3-XRD_RSM.png",
+      "bundle": "figures",
+      "sha256": "84a60c1397fbae5883df06591ae17910ea05dd967bf9e2ce85c2203891ad2b5e",
+      "size_bytes": 503489,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS3-XRD_RSM.svg",
+      "bundle": "figures",
+      "sha256": "022ae9f6a92f0a7aa8a4b4f1387dd3991a983b65e305438d30bc7e22a382aa41",
+      "size_bytes": 545560,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS4-AFM_5um_lineprofile.png",
+      "bundle": "figures",
+      "sha256": "6c5778c43f818765e0d98e541e85c52f79b27d29507c0a884e92e7ab16e32b4c",
+      "size_bytes": 1756535,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS4-AFM_5um_lineprofile.svg",
+      "bundle": "figures",
+      "sha256": "8921ec2308a317508433f80c3b97a816d4167310c143327474b39e8ab6f8eda3",
+      "size_bytes": 1975579,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS5-PLD_logging.png",
+      "bundle": "figures",
+      "sha256": "53ba5d1f06b949c7f0505c782d66e8ab371ed3f4d89f18748a9dfcb3ea33f526",
+      "size_bytes": 230000,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS6-Plume_Sample_Frames-G1.png",
+      "bundle": "figures",
+      "sha256": "424d070e38ac9782b67f3a92e947f280b0cc9d9462dcb9bb96d84ffce6c5e346",
+      "size_bytes": 14046773,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS6-Plume_Sample_Frames-G1.svg",
+      "bundle": "figures",
+      "sha256": "9e5eb86879648f799b000b7eeaf6f4037f56ae8c16431df8191032641128f86b",
+      "size_bytes": 18643199,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS7-Plume_Sample_Frames-G2.png",
+      "bundle": "figures",
+      "sha256": "e9884d54102d34029049166d88b873272f33557404c38d2363ebcb1df08a44a4",
+      "size_bytes": 12317133,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS7-Plume_Sample_Frames-G2.svg",
+      "bundle": "figures",
+      "sha256": "7cbd3624826f7a334aff85b565b290daca93a7599d0ceacfa0df30e94c44a374",
+      "size_bytes": 16403131,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS8-Plume_Sample_Frames-G3.png",
+      "bundle": "figures",
+      "sha256": "bb43f7fbd27abc1f255b48ddf5a3cff7b07b3f9e488adf0ba355c1608546a826",
+      "size_bytes": 12312357,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS8-Plume_Sample_Frames-G3.svg",
+      "bundle": "figures",
+      "sha256": "1a5b38ccce6b5bc0ea4d422eb1786074d7d22d2b52044b132ded1bf83ca94e98",
+      "size_bytes": 16382059,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS9-Plume_Sample_Frames-G4.png",
+      "bundle": "figures",
+      "sha256": "377f224d6e39dcbf549630ff4f1235af430d708e9db6c6a3e52a813e4f2f2b32",
+      "size_bytes": 12417243,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/FigureS9-Plume_Sample_Frames-G4.svg",
+      "bundle": "figures",
+      "sha256": "8927d6a9572d214b3bcd1732149778e947e3632f36c082444a67f901becfac0d",
+      "size_bytes": 16514203,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/draft/1_RSM_103_Analysis.png",
+      "bundle": "figures",
+      "sha256": "65486603315f07e2bb5583ac33c2fb28444d3e88bef1b885bff848fb4ed37542",
+      "size_bytes": 2231654,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/draft/1_RSM_103_Analysis.svg",
+      "bundle": "figures",
+      "sha256": "09466e1e15be8e35c791947e1eea7b1b2617a785e447fb6df23506741502a3d6",
+      "size_bytes": 12774666,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/draft/2_Plume_area_with_index.png",
+      "bundle": "figures",
+      "sha256": "9e186fb1ecb9c866690290effec6808b3cef8ce0e6ca7f9626e3ec34d93d128d",
+      "size_bytes": 3430971,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/draft/2_Plume_metric_summary.png",
+      "bundle": "figures",
+      "sha256": "edf38763107273ac70a0cd23e0cdb5ce1fbc6cef0f04ba771cd82fe541d537d5",
+      "size_bytes": 858889,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/draft/2_Plume_samples.png",
+      "bundle": "figures",
+      "sha256": "865f463b187a9af0949aa8f922bd6c21cb67604fe0a13a957ee89bb8122983ac",
+      "size_bytes": 16016306,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/draft/3_Experiment_Design_target.png",
+      "bundle": "figures",
+      "sha256": "927ca3a946f369ea157656e5cdd10e577b1f272fa596d0f1bfd8b35a5f09e587",
+      "size_bytes": 7633573,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/draft/3_Plume_area_distance_velocity_average.png",
+      "bundle": "figures",
+      "sha256": "d16c41874cbe98c0e12050f6afbedb03775196084eb59fece83bd9aa0d18c40a",
+      "size_bytes": 821861,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/draft/3_Plume_area_distance_velocity_average.svg",
+      "bundle": "figures",
+      "sha256": "ccae64179c772245c71b115b8ec946930337d852698179cebadf7b352ae53eee",
+      "size_bytes": 152618,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/draft/3_Plume_metric_average.png",
+      "bundle": "figures",
+      "sha256": "615ecfb3e5b8868bd278c205184091900aa42277d3d1e97726566e208f934669",
+      "size_bytes": 691443,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/draft/4_Plume_metrics_violinplot.png",
+      "bundle": "figures",
+      "sha256": "78cec208d349c63edc36745d55f35632a2f51dc594d36aa0c8ccfa5c6f457f60",
+      "size_bytes": 711953,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/draft/4_Plume_metrics_violinplot.svg",
+      "bundle": "figures",
+      "sha256": "97fb9229d7d9f0ccf8ff91960d716e92d5f8fc233ce8a2e4104c7e17f2bcb127",
+      "size_bytes": 132548,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/draft/5_Plume_Area_Heatmap.svg",
+      "bundle": "figures",
+      "sha256": "9e995b50e2f304c9d19bef1aaed030545e51730cd6b1c90d0268c66f1311628b",
+      "size_bytes": 1701268,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/draft/Plume_Evolution.svg",
+      "bundle": "figures",
+      "sha256": "7eba0b5971d0b6323d860e674d2d5273295ece20cbd3f7db88f1ce7395404c04",
+      "size_bytes": 266346,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/draft/s2_XRD_Scans.png",
+      "bundle": "figures",
+      "sha256": "fafe49225abefcf1c87b45feed68d4b779541138c899f7f97472ba8170d15717",
+      "size_bytes": 317446,
+      "sample_ids": []
+    },
+    {
+      "path": "figures/draft/s4_Plume_Sample_Frames.svg",
+      "bundle": "figures",
+      "sha256": "28d393509b20e3bd5a689a66a89524e1693416e6aa80a6104726652ac7ddf70b",
+      "size_bytes": 7917588,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/.doctrees/environment.pickle",
+      "bundle": "code-and-notebooks",
+      "sha256": "d47effa070e93af0e04c438f73584756ec25329a0946ff8ae662cff199b36a90",
+      "size_bytes": 307479,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/.doctrees/intro.doctree",
+      "bundle": "code-and-notebooks",
+      "sha256": "b59acfb2399ec9e07fc738518d1c9fe68dee03d31e1cbaa2e43e14cf5da3452d",
+      "size_bytes": 4884,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/.doctrees/manuscript.doctree",
+      "bundle": "code-and-notebooks",
+      "sha256": "bc4ca984e0b2122b6d4b5db763742a49d2e1a3b373c83fb6b19419aa71a2c852",
+      "size_bytes": 179845,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/.doctrees/supplemental-test.doctree",
+      "bundle": "code-and-notebooks",
+      "sha256": "9172a38470470f4f6b9eeac9592ba2141ebc23b23ed893d715746ee5e91e6be6",
+      "size_bytes": 2892,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/.buildinfo",
+      "bundle": "code-and-notebooks",
+      "sha256": "6ef1a15ec3434cc53c04baf60e8e6ada38838813479b9de2db6568dbeefcdd80",
+      "size_bytes": 234,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_images/Figure1-Samples_experiment_setup.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "7e88a94f9a95de7d3a3b9ce3cc3073f9e2a487f3607a2f479972271b2d31ef40",
+      "size_bytes": 2900928,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_images/Figure2-XRD_RSM.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "7c0f572f4cec76112d2201eccd46c0abe263aeb1c7adbb08c06f2ee4b2bf379e",
+      "size_bytes": 2300551,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_images/Figure3-AFM_10um.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "0a46c463f3c114f7026e5adbdf514b2a7037cc50a1193ceff29e203dc788b987",
+      "size_bytes": 1723612,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_images/Figure4-Plume_area_distance_velocity_average.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "f20def528248510a44f3ec21337c11e8149a64a0e82676d4840a0e5b1a935a86",
+      "size_bytes": 1486135,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_images/Figure5-Temporal_variation-violinplot_heatmaps.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "ea8e7017b287bd8d359028c336f964e398514dabe3afd8ff9cce122af19a81d6",
+      "size_bytes": 1754573,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_images/Figure6-Spatial_inhomogeneity_combined.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "3a77bfaebfa34660ec22c30b5e9c87a45927b999579d5c5ba34e0383b8e859ef",
+      "size_bytes": 657192,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_images/FigureS1-AFM_5um_lineprofile.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "6c5778c43f818765e0d98e541e85c52f79b27d29507c0a884e92e7ab16e32b4c",
+      "size_bytes": 1756535,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_images/FigureS10-Plume_distance_history.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "e40988ccae6be8079988ed300949842d8e67c29b201638421ce71ec10e1c74d5",
+      "size_bytes": 1770909,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_images/FigureS11-Plume_velocity_history.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "fde5f963cb39ba916eaf54de5c250a83baa28386477166b63c43b34f1b03e532",
+      "size_bytes": 2782988,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_images/FigureS2-PLD_logging.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "53ba5d1f06b949c7f0505c782d66e8ab371ed3f4d89f18748a9dfcb3ea33f526",
+      "size_bytes": 230000,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_images/FigureS3-Plume_Sample_Frames-G1.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "424d070e38ac9782b67f3a92e947f280b0cc9d9462dcb9bb96d84ffce6c5e346",
+      "size_bytes": 14046773,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_images/FigureS4-Plume_Sample_Frames-G2.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "e9884d54102d34029049166d88b873272f33557404c38d2363ebcb1df08a44a4",
+      "size_bytes": 12317133,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_images/FigureS5-Plume_Sample_Frames-G3.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "bb43f7fbd27abc1f255b48ddf5a3cff7b07b3f9e488adf0ba355c1608546a826",
+      "size_bytes": 12312357,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_images/FigureS6-Plume_Sample_Frames-G4.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "377f224d6e39dcbf549630ff4f1235af430d708e9db6c6a3e52a813e4f2f2b32",
+      "size_bytes": 12417243,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_images/FigureS7-Plume_Sample_Frames-G5.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "a6c453230dbd7b2a2539b09992e305df196379be0976446788f37c1638294f2c",
+      "size_bytes": 12567215,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_images/FigureS8-Plume_Sample_Frames-C_G6.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "7e3b1ceec03175d73a7e3b94b7a6df980bcc4e4aec6c24ebcd222e00801e6b7d",
+      "size_bytes": 12912449,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_images/FigureS9-Plume_area_history.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "a0c0bb51c86162f1580bde2c440d688f8853fef00e76b6ef8343bb553133dece",
+      "size_bytes": 3808101,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_sources/intro.md",
+      "bundle": "code-and-notebooks",
+      "sha256": "1745b3a0a8303975513707cf0cc2bbc9719f48d281c084acf6fa5e8851ec969b",
+      "size_bytes": 479,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_sources/manuscript.ipynb",
+      "bundle": "code-and-notebooks",
+      "sha256": "e396374d3d89056dec1a77241bcd503809ef5fbd8942209a552af8a5988c860b",
+      "size_bytes": 59805,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_sources/supplemental-test.ipynb",
+      "bundle": "code-and-notebooks",
+      "sha256": "c5bd8987bb78c08a76d0d235308a32e1f521623c6d3e2be9c2f5aa36c6b4fbf1",
+      "size_bytes": 3199,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_sphinx_design_static/design-tabs.js",
+      "bundle": "code-and-notebooks",
+      "sha256": "daca86e37c696ad56966f2b7128dbd0cc9910c1c2eba510b50e633d220ae704f",
+      "size_bytes": 2881,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_sphinx_design_static/sphinx-design.min.css",
+      "bundle": "code-and-notebooks",
+      "sha256": "952b9e6af61904e4234c45cd743e1360dce7d7fad8a29116e3eb1358d15473b9",
+      "size_bytes": 49352,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/basic.css",
+      "bundle": "code-and-notebooks",
+      "sha256": "28c8cc041d441eb93a4903382b2b04c122d59884458ade497d7b4ec015714dd2",
+      "size_bytes": 16018,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/check-solid.svg",
+      "bundle": "code-and-notebooks",
+      "sha256": "737293f19c304f16974aec7b94a86d406587c8add5c9ea1b65da275680edb72a",
+      "size_bytes": 317,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/clipboard.min.js",
+      "bundle": "code-and-notebooks",
+      "sha256": "b431aed430ef7327266efabb54330de60001047f4a261547defc85280925984a",
+      "size_bytes": 9037,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/copy-button.svg",
+      "bundle": "code-and-notebooks",
+      "sha256": "ed4c3f572a1859d1852558bdc87acaa119519e3ae30ed3b2372236ddcd937549",
+      "size_bytes": 416,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/copybutton.css",
+      "bundle": "code-and-notebooks",
+      "sha256": "796fffc69f5fd764a7a030167cdced3f6a26500459b7c31da3c11060fae37a18",
+      "size_bytes": 2154,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/copybutton.js",
+      "bundle": "code-and-notebooks",
+      "sha256": "8088e4d4b4bb28e9707737a4101fb7797bff57708400b30904c147c20ba8828e",
+      "size_bytes": 8714,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/copybutton_funcs.js",
+      "bundle": "code-and-notebooks",
+      "sha256": "5e798a0da050711bf041762e0dafa42ac9e35752eb7812d9e740bfea58764cf9",
+      "size_bytes": 2771,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/custom.css",
+      "bundle": "code-and-notebooks",
+      "sha256": "a4111a4b112977fbe35cd818e47ddf4682b07d6c17682c6566839c5a64edbe5b",
+      "size_bytes": 451,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/design-tabs.js",
+      "bundle": "code-and-notebooks",
+      "sha256": "daca86e37c696ad56966f2b7128dbd0cc9910c1c2eba510b50e633d220ae704f",
+      "size_bytes": 2881,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/doctools.js",
+      "bundle": "code-and-notebooks",
+      "sha256": "333677644f463fbc7e3d53bf56095311b3e15b1c981c5bccf2d95f61b9639721",
+      "size_bytes": 4628,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/documentation_options.js",
+      "bundle": "code-and-notebooks",
+      "sha256": "d97fa49b84dabc1fa69cf1bdffc3dc7d6e503bffe570b4b56e5bbfa103e2efb6",
+      "size_bytes": 331,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/drexel-dragon-all_blue.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "fedc8615d77547803389ced4534db06199774022bc6654f1527f3b9b563c23ef",
+      "size_bytes": 235845,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/drexel-dragon-all_gold.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "12fcd8dbe55f7ac72ff597c259d6299ca8dcfec87b7dc74b58b6f75f1b46c08d",
+      "size_bytes": 304994,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/file.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "5c4bc9a16aebf38c4b950f59b8e501ca36495328cb9eb622218bce9064a35e3e",
+      "size_bytes": 286,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/fonts/AxiaBlack-Regular.otf",
+      "bundle": "code-and-notebooks",
+      "sha256": "f8ffdce158f5e8c830244bdf9e7fd6c1de1ade854c7a5c20c48405ac61384b89",
+      "size_bytes": 64864,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/fonts/DINosaur_Medium.otf",
+      "bundle": "code-and-notebooks",
+      "sha256": "fe15173a4b2481bf141ddc54e6badf2d23d0891c9e673572f18de5d375066a91",
+      "size_bytes": 112080,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/fonts/FiraCode-Regular.ttf",
+      "bundle": "code-and-notebooks",
+      "sha256": "30844063c7df17f9af4a294360e492e956c8f29573d4a923353abc403badf99c",
+      "size_bytes": 188504,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/fonts/Interstate.woff",
+      "bundle": "code-and-notebooks",
+      "sha256": "fa15058735cfa93e01723d482927ef52f6168d8a4566a41aa91f1a1bf43188d8",
+      "size_bytes": 17348,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/fonts/Interstate.woff2",
+      "bundle": "code-and-notebooks",
+      "sha256": "2a29a61c60ed927573d241bd5adcc04aced9b89bb2b07593c50863e5e0bd6b1a",
+      "size_bytes": 11896,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/fonts/NavigoMedium.woff",
+      "bundle": "code-and-notebooks",
+      "sha256": "39f96d0fc38cd4d251e2f90f91ba8e8a8effdb966d90dee2bef85a8c2e5f27b6",
+      "size_bytes": 35432,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/fonts/NavigoMedium.woff2",
+      "bundle": "code-and-notebooks",
+      "sha256": "a1826bb24ab78dc5a5ce87522838bf667609fada4cc99924f748c5c1a63d4141",
+      "size_bytes": 26064,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/fonts/Verdana-Bold.ttf",
+      "bundle": "code-and-notebooks",
+      "sha256": "4b0e22422bdcb925bce4516991474cb0575e4b301304618eade3be4868566524",
+      "size_bytes": 124872,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/fonts/Verdana-BoldItalic.ttf",
+      "bundle": "code-and-notebooks",
+      "sha256": "f844643741f663ffa784b233ce48ffa4034e80f0d25c71b223fcd55732e8db3d",
+      "size_bytes": 145156,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/fonts/Verdana-Italic.ttf",
+      "bundle": "code-and-notebooks",
+      "sha256": "6bf24b4932b91056cf467e45562f7c7fd2b0754321a7e710cc1818b20da60200",
+      "size_bytes": 140000,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/fonts/Verdana.ttf",
+      "bundle": "code-and-notebooks",
+      "sha256": "50d20e0413026bb12d794659ee7834375cd99c45603775f1e05b25204980ccc8",
+      "size_bytes": 153096,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/images/logo_binder.svg",
+      "bundle": "code-and-notebooks",
+      "sha256": "17850f29281e6220bb4e954bf14389d6efb7ba89740f8165ced959cbee07a30b",
+      "size_bytes": 1205,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/images/logo_colab.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "68bbb664c58b203e20451c63ec3991bc9a71ccda3f1025e394dc569a20bd2cf9",
+      "size_bytes": 7601,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/images/logo_deepnote.svg",
+      "bundle": "code-and-notebooks",
+      "sha256": "ad0b3fa5e86e7b87f06a4af940f31dcaf521904e941677dd042263410c3c28bc",
+      "size_bytes": 682,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/images/logo_jupyterhub.svg",
+      "bundle": "code-and-notebooks",
+      "sha256": "da212df5434cb89606503520f008acb8eefcec45bebf6e7f8d78d864a3916713",
+      "size_bytes": 1759,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/language_data.js",
+      "bundle": "code-and-notebooks",
+      "sha256": "9b62208b95808374fd3ccbab505ab556ae8ee92768b86f6c82dccfbc1d5a08af",
+      "size_bytes": 4957,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/ar/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "8464d55f751eb34f0ac768b728ef75cb83fa4a38e7fa56e734317306b8092d23",
+      "size_bytes": 1534,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/bg/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "65b07a92d9d1f194464221bd3d4787569d71394d0ca4e79d7f184f9fd8a31bf6",
+      "size_bytes": 1701,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/bn/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "68eb77210cbda08e9a278da316a7373f45f0291d960c0a923b20b6bf44ae646c",
+      "size_bytes": 1627,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/ca/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "aa29146ecaa37b4c53d6110ffe4de61108bcc90c3a41a1b1f259105a0b1707fb",
+      "size_bytes": 1232,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/cs/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "e7cb19d23f641cc2a2799d6137d28eb8b982fb786f68ca427656dfb4b05ef894",
+      "size_bytes": 1398,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/da/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "f7736c73f7c9f1034e9e4d1b04907a9c16a145cf8990088749afd25964e4a0df",
+      "size_bytes": 1297,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/de/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "88d19da87e2272d4f831c14a2b013ce4a0b4c785878b55155aa04352eafe4d4b",
+      "size_bytes": 1381,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/el/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "17c8262d4c52a8a734dad52f932de17ba5480285bc7b691b6e2c6b777504ead8",
+      "size_bytes": 1715,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/eo/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "3ea61cea2301d4f5cd5ff99253ca0777b64c1c46bd00ebdb470fbf0bcfd931f1",
+      "size_bytes": 1330,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/es/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "2a3402208c45c5769e335dcb749d86ebd2f1f8fa9a8e1b1858b39069d1d107be",
+      "size_bytes": 1389,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/et/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "4444383760ab2cf88e493c66f6f7a0b5e948e8d30f5b38a297400ff3bf968b99",
+      "size_bytes": 1334,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/fi/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "1e7a277bbecaeaecc9a6177a232cc6fa27df7d772e93630fdc62ab3bfeae9601",
+      "size_bytes": 1361,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/fr/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "672e6e63b584db36c52e79607916e1738f0098bafc4c4de6d500b2195360de3e",
+      "size_bytes": 1405,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/hr/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "0b4798d28697073a30865ed18d7ffff117366e40c35c2c39f1c38fe1567d0a72",
+      "size_bytes": 1395,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/id/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "0bf675becf4c6f2030be815e75ca66865f04d7532609dd06c4e09aef1a80996c",
+      "size_bytes": 1316,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/it/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "66011e4f72dc43aa2000a566ccd24e50fdb2add8f89022dd06276509da0e9952",
+      "size_bytes": 1396,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/iw/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "26c5746a1ab2cda2e9f3d2c5b17ce3b94797bfd0abbf24907c78f59319be8d0a",
+      "size_bytes": 1438,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/ja/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "13357188b7f29c20fa8529596119418312c527c62fa5d9bc42b06e2571de8695",
+      "size_bytes": 1464,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/ko/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "3495b5f91c686edb07c38dddf03cc4d5471d766e582222e4175acc621f9f41e0",
+      "size_bytes": 1368,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/lt/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "81c07d3c02eab438c29ef945eec7133d48579ed29e8db9247019e913a5adad36",
+      "size_bytes": 1406,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/lv/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "7709bef8cce54a10197ecc51354fa932ba1d8c936d85a8d1af72f1e8405e8721",
+      "size_bytes": 1397,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/ml/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "fba18d2fc3e47140e6deb665893f6487530940572d401d31f56ee3a130110da7",
+      "size_bytes": 1869,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/mr/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "fd8abfe790a4a0a4f41e363839f353e302e8073453ca9ba21b0184db1935c69c",
+      "size_bytes": 1660,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/ms/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "3fa63c57d27580bd7ed07f3b3e44a49645f8265ec42811d36593a8979d526b68",
+      "size_bytes": 1199,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/nl/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "5ff5e04cceb10bbbf7d0c8cb24439e3db9ea0864d4cc1f64049c2bc68d5ed74e",
+      "size_bytes": 1349,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/no/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "9a0611c04464a9aee68e27e161891f14df3f306f22529df8cb98375e464cfc73",
+      "size_bytes": 1310,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/pl/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "2afd55b1607fd65c902fdb3d3e424605b92faec6b49d74e4237a6aa57d2f0f05",
+      "size_bytes": 1364,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/pt/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "45b464e25ab84ded5df15875442898a54349c4a028fcea030bfa5f0868b50f04",
+      "size_bytes": 1357,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/ro/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "29a85d89c2c5eee262d9a808a9c534a61e7f1267872ff1b150e969ce127b4bb9",
+      "size_bytes": 1383,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/ru/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "7fb50523e1c30b9df5ae197e03494c81452b2347386322fab6fcbe763f472f88",
+      "size_bytes": 1722,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/sk/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "f9a3b92f10d7eac46e7c06c2ce9b596a1db214f84d94154e20872ce8ba650daa",
+      "size_bytes": 1386,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/sl/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "70e7a3d959044ba0ca8e222e21256ae15c1d0b4414ba73f050c577bd72d917a5",
+      "size_bytes": 1367,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/sr/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "1e2b44ac3d36c4f16c2ce55850007527d5757669809db72a6f8d1a8af69db6a0",
+      "size_bytes": 1672,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/sv/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "ddfc060ba4195e4d6b3859a28646e821110dbc469d86556e243f7e0124c6ea0c",
+      "size_bytes": 1358,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/ta/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "758930425a400cc305de3fb42584d4d40f0abcdf928f6f757a3f72140861acb9",
+      "size_bytes": 1914,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/te/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "30841dad97b40115f2af87df2781c3cb5653771b7beba8282c737566c859d4fc",
+      "size_bytes": 1792,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/tg/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "a9cf146b9a43d84ebd2db1c548644b8927d4deec69d754a1740db8d39309a018",
+      "size_bytes": 1621,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/th/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "1042afdd376d6e3b6ccdf1d83d45be7a5fef3a9924f5572314bdb85cce80b1ba",
+      "size_bytes": 1759,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/tl/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "4b69a8c09ac81fec2a6a6c65e33a08cd94f22a7a560fc21989494c1e8cf747b6",
+      "size_bytes": 1259,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/tr/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "1a7bc97d937b2278d26d65d728c127926ab2cb92be10091d2eed9910b77dd659",
+      "size_bytes": 1366,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/uk/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "237a43d4b060f49661d56a767f3e89d52e2d43445e0e0e1fef1cdd5b2c7e3aaa",
+      "size_bytes": 1676,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/ur/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "21a0642010c497511816057f1328bceb47b1cd89c13accf437de93fe979d8dad",
+      "size_bytes": 1448,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/vi/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "b10a606dd5f0ed0c1887e0da7609c91ed37e5000887cbe8ba0f28d18c1f6b514",
+      "size_bytes": 1424,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/zh_CN/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "2067893a0e0e3fada054f3866bf3b08e5f594b79ae9aadbd05055fac39cd362f",
+      "size_bytes": 1303,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/locales/zh_TW/LC_MESSAGES/booktheme.po",
+      "bundle": "code-and-notebooks",
+      "sha256": "7dd9f61d4b6875a0c559a582a028fbae16ea3c00b0e4b2f2b98679167925be1d",
+      "size_bytes": 1334,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/m3-dark.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "bb9827c5f8d28fbb563cfced5e1986f6a054bbeeb5307d4cb32f8a3c811feb12",
+      "size_bytes": 223791,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/m3-light.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "2b869faba672e5d50f81f7217d4c42822dbf5b222f8458eea0eb79eeade770b8",
+      "size_bytes": 243647,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/minus.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "47e7fc50db3699f1ca41ce9a2ffa202c00c5d1d5180c55f62ba859b1bd6cc008",
+      "size_bytes": 90,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css",
+      "bundle": "code-and-notebooks",
+      "sha256": "06696a45b937849642cfa8e412e8bfb79927fd8cf52bbc9bf40c63c5e8cfefe3",
+      "size_bytes": 41706,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/play-solid.svg",
+      "bundle": "code-and-notebooks",
+      "sha256": "d2ceaf6d83ed691c771e1616ac29157cb7f115ddac7ce066afab1d23f1a9b483",
+      "size_bytes": 339,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/plus.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "54115199b96a130cba02147c47c0deb43dcc9b9f08b5162bba8642b34980ac63",
+      "size_bytes": 90,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/pygments.css",
+      "bundle": "code-and-notebooks",
+      "sha256": "dbf18bdb887ad6fb7885d408ebb5ae7dea6169634ae8290642275f4aef31d514",
+      "size_bytes": 12906,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/sbt-webpack-macros.html",
+      "bundle": "code-and-notebooks",
+      "sha256": "8fb1379373007b67136195e9cbfce0317e7c1b753d08da289e3bcb5e9608e4c9",
+      "size_bytes": 430,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/scripts/bootstrap.js",
+      "bundle": "code-and-notebooks",
+      "sha256": "6e461ba5daa453c14dbe762e7a930bcdfc36d982c83ddcd76eb4250542cea711",
+      "size_bytes": 81706,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/scripts/bootstrap.js.LICENSE.txt",
+      "bundle": "code-and-notebooks",
+      "sha256": "ed7239bd3f80b4194ce237b04f9f47d291995ad2d1d39a0546f22eb80f1f8b2f",
+      "size_bytes": 242,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/scripts/bootstrap.js.map",
+      "bundle": "code-and-notebooks",
+      "sha256": "6a0a8dfdfeca25ef48c5ce15388a08039a1fcf78b81e00f20381251059cf70f6",
+      "size_bytes": 333317,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/scripts/pydata-sphinx-theme.js",
+      "bundle": "code-and-notebooks",
+      "sha256": "71601c97932bcd7ccd87d0e72ee889cb4af50752e560d218397bc444bef6ca45",
+      "size_bytes": 10911,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/scripts/pydata-sphinx-theme.js.map",
+      "bundle": "code-and-notebooks",
+      "sha256": "70eb355bbc24d39b4a6b0bccb7b6a03d3cf549fd951d757264bbcdf8f6f00de9",
+      "size_bytes": 51750,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/scripts/sphinx-book-theme.js",
+      "bundle": "code-and-notebooks",
+      "sha256": "43ef40b8ba0a897297f8008b4ec34d557042adcbbe0393acf43d60c2ac13a8f4",
+      "size_bytes": 2130,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/scripts/sphinx-book-theme.js.map",
+      "bundle": "code-and-notebooks",
+      "sha256": "d6f4904a7c35ca6b0fa3263d97d570ffe52d14f51bf6fb2363b309bb2959bc6d",
+      "size_bytes": 8482,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/searchtools.js",
+      "bundle": "code-and-notebooks",
+      "sha256": "9e8a81657b48133959d8556f0fc60f6632d41651b29de335ebae3adfbf5881c1",
+      "size_bytes": 21462,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/sphinx-design.min.css",
+      "bundle": "code-and-notebooks",
+      "sha256": "952b9e6af61904e4234c45cd743e1360dce7d7fad8a29116e3eb1358d15473b9",
+      "size_bytes": 49352,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/sphinx-thebe.css",
+      "bundle": "code-and-notebooks",
+      "sha256": "aca1ee3da8b470945c5a3b67239585affa54c3e5940af915a212b2c0915f79aa",
+      "size_bytes": 2363,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/sphinx-thebe.js",
+      "bundle": "code-and-notebooks",
+      "sha256": "4214c20309db91d3aa65b2d8346d6f905bfa6bbd335e355326a5f8f838b65e3b",
+      "size_bytes": 4254,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/sphinx_highlight.js",
+      "bundle": "code-and-notebooks",
+      "sha256": "8115121f6241c3ad6cc4ff70fe9000ef1e78830453ebc933fe446e01d2f7a7e4",
+      "size_bytes": 5277,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/styles/bootstrap.css",
+      "bundle": "code-and-notebooks",
+      "sha256": "90e9cb1351473c6b21c2b2f2ef95acca501f9cada50f028ca0a4a71c56028b3f",
+      "size_bytes": 208747,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/styles/bootstrap.css.map",
+      "bundle": "code-and-notebooks",
+      "sha256": "5f2cf7d22c1cda8940ee372eb73c7e0189025956ec60a92a198f318b27e2f82a",
+      "size_bytes": 556499,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/styles/pydata-sphinx-theme.css",
+      "bundle": "code-and-notebooks",
+      "sha256": "b5e17b305745cbcd560f233750b0b65850944ea36e00f2e4e466ef1e5135156e",
+      "size_bytes": 86252,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/styles/pydata-sphinx-theme.css.map",
+      "bundle": "code-and-notebooks",
+      "sha256": "c5a81618fe3f512dd3586648fe41083c12f041039eefa1123c67aa961cfb6a39",
+      "size_bytes": 330021,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/styles/sphinx-book-theme.css",
+      "bundle": "code-and-notebooks",
+      "sha256": "fac82ce4dd13111554d67b098a1f0aec50ba78d3fa43a99f5e72251b45a4466d",
+      "size_bytes": 14850,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/styles/sphinx-book-theme.css.map",
+      "bundle": "code-and-notebooks",
+      "sha256": "8f799d2566f1e0e26891ec1dd91882babd2b4a90f21cf2fc828c9900cdc5971b",
+      "size_bytes": 36665,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/styles/theme.css",
+      "bundle": "code-and-notebooks",
+      "sha256": "edebccd3b91b7ff197adcc99276c2204651f015a29243e98800642e1abf9f01b",
+      "size_bytes": 108,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/theme.css",
+      "bundle": "code-and-notebooks",
+      "sha256": "b85c27dbce228e289e362ba0a1c9dd70ae35f2df5092ef1e40535dea901cebbf",
+      "size_bytes": 3985,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/togglebutton.css",
+      "bundle": "code-and-notebooks",
+      "sha256": "26d2022e1c95889f4cf90602c3b04d61698bb54e6daadc00245813ae94460120",
+      "size_bytes": 3888,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/togglebutton.js",
+      "bundle": "code-and-notebooks",
+      "sha256": "5e84ea41a9aef93ea4a2512546a6cd248e03c03e6d4939044b8dbfc1f97fc792",
+      "size_bytes": 7533,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/LICENSE.txt",
+      "bundle": "code-and-notebooks",
+      "sha256": "92671da52bc1d6ec6f131ba8bd4094e99fec6c8a76a7ada857f95f5b0a8f2053",
+      "size_bytes": 7592,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/css/all.min.css",
+      "bundle": "code-and-notebooks",
+      "sha256": "7358cf429d782958f403cb9500cb7375de3ce16959e67f0790eb764c1c956230",
+      "size_bytes": 102993,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/js/all.min.js",
+      "bundle": "code-and-notebooks",
+      "sha256": "5686ce393b7800331c76a41a3e7b8f57dccd0db1f97c828ad37cc0f54270e492",
+      "size_bytes": 1489216,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/js/all.min.js.LICENSE.txt",
+      "bundle": "code-and-notebooks",
+      "sha256": "3a5421bbf1e6f6a6cd1074c949e9d427a2b4e74113bc5a9198a851eada4dfb5f",
+      "size_bytes": 224,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.ttf",
+      "bundle": "code-and-notebooks",
+      "sha256": "e28096fa75a96ac77020155ea3a6dd7312983e84115366d4cf49a0c312ec6d51",
+      "size_bytes": 209128,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2",
+      "bundle": "code-and-notebooks",
+      "sha256": "232c6f6a7678304f9efaa26f30b1610debc2ba9f4cd636b5e6751c8d73761b92",
+      "size_bytes": 117852,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.ttf",
+      "bundle": "code-and-notebooks",
+      "sha256": "9174757efc83e072436e873c22be1663d3c103b0a16d7fb73569af4918d4d351",
+      "size_bytes": 67860,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2",
+      "bundle": "code-and-notebooks",
+      "sha256": "c27da6f833431da5aa295c44540bfac0fd8270ba6a3c4346427006d8a7b34b76",
+      "size_bytes": 25392,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.ttf",
+      "bundle": "code-and-notebooks",
+      "sha256": "b4990d0d0c5f5d38d62e936eea120674e584c7eea8dcee38a975c0cf9a37539b",
+      "size_bytes": 420332,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2",
+      "bundle": "code-and-notebooks",
+      "sha256": "ae17c16afbea216707b2203ea1cf9bdb45b9bfe47d0f4ae3258ddbc6294dd02f",
+      "size_bytes": 156400,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/webfonts/fa-v4compatibility.ttf",
+      "bundle": "code-and-notebooks",
+      "sha256": "ff8f525fb050c5d24519ccc8f5723d85b2e51edd3f9bc6548af55aebadd4f269",
+      "size_bytes": 10832,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/webfonts/fa-v4compatibility.woff2",
+      "bundle": "code-and-notebooks",
+      "sha256": "c7a869faca299d15be10a01f19d0765a7c4d46d8922d9b9317235c1e4a6f0982",
+      "size_bytes": 4792,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/_static/webpack-macros.html",
+      "bundle": "code-and-notebooks",
+      "sha256": "2c32cd92bef0e3e4a20e7c112ce873fa27eb5683ea293c14d008d753b91e1d9e",
+      "size_bytes": 2013,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/genindex.html",
+      "bundle": "code-and-notebooks",
+      "sha256": "f0ad5b5f93a380ddee1dd74ff5d667f4b81d4aafb3e0c4b1f15b04fbab792108",
+      "size_bytes": 11951,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/index.html",
+      "bundle": "code-and-notebooks",
+      "sha256": "fb7353341ede02d03035745fb1f6ba2b0d7a1264e79a8f9833b22deccf8dd58c",
+      "size_bytes": 59,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/intro.html",
+      "bundle": "code-and-notebooks",
+      "sha256": "c7933cf3a75676dd0bb6754db754343c070ee0df33e452dfb6b47788d4224025",
+      "size_bytes": 15366,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/manuscript.html",
+      "bundle": "code-and-notebooks",
+      "sha256": "7b8425475a1115e549d3e7a7bdd94b98257ca0c35668705dd4a6f46be0427697",
+      "size_bytes": 143634,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/objects.inv",
+      "bundle": "code-and-notebooks",
+      "sha256": "3196e30426a21b4d347a02ed4f345d20e88fca44655221ac3edd666ebf5c9533",
+      "size_bytes": 1324,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/search.html",
+      "bundle": "code-and-notebooks",
+      "sha256": "e7e215cf8d75b4dd7e4b2a8aa1de3be60206f3568973d01fbeb6459a0cde1382",
+      "size_bytes": 12789,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/searchindex.js",
+      "bundle": "code-and-notebooks",
+      "sha256": "39e64647cae9d1ff48ba256758ce42274d4d173f359317e63c1873a792bc4139",
+      "size_bytes": 29085,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/html/supplemental-test.html",
+      "bundle": "code-and-notebooks",
+      "sha256": "4b62a026435ee483ffd37a0e3cf8fba28f61132b173720fcdccc37955d0d6604",
+      "size_bytes": 14303,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/jupyter_execute/manuscript.ipynb",
+      "bundle": "code-and-notebooks",
+      "sha256": "433b8652b2707567383d96948c6ad6e3d089078db93ffcc7fb537480ef4aec91",
+      "size_bytes": 60038,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_build/jupyter_execute/supplemental-test.ipynb",
+      "bundle": "code-and-notebooks",
+      "sha256": "3212487047ce860e64c9bd21865ed608caf579597dc074392fb1d0ba84d37ff5",
+      "size_bytes": 3432,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_config.yml",
+      "bundle": "code-and-notebooks",
+      "sha256": "a56ffe34d5899b7b5d93f3e25a5324549dc33d4d293d42d355f2d55938b8453e",
+      "size_bytes": 1527,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_extensions/__init__.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_extensions/suppfigure.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "c126486990adb69b2680a8349381752f140020ca83993df24d41c970a703a0ac",
+      "size_bytes": 767,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_static/custom.css",
+      "bundle": "code-and-notebooks",
+      "sha256": "a4111a4b112977fbe35cd818e47ddf4682b07d6c17682c6566839c5a64edbe5b",
+      "size_bytes": 451,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_static/drexel-dragon-all_blue.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "fedc8615d77547803389ced4534db06199774022bc6654f1527f3b9b563c23ef",
+      "size_bytes": 235845,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_static/drexel-dragon-all_gold.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "12fcd8dbe55f7ac72ff597c259d6299ca8dcfec87b7dc74b58b6f75f1b46c08d",
+      "size_bytes": 304994,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_static/fonts/AxiaBlack-Regular.otf",
+      "bundle": "code-and-notebooks",
+      "sha256": "f8ffdce158f5e8c830244bdf9e7fd6c1de1ade854c7a5c20c48405ac61384b89",
+      "size_bytes": 64864,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_static/fonts/DINosaur_Medium.otf",
+      "bundle": "code-and-notebooks",
+      "sha256": "fe15173a4b2481bf141ddc54e6badf2d23d0891c9e673572f18de5d375066a91",
+      "size_bytes": 112080,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_static/fonts/FiraCode-Regular.ttf",
+      "bundle": "code-and-notebooks",
+      "sha256": "30844063c7df17f9af4a294360e492e956c8f29573d4a923353abc403badf99c",
+      "size_bytes": 188504,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_static/fonts/Interstate.woff",
+      "bundle": "code-and-notebooks",
+      "sha256": "fa15058735cfa93e01723d482927ef52f6168d8a4566a41aa91f1a1bf43188d8",
+      "size_bytes": 17348,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_static/fonts/Interstate.woff2",
+      "bundle": "code-and-notebooks",
+      "sha256": "2a29a61c60ed927573d241bd5adcc04aced9b89bb2b07593c50863e5e0bd6b1a",
+      "size_bytes": 11896,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_static/fonts/NavigoMedium.woff",
+      "bundle": "code-and-notebooks",
+      "sha256": "39f96d0fc38cd4d251e2f90f91ba8e8a8effdb966d90dee2bef85a8c2e5f27b6",
+      "size_bytes": 35432,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_static/fonts/NavigoMedium.woff2",
+      "bundle": "code-and-notebooks",
+      "sha256": "a1826bb24ab78dc5a5ce87522838bf667609fada4cc99924f748c5c1a63d4141",
+      "size_bytes": 26064,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_static/fonts/Verdana-Bold.ttf",
+      "bundle": "code-and-notebooks",
+      "sha256": "4b0e22422bdcb925bce4516991474cb0575e4b301304618eade3be4868566524",
+      "size_bytes": 124872,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_static/fonts/Verdana-BoldItalic.ttf",
+      "bundle": "code-and-notebooks",
+      "sha256": "f844643741f663ffa784b233ce48ffa4034e80f0d25c71b223fcd55732e8db3d",
+      "size_bytes": 145156,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_static/fonts/Verdana-Italic.ttf",
+      "bundle": "code-and-notebooks",
+      "sha256": "6bf24b4932b91056cf467e45562f7c7fd2b0754321a7e710cc1818b20da60200",
+      "size_bytes": 140000,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_static/fonts/Verdana.ttf",
+      "bundle": "code-and-notebooks",
+      "sha256": "50d20e0413026bb12d794659ee7834375cd99c45603775f1e05b25204980ccc8",
+      "size_bytes": 153096,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_static/m3-dark.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "bb9827c5f8d28fbb563cfced5e1986f6a054bbeeb5307d4cb32f8a3c811feb12",
+      "size_bytes": 223791,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_static/m3-light.png",
+      "bundle": "code-and-notebooks",
+      "sha256": "2b869faba672e5d50f81f7217d4c42822dbf5b222f8458eea0eb79eeade770b8",
+      "size_bytes": 243647,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_static/theme.css",
+      "bundle": "code-and-notebooks",
+      "sha256": "b85c27dbce228e289e362ba0a1c9dd70ae35f2df5092ef1e40535dea901cebbf",
+      "size_bytes": 3985,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/_toc.yml",
+      "bundle": "code-and-notebooks",
+      "sha256": "8c462bd215b80056af0d27db63a662dc396324b190d94adaa7b9513157720ade",
+      "size_bytes": 173,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/config.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "42827797b4ba7b3df4b7729914c3f49168fee4c1debb7f1290154d3777d977cf",
+      "size_bytes": 182,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/intro.md",
+      "bundle": "code-and-notebooks",
+      "sha256": "1745b3a0a8303975513707cf0cc2bbc9719f48d281c084acf6fa5e8851ec969b",
+      "size_bytes": 479,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/manuscript.ipynb",
+      "bundle": "code-and-notebooks",
+      "sha256": "f2aa22d9edfb4e58bc7a4c1dcd65ff4a0d9855b1da15e10ab60260e539789fce",
+      "size_bytes": 59772,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/references.bib",
+      "bundle": "code-and-notebooks",
+      "sha256": "24b5ddeff736274d891889f58c78d4f741824750efad3ae4737a8b5e8b4e7535",
+      "size_bytes": 143631,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/requirements.txt",
+      "bundle": "code-and-notebooks",
+      "sha256": "88d4d881b0de62de9e4614ac2857265880a2c8d7a261473bf1273e2483df2aee",
+      "size_bytes": 33,
+      "sample_ids": []
+    },
+    {
+      "path": "jupyterbook/supplemental-test.ipynb",
+      "bundle": "code-and-notebooks",
+      "sha256": "a4201c84009ef71b55329e6df255fc57d093eb98413b851175d15954c44f1f81",
+      "size_bytes": 3178,
+      "sample_ids": []
+    },
+    {
+      "path": "notebooks/0_Dataerai_Preservation.ipynb",
+      "bundle": "code-and-notebooks",
+      "sha256": "c6afd64ac3123fdbdde89c69ee66d2f51d306f7293b1d416119759362d06844e",
+      "size_bytes": 8267,
+      "sample_ids": []
+    },
+    {
+      "path": "notebooks/1_Abstract.ipynb",
+      "bundle": "code-and-notebooks",
+      "sha256": "188af6876b045610f16a1fc29065c0a53bbc950b91aa67adf3fd8d614a7f6f09",
+      "size_bytes": 6317,
+      "sample_ids": []
+    },
+    {
+      "path": "notebooks/2_PLD_Experiment_Design_and_Target_Microscopy.ipynb",
+      "bundle": "code-and-notebooks",
+      "sha256": "487ef0d838ae3a28f20aeae70abe5305a0cc4572ba885c62b5b24a1c7af862f6",
+      "size_bytes": 242793,
+      "sample_ids": []
+    },
+    {
+      "path": "notebooks/3_Structure_Characterization.ipynb",
+      "bundle": "code-and-notebooks",
+      "sha256": "a7c115c987c08cb9c93308eab1e97613327cf8139b3a3d5d4520d9f88ca5ebe1",
+      "size_bytes": 3078922,
+      "sample_ids": []
+    },
+    {
+      "path": "notebooks/4_Plume_Metrics_Extraction.ipynb",
+      "bundle": "code-and-notebooks",
+      "sha256": "cefd6993a04e6f3d9156237578070078f845a4327cc21048c32214f98d492af7",
+      "size_bytes": 4389210,
+      "sample_ids": []
+    },
+    {
+      "path": "notebooks/5_Plume_Dynamic_Analysis.ipynb",
+      "bundle": "code-and-notebooks",
+      "sha256": "f7fe2fe7a8d0de6972f3eb17bc1e718d5dace290ea2e74b5ebac2ea9da33d9a7",
+      "size_bytes": 5940386,
+      "sample_ids": []
+    },
+    {
+      "path": "notebooks/6_Target_Temporal_Variation.ipynb",
+      "bundle": "code-and-notebooks",
+      "sha256": "60f65dee17c05766cc2149c8271cd1de171ca7c6bbbecc2731da7c081fc1b650",
+      "size_bytes": 1086328,
+      "sample_ids": []
+    },
+    {
+      "path": "notebooks/7_Target_Spatial_Inhomogeneity.ipynb",
+      "bundle": "code-and-notebooks",
+      "sha256": "d706d362ddddcd5e53dfe5c0ed9985035cd512902dde3f7457d64771dfe17ecb",
+      "size_bytes": 162020,
+      "sample_ids": []
+    },
+    {
+      "path": "notebooks/sync.ffs_lock",
+      "bundle": "code-and-notebooks",
+      "sha256": "02b0752d671a205888026b486f68d639e694a7d88fae1c009a2dc6b8c13b2459",
+      "size_bytes": 92,
+      "sample_ids": []
+    },
+    {
+      "path": "preservation/key_results.json",
+      "bundle": "code-and-notebooks",
+      "sha256": "c529a49e46cf8e11dbc5c2a150107a946191dc45ab3acce35ece8f0b5e113d53",
+      "size_bytes": 4842,
+      "sample_ids": []
+    },
+    {
+      "path": "preservation/study.json",
+      "bundle": "code-and-notebooks",
+      "sha256": "0488f73308afde10e72d3520a6e33b68003332e68ce2a39fe661780b3a109fd0",
+      "size_bytes": 1245,
+      "sample_ids": []
+    },
+    {
+      "path": "pyproject.toml",
+      "bundle": "code-and-notebooks",
+      "sha256": "41fbba100b639ea949a377bba7dc07ae911dc28bfb63e611711b1f2aff408a48",
+      "size_bytes": 447,
+      "sample_ids": []
+    },
+    {
+      "path": "requirements-dataerai.txt",
+      "bundle": "code-and-notebooks",
+      "sha256": "b9e7e3e647a1d293fb725e66854435e9fa83dff4f06a8c9367b85a498136dbc6",
+      "size_bytes": 314,
+      "sample_ids": []
+    },
+    {
+      "path": "requirements.txt",
+      "bundle": "code-and-notebooks",
+      "sha256": "947dfc822a828bf0457189aef8c055fc32dd720daa74f76c6a206502cfeba2ea",
+      "size_bytes": 483,
+      "sample_ids": []
+    },
+    {
+      "path": "scripts/instrument_dataerai_notebooks.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "cc135f8cb48deca8f942f5d84c0b2c16392712e488fbad303db81f925f98301d",
+      "size_bytes": 3986,
+      "sample_ids": []
+    },
+    {
+      "path": "scripts/validate_dataerai_notebooks.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "6cc4dd69232586e99a5f3e2d18efee49774ae26ac6cbbc61e06e5758672f43c8",
+      "size_bytes": 2188,
+      "sample_ids": []
+    },
+    {
+      "path": "scripts/verify_dataerai_roundtrip.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "0244febe198ce2f1d7a44c450d299c9699f55e764e93a908d568ae833da5ccc8",
+      "size_bytes": 2883,
+      "sample_ids": []
+    },
+    {
+      "path": "setup.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "8317492b0d4925b859a154855ea31cd76dcd443d15ee5c74803ea4e67712f993",
+      "size_bytes": 433,
+      "sample_ids": []
+    },
+    {
+      "path": "src/sro_sto_plume/__init__.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "sample_ids": []
+    },
+    {
+      "path": "src/sro_sto_plume/cmap.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "f0c42523d681eb6c16dec9139a6e489f9d86a8b48d99e8a659476781697ec47b",
+      "size_bytes": 2311,
+      "sample_ids": []
+    },
+    {
+      "path": "src/sro_sto_plume/coordinate_converter.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "b537624e40aa21490bf4d46b8da035f96c920c085a42a1ce71757b086ab849a7",
+      "size_bytes": 847,
+      "sample_ids": []
+    },
+    {
+      "path": "src/sro_sto_plume/crystallography.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "95fa213828f0c862f2a02b03df9e2261257d56f5a92ae41ae79c114f9ac344fa",
+      "size_bytes": 1048,
+      "sample_ids": []
+    },
+    {
+      "path": "src/sro_sto_plume/datafed_utils.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "bdc3e6e5a8c008687720083340721dcbf49b72185f426b15ed7049f16e316adc",
+      "size_bytes": 1900,
+      "sample_ids": []
+    },
+    {
+      "path": "src/sro_sto_plume/layout_preset.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "0955e4d764e051d4eaced5697fb308f761f1c2fa916a3967d492fa2783bb2c5f",
+      "size_bytes": 66122,
+      "sample_ids": []
+    },
+    {
+      "path": "src/sro_sto_plume/microscopy.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "a82af870142e128805ca5a446ccdb124abd77eb1171906eeceaad23479195d83",
+      "size_bytes": 44990,
+      "sample_ids": []
+    },
+    {
+      "path": "src/sro_sto_plume/modify_df.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "c8f25d0c8cee3b889ad8f5647a3b0b7456c1bece647145d146b231bac6e804f5",
+      "size_bytes": 1454,
+      "sample_ids": []
+    },
+    {
+      "path": "src/sro_sto_plume/packed_plot_functions.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "9def928531a620cceae60beb0b1c79764c4ca6bee43bac6bdbd6d1431ae65f59",
+      "size_bytes": 4241,
+      "sample_ids": []
+    },
+    {
+      "path": "src/sro_sto_plume/plot_target.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "05c34ccc91797c4b663770387f09767236b2ec57c5522c2d2256f09f0f91c272",
+      "size_bytes": 2254,
+      "sample_ids": []
+    },
+    {
+      "path": "src/sro_sto_plume/plots_afm.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "1546f828e162111c24ffab7a130419440318b3a8b9850e388698cf8cfeb23d88",
+      "size_bytes": 8738,
+      "sample_ids": []
+    },
+    {
+      "path": "src/sro_sto_plume/plots_plume.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "3d2edc1ecea18e6f970270e7b6687f00b37cad3d8df77d9e599193b9994f70cc",
+      "size_bytes": 30271,
+      "sample_ids": []
+    },
+    {
+      "path": "src/sro_sto_plume/plots_rsm.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "1271c8d7290efa95881bc4751650a32c04f64cc89641e6c50add177150876aac",
+      "size_bytes": 9122,
+      "sample_ids": []
+    },
+    {
+      "path": "src/sro_sto_plume/plots_xrd.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "1b320f9d41aa88062294f573b2c811bffda16976e53164bfa69a44bc403ecd04",
+      "size_bytes": 8792,
+      "sample_ids": []
+    },
+    {
+      "path": "src/sro_sto_plume/rsm_helpers.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "db5d3988ec1b3071279471a65b7021e978d763f85f4abbfb92441defd03e65fc",
+      "size_bytes": 2291,
+      "sample_ids": []
+    },
+    {
+      "path": "src/sro_sto_plume/xrd_ref.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "46b032d4c53c37bccb2bff7a3f7b517d6c5705abe860222ca8eda6ac98f0d8dd",
+      "size_bytes": 2503,
+      "sample_ids": []
+    },
+    {
+      "path": "tests/test_dataerai_notebook.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "1ced4ed3cc16948b56032fa6c9b55ce68722b3e0666d30a3c79d8f3fe695b9af",
+      "size_bytes": 19166,
+      "sample_ids": []
+    },
+    {
+      "path": "tests/test_dataerai_preservation.py",
+      "bundle": "code-and-notebooks",
+      "sha256": "adca6fe86cd6e263039fa4c843e1eff56e103d649898039d938c7ca7dd7068d6",
+      "size_bytes": 9846,
+      "sample_ids": []
+    }
+  ],
+  "bundles": {
+    "afm": {
+      "filename": "afm-bb2c29e93e898586.tar.gz",
+      "sha256": "409a50fd2607e382467610044c668ff1c1126bbb1926e7bede4269261f6ee0f7",
+      "size_bytes": 22659722,
+      "file_count": 33,
+      "asset_id": "3f92d1db-6a9f-49d7-be35-15f810939e7c",
+      "content_id": "bbce2bc9-c950-4607-9a20-da41b43ba06f",
+      "verified_download": true
+    },
+    "code-and-notebooks": {
+      "filename": "code-and-notebooks-7c26f1c88f703a7a.tar.gz",
+      "sha256": "28d84c94501bb437f0496a399c8286e987ea0123e79f1ae6f4d83cebaaec496d",
+      "size_bytes": 111863959,
+      "file_count": 224,
+      "asset_id": "7f3ad939-c44a-4c0e-8e5d-b24d767dbc39",
+      "content_id": "05aae502-cfbf-436c-92d7-44fbf33eb363",
+      "verified_download": true
+    },
+    "figures": {
+      "filename": "figures-9d915b1c753d98aa.tar.gz",
+      "sha256": "563ad78e3cba3f1cd11c75ea3d05c324b283d10ef6ba8e3d1f04e761b4d15307",
+      "size_bytes": 299477919,
+      "file_count": 70,
+      "asset_id": "620f2f64-4bb3-4a53-8566-2ff370ad2a42",
+      "content_id": "7bb5559a-94ae-462f-935f-1d81d13715a4",
+      "verified_download": true
+    },
+    "plume-metrics": {
+      "filename": "plume-metrics-8fb71e5cbe093602.tar.gz",
+      "sha256": "057d0ccb972918282a91ece5f0d83f894c9cadedf501a652052ec1383caf5c66",
+      "size_bytes": 4610923,
+      "file_count": 13,
+      "asset_id": "192b33f1-fd99-4700-a0f9-23c47bf57c0e",
+      "content_id": "5a7b496f-12c3-40f7-86cf-f0da25d2f2da",
+      "verified_download": true
+    },
+    "study-data": {
+      "filename": "study-data-eb5305c4a30c49ee.tar.gz",
+      "sha256": "847ff71ee89ac6b0895c73f439e475e4e9665a8c5ba88223d4234b30526ee45c",
+      "size_bytes": 7710,
+      "file_count": 1,
+      "asset_id": "d5e9b18c-c0a2-483f-9add-03adedea034b",
+      "content_id": "6535c6bb-86fc-4fac-bfe9-fad0b70f1023",
+      "verified_download": true
+    },
+    "target-microscopy": {
+      "filename": "target-microscopy-b1ded49a9a1582c3.tar.gz",
+      "sha256": "a59693189f720baf194d5af6cb1534f9a1af988fce686d56c721796956c4de06",
+      "size_bytes": 475173765,
+      "file_count": 48,
+      "asset_id": "a396c0a0-8fcf-4060-b3b2-c4a0363f26c3",
+      "content_id": "a64b129e-87b8-4b63-ad6a-f326d3ffd2c1",
+      "verified_download": true
+    },
+    "xrd": {
+      "filename": "xrd-d0e24b796ea85f82.tar.gz",
+      "sha256": "ead9ecd981497cab5546c79d67254e45d649da73604103d349ce01a7de7a8e08",
+      "size_bytes": 9384122,
+      "file_count": 57,
+      "asset_id": "017efd45-607d-486a-a81b-cee7867a005e",
+      "content_id": "efbdd8ee-dbb7-4780-b3d2-cb6b24acd5d2",
+      "verified_download": true
+    }
+  },
+  "publication": {
+    "project_id": "01500bbd-aec2-4a4e-8e5b-3297e898b79b",
+    "collection_id": "f80d5a7b-0e43-46a4-894e-526e9225cecb",
+    "collection_path": "SrRuO3 Plume Dynamics / Preservation",
+    "study_asset_id": "d4316aba-6407-4b8d-91d4-1da95eefb02a",
+    "key_results_asset_id": "01849dca-3880-4dc1-ba30-1079e718e5c5",
+    "catalogue_asset_id": "2f650b40-c278-4591-9af4-626e788973da",
+    "catalogue_content_id": "a8e39102-1a6c-4f48-ac1e-7138b32d800c"
+  }
+}

@@ -1,0 +1,11 @@
+# Tested together against beta.dataerai.com. Install in the notebook kernel.
+dataerai-sdk==0.2.0b33
+dataerai-cli-beta==0.1.35
+ipython>=8,<10
+nbformat>=5.9,<6
+pytest>=8,<10
+# Preservation workbook inspection and opt-in live notebook validation.
+pandas>=2,<3
+openpyxl>=3.0.10,<4
+nbclient>=0.10,<0.11
+ipykernel>=6,<7

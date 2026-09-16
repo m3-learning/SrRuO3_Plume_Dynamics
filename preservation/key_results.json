@@ -1,0 +1,100 @@
+{
+  "schema": "org.dataerai.srruo3-key-results/v1",
+  "evidence_status": "Preserved existing notebook results, not a new analysis or independent replication",
+  "source_commit": "d953252941ac80e3e2856e1e31f4aff38ba43f1b",
+  "findings": [
+    {
+      "statement": "The abstract reports improved plume stability, crystalline quality, and lower roughness with repeated target ablation.",
+      "source": "notebooks/1_Abstract.ipynb",
+      "original_cell_index": 1
+    },
+    {
+      "statement": "The abstract reports that target contamination causes unstable plumes, poorer crystalline quality, and rougher films.",
+      "source": "notebooks/1_Abstract.ipynb",
+      "original_cell_index": 1
+    }
+  ],
+  "film_thickness": {
+    "source": "notebooks/3_Structure_Characterization.ipynb",
+    "original_cell_index": 8,
+    "rows": [
+      {
+        "sample_id": "YG065",
+        "thickness_mean_nm": 82.29,
+        "thickness_std_nm": 5.74,
+        "reported_fft_fwhm_degrees": 5.13
+      },
+      {
+        "sample_id": "YG066",
+        "thickness_mean_nm": 68.27,
+        "thickness_std_nm": 0.05,
+        "reported_fft_fwhm_degrees": 2.83
+      },
+      {
+        "sample_id": "YG067",
+        "thickness_mean_nm": 70.55,
+        "thickness_std_nm": 4.33,
+        "reported_fft_fwhm_degrees": 10.31
+      },
+      {
+        "sample_id": "YG068",
+        "thickness_mean_nm": 72.75,
+        "thickness_std_nm": 5.32,
+        "reported_fft_fwhm_degrees": 2.67
+      },
+      {
+        "sample_id": "YG069",
+        "thickness_mean_nm": 72.74,
+        "thickness_std_nm": 5.29,
+        "reported_fft_fwhm_degrees": 2.08
+      },
+      {
+        "sample_id": "YG063",
+        "thickness_mean_nm": 66.64,
+        "thickness_std_nm": 3.53,
+        "reported_fft_fwhm_degrees": 2.73
+      }
+    ],
+    "verbatim_stdout": "YG065: 82.29±5.74 nm, FWHM: 5.13°\nYG066: 68.27±0.05 nm, FWHM: 2.83°\nYG067: 70.55±4.33 nm, FWHM: 10.31°\nYG068: 72.75±5.32 nm, FWHM: 2.67°\nYG069: 72.74±5.29 nm, FWHM: 2.08°\nYG063: 66.64±3.53 nm, FWHM: 2.73°\n",
+    "note": "Units and FWHM labels retained as reported; the original FFT axis is frequency (1/degree), so the printed degree label should be reviewed before reuse."
+  },
+  "afm_roughness_and_holes": {
+    "source": "notebooks/3_Structure_Characterization.ipynb",
+    "original_cell_index": 10,
+    "verbatim_stdout": "Processing YG065_0006-plain.txt...\nRMS Roughness (original): 1.1657e-09\nRMS Roughness (holes replaced): 7.8346e-10\n{'hole_count': 125, 'total_area': 547, 'avg_area': 4.376, 'density': 0.0019073486328125, 'hole_ratio': 0.0083465576171875}\nProcessing YG066_0017-plain.txt...\nRMS Roughness (original): 1.3368e-09\nRMS Roughness (holes replaced): 6.4620e-10\n{'hole_count': 377, 'total_area': 1959, 'avg_area': 5.196286472148541, 'density': 0.0057525634765625, 'hole_ratio': 0.0298919677734375}\nProcessing YG067_0188-plain.txt...\nRMS Roughness (original): 1.0699e-09\nRMS Roughness (holes replaced): 5.5611e-10\n{'hole_count': 308, 'total_area': 1573, 'avg_area': 5.107142857142857, 'density': 0.00469970703125, 'hole_ratio': 0.0240020751953125}\nProcessing YG068_0012-plain.txt...\nRMS Roughness (original): 1.0915e-09\nRMS Roughness (holes replaced): 3.4444e-10\n{'hole_count': 73, 'total_area': 308, 'avg_area': 4.219178082191781, 'density': 0.0011138916015625, 'hole_ratio': 0.00469970703125}\nProcessing YG069_0023-plain.txt...\nRMS Roughness (original): 2.3115e-10\nRMS Roughness (holes replaced): 1.9439e-10\n{'hole_count': 7, 'total_area': 47, 'avg_area': 6.714285714285714, 'density': 0.0001068115234375, 'hole_ratio': 0.0007171630859375}\nProcessing YG063_0044-plain.txt...\nRMS Roughness (original): 1.2603e-09\nRMS Roughness (holes replaced): 5.2223e-10\n{'hole_count': 27, 'total_area': 186, 'avg_area': 6.888888888888889, 'density': 0.0004119873046875, 'hole_ratio': 0.002838134765625}\nYG065_0006-plain.txt: 0.83%\nYG066_0017-plain.txt: 2.99%\nYG067_0188-plain.txt: 2.40%\nYG068_0012-plain.txt: 0.47%\nYG069_0023-plain.txt: 0.07%\nYG063_0044-plain.txt: 0.28%\n"
+  },
+  "analysis_contract": {
+    "sample_mapping": {
+      "YG065": "G1",
+      "YG066": "G2",
+      "YG067": "G3",
+      "YG068": "G4",
+      "YG069": "G5",
+      "YG063": "C-G6"
+    },
+    "time_step_ns": 500,
+    "distance_calibration": {
+      "distance_mm": 54,
+      "pixels": 347
+    },
+    "threshold": 200,
+    "incident_velocity_distance_m": {
+      "notebooks_5_and_6": [
+        0.028,
+        0.03
+      ],
+      "notebook_7": [
+        0.028,
+        0.029
+      ]
+    },
+    "note": "The differing incident-velocity windows are preserved exactly, not silently harmonized."
+  },
+  "raw_recordings": {
+    "status": "pending user-provided DIDs",
+    "affected_notebooks": [
+      "notebooks/4_Plume_Metrics_Extraction.ipynb",
+      "notebooks/5_Plume_Dynamic_Analysis.ipynb"
+    ]
+  }
+}

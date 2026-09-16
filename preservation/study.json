@@ -1,0 +1,33 @@
+{
+  "title": "To Sand, or Not to Sand: SrRuO3 Pulsed Laser Deposition with Full-Frame Plume Dynamic Imaging",
+  "repository": "https://github.com/m3-learning/SrRuO3_Plume_Dynamics",
+  "materials": {
+    "film": "SrRuO3",
+    "substrate": "SrTiO3"
+  },
+  "techniques": [
+    "pulsed laser deposition",
+    "full-frame plume dynamic imaging",
+    "X-ray diffraction",
+    "reciprocal-space mapping",
+    "atomic force microscopy",
+    "confocal target microscopy"
+  ],
+  "samples": {
+    "YG065": "G1",
+    "YG066": "G2",
+    "YG067": "G3",
+    "YG068": "G4",
+    "YG069": "G5",
+    "YG063": "C-G6"
+  },
+  "data_recovery": {
+    "source_git_commit": "11a1b18",
+    "reason": "Latest upstream d953252 removed data/; retained local checkout supplies its original data files."
+  },
+  "preservation_policy": {
+    "file_integrity": "SHA-256 and byte size for every file; Dataerai asset and content version pinned for every bundle",
+    "existing_notebooks": "All original cells, outputs, attachments and figures remain preserved. Added cells manage input retrieval and provenance.",
+    "new_runs": "Isolated downloaded copies; execution source, output arrays/tables, rich displays, saved figures/video/data and key results linked to each run."
+  }
+}
