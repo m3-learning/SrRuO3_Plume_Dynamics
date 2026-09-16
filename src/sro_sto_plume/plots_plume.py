@@ -402,7 +402,7 @@ def plume_metrics_summary(df_frame_metrics, plume_recording_root, label=True):
     if label:
         labelfigs(axes=axes_dict['1'], number=0 , size=15, style='bw', inset_fraction=(0.2, 0.05))
 
-    file = f'{plume_recording_root}/YG065_YichenGuo_09102024.h5'
+    file = f'{plume_recording_root}/G1_YichenGuo_09102024.h5'
     plume_ds = plume_dataset(file_path=file, group_name='PLD_Plumes')
     keys = plume_ds.dataset_names()
     plumes = plume_ds.load_plumes('1-SrRuO3')
@@ -426,7 +426,7 @@ def plume_metrics_summary(df_frame_metrics, plume_recording_root, label=True):
         labelfigs(axes=axes_dict['2'], number=1, size=15, style='bw', inset_fraction=(0.2, 0.05))
 
     coords_root = '../data/Plumes/frame_normalize_dataset/'
-    coords_path = coords_root + 'YG065_coords.npy'
+    coords_path = coords_root + 'G1_coords.npy'
     standard_coords_path = coords_root + 'standard_coords.npy'
     coords_standard = np.load(standard_coords_path)
     start_position = np.round(np.mean(coords_standard[:2], axis=0)).astype(np.int32) # start position of plume  (x, y)
