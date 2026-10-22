@@ -8,6 +8,9 @@ local/
 *.h5
 organized_plume_datasets/
 plume_recordings/
+# Large research assets live in OneDrive; WSL keeps local symlinks only.
+/data
+/figures
 
 # _build/
 

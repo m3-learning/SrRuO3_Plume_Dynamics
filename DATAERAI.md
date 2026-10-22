@@ -26,7 +26,8 @@ Publishing does not make the collection public or change sharing permissions.
 
 ## Preserve the study once
 
-The latest upstream commit removed `data/`. A retained earlier checkout can
+Upstream removed `data/` and the tracked `figures/` files. Their historical
+contents remain in the pinned Dataerai archives. A retained earlier checkout can
 supply the source folder, or recover the tracked data from its Git commit:
 
 ```sh
@@ -72,7 +73,8 @@ a previously downloaded archive only after checking its hash), validates every
 file, and creates a separate workspace under `.dataerai/runs/<run-id>/`.
 Original `../data/` and `../figures/` paths point to the restored copies.
 Scientific cells are unchanged except for the `%%dataerai` capture line.
-Previously saved outputs and figure files are retained, not regenerated in Git.
+Saved notebook outputs follow upstream. Historical figure files remain available
+through the pinned Dataerai archives and are restored into run workspaces.
 
 Every code cell records source, streams, execution status, displayed images,
 rich output, assigned arrays and tables, and saved files. Saved PNG/SVG/TIFF
@@ -105,8 +107,11 @@ python scripts/verify_dataerai_roundtrip.py
 ```
 
 The preservation validator compares every original cell, output, execution
-count, attachment and cell metadata against upstream commit `d953252`; it also
-checks all 70 original figure files byte for byte. Tests cover integrity,
+count, attachment and cell metadata against upstream commit `84a1761`.
+That commit no longer tracks figure files; the original 70 figures remain in
+the pinned preservation archives. `preservation/validation.json` retains the
+original preservation validation and records refresh checks separately.
+Tests cover integrity,
 version-pinned downloads, safe archive extraction, missing inputs, DID
 registration, cell provenance, saved files, and errors. Complete scientific
 re-execution requires the raw HDF5 recordings and the original analysis

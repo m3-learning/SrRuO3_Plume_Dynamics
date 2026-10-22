@@ -8,7 +8,7 @@ import subprocess
 import nbformat
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = 'd953252941ac80e3e2856e1e31f4aff38ba43f1b'
+BASE = '84a1761bbc15512d61a755f0fc6265d0391f76b4'
 
 
 def git(*args):

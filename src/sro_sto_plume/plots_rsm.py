@@ -32,8 +32,12 @@ def plot_rsm_figure(
     cbar_ax,
     *,
     peak_z_range_substrate: Optional[Tuple[float, float]] = None,
+    peak_z_range_film: Optional[Tuple[float, float]] = None,
     plane: Optional[str] = None,
     ideal_q: Optional[Tuple[float, float]] = None,
+    peak_labels: Optional[Tuple[str, str]] = None,
+    peak_label_offsets: Optional[Tuple[Tuple[float, float], Tuple[float, float]]] = None,
+    peak_label_kwargs: Optional[dict] = None,
     label: bool = False,
     label_start: int = 0
 ):
@@ -43,6 +47,7 @@ def plot_rsm_figure(
     • optional ideal_q=(qx*, qz*) diamond marker (fully relaxed reference)
     • substrate origin from intensity-weighted centroid inside Qz window
     • dashed reference line through that origin with slope from `plane` (e.g. '103' -> 3)
+    • optional in-panel labels pointing to the substrate and film peak centroids
     """
     # Grab desired limits if the plotter specifies them
     xlim_pref = plotter.plot_params.get("xlim", None)
@@ -67,27 +72,67 @@ def plot_rsm_figure(
                        facecolors='none', edgecolors='white',
                        linewidths=0.7, zorder=10)
 
-        if peak_z_range_substrate is not None and plane is not None:
-            z_lo, z_hi = peak_z_range_substrate
+        def peak_centroid(qz_range):
+            if qz_range is None:
+                return None
+            z_lo, z_hi = qz_range
             mask = (Qz >= z_lo) & (Qz <= z_hi)
             if np.any(mask):
-                qx0, qz0 = intensity_weighted_centroid(Qx[mask], Qz[mask], I[mask])
-                m = parse_plane_slope(plane)
-                if m is not None:
-                    seg = clip_line_to_axes(ax, qx0, qz0, m)
-                    if seg is not None:
-                        x1, z1, x2, z2 = seg
-                        # draw above the image
-                        ax.plot([x1, x2], [z1, z2], '--',
-                                lw=0.8, color='gray', alpha=0.95, zorder=11)
-                else:
-                    # vertical line x=qx0
-                    x_min, x_max = ax.get_xlim()
-                    z_min, z_max = ax.get_ylim()
-                    ax.plot([qx0, qx0], [z_min, z_max], '--',
+                return intensity_weighted_centroid(Qx[mask], Qz[mask], I[mask])
+            print(f"{title}: no pixels within peak Qz range {qz_range}.")
+            return None
+
+        substrate_peak = peak_centroid(peak_z_range_substrate)
+        film_peak = peak_centroid(peak_z_range_film)
+
+        if substrate_peak is not None and plane is not None:
+            qx0, qz0 = substrate_peak
+            m = parse_plane_slope(plane)
+            if m is not None:
+                seg = clip_line_to_axes(ax, qx0, qz0, m)
+                if seg is not None:
+                    x1, z1, x2, z2 = seg
+                    # draw above the image
+                    ax.plot([x1, x2], [z1, z2], '--',
                             lw=0.8, color='gray', alpha=0.95, zorder=11)
             else:
-                print(f"{title}: no pixels within substrate Qz range {peak_z_range_substrate}.")
+                # vertical line x=qx0
+                x_min, x_max = ax.get_xlim()
+                z_min, z_max = ax.get_ylim()
+                ax.plot([qx0, qx0], [z_min, z_max], '--',
+                        lw=0.8, color='gray', alpha=0.95, zorder=11)
+
+        if peak_labels is not None:
+            if peak_label_offsets is None:
+                peak_label_offsets = ((7, 0), (5, 0))
+            label_kwargs = {
+                'ha': 'left',
+                'va': 'center',
+                'multialignment': 'center',
+                'linespacing': 1.0,
+                'color': 'white',
+                'fontsize': 7,
+                'fontweight': 'bold',
+                'annotation_clip': True,
+                'zorder': 12,
+            }
+            if peak_label_kwargs is not None:
+                label_kwargs.update(peak_label_kwargs)
+            label_specs = (
+                (substrate_peak, peak_labels[0], peak_label_offsets[0]),
+                (film_peak, peak_labels[1], peak_label_offsets[1]),
+            )
+            for peak, text, text_offset in label_specs:
+                if peak is None:
+                    continue
+                ax.annotate(
+                    text,
+                    xy=peak,
+                    xycoords='data',
+                    xytext=text_offset,
+                    textcoords='offset points',
+                    **label_kwargs,
+                )
 
 
 def plot_rsm002(rsm002_files, label=True):
@@ -96,7 +141,7 @@ def plot_rsm002(rsm002_files, label=True):
     Same signature/name as your original.
     """
     from pathlib import Path
-    sample_IDs   = ['YG065', 'YG066', 'YG067', 'YG068', 'YG069', 'YG063']
+    sample_IDs   = ['G1', 'G2', 'G3', 'G4', 'G5', 'C-G6']
     sample_names = ['G1',    'G2',    'G3',    'G4',    'G5',    'C-G6']
 
     figsize = (7.5, 3)

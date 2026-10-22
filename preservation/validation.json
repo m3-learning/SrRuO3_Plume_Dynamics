@@ -24,5 +24,16 @@
     "run_asset_id": "d97bbff7-3c4c-4de2-83d8-984240d04c66",
     "summary_asset_id": "bceb59f7-55e8-4fdb-8587-72354f8c71f3"
   },
-  "scientific_reexecution": "Not performed: raw plume HDF5 recordings will be supplied later by DID."
+  "scientific_reexecution": "Not performed: raw plume HDF5 recordings will be supplied later by DID.",
+  "refresh_validation": {
+    "baseline_commit": "84a1761bbc15512d61a755f0fc6265d0391f76b4",
+    "original_notebooks": 13,
+    "original_cells": 209,
+    "original_code_cells": 65,
+    "preserved_stored_outputs": 236,
+    "unchanged_figure_files": 0,
+    "tests_passed": 31,
+    "live_validation": "Not rerun; the live_validation record above belongs to the original baseline.",
+    "figure_files": "Removed upstream; historical files remain in the pinned preservation archives."
+  }
 }

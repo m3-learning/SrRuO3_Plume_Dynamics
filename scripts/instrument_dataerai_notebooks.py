@@ -72,7 +72,7 @@ summary. See the repository's `DATAERAI.md` for the catalogue and later HDF5 DID
     notebook['nbformat_minor'] = max(5, notebook.get('nbformat_minor', 0))
     rendered = json.dumps(notebook, indent=1, ensure_ascii=False) + '\n'
     baseline = subprocess.check_output(['git', '-C', str(ROOT), 'show',
-        'd953252941ac80e3e2856e1e31f4aff38ba43f1b:' + relative])
+        '84a1761bbc15512d61a755f0fc6265d0391f76b4:' + relative])
     if b'\r\n' in baseline:
         rendered = rendered.replace('\n', '\r\n')
     path.write_bytes(rendered.encode())
