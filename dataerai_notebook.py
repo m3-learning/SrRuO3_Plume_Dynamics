@@ -70,6 +70,7 @@ _MANAGED_PROJECT_NAME = "SrRuO3 Plume Dynamics notebook records"
 _FIGURE_FORMATS = {"png", "jpg", "jpeg", "svg"}
 _TRANSIENT_DATAERAI_ERROR = re.compile(
     r"HTTP (?:429|502|503|504)\b|"
+    r"An internal error occurred\. Please retry the transfer\.|"
     r"timed out|did not complete within|connection (?:was )?closed",
     re.IGNORECASE,
 )
@@ -203,7 +204,7 @@ def _json_safe(value: Any, *, key: str | None = None, depth: int = 0) -> Any:
         except Exception:
             pass
 
-    if isinstance(value, Mapping):
+    if isinstance(value, dict):
         items: dict[str, Any] = {}
         for index, (item_key, item_value) in enumerate(value.items()):
             string_key = str(item_key)
@@ -343,7 +344,7 @@ class NotebookProvenance:
     @staticmethod
     def _find_repo_root(start: Path) -> Path:
         for candidate in (start, *start.parents):
-            if (candidate / ".git").exists():
+            if (candidate / ".git").exists() or (candidate / "dataerai_preservation.py").is_file():
                 return candidate
         return start
 
@@ -384,6 +385,11 @@ class NotebookProvenance:
                 "AFM-Learn": _package_version("AFM-Learn"),
                 "XRD-Learn": _package_version("XRD-Learn"),
                 "M3Learning-Util": _package_version("M3Learning-Util"),
+            },
+            "installed_distributions": {
+                distribution.metadata['Name']: distribution.version
+                for distribution in importlib.metadata.distributions()
+                if distribution.metadata.get('Name')
             },
             "git": {
                 "repository": remote or COURSE["repository"],
@@ -1515,7 +1521,7 @@ class NotebookProvenance:
                 details={"shape": list(value.shape), "dtype": str(value.dtype)},
             )
 
-        if np is not None and isinstance(value, (Mapping, list, tuple)):
+        if np is not None and isinstance(value, (dict, list, tuple)):
             arrays = {}
             seen = set()
 
@@ -1526,12 +1532,12 @@ class NotebookProvenance:
                     label = f"array_{len(arrays):04d}"
                     arrays[label] = item
                     return {"array": label, "shape": list(item.shape), "dtype": str(item.dtype)}
-                if isinstance(item, (Mapping, list, tuple)):
+                if isinstance(item, (dict, list, tuple)):
                     if id(item) in seen:
                         return {"recursive_reference": True}
                     seen.add(id(item))
                     try:
-                        if isinstance(item, Mapping):
+                        if isinstance(item, dict):
                             return {str(k): encode(v, k) for k, v in item.items()}
                         return {"container": type(item).__name__, "items": [encode(v) for v in item]}
                     finally:
@@ -1598,7 +1604,7 @@ class NotebookProvenance:
                 details={"original_path": str(value)},
             )
 
-        if isinstance(value, (Mapping, list, tuple, set, frozenset)) and role in {
+        if isinstance(value, (dict, list, tuple, set, frozenset)) and role in {
             "configuration",
             "raw_data",
             "analysis",
@@ -1613,7 +1619,7 @@ class NotebookProvenance:
                 python_type=python_type,
                 details=(
                     {"keys": [str(item) for item in list(value)[:500]]}
-                    if isinstance(value, Mapping)
+                    if isinstance(value, dict)
                     else {"length": len(value)}
                 ),
             )

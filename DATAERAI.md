@@ -1,123 +1,152 @@
-# SrRuO3 study preservation with Dataerai
+# Run the SrRuO3 notebooks with Dataerai
 
-Start with [0_Dataerai_Preservation.ipynb](notebooks/0_Dataerai_Preservation.ipynb).
-The catalogue in [preservation/manifest.json](preservation/manifest.json) records
-Dataerai asset IDs, exact content versions, file sizes and SHA-256 hashes. It
-covers all available source data, code, notebooks with their saved outputs,
-figures, videos, manuscript sources and the existing book build.
+The raw inputs come from [SrRuO3 Data](https://beta.dataerai.com/p/99185d30-fe63-497c-91b4-852a02574d49).
+The project contains **Base notebooks** and **Notebook runs** collections. Base
+notebooks include the original seven analysis notebooks, a readiness notebook,
+and a small analysis of the real G5 HDF5 recording. Download/sync the base
+notebooks before opening them in Jupyter.
 
-## Install and authenticate
+## Environment and login
 
-Use Python 3.10+ and install the integration in the same environment as Jupyter:
+The project root has one notebook dependency definition, `pyproject.toml`,
+uploaded from [notebook-environment/pyproject.toml](notebook-environment/pyproject.toml).
+Child collections inherit it. It selects Python 3.11 and pins the scientific
+libraries, Dataerai SDK/CLI, and Jupyter dependencies. A complete record of the
+locally validated environment is in `notebook-environment/requirements.lock.txt`.
+The scientific environment uses SciPy 1.15.3 because the Materials Project
+client imports interpolation APIs absent from the upstream requirements file's
+SciPy 1.13.1. XRD-Learn, AFM-Learn, and Plume-Learn are pinned to exact
+Git revisions because the notebooks use APIs absent from their PyPI releases.
+Building the environment requires Git. AFM-Learn's legacy Igor import uses
+the maintained `igor2` binary reader; this avoids removed NumPy aliases without changing the scientific cells.
 
-```sh
-python -m pip install -r requirements-dataerai.txt
-dataerai auth login --server https://beta.dataerai.com
-dataerai auth status
-# On a remote machine: dataerai auth login --device --server https://beta.dataerai.com
-```
+In Dataerai Desktop, open **Base notebooks**, review its inherited environment,
+and build it. Choose/download the notebook files, then launch JupyterLab from
+that workspace. Local JupyterLab is a separate organization feature from
+notebook environment indexing. If it is unavailable, use an existing local
+Jupyter installation with the environment below.
 
-The pinned beta CLI/SDK versions were used to validate this integration.
-Install the original scientific requirements separately when running the
-analysis notebooks: `python -m pip install -r requirements.txt`.
-Authentication uses the CLI credential store; no credentials go in notebooks,
-the catalogue, or Git. Access to the preservation collection is required.
-Publishing does not make the collection public or change sharing permissions.
-
-## Preserve the study once
-
-Upstream removed `data/` and the tracked `figures/` files. Their historical
-contents remain in the pinned Dataerai archives. A retained earlier checkout can
-supply the source folder, or recover the tracked data from its Git commit:
+For a repository checkout, with `uv` installed:
 
 ```sh
-mkdir -p .dataerai/source
-git archive 11a1b18 data | tar -x -C .dataerai/source
-export SRRUO3_DATA_SOURCE="$PWD/.dataerai/source/data"
+uv venv --python 3.11 .venv
+uv pip install --python .venv/bin/python -r notebook-environment/requirements.lock.txt
+uv pip install --python .venv/bin/python -e .
+.venv/bin/python -m ipykernel install --user --name srruo3 --display-name 'SrRuO3 Dataerai'
+.venv/bin/dataerai auth login --server https://beta.dataerai.com --device
+.venv/bin/dataerai auth status
 ```
 
-Notebook 0 inventories that folder and the current repository, builds archives
-by modality, uploads them to **SrRuO3 Plume Dynamics / Preservation**, downloads
-each exact content version, verifies its bytes, and writes a portable catalogue.
-Each archive has a per-file inventory. Filenames and directory layout are
-retained even when different experiments use the same basename. Repeated
-publication reuses already verified, unchanged bundles. Changed bytes produce
-new identities. Keep and commit the updated `preservation/manifest.json`.
+Select the **SrRuO3 Dataerai** kernel. Credentials remain in the CLI credential
+store. Do not place tokens in notebooks, dependency files, or Git. Ordinary
+interactive login can omit `--device`.
 
-Already-published catalogues work on fresh clones without the original local
-data. Notebook 0 can reuse their pinned IDs and register the later raw inputs.
-Local archives, downloaded files and run workspaces are ignored by Git.
+Before any input transfer or analysis, setup verifies the beta server, refreshes
+credentials through the SDK, checks the signed-in identity against the transfer
+daemon, confirms raw-data read access and destination write access, and checks
+the installed packages against the declared environment. An invalid login,
+wrong server, missing permission, identity mismatch, or incompatible runtime
+stops the notebook with an actionable error.
 
-## Add the six raw recording DIDs later
+Notebook environment indexing must be enabled for the owning organization;
+the signed-in user must also be entitled to use it in that organization. Data
+read access alone does not grant this feature. Publication records the resolved
+environment, exact dependency content version, and environment hash.
 
-The six original HDF5 plume recordings will be uploaded separately. In notebook
-0, fill `RECORDING_DIDS` with the exact expected filename and its Dataerai DID.
-Each asset must contain one HDF5 recording under that filename. The helper
-resolves the DID through the authenticated SDK, downloads it, and records its
-actual content version, checksum and size. It never guesses a DID or substitutes
-sample data. Partial registration can be resumed; all six must be registered
-before notebooks 4 and 5 can run from top to bottom. Alternatively, set
-`SRRUO3_RAW_SOURCE` to a directory containing all six original filenames when
-building the initial preservation archives.
+## Start here
 
-Notebooks 2, 3, 6 and 7 use the available microscopy, structural and processed
-plume datasets. Abstract and manuscript notebooks retrieve study data and
-figures. The two notebooks that need raw recordings stop at setup with an
-explicit missing-input message until the DIDs are supplied.
+1. Run `0_Dataerai_Preservation.ipynb` to check access and the pinned catalogue.
+   It starts and finalizes a real provenance run without downloading the raw recordings.
+2. Run `00_Dataerai_Raw_Data_Quickstart.ipynb` to download and verify the real G5
+   recording (3.70 GB), inspect its datasets, and analyze one 128×128 frame window.
+   It saves a table, NumPy array, rendered plot, original SVG, executed notebook,
+   and run summary in Dataerai. This is an input/provenance check, not a complete
+   plume-dynamics re-analysis.
+3. Run an original numbered notebook from the top for its scientific analysis.
+   Notebooks 4 and 5 download all six raw recordings (about 32 GB). Other
+   notebooks download only their modalities; the 6/7 analyses use the historical
+   processed metrics. Full-resolution analysis may require substantial memory.
 
-## Run any existing notebook
+Published base notebooks contain no old execution outputs. Their first cell
+checks login and downloads an exact version of the repository source workspace
+from Dataerai. It checks SHA-256 and archive paths before loading that code.
+Each execution has a separate workspace, independent of the original files.
 
-Run from the top. The added setup cell finds the repository from either its root
-or a notebook folder. It downloads the required bundles from Dataerai (or uses
-a previously downloaded archive only after checking its hash), validates every
-file, and creates a separate workspace under `.dataerai/runs/<run-id>/`.
-Original `../data/` and `../figures/` paths point to the restored copies.
-Scientific cells are unchanged except for the `%%dataerai` capture line.
-Saved notebook outputs follow upstream. Historical figure files remain available
-through the pinned Dataerai archives and are restored into run workspaces.
+## Exact inputs and current upstream paths
 
-Every code cell records source, streams, execution status, displayed images,
-rich output, assigned arrays and tables, and saved files. Saved PNG/SVG/TIFF
-figures, MP4 videos, and changed CSV/NPY files are uploaded without re-encoding.
-The graph links the run to notebook source and exact input versions, cells in
-execution order, and outputs to the cells that generated them. The final cell
-uploads a run summary and restores the starting directory. Capture failures
-raise an error and leave recovery files in the local spool.
+`preservation/project-inputs.json` pins 150 accessible project files by asset ID,
+content version, path, byte size, and repository BLAKE3/SHA-256 checksum. All six
+recordings are present as `Plumes/G1.h5` through `Plumes/G5.h5` and
+`Plumes/C-G6.h5`. Four older top-level AFM text records return 404; they are
+listed under `unavailable_files` and are outside the folders used by the current
+analysis notebooks. An inaccessible input required by a notebook stops setup.
 
-Run assets default to **SrRuO3 Plume Dynamics / Notebook runs**. To select an
-existing destination, set `DATAERAI_OWNER_TYPE=project`, `DATAERAI_OWNER_ID` and
-optionally `DATAERAI_COLLECTION_ID` to the relevant UUIDs before Jupyter starts.
-Input access and output ownership are separate: changing the output project
-does not change the pinned input catalogue.
+Downloads always specify the pinned `content_id`. Cached bytes are checked
+again before reuse; corrupt or mismatched downloads cannot enter a run.
+Paths and basenames are retained, including repeated filenames in different
+experiment folders. The original archives in `preservation/manifest.json`
+remain the explicit sources of the growth workbook, historical figures, and
+processed plume metrics and normalization coordinates. They are separately
+version-pinned dependencies in every relevant run.
 
-Saved results are described in [preservation/key_results.json](preservation/key_results.json),
-including exact source notebook/cell references and verbatim numerical output.
-These are historical reported results, not claims that all analyses were rerun.
-The incident-velocity windows differ between notebooks 5/6 and notebook 7; the
-original windows and calculations are preserved. Future results captured by
-`%%dataerai` carry their run and cell identity.
+The current upstream code expects coordinates and metrics under
+`data/datasets/ML_plume_dynamics/`. Setup maps the historical YG identifiers to
+G1–G5/C-G6 filenames at those paths, copying the original bytes. Raw files come
+directly from the supplied project rather than the old placeholder raw-DID list.
+Scientific calculations, cells, and historical source-notebook outputs remain
+unchanged by this integration.
 
-## Validation
+To deliberately refresh the input snapshot after a new data publication:
+
+```python
+from pathlib import Path
+from dataerai_preservation import connect_client
+from dataerai_project import pin_project_inputs
+with connect_client() as client:
+    pin_project_inputs(Path.cwd(), client)
+```
+
+Review and commit the new catalogue. Notebook runs do not silently follow a
+mutable latest data version.
+
+## Saved provenance
+
+Every run saves notebook source, runtime source code, the input catalogue,
+declared environment, installed distribution versions, signed-in user, and
+exact input content versions. Each `%%dataerai` cell saves source, sequence,
+timing, status, stdout/stderr, rich displays, assigned arrays/tables, and new or
+changed files. Saved figures, video, and data retain their original bytes.
+
+The graph links the run to its notebook and inputs, cells in execution order,
+outputs to their generating cells, and the executed notebook and terminal
+summary to the run. Run `dataerai.finish()` in the final cell. A scientific or
+capture error in a managed cell also attempts finalization before propagating
+the error. Local spool files remain under `.dataerai/runs/` if a service failure
+prevents upload. Closing or forcibly killing the kernel cannot guarantee a
+remote terminal summary.
+
+Executed notebook artifacts clear outputs from cells that did not execute in
+that run. They include current captured output and cell asset IDs. Historical
+outputs are not presented as results of a new execution.
+
+## Validate and republish
 
 ```sh
 python scripts/validate_dataerai_notebooks.py
 python -m pytest tests -q
-# Optional, authenticated round trip (creates validation records in Dataerai):
-python scripts/verify_dataerai_roundtrip.py
+python scripts/publish_dataerai_notebooks.py --publish
 ```
 
-The preservation validator compares every original cell, output, execution
-count, attachment and cell metadata against upstream commit `84a1761`.
-That commit no longer tracks figure files; the original 70 figures remain in
-the pinned preservation archives. `preservation/validation.json` retains the
-original preservation validation and records refresh checks separately.
-Tests cover integrity,
-version-pinned downloads, safe archive extraction, missing inputs, DID
-registration, cell provenance, saved files, and errors. Complete scientific
-re-execution requires the raw HDF5 recordings and the original analysis
-packages; preserving historical outputs does not imply a successful rerun.
+The source validator compares all 13 original notebooks against upstream
+`84a1761`, including 209 cells and 236 saved outputs. It ignores the managed
+integration cells. The new readiness and raw-data notebooks are validated by
+execution. Regression tests cover credential/permission failures, paths,
+immutable downloads, corruption, filename mapping, closed HDF5 handles,
+executed-notebook output isolation, and existing provenance/preservation behavior.
 
-The cell recorder is adapted from the QIS Summer School integration. Its
-repository-specific additions are modality bundles, reproducible input
-restoration, saved-file capture, original-output validation, and delayed raw
-recording DID registration.
+Publication uploads the environment to the project root and standalone base
+notebooks to **Base notebooks**, linked to their exact source bundle and
+environment. It resumes previous assets rather than duplicating successful
+uploads. `preservation/notebook-publication.json` records publication IDs and
+server environment resolution. `preservation/project-validation.json` records
+live evidence and the extent of scientific execution actually performed.

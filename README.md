@@ -47,6 +47,9 @@ This repository provides:
 Start with [the Dataerai preservation notebook](notebooks/0_Dataerai_Preservation.ipynb)
 and [setup instructions](DATAERAI.md). All existing notebooks retrieve their
 inputs from a version-pinned Dataerai catalogue and preserve executed code,
-outputs, figures, metadata, and results with provenance. Original saved outputs
-and figure files are retained. The six raw plume recordings can be registered
-later using their Dataerai DIDs; notebooks 4 and 5 require those recordings.
+outputs, figures, metadata, and results with provenance. The raw inputs are pinned directly from
+[SrRuO3 Data](https://beta.dataerai.com/p/99185d30-fe63-497c-91b4-852a02574d49),
+including all six HDF5 recordings. The project contains runnable base notebooks
+and a pinned Python 3.11 environment. Setup checks credentials, permissions,
+checksums, and dependencies before analysis; each run saves an executed notebook
+and links its cells, outputs, software, and exact inputs.

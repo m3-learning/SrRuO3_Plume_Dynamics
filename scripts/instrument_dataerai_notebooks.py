@@ -54,14 +54,15 @@ dataerai
 '''
     notes = '''## Dataerai inputs and preservation
 
-Run `notebooks/0_Dataerai_Preservation.ipynb` once to preserve the study.
-Install `requirements-dataerai.txt` in this kernel and sign in with
+Use the Python 3.11 environment in `notebook-environment/pyproject.toml` and sign in with
 `dataerai auth login --server https://beta.dataerai.com` (add `--device` for a remote machine).
-The next cell downloads this notebook's inputs from Dataerai, verifies SHA-256
-hashes, and opens a separate run workspace. Existing code, saved outputs, and
-figure files remain preserved. Each `%%dataerai` cell records its source,
+The next cell checks the login, server, project access and runtime before any
+transfer or analysis. It downloads version-pinned inputs from the SrRuO3 Data
+project, verifies BLAKE3/SHA-256 hashes, and opens a separate run workspace.
+Historical figures and processed inputs come from the preservation catalogue.
+Each `%%dataerai` cell records its source,
 outputs, figures, tables, and provenance. Run the final cell to upload the run
-summary. See the repository's `DATAERAI.md` for the catalogue and later HDF5 DIDs.
+summary and executed notebook. See `DATAERAI.md` for setup and input catalogues.
 '''
     notebook['cells'] = [*originals[:insertion], cell('markdown', notes, 'dataerai-managed-notes'),
         cell('code', setup, 'dataerai-managed-setup'), *originals[insertion:],

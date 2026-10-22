@@ -1,0 +1,115 @@
+{
+  "assets": {
+    "environment": {
+      "asset_id": "7a776767-e57f-43a5-8ec0-596ef1268c78",
+      "content_id": "a988094f-9c6a-4594-9ece-71af99376550",
+      "sha256": "a107e6b5894c0f496557ef580a56ac430dc7787d9552fd471bc981362a6e5f0d",
+      "filename": "pyproject.toml"
+    },
+    "source_bundle": {
+      "asset_id": "fc677a80-7394-4be5-8da8-b6eaa198b92a",
+      "content_id": "10de20f2-c663-4de7-8242-5f3a5e24c656",
+      "sha256": "66c5fd419dcc17f2f89c609c30ee794ec4b76eab957ed23385fa439e6e9cf39d",
+      "filename": "workspace-code.tar.gz"
+    },
+    "notebooks/00_Dataerai_Raw_Data_Quickstart.ipynb": {
+      "asset_id": "87a5fce5-babd-465a-abe2-e99e034e2b8d",
+      "content_id": "0f7a212f-4a69-4cc6-904d-9f9b14574460",
+      "sha256": "794f83cb1457c9daa196d799ee64773ec81d232e75a12f6d3be88d2e56fab4a5",
+      "filename": "00_Dataerai_Raw_Data_Quickstart.ipynb"
+    },
+    "notebooks/0_Dataerai_Preservation.ipynb": {
+      "asset_id": "92cca0dc-e423-4fc9-8d3f-358c01cce2d8",
+      "content_id": "4391ceaa-1168-4a38-b5e9-3d75fd183fdb",
+      "sha256": "3a99776f36ee2a4a3362533f12c072830df56e6cd79e0fdef6a2b0b52392c4fa",
+      "filename": "0_Dataerai_Preservation.ipynb"
+    },
+    "notebooks/1_Abstract.ipynb": {
+      "asset_id": "f91d9e73-17c4-445c-ba73-63df5db13381",
+      "content_id": "7e40d842-208f-4aca-ab63-bdb7d46dc986",
+      "sha256": "07c37b94a67d2e0da4023e58b9eac08a8955a1d77cefa54bfc7f1361e34a8dfd",
+      "filename": "1_Abstract.ipynb"
+    },
+    "notebooks/2_PLD_Experiment_Design_and_Target_Microscopy.ipynb": {
+      "asset_id": "5f79ac90-bdc1-42ba-bbff-f4b5e3a9a11b",
+      "content_id": "e1396489-5e73-4098-9220-b8d4dc107094",
+      "sha256": "f2c355fca99c18ca195c8c38f263e646cff27a54e1ab48aca250083582f99804",
+      "filename": "2_PLD_Experiment_Design_and_Target_Microscopy.ipynb"
+    },
+    "notebooks/3_Structure_Characterization.ipynb": {
+      "asset_id": "696a7cc5-d03f-4fc8-8631-dcdc8d5352ee",
+      "content_id": "55927ed1-a59d-4da8-9b63-ea1b454e18de",
+      "sha256": "dd00a77502d3d06ffd51c08ecb9dc32e7beccfe41fd379308e4742b7de459a95",
+      "filename": "3_Structure_Characterization.ipynb"
+    },
+    "notebooks/4_Plume_Metrics_Extraction.ipynb": {
+      "asset_id": "b9f8ea2a-d55d-45eb-a1ad-5be4f936ac48",
+      "content_id": "c4ab9ffb-80b7-4fb7-be74-979f59627623",
+      "sha256": "afb1a7ef17a5c9224c6ec5e5de6cc349ae2cc5cf064d242643f0d81426b5c5ce",
+      "filename": "4_Plume_Metrics_Extraction.ipynb"
+    },
+    "notebooks/5_Plume_Dynamic_Analysis.ipynb": {
+      "asset_id": "c8d796de-2729-443b-8f40-45a78f8a3dd2",
+      "content_id": "6d9328a1-2237-403e-8e88-26afb06eafe1",
+      "sha256": "44e3326183cc21ed61a29a717ec64cfdaafd3ab29189b4bbe15cdb587e04edc8",
+      "filename": "5_Plume_Dynamic_Analysis.ipynb"
+    },
+    "notebooks/6_Target_Temporal_Variation.ipynb": {
+      "asset_id": "93a56960-5775-4802-96f0-ab37a7805e84",
+      "content_id": "57330b6d-f1a4-4663-b840-3bb90dadaec2",
+      "sha256": "00535f76da0440312827d4fb910e529358d01a9f81112efb79691043b0cba3da",
+      "filename": "6_Target_Temporal_Variation.ipynb"
+    },
+    "notebooks/7_Target_Spatial_Inhomogeneity.ipynb": {
+      "asset_id": "8f5e3127-76fb-4b3f-a1a3-8ce4a8aaf9d1",
+      "content_id": "39858e70-8bea-469b-882b-d65c6cf8cda6",
+      "sha256": "3530ead3045e804063f4d99f9074fda06b8ff9473563f445a7c4ed22fd08b181",
+      "filename": "7_Target_Spatial_Inhomogeneity.ipynb"
+    }
+  },
+  "project_id": "99185d30-fe63-497c-91b4-852a02574d49",
+  "collection_id": "386a49e7-7a99-4dd2-b95c-2de3020f06da",
+  "run_collection_id": "e6b512f2-471c-46d5-a512-4c8f83bf4644",
+  "server": "https://beta.dataerai.com",
+  "environment_resolution": {
+    "status_code": 200,
+    "resolution": {
+      "outcome": "resolved",
+      "mode": "inherited",
+      "env_hash": "sha256:ff8bac457a05cdb8cbed94542d72f3bcde9689ca9cd570ec2ba06019ecffffdb",
+      "hash_basis": "strong",
+      "python_constraint": ">=3.11,<3.12",
+      "layers": [
+        {
+          "order": 0,
+          "collection": {
+            "id": "7461b56c-7dc6-4677-b0c8-6d165bfc1eed",
+            "title": "My Project root"
+          },
+          "asset": {
+            "id": "7a776767-e57f-43a5-8ec0-596ef1268c78",
+            "title": "pyproject.toml"
+          },
+          "content_id": "a988094f-9c6a-4594-9ece-71af99376550",
+          "spec_type": "pyproject",
+          "checksum": "blake3:4424c65d2bffd141b57db1fa9bffff8a700be0fe381570cb4750fd0763b598ed",
+          "checksum_algorithm": "blake3",
+          "size_bytes": 1118,
+          "redacted": false,
+          "downloadable": true
+        }
+      ],
+      "also_present": [],
+      "provenance": {
+        "source_collection": {
+          "id": "7461b56c-7dc6-4677-b0c8-6d165bfc1eed",
+          "title": "My Project root"
+        },
+        "depth": 1,
+        "redacted": false
+      },
+      "candidates": [],
+      "unsupported_reason": null
+    }
+  }
+}

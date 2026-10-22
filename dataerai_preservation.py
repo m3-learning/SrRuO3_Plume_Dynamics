@@ -327,16 +327,27 @@ def restore(root, client, bundles, destination):
     return manifest
 
 
-def start_analysis(notebook_path, **kwargs):
+def start_analysis(notebook_path, *, input_paths=None, include_legacy=True, **kwargs):
     """Restore inputs, then record cells without changing their scientific code."""
     from dataerai_notebook import NotebookProvenance
 
     class PlumeRun(NotebookProvenance):
+        def _environment_metadata(self):
+            environment = super()._environment_metadata()
+            environment['input_content_versions'] = self.input_versions
+            spec = self.repo_root / 'notebook-environment/pyproject.toml'
+            if spec.is_file():
+                environment['declared_dependency_spec'] = {
+                    'path': 'notebook-environment/pyproject.toml', 'sha256': sha256(spec)}
+            return environment
+
         def _capture_dependencies(self):
             # Preserve the actual local code used by this execution, even after edits.
             paths = set(self.repo_root.glob('src/sro_sto_plume/**/*.py'))
             for pattern in ('dataerai_*.py', 'requirements*.txt', 'pyproject.toml'):
                 paths.update(self.repo_root.glob(pattern))
+            paths.update(self.repo_root.glob('notebook-environment/*'))
+            paths.update(self.repo_root.glob('preservation/*.json'))
             archive = self.run_dir / 'runtime-code.tar.gz'
             records = []
             with tarfile.open(archive, 'w:gz') as tar:
@@ -357,17 +368,41 @@ def start_analysis(notebook_path, **kwargs):
             self._link(self.run_asset_id, asset, 'uses_dependency')
 
         def record_cell(self, **cell):
-            asset_id = super().record_cell(**cell)
+            try:
+                asset_id = super().record_cell(**cell)
+            except BaseException:
+                self.executed_cells.append((None, cell))
+                raise
+            self.executed_cells.append((asset_id, cell))
             self.capture_files(asset_id)
             return asset_id
 
+        def _cell_magic(self, line, cell):
+            try:
+                return super()._cell_magic(line, cell)
+            except BaseException:
+                # Batch runners stop on the first error; preserve its terminal
+                # summary even when the notebook's final cell is never reached.
+                self.finish()
+                raise
+
         def file_state(self):
-            return {p.relative_to(self.workspace).as_posix(): sha256(p)
-                    for folder in ('data', 'figures') for p in (self.workspace / folder).rglob('*')
-                    if p.is_file() and not p.is_symlink()}
+            state = {}
+            for folder in ('data', 'figures'):
+                for path in (self.workspace / folder).rglob('*'):
+                    if not path.is_file() or path.is_symlink():
+                        continue
+                    relative = path.relative_to(self.workspace).as_posix()
+                    stat = path.stat()
+                    stamp = (stat.st_size, stat.st_mtime_ns, stat.st_ctime_ns)
+                    cached = self.file_fingerprints.get(relative)
+                    digest = cached[1] if cached and cached[0] == stamp else sha256(path)
+                    self.file_fingerprints[relative] = (stamp, digest)
+                    state[relative] = digest
+            return state
 
         def _record_type_for_upload(self, path, metadata):
-            if metadata.get('record_kind') == 'saved_file':
+            if metadata.get('record_kind') in {'saved_file', 'executed_notebook'}:
                 return record_type(path)
             return super()._record_type_for_upload(path, metadata)
 
@@ -388,10 +423,53 @@ def start_analysis(notebook_path, **kwargs):
                 self._link(asset_id, parent, 'generated_by')
             self.file_hashes = state
 
+        def save_executed_notebook(self):
+            import nbformat
+            notebook = nbformat.read(self.notebook_path, as_version=4)
+            for cell in notebook.cells:
+                if cell.cell_type == 'code':
+                    cell.outputs, cell.execution_count = [], None
+            cursor = 0
+            for count, (asset, record) in enumerate(self.executed_cells, 1):
+                source = record['source']
+                matches = [i for i, cell in enumerate(notebook.cells)
+                           if i >= cursor and cell.cell_type == 'code'
+                           and cell.source.removeprefix('%%dataerai\n') == source]
+                if matches:
+                    index = matches[0]
+                    cell = notebook.cells[index]
+                    cursor = index + 1
+                else:
+                    cell = nbformat.v4.new_code_cell(source)
+                    notebook.cells.append(cell)
+                cell.execution_count = count
+                cell.metadata['dataerai_cell_asset_id'] = asset
+                for name in ('stdout', 'stderr'):
+                    if record.get(name):
+                        cell.outputs.append(nbformat.v4.new_output('stream', name=name, text=record[name]))
+                for display in record.get('displays') or []:
+                    cell.outputs.append(nbformat.v4.new_output('display_data', data=display.data,
+                                                               metadata=display.metadata))
+                if record.get('error'):
+                    error = record['error']
+                    cell.outputs.append(nbformat.v4.new_output('error', ename=type(error).__name__,
+                                                               evalue=str(error), traceback=[str(error)]))
+            notebook.metadata['dataerai'] = {**notebook.metadata.get('dataerai', {}),
+                                             'run_id': self.run_id, 'run_asset_id': self.run_asset_id,
+                                             'captured_cells': self.cell_count}
+            path = self.run_dir / 'executed.ipynb'
+            nbformat.write(notebook, path)
+            asset = self._upload(path, title=f'SrRuO3 executed notebook {self.run_id}',
+                description='Notebook with outputs from this run only; unexecuted cells have no outputs.',
+                metadata=self._base_metadata('executed_notebook'), tags=self._tags('executed_notebook'))
+            self._link(asset, self.run_asset_id, 'generated_by')
+            self._link(asset, self.notebook_asset_id, 'derived_from')
+
         def finish(self):
             try:
                 if self.running:
                     self.capture_files(self.last_cell_asset_id or self.run_asset_id)
+                    self.save_executed_notebook()
                 return super().finish()
             finally:
                 os.chdir(self.original_cwd)
@@ -401,6 +479,9 @@ def start_analysis(notebook_path, **kwargs):
     run = PlumeRun(notebook_path, **kwargs)
     run.original_cwd = Path.cwd()
     run.workspace = run.run_dir / 'workspace'
+    run.executed_cells = []
+    run.file_fingerprints = {}
+    run.input_versions = []
     client = run.client or connect_client()
     if run._owns_client:
         client.connect()
@@ -409,8 +490,31 @@ def start_analysis(notebook_path, **kwargs):
     if run._owns_client:
         run.binary_path = os.getenv('DATAERAI_BINARY') or shutil.which('dataerai')
     try:
-        needs = required_bundles(notebook_path)
+        needs = required_bundles(notebook_path) if include_legacy else set()
+        project_inputs = []
+        project_catalogue = run.repo_root / 'preservation/project-inputs.json'
+        if project_catalogue.exists():
+            from dataerai_project import (PROJECT_ID, ROOT_COLLECTION_ID, preflight,
+                notebook_inputs, restore_project_inputs, map_legacy_inputs, ensure_project_collection,
+                check_notebook_environment)
+            if run.owner_type not in {'auto', 'project'} or run.owner_id not in {None, PROJECT_ID}:
+                raise ValueError('This project workspace records runs in the SrRuO3 Data project.')
+            preflight(client, collection_id=run.collection_id or ROOT_COLLECTION_ID)
+            check_notebook_environment(run.repo_root)
+            project_inputs = notebook_inputs(run.repo_root, notebook_path, input_paths=input_paths)
+            needs -= {'target-microscopy', 'afm', 'xrd', 'plume-recordings'}
+            restore_project_inputs(run.repo_root, client, project_inputs, run.workspace)
+            run.owner_type, run.owner_id = 'project', PROJECT_ID
+            run.collection_id = run.collection_id or ensure_project_collection(client, 'Notebook runs')
         manifest = restore(run.repo_root, client, needs, run.workspace)
+        run.input_versions = list(project_inputs)
+        for name in sorted(needs):
+            bundle = manifest['bundles'][name]
+            entries = bundle['recordings'].values() if bundle.get('kind') == 'files' else [bundle]
+            run.input_versions.extend({'bundle': name, **entry} for entry in entries)
+        if project_catalogue.exists():
+            map_legacy_inputs(run.workspace)
+        (run.workspace / 'figures').mkdir(parents=True, exist_ok=True)
         if run.owner_type == 'auto' and not run.owner_id:
             resolved = client.ensure_collection_path('SrRuO3 Plume Dynamics / Notebook runs', create_project=True)
             run.owner_type, run.owner_id, run.collection_id = 'project', resolved.project_id, resolved.collection_id
@@ -422,12 +526,19 @@ def start_analysis(notebook_path, **kwargs):
         sys.path.insert(0, str(run.repo_root / 'src'))
         os.chdir(working)
         run.start()
-        for name in sorted(needs | {'code-and-notebooks'}):
+        for entry in project_inputs:
+            run._link(run.run_asset_id, entry['asset_id'], 'uses_dependency', qualifiers={
+                'content_id': entry['content_id'], 'checksum': entry['checksum'], 'path': entry['path']},
+                qualifier_note=json.dumps({'content_id': entry['content_id'],
+                                           'checksum': entry['checksum'], 'path': entry['path']}))
+        for name in sorted(needs | ({'code-and-notebooks'} if include_legacy else set())):
             bundle = manifest['bundles'][name]
             entries = bundle['recordings'].values() if bundle.get('kind') == 'files' else [bundle]
             for entry in entries:
                 run._link(run.run_asset_id, entry['asset_id'], 'uses_dependency',
-                     qualifiers={'bundle': name, 'content_id': entry['content_id'], 'sha256': entry['sha256']})
+                     qualifiers={'bundle': name, 'content_id': entry['content_id'], 'sha256': entry['sha256']},
+                     qualifier_note=json.dumps({'bundle': name, 'content_id': entry['content_id'],
+                                                'sha256': entry['sha256']}))
         return run
     except BaseException:
         os.chdir(run.original_cwd)
