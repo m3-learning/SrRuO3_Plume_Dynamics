@@ -250,6 +250,38 @@ def restore_project_inputs(root, client, records, destination):
     return records
 
 
+def canonical_sample_label(value):
+    """Return the public sample label, retaining recording IDs only in provenance."""
+    return SAMPLE_NAMES.get(value, 'C-G6' if value in {'CG6', 'C_G6'} else value)
+
+
+def normalize_sample_csv(path):
+    """Normalize only identifier columns; preserve every numeric field as text."""
+    import csv
+    import io
+    path = Path(path)
+    original = path.read_text()
+    rows = list(csv.reader(io.StringIO(original)))
+    if not rows:
+        return 0
+    label_columns = [i for i, name in enumerate(rows[0])
+                     if name in {'Sample ID', 'Sample Name', 'Growth ID', 'Growth Name'}]
+    changed = 0
+    for row in rows[1:]:
+        for index in label_columns:
+            if index < len(row):
+                value = canonical_sample_label(row[index])
+                if value != row[index]:
+                    row[index] = value
+                    changed += 1
+    if changed:
+        content = io.StringIO(newline='')
+        writer = csv.writer(content, lineterminator='\n')
+        writer.writerows(rows)
+        path.write_text(content.getvalue())
+    return changed
+
+
 def map_legacy_inputs(workspace):
     """Map preserved YG identifiers to upstream's current sample names and paths."""
     workspace = Path(workspace)
@@ -264,6 +296,8 @@ def map_legacy_inputs(workspace):
             target = workspace / 'data/datasets/ML_plume_dynamics' / new_folder / stem
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(source, target)
+            if target.suffix.lower() == ".csv":
+                normalize_sample_csv(target)
 
 
 def ensure_project_collection(client, title, *, parent_id=ROOT_COLLECTION_ID):

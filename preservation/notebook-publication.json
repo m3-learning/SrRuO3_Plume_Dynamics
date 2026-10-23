@@ -8,62 +8,62 @@
     },
     "source_bundle": {
       "asset_id": "fc677a80-7394-4be5-8da8-b6eaa198b92a",
-      "content_id": "740c0550-366e-4070-a688-c92dcd4b5d13",
-      "sha256": "8401d3e201e55f9211eb5cbbcecedc25296b65cb0fe4b73503aab459f535b7a0",
+      "content_id": "63e842cf-5b17-4f61-b620-cfdcb872d841",
+      "sha256": "82ad4bdaeb4b23dc8c2df1297c84c3d8fe22891ea97e371ae9c35065b8dbf918",
       "filename": "workspace-code.tar.gz"
     },
     "notebooks/00_Dataerai_Raw_Data_Quickstart.ipynb": {
       "asset_id": "87a5fce5-babd-465a-abe2-e99e034e2b8d",
-      "content_id": "2e92c753-05f7-45ae-bf8e-348b3bd67b57",
-      "sha256": "2fa5b2450ce5dd8b64d5e97d42b59f66a87b9bccfb7adfd40ce367bbbe62f860",
+      "content_id": "efb15473-8b9a-4c23-923e-5cf1a37ebfd0",
+      "sha256": "4ca4377cfcd2afe1905823f1760ca0cea1096685b888d1fd1282ba1f2495a49a",
       "filename": "00_Dataerai_Raw_Data_Quickstart.ipynb"
     },
     "notebooks/0_Dataerai_Preservation.ipynb": {
       "asset_id": "92cca0dc-e423-4fc9-8d3f-358c01cce2d8",
-      "content_id": "bea894fb-99e6-4b2e-a1ee-b3aae4c1a255",
-      "sha256": "d2b7b1557b7b2405dcc9db64cd59864d2dc1fe99b7ee16e9bc1c1259a4786f0d",
+      "content_id": "caaadf34-e17d-4b16-9a3c-c1a5cfd77646",
+      "sha256": "cc84f3d619305e437eafe60a4963fa4590f28b5c5fabd993a339ff002c372276",
       "filename": "0_Dataerai_Preservation.ipynb"
     },
     "notebooks/1_Abstract.ipynb": {
       "asset_id": "f91d9e73-17c4-445c-ba73-63df5db13381",
-      "content_id": "d84633f6-14e9-4733-a27a-01fb06b76537",
-      "sha256": "f292ed657eb88c40e339e2075c5e1578a37bb3c4cc41606b77f73014e758880f",
+      "content_id": "e1bb930f-84cc-4e54-b73c-a5f4a5a41746",
+      "sha256": "8c658d0404d2e2f917ca48ddcd7e7e656bdf6ede50ec900f8e54984b9b53945f",
       "filename": "1_Abstract.ipynb"
     },
     "notebooks/2_PLD_Experiment_Design_and_Target_Microscopy.ipynb": {
       "asset_id": "5f79ac90-bdc1-42ba-bbff-f4b5e3a9a11b",
-      "content_id": "f99b2dce-9014-48cd-be78-c69fc2467df7",
-      "sha256": "c2efcb6cb9bedbcba0f122aef013467bf1bcc618c6d919e704c906e4d3599615",
+      "content_id": "7656b8ff-bb78-4b0b-8423-51db075f2e26",
+      "sha256": "3490504042a88525c8bca6bf98ea5ce5d1919ea30e97e8f6935d890c21926ab4",
       "filename": "2_PLD_Experiment_Design_and_Target_Microscopy.ipynb"
     },
     "notebooks/3_Structure_Characterization.ipynb": {
       "asset_id": "696a7cc5-d03f-4fc8-8631-dcdc8d5352ee",
-      "content_id": "aad72411-a510-4f8a-b871-4e3eb769f291",
-      "sha256": "c39b2b6c6224bd7ead46d5ce4db4c6b9c04f3ab7ba2d206be23765adb327e585",
+      "content_id": "7526bcea-5e18-4483-bd43-fb868ce19d39",
+      "sha256": "5048bb1c8658afaa51dbab64bf7ce1e0b9d61bcfbcb81b0281e36b3885d81892",
       "filename": "3_Structure_Characterization.ipynb"
     },
     "notebooks/4_Plume_Metrics_Extraction.ipynb": {
       "asset_id": "b9f8ea2a-d55d-45eb-a1ad-5be4f936ac48",
-      "content_id": "8ab7e5dd-5515-4dae-9869-ae29f413d5d6",
-      "sha256": "d307cb334fffcfc00e2d28de5fc9ad9f049826736d36d015c972392432e7aaf1",
+      "content_id": "0807a38f-2c5b-486e-96fe-aa2b5b085193",
+      "sha256": "7c18fd8527b1569e23c1f2c68c37e6b165aea26914c4b40a12572858d1e75ada",
       "filename": "4_Plume_Metrics_Extraction.ipynb"
     },
     "notebooks/5_Plume_Dynamic_Analysis.ipynb": {
       "asset_id": "c8d796de-2729-443b-8f40-45a78f8a3dd2",
-      "content_id": "479c7301-e1e0-46da-b004-70a448b98cf6",
-      "sha256": "6eda96e6fbd5397a7029781294cb20fb95cff1c00f82ad70ea138a5405549e5c",
+      "content_id": "8f565397-120a-4044-8f2a-8057a2783de3",
+      "sha256": "1ff8afad38f0b12d229a2867163cbd55e494afe2c577a683ba049ab602728d4a",
       "filename": "5_Plume_Dynamic_Analysis.ipynb"
     },
     "notebooks/6_Target_Temporal_Variation.ipynb": {
       "asset_id": "93a56960-5775-4802-96f0-ab37a7805e84",
-      "content_id": "4475ab73-1b75-4542-ad2c-bf3e6cb5894f",
-      "sha256": "1cc3c53a68664bf7b7b6924eb37b911acd137f05825964af4b30ec5759dd9653",
+      "content_id": "9bba51f9-0da7-4419-b048-86d69957e4f9",
+      "sha256": "3c65c0bceb7a35a4c1f8ecd81141cd47cbc8d0263f8af439f86460237b24464f",
       "filename": "6_Target_Temporal_Variation.ipynb"
     },
     "notebooks/7_Target_Spatial_Inhomogeneity.ipynb": {
       "asset_id": "8f5e3127-76fb-4b3f-a1a3-8ce4a8aaf9d1",
-      "content_id": "3be56385-feb4-4ee2-a3a4-2f78b27ace9b",
-      "sha256": "e6dbdf5da411f784618c421a9ac2d33f2e7950dd5f34387571adc6bd328b04f1",
+      "content_id": "b9cfe26d-ed74-41ea-9e3c-5424f6c9c008",
+      "sha256": "b7051822fb424da8c8640edc7e37ff4a90abd3330d14ed38c2039f79b6aa6d1c",
       "filename": "7_Target_Spatial_Inhomogeneity.ipynb"
     }
   },

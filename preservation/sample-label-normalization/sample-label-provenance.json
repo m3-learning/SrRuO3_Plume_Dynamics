@@ -1,0 +1,19 @@
+{
+  "public_sample_labels": [
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "C-G6"
+  ],
+  "historical_recording_to_sample": {
+    "YG065": "G1",
+    "YG066": "G2",
+    "YG067": "G3",
+    "YG068": "G4",
+    "YG069": "G5",
+    "YG063": "C-G6"
+  },
+  "role": "Provenance only; public tables, report displays and legends use canonical sample labels."
+}

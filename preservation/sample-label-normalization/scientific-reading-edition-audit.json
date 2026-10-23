@@ -1,0 +1,793 @@
+{
+  "created_utc": "2026-10-23T14:37:51.428242+00:00",
+  "presentation_only": true,
+  "source_notebooks_modified": false,
+  "reports": [
+    {
+      "notebook": "1_Abstract",
+      "source_sha256": "d1d1b0c9d3f972318cda13e56499646600934c8d4bf65154f250f19143fa90af",
+      "report_sha256": "f908e6d6811cfb22f826304dfc41ce8f136277914b4a4d0d7a155eb6b60cd177",
+      "technical_cells_removed": 5,
+      "stream_outputs_removed": 0,
+      "editorial_heading_edits": 0,
+      "scientific_image_payloads_preserved": 0,
+      "visible_text_scan_passed": true
+    },
+    {
+      "notebook": "2_PLD_Experiment_Design_and_Target_Microscopy",
+      "source_sha256": "0bf832769bf32bf1f1cf67f1e611c123754db2c8965f6575eb8772d4c41d3a62",
+      "report_sha256": "ec8a20eb041739df877fa2aff72db66832b8adc060d3f25174efa86f418b6c40",
+      "technical_cells_removed": 5,
+      "stream_outputs_removed": 8,
+      "editorial_heading_edits": 3,
+      "scientific_image_payloads_preserved": 3,
+      "visible_text_scan_passed": true
+    },
+    {
+      "notebook": "3_Structure_Characterization",
+      "source_sha256": "e2ba0dc6bdd4e94b87a9a1183930bd20b0189d7f6da5a6a28817d18dd526ab41",
+      "report_sha256": "270fe142d0fe8b5f1d4aa5b261c05bc0531595d9a05e365bfb1b0c409beaafe1",
+      "technical_cells_removed": 5,
+      "stream_outputs_removed": 27,
+      "editorial_heading_edits": 1,
+      "scientific_image_payloads_preserved": 25,
+      "visible_text_scan_passed": true
+    },
+    {
+      "notebook": "4_Plume_Metrics_Extraction",
+      "source_sha256": "24d1710238b3a1eba934cd0a76bb4a78605d357cbeb62cd7df5fe21852b8063f",
+      "report_sha256": "a9e25cffce39520eaab0349418a0c7979c80973e2abdb0d891986dcad89b76ac",
+      "technical_cells_removed": 5,
+      "stream_outputs_removed": 60,
+      "editorial_heading_edits": 0,
+      "scientific_image_payloads_preserved": 72,
+      "visible_text_scan_passed": true
+    },
+    {
+      "notebook": "5_Plume_Dynamic_Analysis",
+      "source_sha256": "cef1600d5745ecba05a430c8cbbfd95ede92b7eaa686ed315381084c73ba8674",
+      "report_sha256": "ce3d429502596b92e71ebcb9c1fa8017a33d9f968737411afefb625c1fc5f7d5",
+      "technical_cells_removed": 5,
+      "stream_outputs_removed": 46,
+      "editorial_heading_edits": 0,
+      "scientific_image_payloads_preserved": 13,
+      "visible_text_scan_passed": true
+    },
+    {
+      "notebook": "6_Target_Temporal_Variation",
+      "source_sha256": "a13802f7432d4a999306c91ef663d2b40f1c37cc0a51f31fcd4c86d05fedd8c5",
+      "report_sha256": "847ea0cc34003db9b4726dbf3709182d31334a9aaa65ad3a0e8fb19b1d953487",
+      "technical_cells_removed": 5,
+      "stream_outputs_removed": 14,
+      "editorial_heading_edits": 2,
+      "scientific_image_payloads_preserved": 4,
+      "visible_text_scan_passed": true
+    },
+    {
+      "notebook": "7_Target_Spatial_Inhomogeneity",
+      "source_sha256": "828be991c899fd5b6cd39c156dc01b89aa8f547e370a49899dc9901358685868",
+      "report_sha256": "39891564aa5963a15a02126aed1a7e765a820895b9fb903c18b7c7cc264b845f",
+      "technical_cells_removed": 5,
+      "stream_outputs_removed": 4,
+      "editorial_heading_edits": 1,
+      "scientific_image_payloads_preserved": 1,
+      "visible_text_scan_passed": true
+    }
+  ],
+  "canonical_tabular_outputs": [
+    {
+      "path": "data/notebook_tables/2_PLD_Experiment_Design_and_Target_Microscopy/cell-0004/folder_df.csv",
+      "source_path": "2_PLD_Experiment_Design_and_Target_Microscopy/cell-artifacts/cell-0004/folder_df.csv",
+      "source_sha256": "3af4f02cfc8c6c3ae5eee2e1f65d89e930cf440f0863ef225f246b760e6549c1",
+      "sha256": "3af4f02cfc8c6c3ae5eee2e1f65d89e930cf440f0863ef225f246b760e6549c1",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/2_PLD_Experiment_Design_and_Target_Microscopy/cell-0004/mean_df.csv",
+      "source_path": "2_PLD_Experiment_Design_and_Target_Microscopy/cell-artifacts/cell-0004/mean_df.csv",
+      "source_sha256": "cdaf22a765f265204b2ba370461d978cd49ebce833cd9bb7fde376849fc44067",
+      "sha256": "cdaf22a765f265204b2ba370461d978cd49ebce833cd9bb7fde376849fc44067",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/2_PLD_Experiment_Design_and_Target_Microscopy/cell-0004/per_image_df.csv",
+      "source_path": "2_PLD_Experiment_Design_and_Target_Microscopy/cell-artifacts/cell-0004/per_image_df.csv",
+      "source_sha256": "fb60f9740f43836b035b1179fef5c6f989bfdc164e3e25b93c222fdc4058d8d6",
+      "sha256": "fb60f9740f43836b035b1179fef5c6f989bfdc164e3e25b93c222fdc4058d8d6",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/2_PLD_Experiment_Design_and_Target_Microscopy/cell-0004/rq_variation_df.csv",
+      "source_path": "2_PLD_Experiment_Design_and_Target_Microscopy/cell-artifacts/cell-0004/rq_variation_df.csv",
+      "source_sha256": "393565799955b0386460eb523e601385fa53e9e09ea94429d982555db6d3e553",
+      "sha256": "393565799955b0386460eb523e601385fa53e9e09ea94429d982555db6d3e553",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/2_PLD_Experiment_Design_and_Target_Microscopy/cell-0006/data_row.csv",
+      "source_path": "2_PLD_Experiment_Design_and_Target_Microscopy/cell-artifacts/cell-0006/data_row.csv",
+      "source_sha256": "8417ae65666222cf4afedd38fbbda5ee9a3195a2155aa72add33579c521fa92e",
+      "sha256": "8417ae65666222cf4afedd38fbbda5ee9a3195a2155aa72add33579c521fa92e",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0009/df.csv",
+      "source_path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0009/df.csv",
+      "source_sha256": "b41ef5dff891058fe27c513c4c1aa933ca85608293f8a202e26cf91dfb2b8194",
+      "sha256": "8674de3616ecc241cf81656822f1ffc962c9a183db9d8e3e05b2655cbcfbb2f6",
+      "changed_label_fields": 144384,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0009/df_frame_metrics.csv",
+      "source_path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0009/df_frame_metrics.csv",
+      "source_sha256": "f5d76bd64195523a50f2e4f5a9f20d7803821b0e769455c3e4b8a4a2b553cd5f",
+      "sha256": "47bf6623ee1284439b066af31bd5816be77afddcd0819f3e65e3162a339740fd",
+      "changed_label_fields": 280320,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0009/df_processed.csv",
+      "source_path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0009/df_processed.csv",
+      "source_sha256": "5e6e50fd51f155e953c1b97dd27bb023b1811343fb312a32814dc6a1062556a1",
+      "sha256": "56c54603e757e48be6232fba78430b2518dfebc5d5dc991039ae0089eef4def2",
+      "changed_label_fields": 48128,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0010/df_filtered.csv",
+      "source_path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0010/df_filtered.csv",
+      "source_sha256": "154a59834d02c66cf11ea2a9931689a2efb1e0bdce33280c347f85a2b5d5285b",
+      "sha256": "3b99b585a4694f6c28d03a0c195f68ef79875192c310a681252d4ddb2dca6b26",
+      "changed_label_fields": 2043,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0010/df_max_area.csv",
+      "source_path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0010/df_max_area.csv",
+      "source_sha256": "d39c3be6dfc3e6ce62d1ac3c2a7eb0762b1519cfb11fc9596769606412e4bd2b",
+      "sha256": "d39c3be6dfc3e6ce62d1ac3c2a7eb0762b1519cfb11fc9596769606412e4bd2b",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0010/df_plume_metrics.csv",
+      "source_path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0010/df_plume_metrics.csv",
+      "source_sha256": "fd5feacdb889b25be61ebbf6bc9356662490927c22b740dc5a02b04080df89d5",
+      "sha256": "fd5feacdb889b25be61ebbf6bc9356662490927c22b740dc5a02b04080df89d5",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0010/df_unique.csv",
+      "source_path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0010/df_unique.csv",
+      "source_sha256": "c1e950eaa973ee9b8e8a17dcbc32cc2b238770b124d9c6ec73932515a9d82f29",
+      "sha256": "04599a51cebf92359a53d2916e637d35baf82050d207375d495a7ad16c6beb23",
+      "changed_label_fields": 2023,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0010/idx.csv",
+      "source_path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0010/idx.csv",
+      "source_sha256": "a629db7fd505124f6f7e1bc6de52fb1e1866097c20d8251e5812007e3a5cee8e",
+      "sha256": "a629db7fd505124f6f7e1bc6de52fb1e1866097c20d8251e5812007e3a5cee8e",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0010/incident_velocity.csv",
+      "source_path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0010/incident_velocity.csv",
+      "source_sha256": "aeb2146ea0e803a828c1392fb62fff627de879a888ea5586f15350b979aff009",
+      "sha256": "aeb2146ea0e803a828c1392fb62fff627de879a888ea5586f15350b979aff009",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0023/df_sample.csv",
+      "source_path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0023/df_sample.csv",
+      "source_sha256": "518e4e6474078bdab7a148b4e428e9f08f0b90dd945ca80a8978a94e7d3c7415",
+      "sha256": "35d2970efb479d40ca64bc249173a1e67bed7c96a15831ab7fbf7b6fc102cdd2",
+      "changed_label_fields": 35040,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0024/df_sample.csv",
+      "source_path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0024/df_sample.csv",
+      "source_sha256": "518e4e6474078bdab7a148b4e428e9f08f0b90dd945ca80a8978a94e7d3c7415",
+      "sha256": "35d2970efb479d40ca64bc249173a1e67bed7c96a15831ab7fbf7b6fc102cdd2",
+      "changed_label_fields": 35040,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0025/df_sample.csv",
+      "source_path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0025/df_sample.csv",
+      "source_sha256": "518e4e6474078bdab7a148b4e428e9f08f0b90dd945ca80a8978a94e7d3c7415",
+      "sha256": "35d2970efb479d40ca64bc249173a1e67bed7c96a15831ab7fbf7b6fc102cdd2",
+      "changed_label_fields": 35040,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0003/df.csv",
+      "source_path": "6_Target_Temporal_Variation/cell-artifacts/cell-0003/df.csv",
+      "source_sha256": "b41ef5dff891058fe27c513c4c1aa933ca85608293f8a202e26cf91dfb2b8194",
+      "sha256": "8674de3616ecc241cf81656822f1ffc962c9a183db9d8e3e05b2655cbcfbb2f6",
+      "changed_label_fields": 144384,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0003/df_frame_metrics.csv",
+      "source_path": "6_Target_Temporal_Variation/cell-artifacts/cell-0003/df_frame_metrics.csv",
+      "source_sha256": "f5d76bd64195523a50f2e4f5a9f20d7803821b0e769455c3e4b8a4a2b553cd5f",
+      "sha256": "47bf6623ee1284439b066af31bd5816be77afddcd0819f3e65e3162a339740fd",
+      "changed_label_fields": 280320,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0003/df_processed.csv",
+      "source_path": "6_Target_Temporal_Variation/cell-artifacts/cell-0003/df_processed.csv",
+      "source_sha256": "5e6e50fd51f155e953c1b97dd27bb023b1811343fb312a32814dc6a1062556a1",
+      "sha256": "56c54603e757e48be6232fba78430b2518dfebc5d5dc991039ae0089eef4def2",
+      "changed_label_fields": 48128,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0004/df_filtered.csv",
+      "source_path": "6_Target_Temporal_Variation/cell-artifacts/cell-0004/df_filtered.csv",
+      "source_sha256": "154a59834d02c66cf11ea2a9931689a2efb1e0bdce33280c347f85a2b5d5285b",
+      "sha256": "3b99b585a4694f6c28d03a0c195f68ef79875192c310a681252d4ddb2dca6b26",
+      "changed_label_fields": 2043,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0004/df_max_area.csv",
+      "source_path": "6_Target_Temporal_Variation/cell-artifacts/cell-0004/df_max_area.csv",
+      "source_sha256": "d39c3be6dfc3e6ce62d1ac3c2a7eb0762b1519cfb11fc9596769606412e4bd2b",
+      "sha256": "d39c3be6dfc3e6ce62d1ac3c2a7eb0762b1519cfb11fc9596769606412e4bd2b",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0004/df_plume_metrics.csv",
+      "source_path": "6_Target_Temporal_Variation/cell-artifacts/cell-0004/df_plume_metrics.csv",
+      "source_sha256": "fd5feacdb889b25be61ebbf6bc9356662490927c22b740dc5a02b04080df89d5",
+      "sha256": "fd5feacdb889b25be61ebbf6bc9356662490927c22b740dc5a02b04080df89d5",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0004/df_unique.csv",
+      "source_path": "6_Target_Temporal_Variation/cell-artifacts/cell-0004/df_unique.csv",
+      "source_sha256": "c1e950eaa973ee9b8e8a17dcbc32cc2b238770b124d9c6ec73932515a9d82f29",
+      "sha256": "04599a51cebf92359a53d2916e637d35baf82050d207375d495a7ad16c6beb23",
+      "changed_label_fields": 2023,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0004/idx.csv",
+      "source_path": "6_Target_Temporal_Variation/cell-artifacts/cell-0004/idx.csv",
+      "source_sha256": "a629db7fd505124f6f7e1bc6de52fb1e1866097c20d8251e5812007e3a5cee8e",
+      "sha256": "a629db7fd505124f6f7e1bc6de52fb1e1866097c20d8251e5812007e3a5cee8e",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0004/incident_velocity.csv",
+      "source_path": "6_Target_Temporal_Variation/cell-artifacts/cell-0004/incident_velocity.csv",
+      "source_sha256": "aeb2146ea0e803a828c1392fb62fff627de879a888ea5586f15350b979aff009",
+      "sha256": "aeb2146ea0e803a828c1392fb62fff627de879a888ea5586f15350b979aff009",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0005/df_filtered.csv",
+      "source_path": "6_Target_Temporal_Variation/cell-artifacts/cell-0005/df_filtered.csv",
+      "source_sha256": "01a5bbd967fe68e0d6882c3156a3c2755bd9446811f8461415f2582709994719",
+      "sha256": "5b524c5723ec7fc564b0c1b547eeda33075bed29da6ee8579edd9b88c88834b1",
+      "changed_label_fields": 995,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0005/df_max_area.csv",
+      "source_path": "6_Target_Temporal_Variation/cell-artifacts/cell-0005/df_max_area.csv",
+      "source_sha256": "84cc6394b4d0593d28344bc4ca83378a6021dc893322a28e23b1fb4539801bd0",
+      "sha256": "84cc6394b4d0593d28344bc4ca83378a6021dc893322a28e23b1fb4539801bd0",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0005/df_plume_metrics.csv",
+      "source_path": "6_Target_Temporal_Variation/cell-artifacts/cell-0005/df_plume_metrics.csv",
+      "source_sha256": "f5023e6c5aa3b4d892ab715be65b4ccceb607e193e7a905b973f1d73928a664b",
+      "sha256": "f5023e6c5aa3b4d892ab715be65b4ccceb607e193e7a905b973f1d73928a664b",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0005/df_sample.csv",
+      "source_path": "6_Target_Temporal_Variation/cell-artifacts/cell-0005/df_sample.csv",
+      "source_sha256": "49f4f2e23e0bc55baee37922e74e6bb53f921623e8ed733c88f1d3b34b9737af",
+      "sha256": "a6c0e38f67094ec68c0f8edc48b47bf713f76349ec218affd16f9d3703f46213",
+      "changed_label_fields": 28470,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0005/df_unique.csv",
+      "source_path": "6_Target_Temporal_Variation/cell-artifacts/cell-0005/df_unique.csv",
+      "source_sha256": "97ec9e01f5ee31efcc1ec77e1d1f638f0bb51fcb4d1a3ac3af7efe82c67d22e2",
+      "sha256": "8cf603f7965ead37f5d9e36236a1e20fa368721b52ac1956dda1ca43bcc3c285",
+      "changed_label_fields": 985,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0005/idx.csv",
+      "source_path": "6_Target_Temporal_Variation/cell-artifacts/cell-0005/idx.csv",
+      "source_sha256": "a629db7fd505124f6f7e1bc6de52fb1e1866097c20d8251e5812007e3a5cee8e",
+      "sha256": "a629db7fd505124f6f7e1bc6de52fb1e1866097c20d8251e5812007e3a5cee8e",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0005/incident_velocity.csv",
+      "source_path": "6_Target_Temporal_Variation/cell-artifacts/cell-0005/incident_velocity.csv",
+      "source_sha256": "3fc0e02a97379d4b647b11fbe0bf8506c43352d7b758bd617fefd1db2c6a447b",
+      "sha256": "3fc0e02a97379d4b647b11fbe0bf8506c43352d7b758bd617fefd1db2c6a447b",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0003/df.csv",
+      "source_path": "7_Target_Spatial_Inhomogeneity/cell-artifacts/cell-0003/df.csv",
+      "source_sha256": "b41ef5dff891058fe27c513c4c1aa933ca85608293f8a202e26cf91dfb2b8194",
+      "sha256": "8674de3616ecc241cf81656822f1ffc962c9a183db9d8e3e05b2655cbcfbb2f6",
+      "changed_label_fields": 144384,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0003/df_frame_metrics.csv",
+      "source_path": "7_Target_Spatial_Inhomogeneity/cell-artifacts/cell-0003/df_frame_metrics.csv",
+      "source_sha256": "d12c21591b1576bbf640ba16d9aa29129b3c697442c846dc4c163e9b2fe65a9b",
+      "sha256": "421544654ec266d799bc7b1d3c7468b3d54f85de0745902710e180c3a6c5dcbd",
+      "changed_label_fields": 84992,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0003/df_processed.csv",
+      "source_path": "7_Target_Spatial_Inhomogeneity/cell-artifacts/cell-0003/df_processed.csv",
+      "source_sha256": "5e6e50fd51f155e953c1b97dd27bb023b1811343fb312a32814dc6a1062556a1",
+      "sha256": "56c54603e757e48be6232fba78430b2518dfebc5d5dc991039ae0089eef4def2",
+      "changed_label_fields": 48128,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0004/df_filtered.csv",
+      "source_path": "7_Target_Spatial_Inhomogeneity/cell-artifacts/cell-0004/df_filtered.csv",
+      "source_sha256": "e873f5d87a595d8badcd8c408a985671451009e381b422757504f05627338fd0",
+      "sha256": "9a194ab12b3e5b119f9f951ec040ebcfd43e8a87a86e24239e400653a743a03a",
+      "changed_label_fields": 316,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0004/df_max_area.csv",
+      "source_path": "7_Target_Spatial_Inhomogeneity/cell-artifacts/cell-0004/df_max_area.csv",
+      "source_sha256": "08cb8148b5a6da9f52f5e8ee4a0f83cb5ea45c3b5dc18ba34baff222184c7a70",
+      "sha256": "08cb8148b5a6da9f52f5e8ee4a0f83cb5ea45c3b5dc18ba34baff222184c7a70",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0004/df_plume_metrics.csv",
+      "source_path": "7_Target_Spatial_Inhomogeneity/cell-artifacts/cell-0004/df_plume_metrics.csv",
+      "source_sha256": "2aa46187e82d996291b88da30ce71e174383810a797f0b2c734343b07490b78a",
+      "sha256": "2aa46187e82d996291b88da30ce71e174383810a797f0b2c734343b07490b78a",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0004/df_sample.csv",
+      "source_path": "7_Target_Spatial_Inhomogeneity/cell-artifacts/cell-0004/df_sample.csv",
+      "source_sha256": "99e4e1c02b50d7555930c7cb7ebb8c841464c54e40f96bbe1c8ba0b140535a62",
+      "sha256": "390dea056e18d94e7d66f72f6ace1d8ce0c15822f3552c31d15a9447a32edf0b",
+      "changed_label_fields": 8632,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0004/df_unique.csv",
+      "source_path": "7_Target_Spatial_Inhomogeneity/cell-artifacts/cell-0004/df_unique.csv",
+      "source_sha256": "e873f5d87a595d8badcd8c408a985671451009e381b422757504f05627338fd0",
+      "sha256": "9a194ab12b3e5b119f9f951ec040ebcfd43e8a87a86e24239e400653a743a03a",
+      "changed_label_fields": 316,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0004/idx.csv",
+      "source_path": "7_Target_Spatial_Inhomogeneity/cell-artifacts/cell-0004/idx.csv",
+      "source_sha256": "493825e75d03386332d69b609c742f2f66f3f3bffe6b9684acfc5870dd422b04",
+      "sha256": "493825e75d03386332d69b609c742f2f66f3f3bffe6b9684acfc5870dd422b04",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0004/incident_velocity.csv",
+      "source_path": "7_Target_Spatial_Inhomogeneity/cell-artifacts/cell-0004/incident_velocity.csv",
+      "source_sha256": "917f85931ff2b6c8989716f63a158ef8203896c63cbe65abc9cb054907ebf35b",
+      "sha256": "917f85931ff2b6c8989716f63a158ef8203896c63cbe65abc9cb054907ebf35b",
+      "changed_label_fields": 0,
+      "non_label_fields_unchanged": true
+    }
+  ],
+  "canonical_sample_labels": [
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "C-G6"
+  ],
+  "reading_edition_files": [
+    {
+      "path": "1_Abstract/reading.ipynb",
+      "sha256": "407ad03b8a69a96ab4934be725d3717bb07a5af8a6203df77fa6b012d6a269ae",
+      "size_bytes": 5207
+    },
+    {
+      "path": "1_Abstract/report.html",
+      "sha256": "f908e6d6811cfb22f826304dfc41ce8f136277914b4a4d0d7a155eb6b60cd177",
+      "size_bytes": 280918
+    },
+    {
+      "path": "2_PLD_Experiment_Design_and_Target_Microscopy/reading.ipynb",
+      "sha256": "7b2a059a2fed153f2bc8c1e3d4cab3c5786d5578f50f92b9b6dc3e7ed881d00a",
+      "size_bytes": 1900857
+    },
+    {
+      "path": "2_PLD_Experiment_Design_and_Target_Microscopy/report.html",
+      "sha256": "ec8a20eb041739df877fa2aff72db66832b8adc060d3f25174efa86f418b6c40",
+      "size_bytes": 2157010
+    },
+    {
+      "path": "3_Structure_Characterization/reading.ipynb",
+      "sha256": "b1a1506f4ed272bb4b521511db2209b48f5b57086727177cb5ab79176fd0ac20",
+      "size_bytes": 3230231
+    },
+    {
+      "path": "3_Structure_Characterization/report.html",
+      "sha256": "270fe142d0fe8b5f1d4aa5b261c05bc0531595d9a05e365bfb1b0c409beaafe1",
+      "size_bytes": 3493090
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/reading.ipynb",
+      "sha256": "7720759ba38201f51a7e9d1ac24609aefda0c24f03d5c0436e1ff3573f18cecd",
+      "size_bytes": 4374019
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/report.html",
+      "sha256": "a9e25cffce39520eaab0349418a0c7979c80973e2abdb0d891986dcad89b76ac",
+      "size_bytes": 4643976
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/reading.ipynb",
+      "sha256": "b43963850443a49250334ea31d3da5ea52dca97da9f2d84b4fcd76675288a947",
+      "size_bytes": 5937676
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/report.html",
+      "sha256": "ce3d429502596b92e71ebcb9c1fa8017a33d9f968737411afefb625c1fc5f7d5",
+      "size_bytes": 6189946
+    },
+    {
+      "path": "6_Target_Temporal_Variation/reading.ipynb",
+      "sha256": "d1df8c4f8f5f723535260f183fb9ff1ad35a8a4bcb5f45c53e1f461170faa0f3",
+      "size_bytes": 1125565
+    },
+    {
+      "path": "6_Target_Temporal_Variation/report.html",
+      "sha256": "847ea0cc34003db9b4726dbf3709182d31334a9aaa65ad3a0e8fb19b1d953487",
+      "size_bytes": 1390421
+    },
+    {
+      "path": "7_Target_Spatial_Inhomogeneity/reading.ipynb",
+      "sha256": "3c404371b080b8eddfabad4cccfd64b62642c1ddba32f72c5b44c06a26924ff1",
+      "size_bytes": 159727
+    },
+    {
+      "path": "7_Target_Spatial_Inhomogeneity/report.html",
+      "sha256": "39891564aa5963a15a02126aed1a7e765a820895b9fb903c18b7c7cc264b845f",
+      "size_bytes": 428567
+    },
+    {
+      "path": "SrRuO3_scientific_results.html",
+      "sha256": "7664fcce5c5264664e5072fdb01438180c9722f302b475ce74ece00e93efd120",
+      "size_bytes": 5295
+    },
+    {
+      "path": "data/notebook_tables/2_PLD_Experiment_Design_and_Target_Microscopy/cell-0004/folder_df.csv",
+      "sha256": "3af4f02cfc8c6c3ae5eee2e1f65d89e930cf440f0863ef225f246b760e6549c1",
+      "size_bytes": 694
+    },
+    {
+      "path": "data/notebook_tables/2_PLD_Experiment_Design_and_Target_Microscopy/cell-0004/mean_df.csv",
+      "sha256": "cdaf22a765f265204b2ba370461d978cd49ebce833cd9bb7fde376849fc44067",
+      "size_bytes": 716
+    },
+    {
+      "path": "data/notebook_tables/2_PLD_Experiment_Design_and_Target_Microscopy/cell-0004/per_image_df.csv",
+      "sha256": "fb60f9740f43836b035b1179fef5c6f989bfdc164e3e25b93c222fdc4058d8d6",
+      "size_bytes": 4723
+    },
+    {
+      "path": "data/notebook_tables/2_PLD_Experiment_Design_and_Target_Microscopy/cell-0004/rq_variation_df.csv",
+      "sha256": "393565799955b0386460eb523e601385fa53e9e09ea94429d982555db6d3e553",
+      "size_bytes": 858
+    },
+    {
+      "path": "data/notebook_tables/2_PLD_Experiment_Design_and_Target_Microscopy/cell-0006/data_row.csv",
+      "sha256": "8417ae65666222cf4afedd38fbbda5ee9a3195a2155aa72add33579c521fa92e",
+      "size_bytes": 85
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0009/df.csv",
+      "sha256": "8674de3616ecc241cf81656822f1ffc962c9a183db9d8e3e05b2655cbcfbb2f6",
+      "size_bytes": 5956455
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0009/df_frame_metrics.csv",
+      "sha256": "47bf6623ee1284439b066af31bd5816be77afddcd0819f3e65e3162a339740fd",
+      "size_bytes": 15455896
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0009/df_processed.csv",
+      "sha256": "56c54603e757e48be6232fba78430b2518dfebc5d5dc991039ae0089eef4def2",
+      "size_bytes": 2778804
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0010/df_filtered.csv",
+      "sha256": "3b99b585a4694f6c28d03a0c195f68ef79875192c310a681252d4ddb2dca6b26",
+      "size_bytes": 147019
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0010/df_max_area.csv",
+      "sha256": "d39c3be6dfc3e6ce62d1ac3c2a7eb0762b1519cfb11fc9596769606412e4bd2b",
+      "size_bytes": 51606
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0010/df_plume_metrics.csv",
+      "sha256": "fd5feacdb889b25be61ebbf6bc9356662490927c22b740dc5a02b04080df89d5",
+      "size_bytes": 80645
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0010/df_unique.csv",
+      "sha256": "04599a51cebf92359a53d2916e637d35baf82050d207375d495a7ad16c6beb23",
+      "size_bytes": 145570
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0010/idx.csv",
+      "sha256": "a629db7fd505124f6f7e1bc6de52fb1e1866097c20d8251e5812007e3a5cee8e",
+      "size_bytes": 29917
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0010/incident_velocity.csv",
+      "sha256": "aeb2146ea0e803a828c1392fb62fff627de879a888ea5586f15350b979aff009",
+      "size_bytes": 57314
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0023/df_sample.csv",
+      "sha256": "35d2970efb479d40ca64bc249173a1e67bed7c96a15831ab7fbf7b6fc102cdd2",
+      "size_bytes": 2170871
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0024/df_sample.csv",
+      "sha256": "35d2970efb479d40ca64bc249173a1e67bed7c96a15831ab7fbf7b6fc102cdd2",
+      "size_bytes": 2170871
+    },
+    {
+      "path": "data/notebook_tables/5_Plume_Dynamic_Analysis/cell-0025/df_sample.csv",
+      "sha256": "35d2970efb479d40ca64bc249173a1e67bed7c96a15831ab7fbf7b6fc102cdd2",
+      "size_bytes": 2170871
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0003/df.csv",
+      "sha256": "8674de3616ecc241cf81656822f1ffc962c9a183db9d8e3e05b2655cbcfbb2f6",
+      "size_bytes": 5956455
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0003/df_frame_metrics.csv",
+      "sha256": "47bf6623ee1284439b066af31bd5816be77afddcd0819f3e65e3162a339740fd",
+      "size_bytes": 15455896
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0003/df_processed.csv",
+      "sha256": "56c54603e757e48be6232fba78430b2518dfebc5d5dc991039ae0089eef4def2",
+      "size_bytes": 2778804
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0004/df_filtered.csv",
+      "sha256": "3b99b585a4694f6c28d03a0c195f68ef79875192c310a681252d4ddb2dca6b26",
+      "size_bytes": 147019
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0004/df_max_area.csv",
+      "sha256": "d39c3be6dfc3e6ce62d1ac3c2a7eb0762b1519cfb11fc9596769606412e4bd2b",
+      "size_bytes": 51606
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0004/df_plume_metrics.csv",
+      "sha256": "fd5feacdb889b25be61ebbf6bc9356662490927c22b740dc5a02b04080df89d5",
+      "size_bytes": 80645
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0004/df_unique.csv",
+      "sha256": "04599a51cebf92359a53d2916e637d35baf82050d207375d495a7ad16c6beb23",
+      "size_bytes": 145570
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0004/idx.csv",
+      "sha256": "a629db7fd505124f6f7e1bc6de52fb1e1866097c20d8251e5812007e3a5cee8e",
+      "size_bytes": 29917
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0004/incident_velocity.csv",
+      "sha256": "aeb2146ea0e803a828c1392fb62fff627de879a888ea5586f15350b979aff009",
+      "size_bytes": 57314
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0005/df_filtered.csv",
+      "sha256": "5b524c5723ec7fc564b0c1b547eeda33075bed29da6ee8579edd9b88c88834b1",
+      "size_bytes": 71648
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0005/df_max_area.csv",
+      "sha256": "84cc6394b4d0593d28344bc4ca83378a6021dc893322a28e23b1fb4539801bd0",
+      "size_bytes": 51606
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0005/df_plume_metrics.csv",
+      "sha256": "f5023e6c5aa3b4d892ab715be65b4ccceb607e193e7a905b973f1d73928a664b",
+      "size_bytes": 40441
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0005/df_sample.csv",
+      "sha256": "a6c0e38f67094ec68c0f8edc48b47bf713f76349ec218affd16f9d3703f46213",
+      "size_bytes": 1856609
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0005/df_unique.csv",
+      "sha256": "8cf603f7965ead37f5d9e36236a1e20fa368721b52ac1956dda1ca43bcc3c285",
+      "size_bytes": 70931
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0005/idx.csv",
+      "sha256": "a629db7fd505124f6f7e1bc6de52fb1e1866097c20d8251e5812007e3a5cee8e",
+      "size_bytes": 29917
+    },
+    {
+      "path": "data/notebook_tables/6_Target_Temporal_Variation/cell-0005/incident_velocity.csv",
+      "sha256": "3fc0e02a97379d4b647b11fbe0bf8506c43352d7b758bd617fefd1db2c6a447b",
+      "size_bytes": 28582
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0003/df.csv",
+      "sha256": "8674de3616ecc241cf81656822f1ffc962c9a183db9d8e3e05b2655cbcfbb2f6",
+      "size_bytes": 5956455
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0003/df_frame_metrics.csv",
+      "sha256": "421544654ec266d799bc7b1d3c7468b3d54f85de0745902710e180c3a6c5dcbd",
+      "size_bytes": 4756596
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0003/df_processed.csv",
+      "sha256": "56c54603e757e48be6232fba78430b2518dfebc5d5dc991039ae0089eef4def2",
+      "size_bytes": 2778804
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0004/df_filtered.csv",
+      "sha256": "9a194ab12b3e5b119f9f951ec040ebcfd43e8a87a86e24239e400653a743a03a",
+      "size_bytes": 23117
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0004/df_max_area.csv",
+      "sha256": "08cb8148b5a6da9f52f5e8ee4a0f83cb5ea45c3b5dc18ba34baff222184c7a70",
+      "size_bytes": 15758
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0004/df_plume_metrics.csv",
+      "sha256": "2aa46187e82d996291b88da30ce71e174383810a797f0b2c734343b07490b78a",
+      "size_bytes": 13222
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0004/df_sample.csv",
+      "sha256": "390dea056e18d94e7d66f72f6ace1d8ce0c15822f3552c31d15a9447a32edf0b",
+      "size_bytes": 569050
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0004/df_unique.csv",
+      "sha256": "9a194ab12b3e5b119f9f951ec040ebcfd43e8a87a86e24239e400653a743a03a",
+      "size_bytes": 23117
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0004/idx.csv",
+      "sha256": "493825e75d03386332d69b609c742f2f66f3f3bffe6b9684acfc5870dd422b04",
+      "size_bytes": 9111
+    },
+    {
+      "path": "data/notebook_tables/7_Target_Spatial_Inhomogeneity/cell-0004/incident_velocity.csv",
+      "sha256": "917f85931ff2b6c8989716f63a158ef8203896c63cbe65abc9cb054907ebf35b",
+      "size_bytes": 9391
+    },
+    {
+      "path": "data/plume_metrics/C-G6_metrics.csv",
+      "sha256": "fee8e348200d70a9bbc562220c5e9bb03b87ecaa184b5b2e1865f7681a834324",
+      "size_bytes": 5056876
+    },
+    {
+      "path": "data/plume_metrics/G1_metrics.csv",
+      "sha256": "f030e0a5437423593eb29adedf3d4ac9ed99881e5eacc56155593038665415f4",
+      "size_bytes": 4539801
+    },
+    {
+      "path": "data/plume_metrics/G2_metrics.csv",
+      "sha256": "67d62681a28beef2b44b3861bcbfc99466043149bcb6f6a8ecfb3cef188c0944",
+      "size_bytes": 4568996
+    },
+    {
+      "path": "data/plume_metrics/G3_metrics.csv",
+      "sha256": "b3fc90e1dab413ee1c271f8528a7364a0c3990c65c9219dd29cf5b2efd062152",
+      "size_bytes": 4476629
+    },
+    {
+      "path": "data/plume_metrics/G4_metrics.csv",
+      "sha256": "adea8d7f278d94220a63025e51bf018b7d86c2ce39993fac76ee6f1b1c61bd66",
+      "size_bytes": 4574059
+    },
+    {
+      "path": "data/plume_metrics/G5_metrics.csv",
+      "sha256": "25605e328ed405ccde51ec8cacafaaebe14e67f06d7806681ec4177da22da5bb",
+      "size_bytes": 3420505
+    },
+    {
+      "path": "figures/Figure4.png",
+      "sha256": "8ec7122f6ea4a57924f88ffc43ce65d54286c0cb6404fe96eae759b7bcb11d5f",
+      "size_bytes": 1485235
+    },
+    {
+      "path": "source-and-output-manifest.json",
+      "sha256": "f38fa07855b9f3ab608a3c7cb7f6ce6fe4207b06acbbe564df994bdfb3d76553",
+      "size_bytes": 258552
+    },
+    {
+      "path": "videos/Extra-C-G6_plume_video.mp4",
+      "sha256": "39c66943b9459aa5099fa31f1dd90a7c34db545d515caf8c68607892cfcc5550",
+      "size_bytes": 519826
+    },
+    {
+      "path": "videos/Extra-G1_plume_video.mp4",
+      "sha256": "78006b845d4e1d51a581e7f70b45e0dd3f726218a617b776bf0c880571ece672",
+      "size_bytes": 608826
+    },
+    {
+      "path": "videos/Extra-G2_plume_video.mp4",
+      "sha256": "c6ccce2896927733fc1d705b1c020b78dddc4c86772dbc186064e3b500e916a3",
+      "size_bytes": 952754
+    },
+    {
+      "path": "videos/Extra-G3_plume_video.mp4",
+      "sha256": "ab3e289136c8f88e1e07fe6b56e8b664bc1c2a4edfc6efe5ca8440fc4ef205e6",
+      "size_bytes": 307303
+    },
+    {
+      "path": "videos/Extra-G4_plume_video.mp4",
+      "sha256": "d24063aa25c87e9356794f2d0d440b075db3146106198552b933ffce2bd470fa",
+      "size_bytes": 338163
+    },
+    {
+      "path": "videos/Extra-G5_plume_video.mp4",
+      "sha256": "f79c93cbe3692d1be7b0c4192131d900d6d5f0388c96eb661770abcd004c8563",
+      "size_bytes": 337687
+    }
+  ]
+}

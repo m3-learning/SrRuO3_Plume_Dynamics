@@ -1,0 +1,259 @@
+{
+  "collection_id": "8d26bfdd-d411-4e74-b387-9ac8e50d8244",
+  "assets": {
+    "scientific-reading-edition/SrRuO3_scientific_results.html": {
+      "asset_id": "f30f74d1-524e-4910-84a6-3cc3da2d0f43",
+      "content_id": "058a53e7-2aef-4588-9299-0240226ce59a",
+      "sha256": "7664fcce5c5264664e5072fdb01438180c9722f302b475ce74ece00e93efd120",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific results \u2014 overview",
+      "previous_content_id": "6dac8726-ccac-46fa-bb67-a4df08939179",
+      "canonical_sample_labels": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "C-G6"
+      ]
+    },
+    "SrRuO3_scientific_results.zip": {
+      "asset_id": "3aa16765-3c52-4633-9941-d690730cd169",
+      "content_id": "1b701a1b-b5c0-403c-8b20-eceb5616d1ee",
+      "sha256": "f3d717e985ba783c3e25748dc7e70a5825c32bae333ce01aeebfeb655913b7e7",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific results \u2014 reports, videos and metric tables",
+      "previous_content_id": "a5f48c07-addd-4409-bd16-c3dff8ccf301",
+      "canonical_sample_labels": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "C-G6"
+      ]
+    },
+    "scientific-reading-edition/source-and-output-manifest.json": {
+      "asset_id": "aec2632b-389c-47dc-8853-e6dc92dc7973",
+      "content_id": "c7ed9882-bada-4828-8a05-1426c22a9925",
+      "sha256": "f38fa07855b9f3ab608a3c7cb7f6ce6fe4207b06acbbe564df994bdfb3d76553",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific results \u2014 source and output versions",
+      "previous_content_id": "b928ad13-05a3-4f19-8b18-0f1aebcc3d4d",
+      "canonical_sample_labels": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "C-G6"
+      ]
+    },
+    "scientific-reading-edition/1_Abstract/report.html": {
+      "asset_id": "242b3ae1-ea8e-4984-bce0-5df2432adf1c",
+      "content_id": "551a9b42-3fcd-470c-a3a6-76456314f41b",
+      "sha256": "f908e6d6811cfb22f826304dfc41ce8f136277914b4a4d0d7a155eb6b60cd177",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific report \u2014 1_Abstract",
+      "canonical_sample_labels": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "C-G6"
+      ]
+    },
+    "scientific-reading-edition/2_PLD_Experiment_Design_and_Target_Microscopy/report.html": {
+      "asset_id": "0431a62e-3562-4054-b26b-bf8d0a5e4529",
+      "content_id": "91eeb756-5192-421c-b244-9d54f1101a4d",
+      "sha256": "ec8a20eb041739df877fa2aff72db66832b8adc060d3f25174efa86f418b6c40",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific report \u2014 2_PLD_Experiment_Design_and_Target_Microscopy",
+      "canonical_sample_labels": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "C-G6"
+      ]
+    },
+    "scientific-reading-edition/3_Structure_Characterization/report.html": {
+      "asset_id": "75ce5011-afda-46f4-b72f-016810a93cd3",
+      "content_id": "5f510fd5-65e2-4c6d-ad10-d93499d51524",
+      "sha256": "270fe142d0fe8b5f1d4aa5b261c05bc0531595d9a05e365bfb1b0c409beaafe1",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific report \u2014 3_Structure_Characterization",
+      "canonical_sample_labels": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "C-G6"
+      ]
+    },
+    "scientific-reading-edition/4_Plume_Metrics_Extraction/report.html": {
+      "asset_id": "339f75aa-803e-4216-81cc-db4d0c022c2e",
+      "content_id": "7535f32a-6192-42dd-b931-938d4c445d71",
+      "sha256": "a9e25cffce39520eaab0349418a0c7979c80973e2abdb0d891986dcad89b76ac",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific report \u2014 4_Plume_Metrics_Extraction",
+      "canonical_sample_labels": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "C-G6"
+      ]
+    },
+    "scientific-reading-edition/5_Plume_Dynamic_Analysis/report.html": {
+      "asset_id": "c7326206-7106-4ddc-9224-0a0416a1c353",
+      "content_id": "e16a4611-7687-486c-8b01-8fd6ecbd4389",
+      "sha256": "ce3d429502596b92e71ebcb9c1fa8017a33d9f968737411afefb625c1fc5f7d5",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific report \u2014 5_Plume_Dynamic_Analysis",
+      "previous_content_id": "a088d213-b3a0-411b-aa94-eb62d4dc5312",
+      "canonical_sample_labels": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "C-G6"
+      ]
+    },
+    "scientific-reading-edition/6_Target_Temporal_Variation/report.html": {
+      "asset_id": "33e7e1cb-e6bd-4237-ad6e-c092b26d3e2f",
+      "content_id": "1a8a5c91-eb39-420b-a483-3c9b5d48c3c4",
+      "sha256": "847ea0cc34003db9b4726dbf3709182d31334a9aaa65ad3a0e8fb19b1d953487",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific report \u2014 6_Target_Temporal_Variation",
+      "previous_content_id": "55738ed2-97f9-4e60-b180-64625098f30f",
+      "canonical_sample_labels": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "C-G6"
+      ]
+    },
+    "scientific-reading-edition/7_Target_Spatial_Inhomogeneity/report.html": {
+      "asset_id": "b968d9bb-9c51-4e1d-8d87-e2c2de519f2c",
+      "content_id": "228c49d5-a10b-4d5f-9fb0-57bc509f4f0a",
+      "sha256": "39891564aa5963a15a02126aed1a7e765a820895b9fb903c18b7c7cc264b845f",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific report \u2014 7_Target_Spatial_Inhomogeneity",
+      "previous_content_id": "cd98e7b1-e7c1-426d-a72b-243fd0958dd4",
+      "canonical_sample_labels": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "C-G6"
+      ]
+    },
+    "canonical-reading-notebooks/1_Abstract": {
+      "asset_id": "9f5a3d55-1588-4687-88a0-e9029ba2f288",
+      "content_id": "8d0819d5-31bb-439f-8d43-048ba59a9a1c",
+      "sha256": "407ad03b8a69a96ab4934be725d3717bb07a5af8a6203df77fa6b012d6a269ae",
+      "remote_download_verified": true,
+      "canonical_sample_labels": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "C-G6"
+      ]
+    },
+    "canonical-reading-notebooks/2_PLD_Experiment_Design_and_Target_Microscopy": {
+      "asset_id": "e0624a9e-8040-47d2-9329-ec2dabf07381",
+      "content_id": "1b2132eb-7917-4564-a292-4795ef7eba87",
+      "sha256": "7b2a059a2fed153f2bc8c1e3d4cab3c5786d5578f50f92b9b6dc3e7ed881d00a",
+      "remote_download_verified": true,
+      "canonical_sample_labels": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "C-G6"
+      ]
+    },
+    "canonical-reading-notebooks/3_Structure_Characterization": {
+      "asset_id": "6225e9df-6533-4158-9612-c018aa6a8956",
+      "content_id": "3aa95be7-e12c-4824-9b66-45bc5bdcaaa6",
+      "sha256": "b1a1506f4ed272bb4b521511db2209b48f5b57086727177cb5ab79176fd0ac20",
+      "remote_download_verified": true,
+      "canonical_sample_labels": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "C-G6"
+      ]
+    },
+    "canonical-reading-notebooks/4_Plume_Metrics_Extraction": {
+      "asset_id": "510b4ac1-7341-4c2b-ad34-8e687bd8063b",
+      "content_id": "291f6452-65ff-4554-94a2-965691fbdb22",
+      "sha256": "7720759ba38201f51a7e9d1ac24609aefda0c24f03d5c0436e1ff3573f18cecd",
+      "remote_download_verified": true,
+      "canonical_sample_labels": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "C-G6"
+      ]
+    },
+    "canonical-reading-notebooks/5_Plume_Dynamic_Analysis": {
+      "asset_id": "7299fa03-16a3-4522-b691-5856ff729ef3",
+      "content_id": "0bcb338a-0754-48df-ac30-0750dac33a5d",
+      "sha256": "b43963850443a49250334ea31d3da5ea52dca97da9f2d84b4fcd76675288a947",
+      "remote_download_verified": true,
+      "canonical_sample_labels": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "C-G6"
+      ]
+    },
+    "canonical-reading-notebooks/6_Target_Temporal_Variation": {
+      "asset_id": "65e9835f-e939-4743-b6ab-e42e235565a9",
+      "content_id": "3b04e3be-2ffd-4048-a9ea-cf8dd3f8c95b",
+      "sha256": "d1df8c4f8f5f723535260f183fb9ff1ad35a8a4bcb5f45c53e1f461170faa0f3",
+      "remote_download_verified": true,
+      "canonical_sample_labels": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "C-G6"
+      ]
+    },
+    "canonical-reading-notebooks/7_Target_Spatial_Inhomogeneity": {
+      "asset_id": "2c35430e-9837-4573-9773-ee02000e1568",
+      "content_id": "58373e32-68e6-41b1-85ad-a26c5334f951",
+      "sha256": "3c404371b080b8eddfabad4cccfd64b62642c1ddba32f72c5b44c06a26924ff1",
+      "remote_download_verified": true,
+      "canonical_sample_labels": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "C-G6"
+      ]
+    }
+  }
+}

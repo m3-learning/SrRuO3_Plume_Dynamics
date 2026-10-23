@@ -209,3 +209,14 @@ verification and GitHub synchronization, rebuildable local caches, environments
 and isolated workspaces are optional. Retain an independent original-recording
 backup away from C: if the server's independent backup policy is not established;
 GitHub contains code and manifests, not a second copy of the raw recordings.
+
+## Canonical sample labels
+
+Use G1–G5 and C-G6 in public data tables, report displays, reading notebooks
+and figure legends. Legacy acquisition identifiers remain in provenance. The
+legacy-input adapter normalizes identifier columns on restored copies without
+changing numeric field strings or archived inputs. The formal reading edition
+contains canonical table and notebook views linked to the original execution
+assets; these label-only derivatives are not new scientific executions. See
+`preservation/sample-label-normalization/` for53 passing tests, source readback,
+row-by-row numerical invariance and current content-version receipts.

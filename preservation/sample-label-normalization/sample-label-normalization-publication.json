@@ -1,0 +1,14 @@
+{
+  "sample-label-normalization-validation.json": {
+    "asset_id": "9c783f66-d80c-430f-8938-053f57a22486",
+    "content_id": "9e337ea2-77c5-43f6-a3cf-d1595554824b",
+    "sha256": "b2b0ee653055435d21bac597b63fc70f4b902c1ea709d06e736cf677df564c43",
+    "remote_download_verified": true
+  },
+  "sample-label-provenance.json": {
+    "asset_id": "e807a411-7149-4511-b75f-bf3b0b42222c",
+    "content_id": "0766e530-2ee6-4cb1-9611-45b73c1d1b06",
+    "sha256": "ac6ddfda741cc391b4ee702da069d2d9aeb390ee92cd84c53249bb4d79b786b8",
+    "remote_download_verified": true
+  }
+}

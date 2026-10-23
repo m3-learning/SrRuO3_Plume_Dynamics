@@ -276,3 +276,16 @@ def test_input_refresh_requires_explicit_choice_between_replacement_assets(tmp_p
     assert result['superseded_files']==[{'path':'Plumes/G2.h5','asset_id':ASSET,
         'reason':'Explicitly superseded by the verified replacement asset.'}]
     assert {r['path'] for r in result['files']}=={'Plumes/'+name+'.h5' for name in names}
+
+
+def test_legacy_csv_maps_identifier_values_without_changing_measurements(tmp_path):
+    source = tmp_path / 'data/Plumes/plume_metrics/YG066_metrics.csv'
+    source.parent.mkdir(parents=True)
+    payload = 'Distance,Velocity,Area,Sample ID,Sample Name\n0.0010000000000000001,12345.678901234567,120,YG066,G2\n'
+    source.write_text(payload)
+    map_legacy_inputs(tmp_path)
+    target = tmp_path / 'data/datasets/ML_plume_dynamics/plume_metrics/G2_metrics.csv'
+    assert target.read_text() == payload.replace('YG066,G2', 'G2,G2')
+    assert source.read_text() == payload
+    from dataerai_project import normalize_sample_csv
+    assert normalize_sample_csv(target) == 0

@@ -1,0 +1,75 @@
+{
+  "collection_id": "8d26bfdd-d411-4e74-b387-9ac8e50d8244",
+  "assets": {
+    "scientific-reading-edition/SrRuO3_scientific_results.html": {
+      "asset_id": "f30f74d1-524e-4910-84a6-3cc3da2d0f43",
+      "content_id": "6dac8726-ccac-46fa-bb67-a4df08939179",
+      "sha256": "a989fba40f129541c589486631208de91b28fdb329d5b4454d1d5742f36c7b91",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific results \u2014 overview"
+    },
+    "SrRuO3_scientific_results.zip": {
+      "asset_id": "3aa16765-3c52-4633-9941-d690730cd169",
+      "content_id": "a5f48c07-addd-4409-bd16-c3dff8ccf301",
+      "sha256": "3dd57e25711fcd80223dba22e7b14d2d168252bdfdde3c195d650b2109d680af",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific results \u2014 reports, videos and metric tables"
+    },
+    "scientific-reading-edition/source-and-output-manifest.json": {
+      "asset_id": "aec2632b-389c-47dc-8853-e6dc92dc7973",
+      "content_id": "b928ad13-05a3-4f19-8b18-0f1aebcc3d4d",
+      "sha256": "131d5c86ea43daf37ea64bd161f1ce11cf3eeda5b61efb75d2369dc7e6b287e7",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific results \u2014 source and output versions"
+    },
+    "scientific-reading-edition/1_Abstract/report.html": {
+      "asset_id": "242b3ae1-ea8e-4984-bce0-5df2432adf1c",
+      "content_id": "551a9b42-3fcd-470c-a3a6-76456314f41b",
+      "sha256": "f908e6d6811cfb22f826304dfc41ce8f136277914b4a4d0d7a155eb6b60cd177",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific report \u2014 1_Abstract"
+    },
+    "scientific-reading-edition/2_PLD_Experiment_Design_and_Target_Microscopy/report.html": {
+      "asset_id": "0431a62e-3562-4054-b26b-bf8d0a5e4529",
+      "content_id": "91eeb756-5192-421c-b244-9d54f1101a4d",
+      "sha256": "ec8a20eb041739df877fa2aff72db66832b8adc060d3f25174efa86f418b6c40",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific report \u2014 2_PLD_Experiment_Design_and_Target_Microscopy"
+    },
+    "scientific-reading-edition/3_Structure_Characterization/report.html": {
+      "asset_id": "75ce5011-afda-46f4-b72f-016810a93cd3",
+      "content_id": "5f510fd5-65e2-4c6d-ad10-d93499d51524",
+      "sha256": "270fe142d0fe8b5f1d4aa5b261c05bc0531595d9a05e365bfb1b0c409beaafe1",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific report \u2014 3_Structure_Characterization"
+    },
+    "scientific-reading-edition/4_Plume_Metrics_Extraction/report.html": {
+      "asset_id": "339f75aa-803e-4216-81cc-db4d0c022c2e",
+      "content_id": "7535f32a-6192-42dd-b931-938d4c445d71",
+      "sha256": "a9e25cffce39520eaab0349418a0c7979c80973e2abdb0d891986dcad89b76ac",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific report \u2014 4_Plume_Metrics_Extraction"
+    },
+    "scientific-reading-edition/5_Plume_Dynamic_Analysis/report.html": {
+      "asset_id": "c7326206-7106-4ddc-9224-0a0416a1c353",
+      "content_id": "a088d213-b3a0-411b-aa94-eb62d4dc5312",
+      "sha256": "7d7d2a8738eed79f0d7694ef52431d025afca076e4dd9b2fa178378921aeccb8",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific report \u2014 5_Plume_Dynamic_Analysis"
+    },
+    "scientific-reading-edition/6_Target_Temporal_Variation/report.html": {
+      "asset_id": "33e7e1cb-e6bd-4237-ad6e-c092b26d3e2f",
+      "content_id": "55738ed2-97f9-4e60-b180-64625098f30f",
+      "sha256": "7c493090436ac9a43ff5aa4523597ba6914f523e2e2a9c2758d8ed0502e16289",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific report \u2014 6_Target_Temporal_Variation"
+    },
+    "scientific-reading-edition/7_Target_Spatial_Inhomogeneity/report.html": {
+      "asset_id": "b968d9bb-9c51-4e1d-8d87-e2c2de519f2c",
+      "content_id": "cd98e7b1-e7c1-426d-a72b-243fd0958dd4",
+      "sha256": "bb21791e3b54eb89062716201ce3dfc5d873ca71674814dafdc92d239f35276d",
+      "remote_download_verified": true,
+      "title": "SrRuO3 scientific report \u2014 7_Target_Spatial_Inhomogeneity"
+    }
+  }
+}
