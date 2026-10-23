@@ -1,0 +1,189 @@
+{
+  "created_utc": "2026-10-23T14:17:20.446719+00:00",
+  "presentation_only": true,
+  "source_notebooks_modified": false,
+  "reports": [
+    {
+      "notebook": "1_Abstract",
+      "source_sha256": "d1d1b0c9d3f972318cda13e56499646600934c8d4bf65154f250f19143fa90af",
+      "report_sha256": "f908e6d6811cfb22f826304dfc41ce8f136277914b4a4d0d7a155eb6b60cd177",
+      "technical_cells_removed": 5,
+      "stream_outputs_removed": 0,
+      "editorial_heading_edits": 0,
+      "scientific_image_payloads_preserved": 0,
+      "visible_text_scan_passed": true
+    },
+    {
+      "notebook": "2_PLD_Experiment_Design_and_Target_Microscopy",
+      "source_sha256": "0bf832769bf32bf1f1cf67f1e611c123754db2c8965f6575eb8772d4c41d3a62",
+      "report_sha256": "ec8a20eb041739df877fa2aff72db66832b8adc060d3f25174efa86f418b6c40",
+      "technical_cells_removed": 5,
+      "stream_outputs_removed": 8,
+      "editorial_heading_edits": 3,
+      "scientific_image_payloads_preserved": 3,
+      "visible_text_scan_passed": true
+    },
+    {
+      "notebook": "3_Structure_Characterization",
+      "source_sha256": "e2ba0dc6bdd4e94b87a9a1183930bd20b0189d7f6da5a6a28817d18dd526ab41",
+      "report_sha256": "270fe142d0fe8b5f1d4aa5b261c05bc0531595d9a05e365bfb1b0c409beaafe1",
+      "technical_cells_removed": 5,
+      "stream_outputs_removed": 27,
+      "editorial_heading_edits": 1,
+      "scientific_image_payloads_preserved": 25,
+      "visible_text_scan_passed": true
+    },
+    {
+      "notebook": "4_Plume_Metrics_Extraction",
+      "source_sha256": "24d1710238b3a1eba934cd0a76bb4a78605d357cbeb62cd7df5fe21852b8063f",
+      "report_sha256": "a9e25cffce39520eaab0349418a0c7979c80973e2abdb0d891986dcad89b76ac",
+      "technical_cells_removed": 5,
+      "stream_outputs_removed": 60,
+      "editorial_heading_edits": 0,
+      "scientific_image_payloads_preserved": 72,
+      "visible_text_scan_passed": true
+    },
+    {
+      "notebook": "5_Plume_Dynamic_Analysis",
+      "source_sha256": "cef1600d5745ecba05a430c8cbbfd95ede92b7eaa686ed315381084c73ba8674",
+      "report_sha256": "7d7d2a8738eed79f0d7694ef52431d025afca076e4dd9b2fa178378921aeccb8",
+      "technical_cells_removed": 5,
+      "stream_outputs_removed": 46,
+      "editorial_heading_edits": 0,
+      "scientific_image_payloads_preserved": 13,
+      "visible_text_scan_passed": true
+    },
+    {
+      "notebook": "6_Target_Temporal_Variation",
+      "source_sha256": "a13802f7432d4a999306c91ef663d2b40f1c37cc0a51f31fcd4c86d05fedd8c5",
+      "report_sha256": "7c493090436ac9a43ff5aa4523597ba6914f523e2e2a9c2758d8ed0502e16289",
+      "technical_cells_removed": 5,
+      "stream_outputs_removed": 14,
+      "editorial_heading_edits": 2,
+      "scientific_image_payloads_preserved": 4,
+      "visible_text_scan_passed": true
+    },
+    {
+      "notebook": "7_Target_Spatial_Inhomogeneity",
+      "source_sha256": "828be991c899fd5b6cd39c156dc01b89aa8f547e370a49899dc9901358685868",
+      "report_sha256": "bb21791e3b54eb89062716201ce3dfc5d873ca71674814dafdc92d239f35276d",
+      "technical_cells_removed": 5,
+      "stream_outputs_removed": 4,
+      "editorial_heading_edits": 1,
+      "scientific_image_payloads_preserved": 1,
+      "visible_text_scan_passed": true
+    }
+  ],
+  "reading_edition_files": [
+    {
+      "path": "1_Abstract/report.html",
+      "sha256": "f908e6d6811cfb22f826304dfc41ce8f136277914b4a4d0d7a155eb6b60cd177",
+      "size_bytes": 280918
+    },
+    {
+      "path": "2_PLD_Experiment_Design_and_Target_Microscopy/report.html",
+      "sha256": "ec8a20eb041739df877fa2aff72db66832b8adc060d3f25174efa86f418b6c40",
+      "size_bytes": 2157010
+    },
+    {
+      "path": "3_Structure_Characterization/report.html",
+      "sha256": "270fe142d0fe8b5f1d4aa5b261c05bc0531595d9a05e365bfb1b0c409beaafe1",
+      "size_bytes": 3493090
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/report.html",
+      "sha256": "a9e25cffce39520eaab0349418a0c7979c80973e2abdb0d891986dcad89b76ac",
+      "size_bytes": 4643976
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/report.html",
+      "sha256": "7d7d2a8738eed79f0d7694ef52431d025afca076e4dd9b2fa178378921aeccb8",
+      "size_bytes": 6189966
+    },
+    {
+      "path": "6_Target_Temporal_Variation/report.html",
+      "sha256": "7c493090436ac9a43ff5aa4523597ba6914f523e2e2a9c2758d8ed0502e16289",
+      "size_bytes": 1390441
+    },
+    {
+      "path": "7_Target_Spatial_Inhomogeneity/report.html",
+      "sha256": "bb21791e3b54eb89062716201ce3dfc5d873ca71674814dafdc92d239f35276d",
+      "size_bytes": 428587
+    },
+    {
+      "path": "SrRuO3_scientific_results.html",
+      "sha256": "a989fba40f129541c589486631208de91b28fdb329d5b4454d1d5742f36c7b91",
+      "size_bytes": 5245
+    },
+    {
+      "path": "data/plume_metrics/C-G6_metrics.csv",
+      "sha256": "fee8e348200d70a9bbc562220c5e9bb03b87ecaa184b5b2e1865f7681a834324",
+      "size_bytes": 5056876
+    },
+    {
+      "path": "data/plume_metrics/G1_metrics.csv",
+      "sha256": "f030e0a5437423593eb29adedf3d4ac9ed99881e5eacc56155593038665415f4",
+      "size_bytes": 4539801
+    },
+    {
+      "path": "data/plume_metrics/G2_metrics.csv",
+      "sha256": "67d62681a28beef2b44b3861bcbfc99466043149bcb6f6a8ecfb3cef188c0944",
+      "size_bytes": 4568996
+    },
+    {
+      "path": "data/plume_metrics/G3_metrics.csv",
+      "sha256": "b3fc90e1dab413ee1c271f8528a7364a0c3990c65c9219dd29cf5b2efd062152",
+      "size_bytes": 4476629
+    },
+    {
+      "path": "data/plume_metrics/G4_metrics.csv",
+      "sha256": "adea8d7f278d94220a63025e51bf018b7d86c2ce39993fac76ee6f1b1c61bd66",
+      "size_bytes": 4574059
+    },
+    {
+      "path": "data/plume_metrics/G5_metrics.csv",
+      "sha256": "25605e328ed405ccde51ec8cacafaaebe14e67f06d7806681ec4177da22da5bb",
+      "size_bytes": 3420505
+    },
+    {
+      "path": "figures/Figure4.png",
+      "sha256": "8ec7122f6ea4a57924f88ffc43ce65d54286c0cb6404fe96eae759b7bcb11d5f",
+      "size_bytes": 1485235
+    },
+    {
+      "path": "source-and-output-manifest.json",
+      "sha256": "131d5c86ea43daf37ea64bd161f1ce11cf3eeda5b61efb75d2369dc7e6b287e7",
+      "size_bytes": 254958
+    },
+    {
+      "path": "videos/Extra-C_G6_plume_video.mp4",
+      "sha256": "39c66943b9459aa5099fa31f1dd90a7c34db545d515caf8c68607892cfcc5550",
+      "size_bytes": 519826
+    },
+    {
+      "path": "videos/Extra-G1_plume_video.mp4",
+      "sha256": "78006b845d4e1d51a581e7f70b45e0dd3f726218a617b776bf0c880571ece672",
+      "size_bytes": 608826
+    },
+    {
+      "path": "videos/Extra-G2_plume_video.mp4",
+      "sha256": "c6ccce2896927733fc1d705b1c020b78dddc4c86772dbc186064e3b500e916a3",
+      "size_bytes": 952754
+    },
+    {
+      "path": "videos/Extra-G3_plume_video.mp4",
+      "sha256": "ab3e289136c8f88e1e07fe6b56e8b664bc1c2a4edfc6efe5ca8440fc4ef205e6",
+      "size_bytes": 307303
+    },
+    {
+      "path": "videos/Extra-G4_plume_video.mp4",
+      "sha256": "d24063aa25c87e9356794f2d0d440b075db3146106198552b933ffce2bd470fa",
+      "size_bytes": 338163
+    },
+    {
+      "path": "videos/Extra-G5_plume_video.mp4",
+      "sha256": "f79c93cbe3692d1be7b0c4192131d900d6d5f0388c96eb661770abcd004c8563",
+      "size_bytes": 337687
+    }
+  ]
+}
