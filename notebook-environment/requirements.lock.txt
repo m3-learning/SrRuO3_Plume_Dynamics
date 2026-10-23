@@ -58,6 +58,7 @@ idna==3.20
 igor==0.3
 igor2==0.5.14
 imageio==2.38.1
+imageio-ffmpeg==0.6.0
 importlib-metadata==9.0.1
 imutils==0.5.4
 iniconfig==2.3.1

@@ -1,0 +1,2397 @@
+{
+  "checked_utc": "2026-10-23T06:06:01.793371+00:00",
+  "videos": [
+    {
+      "path": "5_Plume_Dynamic_Analysis/outputs/figures/Extra-C_G6_plume_video.mp4",
+      "sha256": "39c66943b9459aa5099fa31f1dd90a7c34db545d515caf8c68607892cfcc5550",
+      "bytes": 519826,
+      "complete_decode_passed": true,
+      "video_metadata": {
+        "ffmpeg_version": "7.0.2-static https://johnvansickle.com/ffmpeg/ built with gcc 8 (Debian 8.3.0-6)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "fps": 2.0,
+        "source_size": [
+          500,
+          300
+        ],
+        "size": [
+          500,
+          300
+        ],
+        "rotate": 0,
+        "duration": 32.0
+      }
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/outputs/figures/Extra-G1_plume_video.mp4",
+      "sha256": "78006b845d4e1d51a581e7f70b45e0dd3f726218a617b776bf0c880571ece672",
+      "bytes": 608826,
+      "complete_decode_passed": true,
+      "video_metadata": {
+        "ffmpeg_version": "7.0.2-static https://johnvansickle.com/ffmpeg/ built with gcc 8 (Debian 8.3.0-6)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "fps": 10.0,
+        "source_size": [
+          500,
+          300
+        ],
+        "size": [
+          500,
+          300
+        ],
+        "rotate": 0,
+        "duration": 6.4
+      }
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/outputs/figures/Extra-G2_plume_video.mp4",
+      "sha256": "c6ccce2896927733fc1d705b1c020b78dddc4c86772dbc186064e3b500e916a3",
+      "bytes": 952754,
+      "complete_decode_passed": true,
+      "video_metadata": {
+        "ffmpeg_version": "7.0.2-static https://johnvansickle.com/ffmpeg/ built with gcc 8 (Debian 8.3.0-6)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "fps": 2.0,
+        "source_size": [
+          500,
+          300
+        ],
+        "size": [
+          500,
+          300
+        ],
+        "rotate": 0,
+        "duration": 32.0
+      }
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/outputs/figures/Extra-G3_plume_video.mp4",
+      "sha256": "ab3e289136c8f88e1e07fe6b56e8b664bc1c2a4edfc6efe5ca8440fc4ef205e6",
+      "bytes": 307303,
+      "complete_decode_passed": true,
+      "video_metadata": {
+        "ffmpeg_version": "7.0.2-static https://johnvansickle.com/ffmpeg/ built with gcc 8 (Debian 8.3.0-6)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "fps": 2.0,
+        "source_size": [
+          500,
+          300
+        ],
+        "size": [
+          500,
+          300
+        ],
+        "rotate": 0,
+        "duration": 32.0
+      }
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/outputs/figures/Extra-G4_plume_video.mp4",
+      "sha256": "d24063aa25c87e9356794f2d0d440b075db3146106198552b933ffce2bd470fa",
+      "bytes": 338163,
+      "complete_decode_passed": true,
+      "video_metadata": {
+        "ffmpeg_version": "7.0.2-static https://johnvansickle.com/ffmpeg/ built with gcc 8 (Debian 8.3.0-6)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "fps": 2.0,
+        "source_size": [
+          500,
+          300
+        ],
+        "size": [
+          500,
+          300
+        ],
+        "rotate": 0,
+        "duration": 32.0
+      }
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/outputs/figures/Extra-G5_plume_video.mp4",
+      "sha256": "f79c93cbe3692d1be7b0c4192131d900d6d5f0388c96eb661770abcd004c8563",
+      "bytes": 337687,
+      "complete_decode_passed": true,
+      "video_metadata": {
+        "ffmpeg_version": "7.0.2-static https://johnvansickle.com/ffmpeg/ built with gcc 8 (Debian 8.3.0-6)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "fps": 2.0,
+        "source_size": [
+          500,
+          300
+        ],
+        "size": [
+          500,
+          300
+        ],
+        "rotate": 0,
+        "duration": 32.0
+      }
+    }
+  ],
+  "metric_tables": [
+    {
+      "path": "4_Plume_Metrics_Extraction/outputs/data/datasets/ML_plume_dynamics/plume_metrics/C-G6_metrics.csv",
+      "rows": 144384,
+      "columns": [
+        "plume_index",
+        "time_index",
+        "Distance",
+        "Velocity",
+        "Area",
+        "Threshold",
+        "Sample Name",
+        "Sample ID"
+      ],
+      "sha256": "fee8e348200d70a9bbc562220c5e9bb03b87ecaa184b5b2e1865f7681a834324"
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/outputs/data/datasets/ML_plume_dynamics/plume_metrics/G1_metrics.csv",
+      "rows": 146688,
+      "columns": [
+        "plume_index",
+        "time_index",
+        "Distance",
+        "Velocity",
+        "Area",
+        "Threshold",
+        "Sample Name",
+        "Sample ID"
+      ],
+      "sha256": "f030e0a5437423593eb29adedf3d4ac9ed99881e5eacc56155593038665415f4"
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/outputs/data/datasets/ML_plume_dynamics/plume_metrics/G2_metrics.csv",
+      "rows": 147456,
+      "columns": [
+        "plume_index",
+        "time_index",
+        "Distance",
+        "Velocity",
+        "Area",
+        "Threshold",
+        "Sample Name",
+        "Sample ID"
+      ],
+      "sha256": "67d62681a28beef2b44b3861bcbfc99466043149bcb6f6a8ecfb3cef188c0944"
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/outputs/data/datasets/ML_plume_dynamics/plume_metrics/G3_metrics.csv",
+      "rows": 144384,
+      "columns": [
+        "plume_index",
+        "time_index",
+        "Distance",
+        "Velocity",
+        "Area",
+        "Threshold",
+        "Sample Name",
+        "Sample ID"
+      ],
+      "sha256": "b3fc90e1dab413ee1c271f8528a7364a0c3990c65c9219dd29cf5b2efd062152"
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/outputs/data/datasets/ML_plume_dynamics/plume_metrics/G4_metrics.csv",
+      "rows": 147456,
+      "columns": [
+        "plume_index",
+        "time_index",
+        "Distance",
+        "Velocity",
+        "Area",
+        "Threshold",
+        "Sample Name",
+        "Sample ID"
+      ],
+      "sha256": "adea8d7f278d94220a63025e51bf018b7d86c2ce39993fac76ee6f1b1c61bd66"
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/outputs/data/datasets/ML_plume_dynamics/plume_metrics/G5_metrics.csv",
+      "rows": 110592,
+      "columns": [
+        "plume_index",
+        "time_index",
+        "Distance",
+        "Velocity",
+        "Area",
+        "Threshold",
+        "Sample Name",
+        "Sample ID"
+      ],
+      "sha256": "25605e328ed405ccde51ec8cacafaaebe14e67f06d7806681ec4177da22da5bb"
+    }
+  ],
+  "arrays": [
+    {
+      "path": "00_Dataerai_Raw_Data_Quickstart/cell-artifacts/cell-0001/frame.npz",
+      "bytes": 4101,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            128,
+            128
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 16512
+        }
+      ]
+    },
+    {
+      "path": "2_PLD_Experiment_Design_and_Target_Microscopy/cell-artifacts/cell-0004/maps.npz",
+      "bytes": 22406669,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0001.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0002.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0003.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U304",
+          "uncompressed_bytes": 1344
+        }
+      ]
+    },
+    {
+      "path": "2_PLD_Experiment_Design_and_Target_Microscopy/cell-artifacts/cell-0004/maps_all.npz",
+      "bytes": 153768983,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0001.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0002.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0003.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0004.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0005.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0006.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0007.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0008.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0009.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0010.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0011.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0012.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0013.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0014.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0015.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0016.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0017.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0018.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0019.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0020.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0021.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0022.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0023.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0024.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0025.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U2012",
+          "uncompressed_bytes": 8176
+        }
+      ]
+    },
+    {
+      "path": "2_PLD_Experiment_Design_and_Target_Microscopy/cell-artifacts/cell-0006/axes.npz",
+      "bytes": 155134062,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            30
+          ],
+          "dtype": "object",
+          "uncompressed_bytes": 250217910
+        }
+      ]
+    },
+    {
+      "path": "2_PLD_Experiment_Design_and_Target_Microscopy/cell-artifacts/cell-0006/filled.npz",
+      "bytes": 5563168,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        }
+      ]
+    },
+    {
+      "path": "2_PLD_Experiment_Design_and_Target_Microscopy/cell-artifacts/cell-0006/map.npz",
+      "bytes": 5574824,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        }
+      ]
+    },
+    {
+      "path": "2_PLD_Experiment_Design_and_Target_Microscopy/cell-artifacts/cell-0006/maps.npz",
+      "bytes": 22406669,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0001.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0002.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "array_0003.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 8388736
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U304",
+          "uncompressed_bytes": 1344
+        }
+      ]
+    },
+    {
+      "path": "2_PLD_Experiment_Design_and_Target_Microscopy/cell-artifacts/cell-0006/nan_mask.npz",
+      "bytes": 183802,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            1024,
+            1024
+          ],
+          "dtype": "bool",
+          "uncompressed_bytes": 1048704
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0007/axes.npz",
+      "bytes": 80066,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            2
+          ],
+          "dtype": "object",
+          "uncompressed_bytes": 277615
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0007/fft_vals.npz",
+      "bytes": 346,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            17
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 264
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0007/fft_vals_all.npz",
+      "bytes": 2400,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            17
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 264
+        },
+        {
+          "member": "array_0001.npy",
+          "shape": [
+            17
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 264
+        },
+        {
+          "member": "array_0002.npy",
+          "shape": [
+            17
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 264
+        },
+        {
+          "member": "array_0003.npy",
+          "shape": [
+            17
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 264
+        },
+        {
+          "member": "array_0004.npy",
+          "shape": [
+            17
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 264
+        },
+        {
+          "member": "array_0005.npy",
+          "shape": [
+            17
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 264
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U392",
+          "uncompressed_bytes": 1696
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0007/freqs.npz",
+      "bytes": 305,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            17
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 264
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0007/freqs_all.npz",
+      "bytes": 2151,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            17
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 264
+        },
+        {
+          "member": "array_0001.npy",
+          "shape": [
+            17
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 264
+        },
+        {
+          "member": "array_0002.npy",
+          "shape": [
+            17
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 264
+        },
+        {
+          "member": "array_0003.npy",
+          "shape": [
+            17
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 264
+        },
+        {
+          "member": "array_0004.npy",
+          "shape": [
+            17
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 264
+        },
+        {
+          "member": "array_0005.npy",
+          "shape": [
+            17
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 264
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U392",
+          "uncompressed_bytes": 1696
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0007/mask.npz",
+      "bytes": 215,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            499
+          ],
+          "dtype": "bool",
+          "uncompressed_bytes": 627
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0007/results.npz",
+      "bytes": 7426,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            499
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 4120
+        },
+        {
+          "member": "array_0001.npy",
+          "shape": [
+            499
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 4120
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U584",
+          "uncompressed_bytes": 2464
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0007/x.npz",
+      "bytes": 305,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            17
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 264
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0007/xs.npz",
+      "bytes": 6602,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0001.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0002.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0003.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0004.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0005.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U398",
+          "uncompressed_bytes": 1720
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0007/y.npz",
+      "bytes": 346,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            17
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 264
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0007/ys.npz",
+      "bytes": 8044,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0001.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0002.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0003.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0004.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0005.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U398",
+          "uncompressed_bytes": 1720
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0008/x.npz",
+      "bytes": 1046,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0008/xs.npz",
+      "bytes": 6602,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0001.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0002.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0003.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0004.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0005.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U398",
+          "uncompressed_bytes": 1720
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0008/y.npz",
+      "bytes": 1291,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0008/ys.npz",
+      "bytes": 8044,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0001.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0002.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0003.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0004.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "array_0005.npy",
+          "shape": [
+            275
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2328
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U398",
+          "uncompressed_bytes": 1720
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0009/image.npz",
+      "bytes": 446632,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            256,
+            256
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 524416
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0009/image_filled.npz",
+      "bytes": 445540,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            256,
+            256
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 524416
+        }
+      ]
+    },
+    {
+      "path": "3_Structure_Characterization/cell-artifacts/cell-0009/mask.npz",
+      "bytes": 816,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            256,
+            256
+          ],
+          "dtype": "bool",
+          "uncompressed_bytes": 65664
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0002/align_parms.npz",
+      "bytes": 63142,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 100128
+        },
+        {
+          "member": "array_0001.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int64",
+          "uncompressed_bytes": 192
+        },
+        {
+          "member": "array_0002.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int32",
+          "uncompressed_bytes": 160
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U439",
+          "uncompressed_bytes": 1884
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0002/coords.npz",
+      "bytes": 227,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int64",
+          "uncompressed_bytes": 192
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0002/frame_view.npz",
+      "bytes": 62166,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 100128
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0002/metric_parms.npz",
+      "bytes": 799,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            2
+          ],
+          "dtype": "int32",
+          "uncompressed_bytes": 136
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U352",
+          "uncompressed_bytes": 1536
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0002/plumes.npz",
+      "bytes": 1493525408,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            387,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 4953600128
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0003/align_parms.npz",
+      "bytes": 62559,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 100128
+        },
+        {
+          "member": "array_0001.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int64",
+          "uncompressed_bytes": 192
+        },
+        {
+          "member": "array_0002.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int32",
+          "uncompressed_bytes": 160
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U439",
+          "uncompressed_bytes": 1884
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0003/coords.npz",
+      "bytes": 227,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int64",
+          "uncompressed_bytes": 192
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0003/frame_view.npz",
+      "bytes": 61582,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 100128
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0003/metric_parms.npz",
+      "bytes": 799,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            2
+          ],
+          "dtype": "int32",
+          "uncompressed_bytes": 136
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U352",
+          "uncompressed_bytes": 1536
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0003/plumes.npz",
+      "bytes": 1469679877,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            385,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 4928000128
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0004/align_parms.npz",
+      "bytes": 62897,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 100128
+        },
+        {
+          "member": "array_0001.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int64",
+          "uncompressed_bytes": 192
+        },
+        {
+          "member": "array_0002.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int32",
+          "uncompressed_bytes": 160
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U439",
+          "uncompressed_bytes": 1884
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0004/coords.npz",
+      "bytes": 230,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int64",
+          "uncompressed_bytes": 192
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0004/frame_view.npz",
+      "bytes": 61918,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 100128
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0004/metric_parms.npz",
+      "bytes": 799,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            2
+          ],
+          "dtype": "int32",
+          "uncompressed_bytes": 136
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U352",
+          "uncompressed_bytes": 1536
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0004/plumes.npz",
+      "bytes": 1442315861,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            376,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 4812800128
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0005/align_parms.npz",
+      "bytes": 62535,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 100128
+        },
+        {
+          "member": "array_0001.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int64",
+          "uncompressed_bytes": 192
+        },
+        {
+          "member": "array_0002.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int32",
+          "uncompressed_bytes": 160
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U439",
+          "uncompressed_bytes": 1884
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0005/coords.npz",
+      "bytes": 230,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int64",
+          "uncompressed_bytes": 192
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0005/frame_view.npz",
+      "bytes": 61555,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 100128
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0005/metric_parms.npz",
+      "bytes": 799,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            2
+          ],
+          "dtype": "int32",
+          "uncompressed_bytes": 136
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U352",
+          "uncompressed_bytes": 1536
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0005/plumes.npz",
+      "bytes": 1475479383,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            384,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 4915200128
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0006/align_parms.npz",
+      "bytes": 61708,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 100128
+        },
+        {
+          "member": "array_0001.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int64",
+          "uncompressed_bytes": 192
+        },
+        {
+          "member": "array_0002.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int32",
+          "uncompressed_bytes": 160
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U439",
+          "uncompressed_bytes": 1884
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0006/coords.npz",
+      "bytes": 230,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int64",
+          "uncompressed_bytes": 192
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0006/frame_view.npz",
+      "bytes": 60729,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 100128
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0006/metric_parms.npz",
+      "bytes": 799,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            2
+          ],
+          "dtype": "int32",
+          "uncompressed_bytes": 136
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U352",
+          "uncompressed_bytes": 1536
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0006/plumes.npz",
+      "bytes": 1107641683,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            288,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 3686400128
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0007/align_parms.npz",
+      "bytes": 58604,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 100128
+        },
+        {
+          "member": "array_0001.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int64",
+          "uncompressed_bytes": 192
+        },
+        {
+          "member": "array_0002.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int32",
+          "uncompressed_bytes": 160
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U441",
+          "uncompressed_bytes": 1892
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0007/coords.npz",
+      "bytes": 230,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int64",
+          "uncompressed_bytes": 192
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0007/frame_view.npz",
+      "bytes": 57621,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 100128
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0007/metric_parms.npz",
+      "bytes": 799,
+      "entries": [
+        {
+          "member": "array_0000.npy",
+          "shape": [
+            2
+          ],
+          "dtype": "int32",
+          "uncompressed_bytes": 136
+        },
+        {
+          "member": "__structure__.npy",
+          "shape": [],
+          "dtype": "<U352",
+          "uncompressed_bytes": 1536
+        }
+      ]
+    },
+    {
+      "path": "4_Plume_Metrics_Extraction/cell-artifacts/cell-0007/plumes.npz",
+      "bytes": 1442045330,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            380,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 4864000128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0002/plumes.npz",
+      "bytes": 1483422964,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            382,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 4889600128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0003/plumes.npz",
+      "bytes": 1483422964,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            382,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 4889600128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0004/plumes.npz",
+      "bytes": 1467831737,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            384,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 4915200128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0005/plumes.npz",
+      "bytes": 1438541096,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            375,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 4800000128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0006/plumes.npz",
+      "bytes": 1471734577,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            383,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 4902400128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0007/plumes.npz",
+      "bytes": 1107641683,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            288,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 3686400128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0008/plumes.npz",
+      "bytes": 1434384247,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            376,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 4812800128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0013/plumes.npz",
+      "bytes": 17198053,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            5,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 64000128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0014/sample_frames.npz",
+      "bytes": 791286,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            17,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 1700128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0015/plumes.npz",
+      "bytes": 3531535,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            1,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 12800128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0015/video_frames.npz",
+      "bytes": 2324765,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            64,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 6400128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0016/plumes.npz",
+      "bytes": 3720409,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            1,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 12800128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0016/video_frames.npz",
+      "bytes": 2370468,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            64,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 6400128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0017/plumes.npz",
+      "bytes": 3706526,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            1,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 12800128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0017/video_frames.npz",
+      "bytes": 2269505,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            64,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 6400128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0018/plumes.npz",
+      "bytes": 3702065,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            1,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 12800128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0018/video_frames.npz",
+      "bytes": 2279966,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            64,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 6400128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0019/plumes.npz",
+      "bytes": 3651735,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            1,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 12800128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0019/video_frames.npz",
+      "bytes": 2301558,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            64,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 6400128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0020/plumes.npz",
+      "bytes": 3441695,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            1,
+            128,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 12800128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0020/video_frames.npz",
+      "bytes": 2242889,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            64,
+            250,
+            400
+          ],
+          "dtype": "uint8",
+          "uncompressed_bytes": 6400128
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0021/coords_standard.npz",
+      "bytes": 229,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            4,
+            2
+          ],
+          "dtype": "int32",
+          "uncompressed_bytes": 160
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0021/plume_distances.npz",
+      "bytes": 254,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            1,
+            128
+          ],
+          "dtype": "int64",
+          "uncompressed_bytes": 1152
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0021/plume_positions.npz",
+      "bytes": 300,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            1,
+            128,
+            2
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 2176
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0021/plume_velocities.npz",
+      "bytes": 255,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            1,
+            128
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 1152
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0021/start_position.npz",
+      "bytes": 211,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            2
+          ],
+          "dtype": "int32",
+          "uncompressed_bytes": 136
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0022/sample_plume_positions.npz",
+      "bytes": 278,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            17,
+            2
+          ],
+          "dtype": "float64",
+          "uncompressed_bytes": 400
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0023/axes.npz",
+      "bytes": 4038611,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            6
+          ],
+          "dtype": "object",
+          "uncompressed_bytes": 14762393
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0024/axes.npz",
+      "bytes": 3951041,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            6
+          ],
+          "dtype": "object",
+          "uncompressed_bytes": 14733846
+        }
+      ]
+    },
+    {
+      "path": "5_Plume_Dynamic_Analysis/cell-artifacts/cell-0025/axes.npz",
+      "bytes": 4342611,
+      "entries": [
+        {
+          "member": "value.npy",
+          "shape": [
+            6
+          ],
+          "dtype": "object",
+          "uncompressed_bytes": 14962179
+        }
+      ]
+    }
+  ],
+  "figure_previews": [
+    {
+      "source": "2_PLD_Experiment_Design_and_Target_Microscopy/outputs/figures/FigureS2-TargetMicroscopy-Maps.png",
+      "preview": "quality-review/2-FigureS2-TargetMicroscopy-Maps.jpg"
+    },
+    {
+      "source": "3_Structure_Characterization/outputs/figures/Figure2-XRD_RSM-nolabel.png",
+      "preview": "quality-review/3-Figure2-XRD_RSM-nolabel.jpg"
+    },
+    {
+      "source": "3_Structure_Characterization/outputs/figures/Figure2-XRD_RSM.png",
+      "preview": "quality-review/3-Figure2-XRD_RSM.jpg"
+    },
+    {
+      "source": "3_Structure_Characterization/outputs/figures/Figure3-AFM_10um.tif",
+      "preview": "quality-review/3-Figure3-AFM_10um.jpg"
+    },
+    {
+      "source": "3_Structure_Characterization/outputs/figures/FigureS3-XRD_RSM.png",
+      "preview": "quality-review/3-FigureS3-XRD_RSM.jpg"
+    },
+    {
+      "source": "3_Structure_Characterization/outputs/figures/FigureS4-AFM_5um_lineprofile.tif",
+      "preview": "quality-review/3-FigureS4-AFM_5um_lineprofile.jpg"
+    },
+    {
+      "source": "5_Plume_Dynamic_Analysis/outputs/figures/Extra-Plume_Sample_Frames-G1-short.tif",
+      "preview": "quality-review/5-Extra-Plume_Sample_Frames-G1-short.jpg"
+    },
+    {
+      "source": "5_Plume_Dynamic_Analysis/outputs/figures/Figure4-Plume_area_distance_velocity_average.png",
+      "preview": "quality-review/5-Figure4-Plume_area_distance_velocity_average.jpg"
+    },
+    {
+      "source": "5_Plume_Dynamic_Analysis/outputs/figures/FigureS10-Plume_Sample_Frames-G5.tif",
+      "preview": "quality-review/5-FigureS10-Plume_Sample_Frames-G5.jpg"
+    },
+    {
+      "source": "5_Plume_Dynamic_Analysis/outputs/figures/FigureS11-Plume_Sample_Frames-C_G6.tif",
+      "preview": "quality-review/5-FigureS11-Plume_Sample_Frames-C_G6.jpg"
+    },
+    {
+      "source": "5_Plume_Dynamic_Analysis/outputs/figures/FigureS13-Plume_area_history.tif",
+      "preview": "quality-review/5-FigureS13-Plume_area_history.jpg"
+    },
+    {
+      "source": "5_Plume_Dynamic_Analysis/outputs/figures/FigureS14-Plume_distance_history.tif",
+      "preview": "quality-review/5-FigureS14-Plume_distance_history.jpg"
+    },
+    {
+      "source": "5_Plume_Dynamic_Analysis/outputs/figures/FigureS15-Plume_velocity_history.tif",
+      "preview": "quality-review/5-FigureS15-Plume_velocity_history.jpg"
+    },
+    {
+      "source": "5_Plume_Dynamic_Analysis/outputs/figures/FigureS6-Plume_Sample_Frames-G1.tif",
+      "preview": "quality-review/5-FigureS6-Plume_Sample_Frames-G1.jpg"
+    },
+    {
+      "source": "5_Plume_Dynamic_Analysis/outputs/figures/FigureS7-Plume_Sample_Frames-G2.tif",
+      "preview": "quality-review/5-FigureS7-Plume_Sample_Frames-G2.jpg"
+    },
+    {
+      "source": "5_Plume_Dynamic_Analysis/outputs/figures/FigureS8-Plume_Sample_Frames-G3.tif",
+      "preview": "quality-review/5-FigureS8-Plume_Sample_Frames-G3.jpg"
+    },
+    {
+      "source": "5_Plume_Dynamic_Analysis/outputs/figures/FigureS9-Plume_Sample_Frames-G4.tif",
+      "preview": "quality-review/5-FigureS9-Plume_Sample_Frames-G4.jpg"
+    },
+    {
+      "source": "6_Target_Temporal_Variation/outputs/figures/Figure5-Temporal_Spatial_variation-violinplot_heatmaps.tif",
+      "preview": "quality-review/6-Figure5-Temporal_Spatial_variation-violinplot_heatmaps.jpg"
+    },
+    {
+      "source": "6_Target_Temporal_Variation/outputs/figures/Figure5-Temporal_variation-violinplot_heatmaps.png",
+      "preview": "quality-review/6-Figure5-Temporal_variation-violinplot_heatmaps.jpg"
+    },
+    {
+      "source": "7_Target_Spatial_Inhomogeneity/outputs/figures/Figure6-Spatial_inhomogeneity_combined.tif",
+      "preview": "quality-review/7-Figure6-Spatial_inhomogeneity_combined.jpg"
+    }
+  ],
+  "figure_visual_review": {
+    "passed": true,
+    "reviewed_exported_figures": 20,
+    "method": "Viewed four contact sheets of all exported PNG/TIFF figures, including XRD composite, AFM, six sample grids, Figure4, temporal and spatial panels. Panels contain data and retain their composed layouts."
+  }
+}

@@ -70,6 +70,10 @@ def bootstrap(name, bundle):
         shutil.copyfile(current_notebook, REPO_ROOT / 'notebooks' / NOTEBOOK_NAME)
         sys.path.insert(0, str(REPO_ROOT))
         os.chdir(REPO_ROOT)
+        # Runtime compatibility is part of the immutable published source.
+        sys.path.insert(0, str(REPO_ROOT / 'src'))
+        from sro_sto_plume.runtime_compat import configure_notebook_runtime
+        print('Notebook runtime:', configure_notebook_runtime(REPO_ROOT, NOTEBOOK_NAME))
         print('Verified notebook source workspace:', REPO_ROOT)
         ''').replace('BUNDLE_ASSET', repr(bundle['asset_id'])).replace(
             'BUNDLE_CONTENT', repr(bundle['content_id'])).replace(
@@ -171,7 +175,12 @@ def publish():
             notebook.metadata['kernelspec'] = {'display_name': 'Python 3 (SrRuO3 Dataerai)',
                                                'language': 'python', 'name': 'python3'}
             notebook.metadata['dataerai'] = {'project_id': PROJECT_ID, 'source_bundle': source,
-                                              'environment': environment}
+                'environment': environment, 'runtime_compatibility': {
+                    'daemon_log_drain': True, 'xrd_axes_adapter': True,
+                    'parent_axes_layout': True, 'inline_output_capture': True,
+                    'provenance_npz_compression_level': 1,
+                    'disk_backed_arrays': path.name.startswith(('4_', '5_'))}}
+
             target = folder / path.name
             nbformat.write(notebook, target)
             published = upload('notebooks/' + path.name, target, base_collection, 'jupyter_notebook')

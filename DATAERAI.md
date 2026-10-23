@@ -106,8 +106,11 @@ with connect_client() as client:
     pin_project_inputs(Path.cwd(), client)
 ```
 
-Review and commit the new catalogue. Notebook runs do not silently follow a
-mutable latest data version.
+Review and commit the new catalogue. If a corrected upload is a separate asset
+with the same filename, pass `asset_overrides={'Plumes/G2.h5': 'verified-asset-uuid'}`
+to `pin_project_inputs`. Ambiguous filenames stop refresh unless explicitly
+resolved. The catalogue retains the superseded asset IDs for audit. Notebook
+runs do not silently follow a mutable latest data version.
 
 ## Saved provenance
 
@@ -150,3 +153,59 @@ environment. It resumes previous assets rather than duplicating successful
 uploads. `preservation/notebook-publication.json` records publication IDs and
 server environment resolution. `preservation/project-validation.json` records
 live evidence and the extent of scientific execution actually performed.
+
+
+## Published runtime and local storage
+
+The published bootstrap activates the versioned runtime helpers for inline
+Matplotlib output, SDK transfer-log draining, compatibility with the pinned
+XRD/layout APIs, and disk-backed large plume arrays. These change execution
+support, not the original scientific cells. The declared environment includes
+`imageio-ffmpeg==0.6.0`; notebook 5 resolves its packaged binary automatically.
+
+For batch validation, an optional `SRRUO3_SHARED_CACHE` points to a checksum-
+addressed cache. An empty cache is populated only from pinned Dataerai assets.
+Each run keeps independent working inputs. After its remote completion,
+executed-notebook checksum and provenance are verified, derived local raw
+working copies can be removed while keeping receipts and outputs. Keep one
+verified cache during execution instead of retaining repeated 32 GB workspaces.
+
+Deleting a local download or derived working copy does not delete its server
+asset. Before removing all local project material, confirm that raw inputs,
+output content, source bundles, environments and successful run receipts are
+available remotely, and that intended source changes are committed and pushed
+to GitHub. A server content checksum verifies bytes, not HDF5 readability;
+validate the required datasets as well. These checks establish reproducibility,
+not an independent backup policy for the remote repository.
+
+## Verified complete campaign (2026-10-23 UTC)
+
+All nine published notebooks (0, 00, 1–7) passed without scientific-cell
+exclusions, starting with an empty download cache and using only pinned
+DataERAI inputs, source and notebook assets. Computation took place in Ubuntu
+WSL; DataERAI supplies and preserves the assets, resolved environment definition
+and provenance records. This does not assert that computation was hosted by
+the DataERAI server.
+
+The immutable aggregate validation asset is
+`b8459e89-f908-4393-af21-3802bd88348e`, content
+`34352dea-9863-42c1-aa0b-5b133c619721`. The reusable campaign index asset is
+`208f2529-1d95-4840-ac09-0bf2200a8164`. Both were downloaded again and verified.
+See `preservation/campaign-20261023/` for the nine exact run IDs, base/source/
+environment versions, corrected G2/G4 content pins and final publication receipt.
+
+Final audit confirmed all 419 output assets are available and their repository
+checksums match local bytes; all six MP4s decode completely; six new metrics
+CSVs contain data; 86 NPZ archives retain typed array shapes; twenty exported
+figure layouts were visually reviewed. Array-header and rendering checks do
+not constitute scientific peer review. The original 209 cells, including 65
+code cells and 236 stored historical outputs, remain unchanged against the
+pinned upstream baseline. Earlier partial/failed receipts remain history.
+
+To reuse results, download the saved executed notebook, CSV/NPZ assets or
+figure/video assets identified by the index. To rerun, use the published base
+notebook and its resolved environment; keep exact content pins. After remote
+verification and GitHub synchronization, rebuildable local caches, environments
+and isolated workspaces are optional. Retain an independent original-recording
+backup away from C: if the server's independent backup policy is not established;
+GitHub contains code and manifests, not a second copy of the raw recordings.

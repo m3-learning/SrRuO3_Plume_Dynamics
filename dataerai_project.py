@@ -111,16 +111,29 @@ def _relative(path):
     return path
 
 
-def pin_project_inputs(root, client, *, rest=None):
+def pin_project_inputs(root, client, *, rest=None, asset_overrides=None):
     """Record exact native content versions and repository-verified checksums."""
     from dataerai.rest import RestClient
     from dataerai_preservation import write_json
     preflight(client, require_write=False, rest=rest)
     manifest = client.get_collection_manifest(ROOT_COLLECTION_ID)
-    files, paths, unavailable = [], set(), []
+    files, paths, unavailable, superseded = [], set(), [], []
+    asset_overrides = asset_overrides or {}
+    selected_overrides = set()
     with nullcontext(rest) if rest is not None else RestClient() as api:
         for entry in manifest.files:
-            relative = _relative(entry.relative_path)
+            # Collection manifests add stable ID suffixes to disambiguate names.
+            # Keep experiment folder names and use the asset's original filename.
+            parts = Path(_relative(entry.relative_path)).parts
+            folders = [re.sub(r'--c[0-9a-f]{32}$', '', part) for part in parts[:-1]]
+            relative = _relative('/'.join([*folders, entry.filename]))
+            preferred = asset_overrides.get(relative)
+            if preferred and entry.asset_id != preferred:
+                superseded.append({'path': relative, 'asset_id': entry.asset_id,
+                                   'reason': 'Explicitly superseded by the verified replacement asset.'})
+                continue
+            if preferred:
+                selected_overrides.add(relative)
             # Published notebook workspaces must never become raw-data inputs.
             if relative.split('/')[0] not in {'AFM', 'TargetMicroscopy', 'XRD_RSM', 'Plumes'}:
                 continue
@@ -150,13 +163,16 @@ def pin_project_inputs(root, client, *, rest=None):
             files.append({'path': relative, 'filename': entry.filename,
                           'asset_id': entry.asset_id, 'did': asset.get('did'),
                           'content_id': content['id'], 'size_bytes': item['size'], 'checksum': checksum})
+    if set(asset_overrides) != selected_overrides:
+        raise FileNotFoundError('Requested replacement assets are absent from the collection manifest.')
     recordings = {f['path'] for f in files if f['path'].endswith('.h5')}
     expected = {f'Plumes/{sample}.h5' for sample in SAMPLE_NAMES.values()}
     if not expected <= recordings:
         raise FileNotFoundError(f'Missing raw recordings: {sorted(expected - recordings)}')
     result = {'schema': 'org.dataerai.srruo3-project-inputs/v1', 'server': SERVER,
               'project_id': PROJECT_ID, 'root_collection_id': ROOT_COLLECTION_ID,
-              'files': sorted(files, key=lambda f: f['path']), 'unavailable_files': unavailable}
+              'files': sorted(files, key=lambda f: f['path']), 'unavailable_files': unavailable,
+              'asset_overrides': asset_overrides, 'superseded_files': superseded}
     write_json(Path(root) / 'preservation/project-inputs.json', result)
     return result
 

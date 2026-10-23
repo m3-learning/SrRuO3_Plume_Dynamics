@@ -1,0 +1,26 @@
+{
+  "reusable-campaign-index.json": {
+    "asset_id": "208f2529-1d95-4840-ac09-0bf2200a8164",
+    "content_id": "dc1a5982-10fa-41ca-b8bb-5ed7ef8d26b1",
+    "sha256": "7beae5456e4d9b1128b09d55fc733a844787d902637f67ce465deff18f2d2f9d",
+    "remote_download_verified": true
+  },
+  "remote-output-inventory.json": {
+    "asset_id": "0f98d473-b433-487c-9608-3988a38abce2",
+    "content_id": "73641cb1-54fd-4fc0-a7e7-3d078f780a68",
+    "sha256": "d783ca24347bff0d3deb09cbe7f2ad4bea715a4e462d7428a95f738cceb7b221",
+    "remote_download_verified": true
+  },
+  "local-quality-review.json": {
+    "asset_id": "82ac13a1-fb8a-49eb-ac07-152e20e7798a",
+    "content_id": "c4af9765-9c18-4db7-8cbc-fb8ed911fdaa",
+    "sha256": "ea8d2068b0927bfe87d37a6ba4c7fe6a898af48381cd3651ad9d7338589bb677",
+    "remote_download_verified": true
+  },
+  "srruo3-review-package.zip": {
+    "asset_id": "578219f5-0d51-427a-994f-c3674ce7d23a",
+    "content_id": "a76f8cd9-e780-4d89-8887-a1b881374596",
+    "sha256": "2ceabd41fe5c79871f5e07165d594246008cb488ac16dd2c509f460acb0eb8c6",
+    "remote_download_verified": true
+  }
+}

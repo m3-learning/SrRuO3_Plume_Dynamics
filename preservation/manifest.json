@@ -3360,40 +3360,36 @@
       "verified_download": true
     },
     "code-and-notebooks": {
-      "filename": "code-and-notebooks-7c26f1c88f703a7a.tar.gz",
-      "sha256": "28d84c94501bb437f0496a399c8286e987ea0123e79f1ae6f4d83cebaaec496d",
-      "size_bytes": 111863959,
-      "file_count": 224,
-      "asset_id": "7f3ad939-c44a-4c0e-8e5d-b24d767dbc39",
-      "content_id": "05aae502-cfbf-436c-92d7-44fbf33eb363",
-      "verified_download": true
+      "asset_id": "6c4e9537-124d-419e-9935-848dfbe0b08e",
+      "content_id": "7bdacc40-93f8-469f-8d10-c9108cd4003f",
+      "sha256": "bb737d1b20cdf7989346be2db4e8bac8877a1c88c92cf9fa10ab6f7d14187e27",
+      "filename": "code-and-notebooks-recovered.tar.gz",
+      "size_bytes": 111849954,
+      "file_count": 224
     },
     "figures": {
-      "filename": "figures-9d915b1c753d98aa.tar.gz",
-      "sha256": "563ad78e3cba3f1cd11c75ea3d05c324b283d10ef6ba8e3d1f04e761b4d15307",
-      "size_bytes": 299477919,
-      "file_count": 70,
-      "asset_id": "620f2f64-4bb3-4a53-8566-2ff370ad2a42",
-      "content_id": "7bb5559a-94ae-462f-935f-1d81d13715a4",
-      "verified_download": true
+      "asset_id": "21640d94-ee6f-4ceb-830f-b0be75576b2c",
+      "content_id": "c8406dcb-7efe-4270-924a-e7fefb12f37b",
+      "sha256": "005b9dd343335fbee71de608911a3ae5d516881dceece0f618b90fb833741b2a",
+      "filename": "figures-recovered.tar.gz",
+      "size_bytes": 299473016,
+      "file_count": 70
     },
     "plume-metrics": {
-      "filename": "plume-metrics-8fb71e5cbe093602.tar.gz",
-      "sha256": "057d0ccb972918282a91ece5f0d83f894c9cadedf501a652052ec1383caf5c66",
-      "size_bytes": 4610923,
-      "file_count": 13,
-      "asset_id": "192b33f1-fd99-4700-a0f9-23c47bf57c0e",
-      "content_id": "5a7b496f-12c3-40f7-86cf-f0da25d2f2da",
-      "verified_download": true
+      "asset_id": "663b478e-5e33-42eb-af9b-38f19ad5b1ff",
+      "content_id": "1cf8bab7-e309-4782-85d8-77135b263c5b",
+      "sha256": "a87e9b4a0d925a54d78cdb2990e7f15a7f02a7ca7a03feae1c947dd416b0b882",
+      "filename": "plume-metrics-recovered.tar.gz",
+      "size_bytes": 4609843,
+      "file_count": 13
     },
     "study-data": {
-      "filename": "study-data-eb5305c4a30c49ee.tar.gz",
-      "sha256": "847ff71ee89ac6b0895c73f439e475e4e9665a8c5ba88223d4234b30526ee45c",
-      "size_bytes": 7710,
-      "file_count": 1,
-      "asset_id": "d5e9b18c-c0a2-483f-9add-03adedea034b",
-      "content_id": "6535c6bb-86fc-4fac-bfe9-fad0b70f1023",
-      "verified_download": true
+      "asset_id": "ad7ea666-519d-4fe5-9b30-9e5ad498f2c5",
+      "content_id": "ab970e00-2c6d-4612-8c5f-1cdbd7422e1f",
+      "sha256": "547e622ae389ea0b2a7aff23167161a2068556161feb0fd025f37a43e7ac3b1c",
+      "filename": "study-data-recovered.tar.gz",
+      "size_bytes": 7591,
+      "file_count": 1
     },
     "target-microscopy": {
       "filename": "target-microscopy-b1ded49a9a1582c3.tar.gz",
@@ -3422,5 +3418,1590 @@
     "key_results_asset_id": "01849dca-3880-4dc1-ba30-1079e718e5c5",
     "catalogue_asset_id": "2f650b40-c278-4591-9af4-626e788973da",
     "catalogue_content_id": "a8e39102-1a6c-4f48-ac1e-7138b32d800c"
+  },
+  "historical_recovery": {
+    "schema": "org.dataerai.srruo3-input-recovery/v1",
+    "reason": "Original pinned archives are inaccessible (404).",
+    "original_bundles": {
+      "study-data": {
+        "filename": "study-data-eb5305c4a30c49ee.tar.gz",
+        "sha256": "847ff71ee89ac6b0895c73f439e475e4e9665a8c5ba88223d4234b30526ee45c",
+        "size_bytes": 7710,
+        "file_count": 1,
+        "asset_id": "d5e9b18c-c0a2-483f-9add-03adedea034b",
+        "content_id": "6535c6bb-86fc-4fac-bfe9-fad0b70f1023",
+        "verified_download": true
+      },
+      "plume-metrics": {
+        "filename": "plume-metrics-8fb71e5cbe093602.tar.gz",
+        "sha256": "057d0ccb972918282a91ece5f0d83f894c9cadedf501a652052ec1383caf5c66",
+        "size_bytes": 4610923,
+        "file_count": 13,
+        "asset_id": "192b33f1-fd99-4700-a0f9-23c47bf57c0e",
+        "content_id": "5a7b496f-12c3-40f7-86cf-f0da25d2f2da",
+        "verified_download": true
+      },
+      "figures": {
+        "filename": "figures-9d915b1c753d98aa.tar.gz",
+        "sha256": "563ad78e3cba3f1cd11c75ea3d05c324b283d10ef6ba8e3d1f04e761b4d15307",
+        "size_bytes": 299477919,
+        "file_count": 70,
+        "asset_id": "620f2f64-4bb3-4a53-8566-2ff370ad2a42",
+        "content_id": "7bb5559a-94ae-462f-935f-1d81d13715a4",
+        "verified_download": true
+      },
+      "code-and-notebooks": {
+        "filename": "code-and-notebooks-7c26f1c88f703a7a.tar.gz",
+        "sha256": "28d84c94501bb437f0496a399c8286e987ea0123e79f1ae6f4d83cebaaec496d",
+        "size_bytes": 111863959,
+        "file_count": 224,
+        "asset_id": "7f3ad939-c44a-4c0e-8e5d-b24d767dbc39",
+        "content_id": "05aae502-cfbf-436c-92d7-44fbf33eb363",
+        "verified_download": true
+      }
+    },
+    "verified_git_files": {
+      ".gitmodules": {
+        "git_blob": "8b24d4e5de992c78744fcffe55550be7dd72728f",
+        "sha256": "26b9923a08febf3940e9641becae3ed53670f2627dc136274fd4a28af57e0116",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/.doctrees/environment.pickle": {
+        "git_blob": "77befb01b3f2143ea8189fa02c344c7816076b7c",
+        "sha256": "d47effa070e93af0e04c438f73584756ec25329a0946ff8ae662cff199b36a90",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/.doctrees/intro.doctree": {
+        "git_blob": "4415dfeebd490f206b8ca6803773cfe836675b11",
+        "sha256": "b59acfb2399ec9e07fc738518d1c9fe68dee03d31e1cbaa2e43e14cf5da3452d",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/.doctrees/manuscript.doctree": {
+        "git_blob": "75c540fcefb185e61427e8c0f5a23e88348a9ff3",
+        "sha256": "bc4ca984e0b2122b6d4b5db763742a49d2e1a3b373c83fb6b19419aa71a2c852",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/.doctrees/supplemental-test.doctree": {
+        "git_blob": "aa17adf33ff434e78ca9e9581ec26a03c8707fea",
+        "sha256": "9172a38470470f4f6b9eeac9592ba2141ebc23b23ed893d715746ee5e91e6be6",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/.buildinfo": {
+        "git_blob": "5f78aeee32a62e9350fdace8b70ef41da57c42b1",
+        "sha256": "6ef1a15ec3434cc53c04baf60e8e6ada38838813479b9de2db6568dbeefcdd80",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_images/Figure1-Samples_experiment_setup.png": {
+        "git_blob": "62d4d382b12419a2c94429b0d0a3f7b798715eec",
+        "sha256": "7e88a94f9a95de7d3a3b9ce3cc3073f9e2a487f3607a2f479972271b2d31ef40",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_images/Figure2-XRD_RSM.png": {
+        "git_blob": "a535114e84f01e0ae08318c23238b39e5e143319",
+        "sha256": "7c0f572f4cec76112d2201eccd46c0abe263aeb1c7adbb08c06f2ee4b2bf379e",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_images/Figure3-AFM_10um.png": {
+        "git_blob": "54e1065f7a7afb10114246129d9483b439db2bd3",
+        "sha256": "0a46c463f3c114f7026e5adbdf514b2a7037cc50a1193ceff29e203dc788b987",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_images/Figure4-Plume_area_distance_velocity_average.png": {
+        "git_blob": "6255ae70bd4d4caf409de6665f2ac4b2c33e0628",
+        "sha256": "f20def528248510a44f3ec21337c11e8149a64a0e82676d4840a0e5b1a935a86",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_images/Figure5-Temporal_variation-violinplot_heatmaps.png": {
+        "git_blob": "d8e85dc8650c2291843728ff3ece4ae50993148e",
+        "sha256": "ea8e7017b287bd8d359028c336f964e398514dabe3afd8ff9cce122af19a81d6",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_images/Figure6-Spatial_inhomogeneity_combined.png": {
+        "git_blob": "fd271429c4e0bc015a100f578292a2b1fce5d705",
+        "sha256": "3a77bfaebfa34660ec22c30b5e9c87a45927b999579d5c5ba34e0383b8e859ef",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_images/FigureS1-AFM_5um_lineprofile.png": {
+        "git_blob": "7179010126660e1f323a6541e00e930bab2bf3c0",
+        "sha256": "6c5778c43f818765e0d98e541e85c52f79b27d29507c0a884e92e7ab16e32b4c",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_images/FigureS10-Plume_distance_history.png": {
+        "git_blob": "55acfcc128701551a9ac30d132ca1147b8e1ae38",
+        "sha256": "e40988ccae6be8079988ed300949842d8e67c29b201638421ce71ec10e1c74d5",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_images/FigureS11-Plume_velocity_history.png": {
+        "git_blob": "481f87af764f2ee5cf6bb22bc808ab7afab6086e",
+        "sha256": "fde5f963cb39ba916eaf54de5c250a83baa28386477166b63c43b34f1b03e532",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_images/FigureS2-PLD_logging.png": {
+        "git_blob": "107b12460bc619a1ff51f382150509f514fd2267",
+        "sha256": "53ba5d1f06b949c7f0505c782d66e8ab371ed3f4d89f18748a9dfcb3ea33f526",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_images/FigureS3-Plume_Sample_Frames-G1.png": {
+        "git_blob": "670af6476883d8a75cb5be1e7a148b75423f20b6",
+        "sha256": "424d070e38ac9782b67f3a92e947f280b0cc9d9462dcb9bb96d84ffce6c5e346",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_images/FigureS4-Plume_Sample_Frames-G2.png": {
+        "git_blob": "49e68bb8e47409ca3ac00c4bf8109949c273a590",
+        "sha256": "e9884d54102d34029049166d88b873272f33557404c38d2363ebcb1df08a44a4",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_images/FigureS5-Plume_Sample_Frames-G3.png": {
+        "git_blob": "046f85ee8ec6a3167d153395af906d216d3f6196",
+        "sha256": "bb43f7fbd27abc1f255b48ddf5a3cff7b07b3f9e488adf0ba355c1608546a826",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_images/FigureS6-Plume_Sample_Frames-G4.png": {
+        "git_blob": "9d50ed338352c219c07dccd4a15a5212fd8c86cb",
+        "sha256": "377f224d6e39dcbf549630ff4f1235af430d708e9db6c6a3e52a813e4f2f2b32",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_images/FigureS7-Plume_Sample_Frames-G5.png": {
+        "git_blob": "7083295ea8219e11c6e8528028195e43bd6ffeb0",
+        "sha256": "a6c453230dbd7b2a2539b09992e305df196379be0976446788f37c1638294f2c",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_images/FigureS8-Plume_Sample_Frames-C_G6.png": {
+        "git_blob": "02ed8f37c55c0d705bf63c3141df8b1356b53919",
+        "sha256": "7e3b1ceec03175d73a7e3b94b7a6df980bcc4e4aec6c24ebcd222e00801e6b7d",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_images/FigureS9-Plume_area_history.png": {
+        "git_blob": "dc80b4ee401f40a2e7c1aa529a53bf7868e3f613",
+        "sha256": "a0c0bb51c86162f1580bde2c440d688f8853fef00e76b6ef8343bb553133dece",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_sources/intro.md": {
+        "git_blob": "daff05e3a860d8803e01956dabefe5aaab6dee0b",
+        "sha256": "1745b3a0a8303975513707cf0cc2bbc9719f48d281c084acf6fa5e8851ec969b",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_sphinx_design_static/design-tabs.js": {
+        "git_blob": "2952d2e204a3e4e0f0dc14f24ffe2b7ba9b7dd75",
+        "sha256": "daca86e37c696ad56966f2b7128dbd0cc9910c1c2eba510b50e633d220ae704f",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_sphinx_design_static/sphinx-design.min.css": {
+        "git_blob": "173af9457eca2e3d00482a865f89567738dd6fb4",
+        "sha256": "952b9e6af61904e4234c45cd743e1360dce7d7fad8a29116e3eb1358d15473b9",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/basic.css": {
+        "git_blob": "4c6d6e290100adf03ada4c57c02e3b59140faf51",
+        "sha256": "28c8cc041d441eb93a4903382b2b04c122d59884458ade497d7b4ec015714dd2",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/check-solid.svg": {
+        "git_blob": "70f7f78160c0864fdaf792065796fa62bfc8e93e",
+        "sha256": "737293f19c304f16974aec7b94a86d406587c8add5c9ea1b65da275680edb72a",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/clipboard.min.js": {
+        "git_blob": "f0f8466f7002d253c1e4b443a4ce4e758b731ddb",
+        "sha256": "b431aed430ef7327266efabb54330de60001047f4a261547defc85280925984a",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/copy-button.svg": {
+        "git_blob": "c03b6caab31d4e7985f18f80b72596cfa58057ce",
+        "sha256": "ed4c3f572a1859d1852558bdc87acaa119519e3ae30ed3b2372236ddcd937549",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/copybutton.css": {
+        "git_blob": "689cd928660d312917aa893984d61e6db2160ade",
+        "sha256": "796fffc69f5fd764a7a030167cdced3f6a26500459b7c31da3c11060fae37a18",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/copybutton.js": {
+        "git_blob": "f4ec4edcc3c3308e5000085353d48d0af8f78a6a",
+        "sha256": "8088e4d4b4bb28e9707737a4101fb7797bff57708400b30904c147c20ba8828e",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/copybutton_funcs.js": {
+        "git_blob": "ccb9fe81f4621d53cbfc4568dc51cf6197f1c4ed",
+        "sha256": "5e798a0da050711bf041762e0dafa42ac9e35752eb7812d9e740bfea58764cf9",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/custom.css": {
+        "git_blob": "276f7f6520d029ff0d1b29c07dad3a1a9eb9b76b",
+        "sha256": "a4111a4b112977fbe35cd818e47ddf4682b07d6c17682c6566839c5a64edbe5b",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/doctools.js": {
+        "git_blob": "1e004aa559fca8e5a36817a9bb187191942f745d",
+        "sha256": "333677644f463fbc7e3d53bf56095311b3e15b1c981c5bccf2d95f61b9639721",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/documentation_options.js": {
+        "git_blob": "7c6e6d226bb76b1298060702b346078022b918ca",
+        "sha256": "d97fa49b84dabc1fa69cf1bdffc3dc7d6e503bffe570b4b56e5bbfa103e2efb6",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/drexel-dragon-all_blue.png": {
+        "git_blob": "b04d3ece9729877ba3dbd024a8ba5c13a0b969db",
+        "sha256": "fedc8615d77547803389ced4534db06199774022bc6654f1527f3b9b563c23ef",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/drexel-dragon-all_gold.png": {
+        "git_blob": "1d8db8d96802adda7a61fc4a5592d1d2e07b5393",
+        "sha256": "12fcd8dbe55f7ac72ff597c259d6299ca8dcfec87b7dc74b58b6f75f1b46c08d",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/file.png": {
+        "git_blob": "a858a410e4faa62ce324d814e4b816fff83a6fb3",
+        "sha256": "5c4bc9a16aebf38c4b950f59b8e501ca36495328cb9eb622218bce9064a35e3e",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/fonts/AxiaBlack-Regular.otf": {
+        "git_blob": "42935dd5d22c19e00bb962d582afc76c44f35d04",
+        "sha256": "f8ffdce158f5e8c830244bdf9e7fd6c1de1ade854c7a5c20c48405ac61384b89",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/fonts/DINosaur_Medium.otf": {
+        "git_blob": "edf8bf404646f630d98fc0113c7ea05ef591afa0",
+        "sha256": "fe15173a4b2481bf141ddc54e6badf2d23d0891c9e673572f18de5d375066a91",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/fonts/FiraCode-Regular.ttf": {
+        "git_blob": "b8a44d2db0a18c12d7cf03c3763ef23991c3b5ab",
+        "sha256": "30844063c7df17f9af4a294360e492e956c8f29573d4a923353abc403badf99c",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/fonts/Interstate.woff": {
+        "git_blob": "9f773c6d63cb145130eeb765acc20fe2676f1bb9",
+        "sha256": "fa15058735cfa93e01723d482927ef52f6168d8a4566a41aa91f1a1bf43188d8",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/fonts/Interstate.woff2": {
+        "git_blob": "fa738b59088ffced64e8dd143e27c7d6ab3513c2",
+        "sha256": "2a29a61c60ed927573d241bd5adcc04aced9b89bb2b07593c50863e5e0bd6b1a",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/fonts/NavigoMedium.woff": {
+        "git_blob": "9908290da6666dbf8764eff30538654f0f3402ad",
+        "sha256": "39f96d0fc38cd4d251e2f90f91ba8e8a8effdb966d90dee2bef85a8c2e5f27b6",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/fonts/NavigoMedium.woff2": {
+        "git_blob": "eb75586f6e3cd151d093e72fc2ca3ca2ab06e240",
+        "sha256": "a1826bb24ab78dc5a5ce87522838bf667609fada4cc99924f748c5c1a63d4141",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/fonts/Verdana-Bold.ttf": {
+        "git_blob": "caecbf8bcb2b0d9dd7d88bda651a1fa832df30e4",
+        "sha256": "4b0e22422bdcb925bce4516991474cb0575e4b301304618eade3be4868566524",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/fonts/Verdana-BoldItalic.ttf": {
+        "git_blob": "e0b3cb1093ed5a6b2f0df46381f680b4dda755e7",
+        "sha256": "f844643741f663ffa784b233ce48ffa4034e80f0d25c71b223fcd55732e8db3d",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/fonts/Verdana-Italic.ttf": {
+        "git_blob": "2e2ec543f066a4d9a72ff41dfb3f455ca4b2954b",
+        "sha256": "6bf24b4932b91056cf467e45562f7c7fd2b0754321a7e710cc1818b20da60200",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/fonts/Verdana.ttf": {
+        "git_blob": "bbf2eae7bf765f86b7421a4f79a09adbb179f4bb",
+        "sha256": "50d20e0413026bb12d794659ee7834375cd99c45603775f1e05b25204980ccc8",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/images/logo_binder.svg": {
+        "git_blob": "16390ee417be9ce290da0bf878b8becf9952bf76",
+        "sha256": "17850f29281e6220bb4e954bf14389d6efb7ba89740f8165ced959cbee07a30b",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/images/logo_colab.png": {
+        "git_blob": "b7560ec216b2d1b6f77855525fe966c741833428",
+        "sha256": "68bbb664c58b203e20451c63ec3991bc9a71ccda3f1025e394dc569a20bd2cf9",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/images/logo_deepnote.svg": {
+        "git_blob": "fefe3ff1137594b85046b7955fd36ce1aba34f7b",
+        "sha256": "ad0b3fa5e86e7b87f06a4af940f31dcaf521904e941677dd042263410c3c28bc",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/images/logo_jupyterhub.svg": {
+        "git_blob": "e63466b9c57d371acf824aa9fcfc53719db05dbe",
+        "sha256": "da212df5434cb89606503520f008acb8eefcec45bebf6e7f8d78d864a3916713",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/language_data.js": {
+        "git_blob": "fd5e0d743045c7c0516dcdd5aa4b334ac7380660",
+        "sha256": "9b62208b95808374fd3ccbab505ab556ae8ee92768b86f6c82dccfbc1d5a08af",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/ar/LC_MESSAGES/booktheme.po": {
+        "git_blob": "54a2fafbcb0e30a12de5574d159d152d8a042614",
+        "sha256": "8464d55f751eb34f0ac768b728ef75cb83fa4a38e7fa56e734317306b8092d23",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/bg/LC_MESSAGES/booktheme.po": {
+        "git_blob": "343eb0d03344158c56f38df51a5694c27bb72fb2",
+        "sha256": "65b07a92d9d1f194464221bd3d4787569d71394d0ca4e79d7f184f9fd8a31bf6",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/bn/LC_MESSAGES/booktheme.po": {
+        "git_blob": "5b0c8bae773529639ea0948b6dc4e5c11ed17db4",
+        "sha256": "68eb77210cbda08e9a278da316a7373f45f0291d960c0a923b20b6bf44ae646c",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/ca/LC_MESSAGES/booktheme.po": {
+        "git_blob": "4f76adb9f6d9741a5ce5376922b6ebe1e6786385",
+        "sha256": "aa29146ecaa37b4c53d6110ffe4de61108bcc90c3a41a1b1f259105a0b1707fb",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/cs/LC_MESSAGES/booktheme.po": {
+        "git_blob": "355fe326046463b7522691183173fa81a6fb70f6",
+        "sha256": "e7cb19d23f641cc2a2799d6137d28eb8b982fb786f68ca427656dfb4b05ef894",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/da/LC_MESSAGES/booktheme.po": {
+        "git_blob": "da1a7eaec39ea6c2dda7a84d732343df809848c0",
+        "sha256": "f7736c73f7c9f1034e9e4d1b04907a9c16a145cf8990088749afd25964e4a0df",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/de/LC_MESSAGES/booktheme.po": {
+        "git_blob": "2fe50c877a7378fde9d1224559e73ce6180bc858",
+        "sha256": "88d19da87e2272d4f831c14a2b013ce4a0b4c785878b55155aa04352eafe4d4b",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/el/LC_MESSAGES/booktheme.po": {
+        "git_blob": "40014323c097ebbce4768af317fd0b0ed5242378",
+        "sha256": "17c8262d4c52a8a734dad52f932de17ba5480285bc7b691b6e2c6b777504ead8",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/eo/LC_MESSAGES/booktheme.po": {
+        "git_blob": "962a7316322c3afd0945ea770e6b7e205b0e7b86",
+        "sha256": "3ea61cea2301d4f5cd5ff99253ca0777b64c1c46bd00ebdb470fbf0bcfd931f1",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/es/LC_MESSAGES/booktheme.po": {
+        "git_blob": "a431d9f189fe90477e8d883b76045d8c7059067b",
+        "sha256": "2a3402208c45c5769e335dcb749d86ebd2f1f8fa9a8e1b1858b39069d1d107be",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/et/LC_MESSAGES/booktheme.po": {
+        "git_blob": "8b75b769ecc7db9088ad29649c13e22ee9b31378",
+        "sha256": "4444383760ab2cf88e493c66f6f7a0b5e948e8d30f5b38a297400ff3bf968b99",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/fi/LC_MESSAGES/booktheme.po": {
+        "git_blob": "be54b27ab944780ace521fa33d93881f5e097790",
+        "sha256": "1e7a277bbecaeaecc9a6177a232cc6fa27df7d772e93630fdc62ab3bfeae9601",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/fr/LC_MESSAGES/booktheme.po": {
+        "git_blob": "4c6fc129bf86fbd45304f723f4ba20fbbb6b7e29",
+        "sha256": "672e6e63b584db36c52e79607916e1738f0098bafc4c4de6d500b2195360de3e",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/hr/LC_MESSAGES/booktheme.po": {
+        "git_blob": "aca09bbfb6f0dcd392c13ea16c136bbbfb0751ed",
+        "sha256": "0b4798d28697073a30865ed18d7ffff117366e40c35c2c39f1c38fe1567d0a72",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/id/LC_MESSAGES/booktheme.po": {
+        "git_blob": "e2d352ae4a35205176d4b8fba8f30b112d0e1de3",
+        "sha256": "0bf675becf4c6f2030be815e75ca66865f04d7532609dd06c4e09aef1a80996c",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/it/LC_MESSAGES/booktheme.po": {
+        "git_blob": "5dfa6b33379b6f703ce95933307bac185f760f39",
+        "sha256": "66011e4f72dc43aa2000a566ccd24e50fdb2add8f89022dd06276509da0e9952",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/iw/LC_MESSAGES/booktheme.po": {
+        "git_blob": "853e65e9e072ad331a35dfeda47b872bb74f44d7",
+        "sha256": "26c5746a1ab2cda2e9f3d2c5b17ce3b94797bfd0abbf24907c78f59319be8d0a",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/ja/LC_MESSAGES/booktheme.po": {
+        "git_blob": "c32f9d4dca760750eee2f57514fa5486b1b8f460",
+        "sha256": "13357188b7f29c20fa8529596119418312c527c62fa5d9bc42b06e2571de8695",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/ko/LC_MESSAGES/booktheme.po": {
+        "git_blob": "976a28349d77f15cb1f3eb12ba35185052ae373d",
+        "sha256": "3495b5f91c686edb07c38dddf03cc4d5471d766e582222e4175acc621f9f41e0",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/lt/LC_MESSAGES/booktheme.po": {
+        "git_blob": "6d61b2d4e7b88f88cf6bcb7b0cfc9f737c7f2a61",
+        "sha256": "81c07d3c02eab438c29ef945eec7133d48579ed29e8db9247019e913a5adad36",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/lv/LC_MESSAGES/booktheme.po": {
+        "git_blob": "60d0be65dbe1edf8719872cb8b281877e83b344a",
+        "sha256": "7709bef8cce54a10197ecc51354fa932ba1d8c936d85a8d1af72f1e8405e8721",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/ml/LC_MESSAGES/booktheme.po": {
+        "git_blob": "adaaa86ef9bd04fa741b41e547e5619e8944b482",
+        "sha256": "fba18d2fc3e47140e6deb665893f6487530940572d401d31f56ee3a130110da7",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/mr/LC_MESSAGES/booktheme.po": {
+        "git_blob": "afca068118bf65067ad9d4188ece9323c261fd08",
+        "sha256": "fd8abfe790a4a0a4f41e363839f353e302e8073453ca9ba21b0184db1935c69c",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/ms/LC_MESSAGES/booktheme.po": {
+        "git_blob": "50dd50734e533e7eb888c2f6e94b7f62e287c786",
+        "sha256": "3fa63c57d27580bd7ed07f3b3e44a49645f8265ec42811d36593a8979d526b68",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/nl/LC_MESSAGES/booktheme.po": {
+        "git_blob": "76d26625f0278725b762af69ed91e07b70fcdca9",
+        "sha256": "5ff5e04cceb10bbbf7d0c8cb24439e3db9ea0864d4cc1f64049c2bc68d5ed74e",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/no/LC_MESSAGES/booktheme.po": {
+        "git_blob": "83a3683ed4e2853eb4c4c0bc036cbb7e5b51bffa",
+        "sha256": "9a0611c04464a9aee68e27e161891f14df3f306f22529df8cb98375e464cfc73",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/pl/LC_MESSAGES/booktheme.po": {
+        "git_blob": "c1dd4121dede12926a14cc1863d4ebac824b051b",
+        "sha256": "2afd55b1607fd65c902fdb3d3e424605b92faec6b49d74e4237a6aa57d2f0f05",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/pt/LC_MESSAGES/booktheme.po": {
+        "git_blob": "32341896473269ba66a41b0469febfb9ea8bb945",
+        "sha256": "45b464e25ab84ded5df15875442898a54349c4a028fcea030bfa5f0868b50f04",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/ro/LC_MESSAGES/booktheme.po": {
+        "git_blob": "aa87869b549afe914138ddce5d4bee73e2617097",
+        "sha256": "29a85d89c2c5eee262d9a808a9c534a61e7f1267872ff1b150e969ce127b4bb9",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/ru/LC_MESSAGES/booktheme.po": {
+        "git_blob": "fdb5d29c4c4857fbeb3eb529b57f8eb51ffac66d",
+        "sha256": "7fb50523e1c30b9df5ae197e03494c81452b2347386322fab6fcbe763f472f88",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/sk/LC_MESSAGES/booktheme.po": {
+        "git_blob": "3fbd9e7ceda478cf65d74c43b5ef02b1b8bf5fbc",
+        "sha256": "f9a3b92f10d7eac46e7c06c2ce9b596a1db214f84d94154e20872ce8ba650daa",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/sl/LC_MESSAGES/booktheme.po": {
+        "git_blob": "ffffc3387c0067687374912782381d6e7218e831",
+        "sha256": "70e7a3d959044ba0ca8e222e21256ae15c1d0b4414ba73f050c577bd72d917a5",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/sr/LC_MESSAGES/booktheme.po": {
+        "git_blob": "ad953cce2b9782bc35f3ff280c5c04db20d70d6d",
+        "sha256": "1e2b44ac3d36c4f16c2ce55850007527d5757669809db72a6f8d1a8af69db6a0",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/sv/LC_MESSAGES/booktheme.po": {
+        "git_blob": "4425d9270c09029c560e518f279f76f293f5ae48",
+        "sha256": "ddfc060ba4195e4d6b3859a28646e821110dbc469d86556e243f7e0124c6ea0c",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/ta/LC_MESSAGES/booktheme.po": {
+        "git_blob": "1db3653395fbd0eaa88db17d6d0827d8bedbcfd2",
+        "sha256": "758930425a400cc305de3fb42584d4d40f0abcdf928f6f757a3f72140861acb9",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/te/LC_MESSAGES/booktheme.po": {
+        "git_blob": "a47e0adacb4520095e2e617d683deec14f723763",
+        "sha256": "30841dad97b40115f2af87df2781c3cb5653771b7beba8282c737566c859d4fc",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/tg/LC_MESSAGES/booktheme.po": {
+        "git_blob": "389364c9fd36c140a511b7c416e360b06b6eb0a3",
+        "sha256": "a9cf146b9a43d84ebd2db1c548644b8927d4deec69d754a1740db8d39309a018",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/th/LC_MESSAGES/booktheme.po": {
+        "git_blob": "2cd79121265109c6b1998672e3d498b30ce20b84",
+        "sha256": "1042afdd376d6e3b6ccdf1d83d45be7a5fef3a9924f5572314bdb85cce80b1ba",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/tl/LC_MESSAGES/booktheme.po": {
+        "git_blob": "894f4a767208707bcae0749d2b11b0c018402762",
+        "sha256": "4b69a8c09ac81fec2a6a6c65e33a08cd94f22a7a560fc21989494c1e8cf747b6",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/tr/LC_MESSAGES/booktheme.po": {
+        "git_blob": "470189839586240ef14854a733c2e142e9b593d4",
+        "sha256": "1a7bc97d937b2278d26d65d728c127926ab2cb92be10091d2eed9910b77dd659",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/uk/LC_MESSAGES/booktheme.po": {
+        "git_blob": "6de4d2f69cd4eee96a918eee7fc813d844f5168b",
+        "sha256": "237a43d4b060f49661d56a767f3e89d52e2d43445e0e0e1fef1cdd5b2c7e3aaa",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/ur/LC_MESSAGES/booktheme.po": {
+        "git_blob": "232fee42427447217382c70b7c37e2a3d335759d",
+        "sha256": "21a0642010c497511816057f1328bceb47b1cd89c13accf437de93fe979d8dad",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/vi/LC_MESSAGES/booktheme.po": {
+        "git_blob": "a87cba96ddacfa8678e141744cdb97590cfa59f0",
+        "sha256": "b10a606dd5f0ed0c1887e0da7609c91ed37e5000887cbe8ba0f28d18c1f6b514",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/zh_CN/LC_MESSAGES/booktheme.po": {
+        "git_blob": "1cd411e5ae0d695f843bc3313d078354914eddf3",
+        "sha256": "2067893a0e0e3fada054f3866bf3b08e5f594b79ae9aadbd05055fac39cd362f",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/locales/zh_TW/LC_MESSAGES/booktheme.po": {
+        "git_blob": "880a6d01cb0408da3aabb94d905018e5d123b788",
+        "sha256": "7dd9f61d4b6875a0c559a582a028fbae16ea3c00b0e4b2f2b98679167925be1d",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/m3-dark.png": {
+        "git_blob": "86f2ace0d23a2ec24305dd45129010ce42ecbf43",
+        "sha256": "bb9827c5f8d28fbb563cfced5e1986f6a054bbeeb5307d4cb32f8a3c811feb12",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/m3-light.png": {
+        "git_blob": "5e8a4c017f8dab7c2ff7434566602291726640c8",
+        "sha256": "2b869faba672e5d50f81f7217d4c42822dbf5b222f8458eea0eb79eeade770b8",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/minus.png": {
+        "git_blob": "d96755fdaf8bb2214971e0db9c1fd3077d7c419d",
+        "sha256": "47e7fc50db3699f1ca41ce9a2ffa202c00c5d1d5180c55f62ba859b1bd6cc008",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css": {
+        "git_blob": "181b6545e2dc55d276c15f3af1daa375e56ae04c",
+        "sha256": "06696a45b937849642cfa8e412e8bfb79927fd8cf52bbc9bf40c63c5e8cfefe3",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/play-solid.svg": {
+        "git_blob": "bcd81f7a6d11914d9173c2452869209130f1f6cc",
+        "sha256": "d2ceaf6d83ed691c771e1616ac29157cb7f115ddac7ce066afab1d23f1a9b483",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/plus.png": {
+        "git_blob": "7107cec93a979b9a5f64843235a16651d563ce2d",
+        "sha256": "54115199b96a130cba02147c47c0deb43dcc9b9f08b5162bba8642b34980ac63",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/pygments.css": {
+        "git_blob": "1bf3c24877a5611e6f8dacbcc7ceaa6bf4842fab",
+        "sha256": "dbf18bdb887ad6fb7885d408ebb5ae7dea6169634ae8290642275f4aef31d514",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/sbt-webpack-macros.html": {
+        "git_blob": "ae2df1ab13d999fbf670c536807e22761d87a2a7",
+        "sha256": "8fb1379373007b67136195e9cbfce0317e7c1b753d08da289e3bcb5e9608e4c9",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/scripts/bootstrap.js": {
+        "git_blob": "9a03f56356b4eaa5e7a96ef9f64a59e2c596e6d3",
+        "sha256": "6e461ba5daa453c14dbe762e7a930bcdfc36d982c83ddcd76eb4250542cea711",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/scripts/bootstrap.js.LICENSE.txt": {
+        "git_blob": "5a359ec72559cea6025f177b8a260354ba75c374",
+        "sha256": "ed7239bd3f80b4194ce237b04f9f47d291995ad2d1d39a0546f22eb80f1f8b2f",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/scripts/bootstrap.js.map": {
+        "git_blob": "e9e815891f70903e723cfd0205f6edd6395773e3",
+        "sha256": "6a0a8dfdfeca25ef48c5ce15388a08039a1fcf78b81e00f20381251059cf70f6",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/scripts/pydata-sphinx-theme.js": {
+        "git_blob": "ec0849ce66395becd130ca590e5cd717c1c2f86a",
+        "sha256": "71601c97932bcd7ccd87d0e72ee889cb4af50752e560d218397bc444bef6ca45",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/scripts/pydata-sphinx-theme.js.map": {
+        "git_blob": "410fe68637f2129392172171db0d76142b2d0974",
+        "sha256": "70eb355bbc24d39b4a6b0bccb7b6a03d3cf549fd951d757264bbcdf8f6f00de9",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/scripts/sphinx-book-theme.js": {
+        "git_blob": "d1ddbefa18203dac2b1a134733aaa87350932af9",
+        "sha256": "43ef40b8ba0a897297f8008b4ec34d557042adcbbe0393acf43d60c2ac13a8f4",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/scripts/sphinx-book-theme.js.map": {
+        "git_blob": "2cc145ab887a2f0520c1ed557c11420927ca6df7",
+        "sha256": "d6f4904a7c35ca6b0fa3263d97d570ffe52d14f51bf6fb2363b309bb2959bc6d",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/searchtools.js": {
+        "git_blob": "8d63d6c680c53f9337d142e72460e44df3eb27c0",
+        "sha256": "9e8a81657b48133959d8556f0fc60f6632d41651b29de335ebae3adfbf5881c1",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/sphinx-thebe.css": {
+        "git_blob": "fc0af695a2268b39f14c10c1089d1aca10f338d3",
+        "sha256": "aca1ee3da8b470945c5a3b67239585affa54c3e5940af915a212b2c0915f79aa",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/sphinx-thebe.js": {
+        "git_blob": "0b4e6b582157c709a61800341b38b20e79d07f17",
+        "sha256": "4214c20309db91d3aa65b2d8346d6f905bfa6bbd335e355326a5f8f838b65e3b",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/sphinx_highlight.js": {
+        "git_blob": "2268ff752a703b30cd91dbefcada8a398d785864",
+        "sha256": "8115121f6241c3ad6cc4ff70fe9000ef1e78830453ebc933fe446e01d2f7a7e4",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/styles/bootstrap.css": {
+        "git_blob": "c2060d75eb5da512455414894972e72e517440f3",
+        "sha256": "90e9cb1351473c6b21c2b2f2ef95acca501f9cada50f028ca0a4a71c56028b3f",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/styles/bootstrap.css.map": {
+        "git_blob": "6af30c4174e8a00a5933a72b3c888852284b4038",
+        "sha256": "5f2cf7d22c1cda8940ee372eb73c7e0189025956ec60a92a198f318b27e2f82a",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/styles/pydata-sphinx-theme.css": {
+        "git_blob": "78db8a3c23345fc288586354d6c668539898e3c7",
+        "sha256": "b5e17b305745cbcd560f233750b0b65850944ea36e00f2e4e466ef1e5135156e",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/styles/pydata-sphinx-theme.css.map": {
+        "git_blob": "2d89817d92be026a4290a7fffd63ac36dec07145",
+        "sha256": "c5a81618fe3f512dd3586648fe41083c12f041039eefa1123c67aa961cfb6a39",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/styles/sphinx-book-theme.css": {
+        "git_blob": "ae324f09447c7f20fa12f7579d62813ad005eae8",
+        "sha256": "fac82ce4dd13111554d67b098a1f0aec50ba78d3fa43a99f5e72251b45a4466d",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/styles/sphinx-book-theme.css.map": {
+        "git_blob": "fd6fba603a84ef4c7c8f9677b94ad2ff9f5ceb75",
+        "sha256": "8f799d2566f1e0e26891ec1dd91882babd2b4a90f21cf2fc828c9900cdc5971b",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/styles/theme.css": {
+        "git_blob": "9bc68e5c9395f563cfa8df238a782aaeaba43ab0",
+        "sha256": "edebccd3b91b7ff197adcc99276c2204651f015a29243e98800642e1abf9f01b",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/theme.css": {
+        "git_blob": "80526d39619f6c395ba3c16be43898cad1b63c0a",
+        "sha256": "b85c27dbce228e289e362ba0a1c9dd70ae35f2df5092ef1e40535dea901cebbf",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/togglebutton.css": {
+        "git_blob": "3a8676ac574cd62399475fa3328c05791214cd6b",
+        "sha256": "26d2022e1c95889f4cf90602c3b04d61698bb54e6daadc00245813ae94460120",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/togglebutton.js": {
+        "git_blob": "614bac743403d3dab526ae3eaef55d7b4b30fd4d",
+        "sha256": "5e84ea41a9aef93ea4a2512546a6cd248e03c03e6d4939044b8dbfc1f97fc792",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/LICENSE.txt": {
+        "git_blob": "22c6591bd2930adb8c53462c094fa66e6973c658",
+        "sha256": "92671da52bc1d6ec6f131ba8bd4094e99fec6c8a76a7ada857f95f5b0a8f2053",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/css/all.min.css": {
+        "git_blob": "209b211bc9fd646cd5773333d4911c50516c7636",
+        "sha256": "7358cf429d782958f403cb9500cb7375de3ce16959e67f0790eb764c1c956230",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/js/all.min.js": {
+        "git_blob": "47ada717c57d2c80fe3149a39ed8cd268cde8b6b",
+        "sha256": "5686ce393b7800331c76a41a3e7b8f57dccd0db1f97c828ad37cc0f54270e492",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/js/all.min.js.LICENSE.txt": {
+        "git_blob": "4ecb96dafca57364f36fa3631d1e0a539ad095eb",
+        "sha256": "3a5421bbf1e6f6a6cd1074c949e9d427a2b4e74113bc5a9198a851eada4dfb5f",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.ttf": {
+        "git_blob": "1fbb1f7c32d46f5dcb89a50e10d00878ed43f1a1",
+        "sha256": "e28096fa75a96ac77020155ea3a6dd7312983e84115366d4cf49a0c312ec6d51",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2": {
+        "git_blob": "5d28021697ff1f32507b1bcbcbf9e6a41d0ac99f",
+        "sha256": "232c6f6a7678304f9efaa26f30b1610debc2ba9f4cd636b5e6751c8d73761b92",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.ttf": {
+        "git_blob": "549d68dc023ff6e31b8774d784c2cfcc231e7976",
+        "sha256": "9174757efc83e072436e873c22be1663d3c103b0a16d7fb73569af4918d4d351",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2": {
+        "git_blob": "18400d7fad27fc52cfbabbda495b871bd912d045",
+        "sha256": "c27da6f833431da5aa295c44540bfac0fd8270ba6a3c4346427006d8a7b34b76",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.ttf": {
+        "git_blob": "bb2a8695653cd2839e3e52266c124c5dba1ca995",
+        "sha256": "b4990d0d0c5f5d38d62e936eea120674e584c7eea8dcee38a975c0cf9a37539b",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2": {
+        "git_blob": "758dd4f6070c7cb399334ae997ae9ff6523d3b55",
+        "sha256": "ae17c16afbea216707b2203ea1cf9bdb45b9bfe47d0f4ae3258ddbc6294dd02f",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/webfonts/fa-v4compatibility.ttf": {
+        "git_blob": "8c5864c42fa295c7620ac149b478e66b668affe6",
+        "sha256": "ff8f525fb050c5d24519ccc8f5723d85b2e51edd3f9bc6548af55aebadd4f269",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/vendor/fontawesome/6.5.2/webfonts/fa-v4compatibility.woff2": {
+        "git_blob": "f94bec22756c48039ad405859f0d0e542033c1b2",
+        "sha256": "c7a869faca299d15be10a01f19d0765a7c4d46d8922d9b9317235c1e4a6f0982",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/webpack-macros.html": {
+        "git_blob": "f7403d87c0b4ea766c42dd17bf8e2a340a537716",
+        "sha256": "2c32cd92bef0e3e4a20e7c112ce873fa27eb5683ea293c14d008d753b91e1d9e",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/genindex.html": {
+        "git_blob": "3f6de3cb1965c73fcc842b4cbe88d86d890ca4d8",
+        "sha256": "f0ad5b5f93a380ddee1dd74ff5d667f4b81d4aafb3e0c4b1f15b04fbab792108",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/index.html": {
+        "git_blob": "d09c1e8ff8edae16a64581a6054bd59c25fb4ad3",
+        "sha256": "fb7353341ede02d03035745fb1f6ba2b0d7a1264e79a8f9833b22deccf8dd58c",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/intro.html": {
+        "git_blob": "539364b2fb8ae7f951e9b4338450df0675c7220e",
+        "sha256": "c7933cf3a75676dd0bb6754db754343c070ee0df33e452dfb6b47788d4224025",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/manuscript.html": {
+        "git_blob": "81d245bffffcccf262772ca755e38acdf054fc15",
+        "sha256": "7b8425475a1115e549d3e7a7bdd94b98257ca0c35668705dd4a6f46be0427697",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/objects.inv": {
+        "git_blob": "eac3f581510eb895fd1bc0ffdc68c11d4912f697",
+        "sha256": "3196e30426a21b4d347a02ed4f345d20e88fca44655221ac3edd666ebf5c9533",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/search.html": {
+        "git_blob": "94547be7dcd483fe8fc4f54123c5fefa312320be",
+        "sha256": "e7e215cf8d75b4dd7e4b2a8aa1de3be60206f3568973d01fbeb6459a0cde1382",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/searchindex.js": {
+        "git_blob": "3c731c04752541ea36f9397482645fc264136210",
+        "sha256": "39e64647cae9d1ff48ba256758ce42274d4d173f359317e63c1873a792bc4139",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/supplemental-test.html": {
+        "git_blob": "1a64ff652bc70167e05b13c2338c83fa18e0e806",
+        "sha256": "4b62a026435ee483ffd37a0e3cf8fba28f61132b173720fcdccc37955d0d6604",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_config.yml": {
+        "git_blob": "a46fd0ae3ce2eb3d6b1feb3e3c54e0fcdc926907",
+        "sha256": "a56ffe34d5899b7b5d93f3e25a5324549dc33d4d293d42d355f2d55938b8453e",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_extensions/__init__.py": {
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_extensions/suppfigure.py": {
+        "git_blob": "ae5a0aaf21a921f912eb4d1b927cacbd83db288d",
+        "sha256": "c126486990adb69b2680a8349381752f140020ca83993df24d41c970a703a0ac",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_toc.yml": {
+        "git_blob": "503a88f3b4d8814148f9f1c048c3893ca4e71fc0",
+        "sha256": "8c462bd215b80056af0d27db63a662dc396324b190d94adaa7b9513157720ade",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/config.py": {
+        "git_blob": "f44a536e618046b0231912db975bb7bc99096f5c",
+        "sha256": "42827797b4ba7b3df4b7729914c3f49168fee4c1debb7f1290154d3777d977cf",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/references.bib": {
+        "git_blob": "dcdc80d44c79c0d5d4ae41e87b08604ea917a16e",
+        "sha256": "24b5ddeff736274d891889f58c78d4f741824750efad3ae4737a8b5e8b4e7535",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/requirements.txt": {
+        "git_blob": "d45f374a426fc2368661d8f5ddb71563b88d1f30",
+        "sha256": "88d4d881b0de62de9e4614ac2857265880a2c8d7a261473bf1273e2483df2aee",
+        "bundle": "code-and-notebooks"
+      },
+      "notebooks/sync.ffs_lock": {
+        "git_blob": "ef35e29d2165beed3882aa55955b00944769b053",
+        "sha256": "02b0752d671a205888026b486f68d639e694a7d88fae1c009a2dc6b8c13b2459",
+        "bundle": "code-and-notebooks"
+      },
+      "preservation/key_results.json": {
+        "git_blob": "23f262752e600ca39c414bc12211ad20c8066ef9",
+        "sha256": "c529a49e46cf8e11dbc5c2a150107a946191dc45ab3acce35ece8f0b5e113d53",
+        "bundle": "code-and-notebooks"
+      },
+      "preservation/study.json": {
+        "git_blob": "7bfad4057ad6829d385d690ac0a120a42bc04170",
+        "sha256": "0488f73308afde10e72d3520a6e33b68003332e68ce2a39fe661780b3a109fd0",
+        "bundle": "code-and-notebooks"
+      },
+      "pyproject.toml": {
+        "git_blob": "72d3b15733d70a4acc65394d66ddbebdee83ab1d",
+        "sha256": "41fbba100b639ea949a377bba7dc07ae911dc28bfb63e611711b1f2aff408a48",
+        "bundle": "code-and-notebooks"
+      },
+      "requirements.txt": {
+        "git_blob": "301388e892ae76399b2a90d2933c0bd03302caf9",
+        "sha256": "947dfc822a828bf0457189aef8c055fc32dd720daa74f76c6a206502cfeba2ea",
+        "bundle": "code-and-notebooks"
+      },
+      "scripts/verify_dataerai_roundtrip.py": {
+        "git_blob": "dd84548d397c5e5ee5761c7c92f954645b8bdd98",
+        "sha256": "0244febe198ce2f1d7a44c450d299c9699f55e764e93a908d568ae833da5ccc8",
+        "bundle": "code-and-notebooks"
+      },
+      "setup.py": {
+        "git_blob": "463bbb7fbd3187e65d7842ff9171694fb615bc99",
+        "sha256": "8317492b0d4925b859a154855ea31cd76dcd443d15ee5c74803ea4e67712f993",
+        "bundle": "code-and-notebooks"
+      },
+      "src/sro_sto_plume/cmap.py": {
+        "git_blob": "ab82c5ff2882cc7505f0aba3f0062f37982f1e63",
+        "sha256": "f0c42523d681eb6c16dec9139a6e489f9d86a8b48d99e8a659476781697ec47b",
+        "bundle": "code-and-notebooks"
+      },
+      "src/sro_sto_plume/coordinate_converter.py": {
+        "git_blob": "c3187985fbb862e508778c4ed44b55c7af686162",
+        "sha256": "b537624e40aa21490bf4d46b8da035f96c920c085a42a1ce71757b086ab849a7",
+        "bundle": "code-and-notebooks"
+      },
+      "src/sro_sto_plume/crystallography.py": {
+        "git_blob": "7db40a85f87392b4a2222e0db6d5d921a00dfd74",
+        "sha256": "95fa213828f0c862f2a02b03df9e2261257d56f5a92ae41ae79c114f9ac344fa",
+        "bundle": "code-and-notebooks"
+      },
+      "src/sro_sto_plume/datafed_utils.py": {
+        "git_blob": "2ca8db8cac452653980e8d120e42b78cb0a92bb2",
+        "sha256": "bdc3e6e5a8c008687720083340721dcbf49b72185f426b15ed7049f16e316adc",
+        "bundle": "code-and-notebooks"
+      },
+      "src/sro_sto_plume/microscopy.py": {
+        "git_blob": "012118afbb6e408662e1d0363c98698207267958",
+        "sha256": "a82af870142e128805ca5a446ccdb124abd77eb1171906eeceaad23479195d83",
+        "bundle": "code-and-notebooks"
+      },
+      "src/sro_sto_plume/modify_df.py": {
+        "git_blob": "06e4ededa8aaaefcd3b09cce6ee42789acd43365",
+        "sha256": "c8f25d0c8cee3b889ad8f5647a3b0b7456c1bece647145d146b231bac6e804f5",
+        "bundle": "code-and-notebooks"
+      },
+      "src/sro_sto_plume/packed_plot_functions.py": {
+        "git_blob": "b68e5d6ccf948917112dc2048521a56cc1b1ae94",
+        "sha256": "9def928531a620cceae60beb0b1c79764c4ca6bee43bac6bdbd6d1431ae65f59",
+        "bundle": "code-and-notebooks"
+      },
+      "src/sro_sto_plume/plot_target.py": {
+        "git_blob": "7817941986de681411c747feee2ee16f2ac599fa",
+        "sha256": "05c34ccc91797c4b663770387f09767236b2ec57c5522c2d2256f09f0f91c272",
+        "bundle": "code-and-notebooks"
+      },
+      "src/sro_sto_plume/plots_afm.py": {
+        "git_blob": "95a6fa5e5309f2b31bd294681edb1b3e9b081a79",
+        "sha256": "1546f828e162111c24ffab7a130419440318b3a8b9850e388698cf8cfeb23d88",
+        "bundle": "code-and-notebooks"
+      },
+      "src/sro_sto_plume/rsm_helpers.py": {
+        "git_blob": "77a01fc6fceb2855642583d57aba731a616cd08f",
+        "sha256": "db5d3988ec1b3071279471a65b7021e978d763f85f4abbfb92441defd03e65fc",
+        "bundle": "code-and-notebooks"
+      },
+      "src/sro_sto_plume/xrd_ref.py": {
+        "git_blob": "717318d8af674b2e8718b21a988a242ac391f8eb",
+        "sha256": "46b032d4c53c37bccb2bff7a3f7b517d6c5705abe860222ca8eda6ac98f0d8dd",
+        "bundle": "code-and-notebooks"
+      },
+      "tests/test_dataerai_notebook.py": {
+        "git_blob": "ee21af8c91ed984b06e41cbb0eb00589e54c0232",
+        "sha256": "1ced4ed3cc16948b56032fa6c9b55ce68722b3e0666d30a3c79d8f3fe695b9af",
+        "bundle": "code-and-notebooks"
+      },
+      "tests/test_dataerai_preservation.py": {
+        "git_blob": "bac02dbd41a93825e322f4c80f76cf22fe62b26a",
+        "sha256": "adca6fe86cd6e263039fa4c843e1eff56e103d649898039d938c7ca7dd7068d6",
+        "bundle": "code-and-notebooks"
+      },
+      "README.md": {
+        "git_blob": "fe19bacbdca232aeb596e97e58fb16370cca002c",
+        "sha256": "97e74abae7e2f9769d0c3a84e14099407e2b59b2493be4e020ddbd2d3d8b5e77",
+        "bundle": "code-and-notebooks"
+      },
+      "dataerai_notebook.py": {
+        "git_blob": "06523b0ab61b804a2ad7f4ee30c544ca3062e67d",
+        "sha256": "54600498d0bcb21a00d599bd416d9a8a2141d3a0b9c6b315f7e7bcffc783c573",
+        "bundle": "code-and-notebooks"
+      },
+      "dataerai_preservation.py": {
+        "git_blob": "dd8c03f73314f92141a52e012b00c52877cc09e3",
+        "sha256": "ca7cd045435579b09468581855070e8ddb36dcd6af35ab2cdf0038c2aae0437e",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_sources/manuscript.ipynb": {
+        "git_blob": "228567dd639acc7b61d5fb3d7f938c71111d8544",
+        "sha256": "e396374d3d89056dec1a77241bcd503809ef5fbd8942209a552af8a5988c860b",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_sources/supplemental-test.ipynb": {
+        "git_blob": "933edf6feba8a4ed5a56748534092026aec1462f",
+        "sha256": "c5bd8987bb78c08a76d0d235308a32e1f521623c6d3e2be9c2f5aa36c6b4fbf1",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/jupyter_execute/manuscript.ipynb": {
+        "git_blob": "4f0757a607a32531c498428fab176e0e08743e32",
+        "sha256": "433b8652b2707567383d96948c6ad6e3d089078db93ffcc7fb537480ef4aec91",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/jupyter_execute/supplemental-test.ipynb": {
+        "git_blob": "fca3cb0d1c58cd6b4b5fa2b65a0a2e17d38297b9",
+        "sha256": "3212487047ce860e64c9bd21865ed608caf579597dc074392fb1d0ba84d37ff5",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/manuscript.ipynb": {
+        "git_blob": "24ab861f1a7aba7bc437bd3a1decd9e8164fee56",
+        "sha256": "f2aa22d9edfb4e58bc7a4c1dcd65ff4a0d9855b1da15e10ab60260e539789fce",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/supplemental-test.ipynb": {
+        "git_blob": "33ea86415f7b7bc28623dd88a1b199ec7fd482bb",
+        "sha256": "a4201c84009ef71b55329e6df255fc57d093eb98413b851175d15954c44f1f81",
+        "bundle": "code-and-notebooks"
+      },
+      "notebooks/0_Dataerai_Preservation.ipynb": {
+        "git_blob": "b7cb50b219b35da5ab8868ef1773a7a134373275",
+        "sha256": "c6afd64ac3123fdbdde89c69ee66d2f51d306f7293b1d416119759362d06844e",
+        "bundle": "code-and-notebooks"
+      },
+      "notebooks/1_Abstract.ipynb": {
+        "git_blob": "4337b279a202386cd734a1d0dda96448d38ff3ba",
+        "sha256": "188af6876b045610f16a1fc29065c0a53bbc950b91aa67adf3fd8d614a7f6f09",
+        "bundle": "code-and-notebooks"
+      },
+      "notebooks/2_PLD_Experiment_Design_and_Target_Microscopy.ipynb": {
+        "git_blob": "0130a010d791fd9ac1b105de32a750a3c41c09f1",
+        "sha256": "487ef0d838ae3a28f20aeae70abe5305a0cc4572ba885c62b5b24a1c7af862f6",
+        "bundle": "code-and-notebooks"
+      },
+      "requirements-dataerai.txt": {
+        "git_blob": "ebd4849764f9a730c81fa08de06efeb1821e3d65",
+        "sha256": "b9e7e3e647a1d293fb725e66854435e9fa83dff4f06a8c9367b85a498136dbc6",
+        "bundle": "code-and-notebooks"
+      },
+      "src/sro_sto_plume/layout_preset.py": {
+        "git_blob": "a2cf6370a7a99223d4f74c047c8385531b168564",
+        "sha256": "0955e4d764e051d4eaced5697fb308f761f1c2fa916a3967d492fa2783bb2c5f",
+        "bundle": "code-and-notebooks"
+      },
+      "src/sro_sto_plume/plots_plume.py": {
+        "git_blob": "117a48fa4b51d114873736a7a7083907b5b29362",
+        "sha256": "3d2edc1ecea18e6f970270e7b6687f00b37cad3d8df77d9e599193b9994f70cc",
+        "bundle": "code-and-notebooks"
+      },
+      "src/sro_sto_plume/plots_rsm.py": {
+        "git_blob": "c948fa4a3745b7a66ac0b17454eda872f456b6b9",
+        "sha256": "1271c8d7290efa95881bc4751650a32c04f64cc89641e6c50add177150876aac",
+        "bundle": "code-and-notebooks"
+      },
+      "src/sro_sto_plume/plots_xrd.py": {
+        "git_blob": "d97c2821f1a303c3af3b3e7c618f700a699abe00",
+        "sha256": "1b320f9d41aa88062294f573b2c811bffda16976e53164bfa69a44bc403ecd04",
+        "bundle": "code-and-notebooks"
+      },
+      ".gitignore": {
+        "git_blob": "07167f6d65aa3a61560bb74e555b25d0f81e75d4",
+        "sha256": "24c7d5af64813f9eda74b81c53d1c159c9f29d0f0e63001710a5286e810e2dbc",
+        "bundle": "code-and-notebooks"
+      },
+      "DATAERAI.md": {
+        "git_blob": "569e781e31c97ab45d4c1daca4ee744633de71a5",
+        "sha256": "4902bfc2099ad50388a9a6c07fa365e243b4c0ec39b7d6f73761aca2027f1801",
+        "bundle": "code-and-notebooks"
+      },
+      "figures/Extra-C_G6_plume_video.mp4": {
+        "git_blob": "d2ad2c44326c8fd4cc6ee299b786988829a40c26",
+        "sha256": "aa8255a029388ee346f291ea0492f85daec665679adf030f5da2281e1b4617c4",
+        "bundle": "figures"
+      },
+      "figures/Extra-G1_plume_video.mp4": {
+        "git_blob": "f2fd495b0207a649611349b4e920047781c8e729",
+        "sha256": "472d881649ac238f5f461df6014b0f195a312256fa5e284a6185686a095c2acd",
+        "bundle": "figures"
+      },
+      "figures/Extra-G2_plume_video.mp4": {
+        "git_blob": "e36104a7a0c0bddd7c987eedb8be80d6dba1e9c6",
+        "sha256": "b6c30d145248f64715c2450c18974531b7f6d9c0228f5c4b6f20f8b37a00e862",
+        "bundle": "figures"
+      },
+      "figures/Extra-G3_plume_video.mp4": {
+        "git_blob": "525d0cc5fae7ff02c2316b8efeb1b3db4e1b2a4f",
+        "sha256": "79aa86db7e9159c346b6c8f392df1c47f820e1fd635bbc654e667d5120069976",
+        "bundle": "figures"
+      },
+      "figures/Extra-G4_plume_video.mp4": {
+        "git_blob": "494a4c4ba95805c251544a74d21005cec80c6857",
+        "sha256": "3828fecd57de57f43cad8ef410bac93e15c7cfdde539664150a7d038427e5d66",
+        "bundle": "figures"
+      },
+      "figures/Extra-G5_plume_video.mp4": {
+        "git_blob": "c6c6e756d0a2ef7763ad50fa1a7cb5504bd719ad",
+        "sha256": "aaa6644fa520c9c68238ab4dde669bc9dfa7c26b95eb1cff0b368dd620e2cf13",
+        "bundle": "figures"
+      },
+      "figures/Extra-Plume_Evolution.svg": {
+        "git_blob": "f6673e4bb83ecc0bd03cddb57d4a84736c8fde34",
+        "sha256": "d694e65b58cf6f8bb1eecfa6b59511eb42f8b61665868e4250430b32696e8ffb",
+        "bundle": "figures"
+      },
+      "figures/Extra-Plume_Evolution_position.svg": {
+        "git_blob": "7052afc73e357e6115b894cb543750fc90ff151e",
+        "sha256": "8a34b1f078d5ce420a5a26df37974cf59551fbd3edbc45faff1972c53d7457bb",
+        "bundle": "figures"
+      },
+      "figures/Extra-Plume_Sample_Frames-G1-short.png": {
+        "git_blob": "2de9ce63d7344451ec22468db46585b7cdecde5b",
+        "sha256": "df405fcd70c3c76d929c395b5b9bdf8d32238c9fac16922f5531a3958e8866d7",
+        "bundle": "figures"
+      },
+      "figures/Extra-Plume_Sample_Frames-G1-short.svg": {
+        "git_blob": "873a76d67dc0384a741b2f659392eca2332c744c",
+        "sha256": "8957eafe03480a853c5d8fc40749d51edff3d65060df16ca32b65d5fb060b0f7",
+        "bundle": "figures"
+      },
+      "figures/Figure1-Samples_experiment_setup.png": {
+        "git_blob": "cabaa6ccca587252304623c1c96b77f47700a3ca",
+        "sha256": "3a7878e701c10543f078abc6e76b0a902add1832815253dd1b674419a59f62b0",
+        "bundle": "figures"
+      },
+      "figures/Figure1-Samples_experiment_setup.svg": {
+        "git_blob": "a2dda81dcd275c0dd2360b79412724d3d01d7cd9",
+        "sha256": "0da4872fffebb271f6359aa16ed010cea7d506f7fa98fa832a1a0ff5e0095e3f",
+        "bundle": "figures"
+      },
+      "figures/Figure2-XRD_RSM-no_labels.png": {
+        "git_blob": "76ee0eb0a324ce479c71db0015f07e56c3ca20c3",
+        "sha256": "64053a46b21ff9502f3bdfb7dd9b862fe5486e59faad411bd9029a4102adf9d7",
+        "bundle": "figures"
+      },
+      "figures/Figure2-XRD_RSM-no_labels.svg": {
+        "git_blob": "0236a1411d3a39ef4a19258992a1e4632951436b",
+        "sha256": "0a257e26c0008e78a61ac90b1d1223f8a8af17a91c63af54f79cce7d1cce574a",
+        "bundle": "figures"
+      },
+      "figures/Figure2-XRD_RSM-nolabel.svg": {
+        "git_blob": "63c2db5a249c4b878a45baf869f7714ee91609c1",
+        "sha256": "aa51fe056eaec41a9a66c94f56ee9263a909a500395477bb83a34d27932e9ce7",
+        "bundle": "figures"
+      },
+      "figures/Figure2-XRD_RSM.png": {
+        "git_blob": "a9b7818ff66bdca9cae6c9910660d0f50989c77e",
+        "sha256": "ecaa6ce343a0776f077e31f624046115df964d5bd650da6342bca487d5627e58",
+        "bundle": "figures"
+      },
+      "figures/Figure2-XRD_RSM.svg": {
+        "git_blob": "d77e74bce11cdb816b15bd64842e8929a0072dff",
+        "sha256": "c0525e3316e4b1c72849fa5a59d60cb886b2c4743701f91afc65060b948d9a50",
+        "bundle": "figures"
+      },
+      "figures/Figure3-AFM_10um.svg": {
+        "git_blob": "c4f2ec92a8ec8b8c93eb243ea0b6f0e67cea816c",
+        "sha256": "e2d5da632545b02b5a5e1a51801a45091e4f1c6b7cb5b7fe53a3aa6cd4359c45",
+        "bundle": "figures"
+      },
+      "figures/Figure4-Plume_area_distance_velocity_average.png": {
+        "git_blob": "2a10ce28083ec0d7626bb41ff1de5ce75ab51dc2",
+        "sha256": "01163f2a996e7321c74f6406286c09813d7046af982d74d1c8ae7d69f513c8e1",
+        "bundle": "figures"
+      },
+      "figures/Figure4-Plume_area_distance_velocity_average.svg": {
+        "git_blob": "36fe23ae36258b7b0c37ec6f483a3168353e0c2e",
+        "sha256": "fd21cee323a938127863b8950f460f0b25471ebe52c53705494b6f826d53cc31",
+        "bundle": "figures"
+      },
+      "figures/Figure5-Temporal_Spatial_variation-violinplot_heatmaps.png": {
+        "git_blob": "9e4b1de835d3c9e4a9f37bbf1d5aefa611d59ac1",
+        "sha256": "42c7f31301239f7655224f681f05be420b6fc64467d2a0b02a447d301ae495e0",
+        "bundle": "figures"
+      },
+      "figures/Figure5-Temporal_Spatial_variation-violinplot_heatmaps.svg": {
+        "git_blob": "aaeb6948b538f5c1e65aab8deb4114e207673540",
+        "sha256": "1835ae179f14f5503defdca5e13224992290dc74f24f5572e5059ec4624b2020",
+        "bundle": "figures"
+      },
+      "figures/Figure5-Temporal_variation-violinplot_heatmaps.svg": {
+        "git_blob": "49137ff592cabbba106dee1e2df6dd7b62be3398",
+        "sha256": "f327aafe225ee1c5013e3a19fdeeb6a35bbe3f09ed16576e55aa0114d07d00de",
+        "bundle": "figures"
+      },
+      "figures/Figure6-Spatial_inhomogeneity_combined.png": {
+        "git_blob": "fff9aa724a51f825f937d043f055dd9dab290f19",
+        "sha256": "afebf2d4372696731399e66523bb7db1471e4205d5e0ee11f5e391fa23b6795f",
+        "bundle": "figures"
+      },
+      "figures/Figure6-Spatial_inhomogeneity_combined.svg": {
+        "git_blob": "ebad5a39e2c1bf2bf51489bedf664aabf20a4732",
+        "sha256": "6b515d774215c3f44b00251ba41123965280df9639231601cbfaec070c19265f",
+        "bundle": "figures"
+      },
+      "figures/FigureS1-TargetMicroscopy.png": {
+        "git_blob": "31f04a118bac0c5a5dda404800a5a0ffda7689f5",
+        "sha256": "bce35eb6cb09810b7789feb20ce2610186936d62814bc179033a0fb827e8a838",
+        "bundle": "figures"
+      },
+      "figures/FigureS1-TargetMicroscopy.svg": {
+        "git_blob": "b0b1ca725870888d1ed40d19ec44663a417e0fc5",
+        "sha256": "8502639ed2f056b56e534bf70e570c9f4a16efc931daab5d13eae8b2f946b8f6",
+        "bundle": "figures"
+      },
+      "figures/FigureS10-Plume_Sample_Frames-G5.svg": {
+        "git_blob": "0dc89c18c6b3eac86a0010cdf17a27757121aa9a",
+        "sha256": "1e5d74d0a9c6e5fa88f2f8ef7235d2cf48d3cd3869811fce131e1a8137ce375f",
+        "bundle": "figures"
+      },
+      "figures/FigureS11-Plume_Sample_Frames-C_G6.svg": {
+        "git_blob": "2321f40872a48e2138efdf959a4f3cb30be86d1d",
+        "sha256": "5ca04d9da9211ad14549a4440e2d28fa46a75d85481aebef352ae64bf19a28e8",
+        "bundle": "figures"
+      },
+      "figures/FigureS13-Plume_area_history.svg": {
+        "git_blob": "ae25b05f355de0c7da114eda2b7eff840690bb2c",
+        "sha256": "820e615b6324f9f8d36da85e59856629218793c73deff88faa926a8169c417e4",
+        "bundle": "figures"
+      },
+      "figures/FigureS14-Plume_distance_history.svg": {
+        "git_blob": "5cc295547e192e5c1925c453a94d967166e63dba",
+        "sha256": "20fe1c337b1ff22d4b5d0d28549ecaaf6022cd19b60a93b7b7814556a2d8871e",
+        "bundle": "figures"
+      },
+      "figures/FigureS15-Plume_velocity_history.svg": {
+        "git_blob": "962dfe8d57305dbc71fc27beb714b19d75c1b77a",
+        "sha256": "63c1bd0d8e6095b12b3f872d4442c226ca7bf5a24cbd5d67c1a0a0ba61fff600",
+        "bundle": "figures"
+      },
+      "figures/FigureS2-TargetMicroscopy-Maps.png": {
+        "git_blob": "7d47dae8db2415769c8dee6dae898933c7ed80f1",
+        "sha256": "382471baa3375a3c71df817b78af300891bd41c0bbb0d70172fc5a6a24c6c654",
+        "bundle": "figures"
+      },
+      "figures/FigureS2-TargetMicroscopy-Maps.svg": {
+        "git_blob": "6a218fb84e72546ca84166aa59b6dc3cc62ea153",
+        "sha256": "6f576aa5ac752f48db665cd3e6856a1981cc6e96f6ce534f480820c3786bf9f1",
+        "bundle": "figures"
+      },
+      "figures/FigureS3-XRD_RSM.png": {
+        "git_blob": "788431a3765bf5453648466f0b790bcee78ff5fe",
+        "sha256": "84a60c1397fbae5883df06591ae17910ea05dd967bf9e2ce85c2203891ad2b5e",
+        "bundle": "figures"
+      },
+      "figures/FigureS3-XRD_RSM.svg": {
+        "git_blob": "dc9288276c05eae159f906dce22fbdb4e468b624",
+        "sha256": "022ae9f6a92f0a7aa8a4b4f1387dd3991a983b65e305438d30bc7e22a382aa41",
+        "bundle": "figures"
+      },
+      "figures/FigureS4-AFM_5um_lineprofile.svg": {
+        "git_blob": "c5ea71605021a6f81473e1f506167b34c5d660a9",
+        "sha256": "8921ec2308a317508433f80c3b97a816d4167310c143327474b39e8ab6f8eda3",
+        "bundle": "figures"
+      },
+      "figures/FigureS6-Plume_Sample_Frames-G1.svg": {
+        "git_blob": "5dc7ef6893fe922633ae2cd302f124f88221f36f",
+        "sha256": "9e5eb86879648f799b000b7eeaf6f4037f56ae8c16431df8191032641128f86b",
+        "bundle": "figures"
+      },
+      "figures/FigureS7-Plume_Sample_Frames-G2.svg": {
+        "git_blob": "419a61387f769f54edb3e17195f2114cc221028c",
+        "sha256": "7cbd3624826f7a334aff85b565b290daca93a7599d0ceacfa0df30e94c44a374",
+        "bundle": "figures"
+      },
+      "figures/FigureS8-Plume_Sample_Frames-G3.svg": {
+        "git_blob": "377237ad190e8bccc613242782906a41eb0577d5",
+        "sha256": "1a5b38ccce6b5bc0ea4d422eb1786074d7d22d2b52044b132ded1bf83ca94e98",
+        "bundle": "figures"
+      },
+      "figures/FigureS9-Plume_Sample_Frames-G4.svg": {
+        "git_blob": "dfc764c0ebd7f0bb71cb34fe2647dd69a2b364cf",
+        "sha256": "8927d6a9572d214b3bcd1732149778e947e3632f36c082444a67f901becfac0d",
+        "bundle": "figures"
+      },
+      "figures/draft/1_RSM_103_Analysis.png": {
+        "git_blob": "83fe767b85aba20b45a6d5779877446acd174ae9",
+        "sha256": "65486603315f07e2bb5583ac33c2fb28444d3e88bef1b885bff848fb4ed37542",
+        "bundle": "figures"
+      },
+      "figures/draft/1_RSM_103_Analysis.svg": {
+        "git_blob": "9ee6c105eedbbb164307ba7aa7649e41d46289cf",
+        "sha256": "09466e1e15be8e35c791947e1eea7b1b2617a785e447fb6df23506741502a3d6",
+        "bundle": "figures"
+      },
+      "figures/draft/2_Plume_area_with_index.png": {
+        "git_blob": "bb2bf9e2e92355e1617593387a17b8c9781b08a7",
+        "sha256": "9e186fb1ecb9c866690290effec6808b3cef8ce0e6ca7f9626e3ec34d93d128d",
+        "bundle": "figures"
+      },
+      "figures/draft/2_Plume_metric_summary.png": {
+        "git_blob": "1e9c14036032024b013473f646821c883c2ede08",
+        "sha256": "edf38763107273ac70a0cd23e0cdb5ce1fbc6cef0f04ba771cd82fe541d537d5",
+        "bundle": "figures"
+      },
+      "figures/draft/2_Plume_samples.png": {
+        "git_blob": "2d27ac66b01fbb0de176ad368c76c81906cf6cec",
+        "sha256": "865f463b187a9af0949aa8f922bd6c21cb67604fe0a13a957ee89bb8122983ac",
+        "bundle": "figures"
+      },
+      "figures/draft/3_Experiment_Design_target.png": {
+        "git_blob": "db8e0eaad69059b7195b8bb9512ebe1b972dd3bc",
+        "sha256": "927ca3a946f369ea157656e5cdd10e577b1f272fa596d0f1bfd8b35a5f09e587",
+        "bundle": "figures"
+      },
+      "figures/draft/3_Plume_area_distance_velocity_average.png": {
+        "git_blob": "8f9c73ff18cacf0daa354bc7ad567f753d94562f",
+        "sha256": "d16c41874cbe98c0e12050f6afbedb03775196084eb59fece83bd9aa0d18c40a",
+        "bundle": "figures"
+      },
+      "figures/draft/3_Plume_area_distance_velocity_average.svg": {
+        "git_blob": "bdd60a9d95725ad7c3007fa13cc17ed36d452db0",
+        "sha256": "ccae64179c772245c71b115b8ec946930337d852698179cebadf7b352ae53eee",
+        "bundle": "figures"
+      },
+      "figures/draft/3_Plume_metric_average.png": {
+        "git_blob": "4f16fa6304b469eab9b94b2d8dcf9d91da9ad1eb",
+        "sha256": "615ecfb3e5b8868bd278c205184091900aa42277d3d1e97726566e208f934669",
+        "bundle": "figures"
+      },
+      "figures/draft/4_Plume_metrics_violinplot.png": {
+        "git_blob": "b027f24f557f26c3a14de176b2c8b836f53ca9c6",
+        "sha256": "78cec208d349c63edc36745d55f35632a2f51dc594d36aa0c8ccfa5c6f457f60",
+        "bundle": "figures"
+      },
+      "figures/draft/4_Plume_metrics_violinplot.svg": {
+        "git_blob": "1438057fedc317c7075853f83ef4a6013adf60b8",
+        "sha256": "97fb9229d7d9f0ccf8ff91960d716e92d5f8fc233ce8a2e4104c7e17f2bcb127",
+        "bundle": "figures"
+      },
+      "figures/draft/5_Plume_Area_Heatmap.svg": {
+        "git_blob": "1ded18ec0c5070e5a87eb5a8cd2cb7afcd28a2a5",
+        "sha256": "9e995b50e2f304c9d19bef1aaed030545e51730cd6b1c90d0268c66f1311628b",
+        "bundle": "figures"
+      },
+      "figures/draft/Plume_Evolution.svg": {
+        "git_blob": "37567f2890fad1b7bd1097a190ba7ac890d87ca7",
+        "sha256": "7eba0b5971d0b6323d860e674d2d5273295ece20cbd3f7db88f1ce7395404c04",
+        "bundle": "figures"
+      },
+      "figures/draft/s2_XRD_Scans.png": {
+        "git_blob": "7edfad18e01104ffa01944d6fd127bc0e955df3c",
+        "sha256": "fafe49225abefcf1c87b45feed68d4b779541138c899f7f97472ba8170d15717",
+        "bundle": "figures"
+      },
+      "figures/draft/s4_Plume_Sample_Frames.svg": {
+        "git_blob": "5bbfeb026ee220d6fec2c89e938b4b84ff7698f4",
+        "sha256": "28d393509b20e3bd5a689a66a89524e1693416e6aa80a6104726652ac7ddf70b",
+        "bundle": "figures"
+      },
+      "notebooks/3_Structure_Characterization.ipynb": {
+        "git_blob": "67210b2061bf03f4236837e6ed5d1c37c9c771ac",
+        "sha256": "a7c115c987c08cb9c93308eab1e97613327cf8139b3a3d5d4520d9f88ca5ebe1",
+        "bundle": "code-and-notebooks"
+      },
+      "notebooks/4_Plume_Metrics_Extraction.ipynb": {
+        "git_blob": "8a9f331fdb04438f69e3299c3e472befdc19b5b9",
+        "sha256": "cefd6993a04e6f3d9156237578070078f845a4327cc21048c32214f98d492af7",
+        "bundle": "code-and-notebooks"
+      },
+      "notebooks/5_Plume_Dynamic_Analysis.ipynb": {
+        "git_blob": "1fb48ccb07aa9860a8ea51632ba47abb1afc4359",
+        "sha256": "f7fe2fe7a8d0de6972f3eb17bc1e718d5dace290ea2e74b5ebac2ea9da33d9a7",
+        "bundle": "code-and-notebooks"
+      },
+      "notebooks/6_Target_Temporal_Variation.ipynb": {
+        "git_blob": "41a07bc408fd11a99676c5057212da40257aeb1e",
+        "sha256": "60f65dee17c05766cc2149c8271cd1de171ca7c6bbbecc2731da7c081fc1b650",
+        "bundle": "code-and-notebooks"
+      },
+      "notebooks/7_Target_Spatial_Inhomogeneity.ipynb": {
+        "git_blob": "80532624539bd952647be634aa3b6112a9abe59b",
+        "sha256": "d706d362ddddcd5e53dfe5c0ed9985035cd512902dde3f7457d64771dfe17ecb",
+        "bundle": "code-and-notebooks"
+      },
+      "scripts/instrument_dataerai_notebooks.py": {
+        "git_blob": "43ca6766d8e5edc5c61a5fcbfbae776c97edff31",
+        "sha256": "cc135f8cb48deca8f942f5d84c0b2c16392712e488fbad303db81f925f98301d",
+        "bundle": "code-and-notebooks"
+      },
+      "scripts/validate_dataerai_notebooks.py": {
+        "git_blob": "85cd112c73349b6c3cac753b29f110e992e9af7f",
+        "sha256": "6cc4dd69232586e99a5f3e2d18efee49774ae26ac6cbbc61e06e5758672f43c8",
+        "bundle": "code-and-notebooks"
+      },
+      "data/Plumes/frame_normalize_dataset/YG063_coords.npy": {
+        "git_blob": "dd37227728d9a8269830690566608243ea146c9d",
+        "sha256": "aaf4b7aadf10ba4d65511dddda44a0e927e217610ec736c681e1bacb88d81a12",
+        "bundle": "plume-metrics"
+      },
+      "data/Plumes/frame_normalize_dataset/YG065_coords.npy": {
+        "git_blob": "c6f169dcba29e0f79dcfedda104016d039949307",
+        "sha256": "ff9b862942df595ab93630a86e55ffde81852741072d5de0e524e6d3559f4285",
+        "bundle": "plume-metrics"
+      },
+      "data/Plumes/frame_normalize_dataset/YG067_coords.npy": {
+        "git_blob": "ff61ee9fc1b0bc739cbf9ed8de63060bb13f287e",
+        "sha256": "c35a1d74d2a451f9a70a79138734c5ff06902300f43b9f41aebaec426c9d7649",
+        "bundle": "plume-metrics"
+      },
+      "data/Plumes/frame_normalize_dataset/standard_coords.npy": {
+        "git_blob": "c37370c79db0298fa5860b887615b1f471104c1f",
+        "sha256": "0a5d2d2f7569d4dfe4427bc1a7259f60433ca04c83f5ae3388c25c30124bff3c",
+        "bundle": "plume-metrics"
+      },
+      "data/Plumes/plume_metrics/YG063_metrics.csv": {
+        "git_blob": "e80fc2c14d8dd9008b99efa4cbbacccf3d9f9dd3",
+        "sha256": "8cb0e6003f3c0e3d06b8f78f6a754b071d0ee3d3ecc6363232898c8a28a8a01d",
+        "bundle": "plume-metrics"
+      },
+      "data/Plumes/plume_metrics/YG065_metrics.csv": {
+        "git_blob": "32244180c1a752354689c08580c0078211104e4b",
+        "sha256": "f16d26ae7b4f504b6c2057af5bf90e9c125e6b4011a2c8acb58082239164f8cf",
+        "bundle": "plume-metrics"
+      },
+      "data/Plumes/plume_metrics/YG066_metrics.csv": {
+        "git_blob": "02f428c31873594b79215b1571ef554941e1c139",
+        "sha256": "41e3b15dd0e1cf43b445a4f45eb9ae54d28eb35d39c2fe4de738c6093620cbd6",
+        "bundle": "plume-metrics"
+      },
+      "data/Plumes/plume_metrics/YG067_metrics.csv": {
+        "git_blob": "115f0886ed0f7b50ab97ee4270fb2059f0c48481",
+        "sha256": "d6cbda03f35e3e3e0da7bbaad12d65ee6a512ac9a5607018e6c0bd0907632181",
+        "bundle": "plume-metrics"
+      },
+      "data/Plumes/plume_metrics/YG068_metrics.csv": {
+        "git_blob": "1dd54188d1db63c9f1ccdd5ed6c9693e7ead4587",
+        "sha256": "08b7c05137b70b542f1ff08a3ae4cf10bf260af99ffd969b42b7c38d429c1607",
+        "bundle": "plume-metrics"
+      },
+      "data/Plumes/plume_metrics/YG069_metrics.csv": {
+        "git_blob": "901177e458c2210a1371b1044d4401305335aaa2",
+        "sha256": "2ab2e360c6eb7fada197196286b344ab00b71c4eb4db5c7484247a64db5799e3",
+        "bundle": "plume-metrics"
+      },
+      "data/Growth_Parameters.xlsx": {
+        "git_blob": "df8cd81ab019d95e857be7aec864a1178c59f27e",
+        "sha256": "2e8b05da1d433d6a2dbafa670445178c9ade006dc85643a77f66fad7357b8f35",
+        "bundle": "study-data"
+      },
+      "figures/FigureS11-Plume_Sample_Frames-C_G6.png": {
+        "git_blob": "02ed8f37c55c0d705bf63c3141df8b1356b53919",
+        "sha256": "7e3b1ceec03175d73a7e3b94b7a6df980bcc4e4aec6c24ebcd222e00801e6b7d",
+        "bundle": "figures"
+      },
+      "figures/FigureS8-Plume_Sample_Frames-G3.png": {
+        "git_blob": "046f85ee8ec6a3167d153395af906d216d3f6196",
+        "sha256": "bb43f7fbd27abc1f255b48ddf5a3cff7b07b3f9e488adf0ba355c1608546a826",
+        "bundle": "figures"
+      },
+      "figures/FigureS5-PLD_logging.png": {
+        "git_blob": "107b12460bc619a1ff51f382150509f514fd2267",
+        "sha256": "53ba5d1f06b949c7f0505c782d66e8ab371ed3f4d89f18748a9dfcb3ea33f526",
+        "bundle": "figures"
+      },
+      "jupyterbook/_build/html/_static/sphinx-design.min.css": {
+        "git_blob": "173af9457eca2e3d00482a865f89567738dd6fb4",
+        "sha256": "952b9e6af61904e4234c45cd743e1360dce7d7fad8a29116e3eb1358d15473b9",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_static/drexel-dragon-all_gold.png": {
+        "git_blob": "1d8db8d96802adda7a61fc4a5592d1d2e07b5393",
+        "sha256": "12fcd8dbe55f7ac72ff597c259d6299ca8dcfec87b7dc74b58b6f75f1b46c08d",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_static/custom.css": {
+        "git_blob": "276f7f6520d029ff0d1b29c07dad3a1a9eb9b76b",
+        "sha256": "a4111a4b112977fbe35cd818e47ddf4682b07d6c17682c6566839c5a64edbe5b",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_build/html/_static/design-tabs.js": {
+        "git_blob": "2952d2e204a3e4e0f0dc14f24ffe2b7ba9b7dd75",
+        "sha256": "daca86e37c696ad56966f2b7128dbd0cc9910c1c2eba510b50e633d220ae704f",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_static/fonts/Verdana-Italic.ttf": {
+        "git_blob": "2e2ec543f066a4d9a72ff41dfb3f455ca4b2954b",
+        "sha256": "6bf24b4932b91056cf467e45562f7c7fd2b0754321a7e710cc1818b20da60200",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_static/fonts/AxiaBlack-Regular.otf": {
+        "git_blob": "42935dd5d22c19e00bb962d582afc76c44f35d04",
+        "sha256": "f8ffdce158f5e8c830244bdf9e7fd6c1de1ade854c7a5c20c48405ac61384b89",
+        "bundle": "code-and-notebooks"
+      },
+      "figures/FigureS15-Plume_velocity_history.png": {
+        "git_blob": "481f87af764f2ee5cf6bb22bc808ab7afab6086e",
+        "sha256": "fde5f963cb39ba916eaf54de5c250a83baa28386477166b63c43b34f1b03e532",
+        "bundle": "figures"
+      },
+      "figures/FigureS7-Plume_Sample_Frames-G2.png": {
+        "git_blob": "49e68bb8e47409ca3ac00c4bf8109949c273a590",
+        "sha256": "e9884d54102d34029049166d88b873272f33557404c38d2363ebcb1df08a44a4",
+        "bundle": "figures"
+      },
+      "figures/Figure3-AFM_10um.png": {
+        "git_blob": "54e1065f7a7afb10114246129d9483b439db2bd3",
+        "sha256": "0a46c463f3c114f7026e5adbdf514b2a7037cc50a1193ceff29e203dc788b987",
+        "bundle": "figures"
+      },
+      "figures/FigureS14-Plume_distance_history.png": {
+        "git_blob": "55acfcc128701551a9ac30d132ca1147b8e1ae38",
+        "sha256": "e40988ccae6be8079988ed300949842d8e67c29b201638421ce71ec10e1c74d5",
+        "bundle": "figures"
+      },
+      "jupyterbook/_static/m3-light.png": {
+        "git_blob": "5e8a4c017f8dab7c2ff7434566602291726640c8",
+        "sha256": "2b869faba672e5d50f81f7217d4c42822dbf5b222f8458eea0eb79eeade770b8",
+        "bundle": "code-and-notebooks"
+      },
+      "figures/FigureS6-Plume_Sample_Frames-G1.png": {
+        "git_blob": "670af6476883d8a75cb5be1e7a148b75423f20b6",
+        "sha256": "424d070e38ac9782b67f3a92e947f280b0cc9d9462dcb9bb96d84ffce6c5e346",
+        "bundle": "figures"
+      },
+      "figures/FigureS10-Plume_Sample_Frames-G5.png": {
+        "git_blob": "7083295ea8219e11c6e8528028195e43bd6ffeb0",
+        "sha256": "a6c453230dbd7b2a2539b09992e305df196379be0976446788f37c1638294f2c",
+        "bundle": "figures"
+      },
+      "figures/FigureS4-AFM_5um_lineprofile.png": {
+        "git_blob": "7179010126660e1f323a6541e00e930bab2bf3c0",
+        "sha256": "6c5778c43f818765e0d98e541e85c52f79b27d29507c0a884e92e7ab16e32b4c",
+        "bundle": "figures"
+      },
+      "figures/Figure2-XRD_RSM-nolabel.png": {
+        "git_blob": "76ee0eb0a324ce479c71db0015f07e56c3ca20c3",
+        "sha256": "64053a46b21ff9502f3bdfb7dd9b862fe5486e59faad411bd9029a4102adf9d7",
+        "bundle": "figures"
+      },
+      "jupyterbook/_static/theme.css": {
+        "git_blob": "80526d39619f6c395ba3c16be43898cad1b63c0a",
+        "sha256": "b85c27dbce228e289e362ba0a1c9dd70ae35f2df5092ef1e40535dea901cebbf",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_static/m3-dark.png": {
+        "git_blob": "86f2ace0d23a2ec24305dd45129010ce42ecbf43",
+        "sha256": "bb9827c5f8d28fbb563cfced5e1986f6a054bbeeb5307d4cb32f8a3c811feb12",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_static/fonts/NavigoMedium.woff": {
+        "git_blob": "9908290da6666dbf8764eff30538654f0f3402ad",
+        "sha256": "39f96d0fc38cd4d251e2f90f91ba8e8a8effdb966d90dee2bef85a8c2e5f27b6",
+        "bundle": "code-and-notebooks"
+      },
+      "figures/FigureS9-Plume_Sample_Frames-G4.png": {
+        "git_blob": "9d50ed338352c219c07dccd4a15a5212fd8c86cb",
+        "sha256": "377f224d6e39dcbf549630ff4f1235af430d708e9db6c6a3e52a813e4f2f2b32",
+        "bundle": "figures"
+      },
+      "figures/Figure5-Temporal_variation-violinplot_heatmaps.png": {
+        "git_blob": "9e4b1de835d3c9e4a9f37bbf1d5aefa611d59ac1",
+        "sha256": "42c7f31301239f7655224f681f05be420b6fc64467d2a0b02a447d301ae495e0",
+        "bundle": "figures"
+      },
+      "jupyterbook/_static/fonts/Interstate.woff": {
+        "git_blob": "9f773c6d63cb145130eeb765acc20fe2676f1bb9",
+        "sha256": "fa15058735cfa93e01723d482927ef52f6168d8a4566a41aa91f1a1bf43188d8",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_static/drexel-dragon-all_blue.png": {
+        "git_blob": "b04d3ece9729877ba3dbd024a8ba5c13a0b969db",
+        "sha256": "fedc8615d77547803389ced4534db06199774022bc6654f1527f3b9b563c23ef",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_static/fonts/FiraCode-Regular.ttf": {
+        "git_blob": "b8a44d2db0a18c12d7cf03c3763ef23991c3b5ab",
+        "sha256": "30844063c7df17f9af4a294360e492e956c8f29573d4a923353abc403badf99c",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_static/fonts/Verdana.ttf": {
+        "git_blob": "bbf2eae7bf765f86b7421a4f79a09adbb179f4bb",
+        "sha256": "50d20e0413026bb12d794659ee7834375cd99c45603775f1e05b25204980ccc8",
+        "bundle": "code-and-notebooks"
+      },
+      "data/Plumes/frame_normalize_dataset/YG066_coords.npy": {
+        "git_blob": "c6f169dcba29e0f79dcfedda104016d039949307",
+        "sha256": "ff9b862942df595ab93630a86e55ffde81852741072d5de0e524e6d3559f4285",
+        "bundle": "plume-metrics"
+      },
+      "jupyterbook/_static/fonts/Verdana-Bold.ttf": {
+        "git_blob": "caecbf8bcb2b0d9dd7d88bda651a1fa832df30e4",
+        "sha256": "4b0e22422bdcb925bce4516991474cb0575e4b301304618eade3be4868566524",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/intro.md": {
+        "git_blob": "daff05e3a860d8803e01956dabefe5aaab6dee0b",
+        "sha256": "1745b3a0a8303975513707cf0cc2bbc9719f48d281c084acf6fa5e8851ec969b",
+        "bundle": "code-and-notebooks"
+      },
+      "figures/FigureS13-Plume_area_history.png": {
+        "git_blob": "dc80b4ee401f40a2e7c1aa529a53bf7868e3f613",
+        "sha256": "a0c0bb51c86162f1580bde2c440d688f8853fef00e76b6ef8343bb553133dece",
+        "bundle": "figures"
+      },
+      "jupyterbook/_static/fonts/Verdana-BoldItalic.ttf": {
+        "git_blob": "e0b3cb1093ed5a6b2f0df46381f680b4dda755e7",
+        "sha256": "f844643741f663ffa784b233ce48ffa4034e80f0d25c71b223fcd55732e8db3d",
+        "bundle": "code-and-notebooks"
+      },
+      "src/sro_sto_plume/__init__.py": {
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_static/fonts/NavigoMedium.woff2": {
+        "git_blob": "eb75586f6e3cd151d093e72fc2ca3ca2ab06e240",
+        "sha256": "a1826bb24ab78dc5a5ce87522838bf667609fada4cc99924f748c5c1a63d4141",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_static/fonts/DINosaur_Medium.otf": {
+        "git_blob": "edf8bf404646f630d98fc0113c7ea05ef591afa0",
+        "sha256": "fe15173a4b2481bf141ddc54e6badf2d23d0891c9e673572f18de5d375066a91",
+        "bundle": "code-and-notebooks"
+      },
+      "jupyterbook/_static/fonts/Interstate.woff2": {
+        "git_blob": "fa738b59088ffced64e8dd143e27c7d6ab3513c2",
+        "sha256": "2a29a61c60ed927573d241bd5adcc04aced9b89bb2b07593c50863e5e0bd6b1a",
+        "bundle": "code-and-notebooks"
+      },
+      "data/Plumes/frame_normalize_dataset/YG068_coords.npy": {
+        "git_blob": "ff61ee9fc1b0bc739cbf9ed8de63060bb13f287e",
+        "sha256": "c35a1d74d2a451f9a70a79138734c5ff06902300f43b9f41aebaec426c9d7649",
+        "bundle": "plume-metrics"
+      },
+      "data/Plumes/frame_normalize_dataset/YG069_coords.npy": {
+        "git_blob": "ff61ee9fc1b0bc739cbf9ed8de63060bb13f287e",
+        "sha256": "c35a1d74d2a451f9a70a79138734c5ff06902300f43b9f41aebaec426c9d7649",
+        "bundle": "plume-metrics"
+      }
+    },
+    "file_verification": "All original per-file paths, byte sizes and SHA-256 hashes are unchanged."
   }
 }

@@ -5,10 +5,10 @@
       "notebook": "0_Dataerai_Preservation.ipynb",
       "base_asset_id": "92cca0dc-e423-4fc9-8d3f-358c01cce2d8",
       "base_content_id": "4391ceaa-1168-4a38-b5e9-3d75fd183fdb",
-      "run_asset_id": "209907cd-b710-48c6-bd65-5fe312cc9e3e",
-      "executed_notebook_asset_id": "81e36374-b8e5-49c8-8a60-14e3fb3b19cb",
-      "executed_notebook_content_id": "53117a7d-f64b-4926-b1d8-18c6c8635275",
-      "summary_asset_id": "bf5fe477-fdb9-4bc7-9e8d-f90d75fe9bad",
+      "run_asset_id": "fe3b5e95-a260-4091-85cb-4ef293926bc2",
+      "executed_notebook_asset_id": "01395831-bbf1-4017-a8c6-13980b7b8cd5",
+      "executed_notebook_content_id": "dda36496-7c54-46d5-ac3a-f93acff4b024",
+      "summary_asset_id": "739f15ef-87c8-4407-97ff-342fb94016e6",
       "captured_cells": 1,
       "asset_count": 8,
       "relationship_count": 10,
@@ -19,10 +19,10 @@
       "notebook": "00_Dataerai_Raw_Data_Quickstart.ipynb",
       "base_asset_id": "87a5fce5-babd-465a-abe2-e99e034e2b8d",
       "base_content_id": "0f7a212f-4a69-4cc6-904d-9f9b14574460",
-      "run_asset_id": "008d8f87-380a-4541-9589-7192cb74af36",
-      "executed_notebook_asset_id": "5f40cd02-ee44-4d05-9e19-56456d6c4743",
-      "executed_notebook_content_id": "f8501cf3-822c-495b-8aaf-717e7887def2",
-      "summary_asset_id": "d058eb2f-933e-4494-8b17-05096d293d0d",
+      "run_asset_id": "de4e3e62-21fe-4847-a91c-8e13c9ef1d26",
+      "executed_notebook_asset_id": "68570cb9-2e33-4ee1-a0c5-0890cdf8724e",
+      "executed_notebook_content_id": "447388a2-7380-4b3d-a135-99856e99a4b3",
+      "summary_asset_id": "e8bb04fd-2f1b-4235-a4fd-6fe6aaead79e",
       "captured_cells": 3,
       "asset_count": 19,
       "relationship_count": 26,
@@ -38,167 +38,7 @@
         }
       ],
       "status": "passed"
-    },
-    {
-      "notebook": "7_Target_Spatial_Inhomogeneity.ipynb",
-      "base_asset_id": "8f5e3127-76fb-4b3f-a1a3-8ce4a8aaf9d1",
-      "base_content_id": "39858e70-8bea-469b-882b-d65c6cf8cda6",
-      "run_asset_id": "edd95a13-007b-4eba-be2d-0183e8a5df23",
-      "executed_notebook_asset_id": "3dd7e3dc-b013-4d7e-a0ed-1d6c7ada8571",
-      "executed_notebook_content_id": "e4f4872a-b52c-4754-85e5-e3c2f5df8393",
-      "summary_asset_id": "ef925bba-cd78-4798-bfd6-332214734541",
-      "captured_cells": 6,
-      "asset_count": 31,
-      "relationship_count": 44,
-      "input_content_versions": [
-        {
-          "bundle": "figures",
-          "sha256": "563ad78e3cba3f1cd11c75ea3d05c324b283d10ef6ba8e3d1f04e761b4d15307",
-          "asset_id": "620f2f64-4bb3-4a53-8566-2ff370ad2a42",
-          "filename": "figures-9d915b1c753d98aa.tar.gz",
-          "content_id": "7bb5559a-94ae-462f-935f-1d81d13715a4",
-          "file_count": 70,
-          "size_bytes": 299477919,
-          "verified_download": true
-        },
-        {
-          "bundle": "plume-metrics",
-          "sha256": "057d0ccb972918282a91ece5f0d83f894c9cadedf501a652052ec1383caf5c66",
-          "asset_id": "192b33f1-fd99-4700-a0f9-23c47bf57c0e",
-          "filename": "plume-metrics-8fb71e5cbe093602.tar.gz",
-          "content_id": "5a7b496f-12c3-40f7-86cf-f0da25d2f2da",
-          "file_count": 13,
-          "size_bytes": 4610923,
-          "verified_download": true
-        },
-        {
-          "bundle": "study-data",
-          "sha256": "847ff71ee89ac6b0895c73f439e475e4e9665a8c5ba88223d4234b30526ee45c",
-          "asset_id": "d5e9b18c-c0a2-483f-9add-03adedea034b",
-          "filename": "study-data-eb5305c4a30c49ee.tar.gz",
-          "content_id": "6535c6bb-86fc-4fac-bfe9-fad0b70f1023",
-          "file_count": 1,
-          "size_bytes": 7710,
-          "verified_download": true
-        }
-      ],
-      "status": "passed"
     }
   ],
-  "scientific_reexecution": "The published readiness notebook, G5 raw-frame quickstart, and complete notebook 7 were executed and their saved notebooks verified. Other original notebooks passed import checks but were not re-executed in full.",
-  "schema": "org.dataerai.srruo3-project-validation/v1",
-  "project_id": "99185d30-fe63-497c-91b4-852a02574d49",
-  "unit_tests": {
-    "command": "python -m pytest tests -q",
-    "passed": 51
-  },
-  "source_notebook_preservation": {
-    "baseline_commit": "84a1761bbc15512d61a755f0fc6265d0391f76b4",
-    "notebooks": 13,
-    "original_cells": 209,
-    "stored_outputs": 236,
-    "status": "passed"
-  },
-  "notebook_import_checks": {
-    "environment": {
-      "python": "3.11.17",
-      "declared_dependencies_checked": 27,
-      "igor_binary_reader": "0.5.14"
-    },
-    "notebooks": [
-      "2_PLD_Experiment_Design_and_Target_Microscopy.ipynb",
-      "3_Structure_Characterization.ipynb",
-      "4_Plume_Metrics_Extraction.ipynb",
-      "5_Plume_Dynamic_Analysis.ipynb",
-      "6_Target_Temporal_Variation.ipynb",
-      "7_Target_Spatial_Inhomogeneity.ipynb"
-    ]
-  },
-  "modality_read_checks": {
-    "inputs": [
-      {
-        "path": "AFM/10um/G1_0006.ibw",
-        "filename": "G1_0006.ibw",
-        "asset_id": "bda82179-9980-4c20-ab52-7d801688e3f1",
-        "did": "did:dataerai:beta:asset:sp7sq3t7p2uzdnbemgkofow73judiw3l",
-        "content_id": "b5823cd5-36f1-433c-ab44-a696cf04ba74",
-        "size_bytes": 1145057,
-        "checksum": "blake3:30ac517b91aad54e1302ced17f9020028df930bda6cb8e43183f4268f6e243f0"
-      },
-      {
-        "path": "TargetMicroscopy/G1/s1.datx",
-        "filename": "s1.datx",
-        "asset_id": "37bdf0ef-696d-4edf-92f0-6c5026bcd5fd",
-        "did": "did:dataerai:beta:asset:zmdvef2kjlsttkynxgo43m35bpcljpcv",
-        "content_id": "04a9320a-e1a2-4194-bf15-da4d242a45de",
-        "size_bytes": 25236864,
-        "checksum": "blake3:5cffac3c0ec40e32e27380a37b7a84122316714961f6615827a7d60e10ebfd8f"
-      },
-      {
-        "path": "XRD_RSM/G1/G1_2theta-Omega_42-49degree.xrdml",
-        "filename": "G1_2theta-Omega_42-49degree.xrdml",
-        "asset_id": "7e12987c-d4ee-4950-88b5-92db28dc50a7",
-        "did": "did:dataerai:beta:asset:m6sxm3gfhe7ayoedocdpc4lamindg65f",
-        "content_id": "c0935202-a986-4b25-8677-7acf4a326e4f",
-        "size_bytes": 6059,
-        "checksum": "blake3:54f3921bdd1e43d1abb3cdc928359afa7bb7072d546c6d6cc3075fa5ca26dee6"
-      }
-    ],
-    "afm_reader": "passed",
-    "xrd_points": 275,
-    "microscopy_primary_dataset": "Data/Intensity/{5C0B854E-0A9F-4918-99C7-887E6B187388}"
-  },
-  "environment_resolution": {
-    "status_code": 200,
-    "resolution": {
-      "outcome": "resolved",
-      "mode": "inherited",
-      "env_hash": "sha256:ff8bac457a05cdb8cbed94542d72f3bcde9689ca9cd570ec2ba06019ecffffdb",
-      "hash_basis": "strong",
-      "python_constraint": ">=3.11,<3.12",
-      "layers": [
-        {
-          "order": 0,
-          "collection": {
-            "id": "7461b56c-7dc6-4677-b0c8-6d165bfc1eed",
-            "title": "My Project root"
-          },
-          "asset": {
-            "id": "7a776767-e57f-43a5-8ec0-596ef1268c78",
-            "title": "pyproject.toml"
-          },
-          "content_id": "a988094f-9c6a-4594-9ece-71af99376550",
-          "spec_type": "pyproject",
-          "checksum": "blake3:4424c65d2bffd141b57db1fa9bffff8a700be0fe381570cb4750fd0763b598ed",
-          "checksum_algorithm": "blake3",
-          "size_bytes": 1118,
-          "redacted": false,
-          "downloadable": true
-        }
-      ],
-      "also_present": [],
-      "provenance": {
-        "source_collection": {
-          "id": "7461b56c-7dc6-4677-b0c8-6d165bfc1eed",
-          "title": "My Project root"
-        },
-        "depth": 1,
-        "redacted": false
-      },
-      "candidates": [],
-      "unsupported_reason": null
-    }
-  },
-  "environment_dependency_check": {
-    "command": "uv pip check --python .dataerai/notebook-env/bin/python",
-    "status": "passed",
-    "installed_packages": 228
-  },
-  "published_base_notebooks": 9,
-  "organization_notebook_indexing": "enabled",
-  "organization_membership_added": {
-    "user_email": "josh@dataerai.com",
-    "role": "member"
-  },
-  "full_raw_plume_reanalysis": "Not performed; notebooks 4 and 5 are configured to retrieve all six pinned recordings on demand."
+  "scientific_reexecution": "Only the notebook names listed here were executed in full."
 }

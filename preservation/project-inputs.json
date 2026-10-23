@@ -340,11 +340,11 @@
     {
       "path": "Plumes/G2.h5",
       "filename": "G2.h5",
-      "asset_id": "36847807-c6ce-4b2c-bd14-686061187fa5",
-      "did": "did:dataerai:beta:asset:uzjrjnpffu2akepyxr6vjlwm2v2nwec5",
-      "content_id": "516c1e1a-8535-4a40-aa49-646b59a8b0d5",
+      "asset_id": "b727c17c-7d68-4a58-8558-7d72eda03d08",
+      "did": "did:dataerai:beta:asset:rtou7oih3n7dnqnitlqduavw45ee6cy2",
+      "content_id": "1f220b45-adf6-4f78-941c-3b1cb6987288",
       "size_bytes": 6937604480,
-      "checksum": "blake3:60bf56d4e6b2b8c0d3f6f5b6d20e66d35f9cc03d97dc15913850d286d47b4b4e"
+      "checksum": "blake3:a5e471e590b7618b3aea6c5259e522a4c76f7d5d4425cf38d845d73735b8cac5"
     },
     {
       "path": "Plumes/G2.json",
@@ -376,11 +376,11 @@
     {
       "path": "Plumes/G4.h5",
       "filename": "G4.h5",
-      "asset_id": "c20700fb-9d33-4c65-b7ba-05a0e6f42100",
-      "did": "did:dataerai:beta:asset:hc6zofixte4eugopmkrvp57ffnu2t6bl",
-      "content_id": "48978fcb-6d74-48bb-bdde-123e556da8dd",
+      "asset_id": "58b33cc2-4f36-44d3-982b-76ab08fbc457",
+      "did": "did:dataerai:beta:asset:7ipxy7j73zvpfjiqirop43pg56fjvdds",
+      "content_id": "859bec48-a08a-4c50-a666-a2fad6a1e11f",
       "size_bytes": 4928004480,
-      "checksum": "blake3:dd8edce9846eec81e2ae62a6644426175034cb9caa599af2d258cfdcc776b797"
+      "checksum": "blake3:4788d7ccb2f72873199dfd6fb9a636f940a0fc49ad620fa1510c94126a4c579f"
     },
     {
       "path": "Plumes/G4.json",
@@ -1375,6 +1375,22 @@
       "path": "AFM/G5_0023.txt",
       "asset_id": "0c3dde52-0ed5-42c1-962b-089e9ac61933",
       "reason": "Asset detail returned 404; not an executable input."
+    }
+  ],
+  "asset_overrides": {
+    "Plumes/G2.h5": "b727c17c-7d68-4a58-8558-7d72eda03d08",
+    "Plumes/G4.h5": "58b33cc2-4f36-44d3-982b-76ab08fbc457"
+  },
+  "superseded_files": [
+    {
+      "path": "Plumes/G4.h5",
+      "asset_id": "c20700fb-9d33-4c65-b7ba-05a0e6f42100",
+      "reason": "Explicitly superseded by the verified replacement asset."
+    },
+    {
+      "path": "Plumes/G2.h5",
+      "asset_id": "36847807-c6ce-4b2c-bd14-686061187fa5",
+      "reason": "Explicitly superseded by the verified replacement asset."
     }
   ]
 }

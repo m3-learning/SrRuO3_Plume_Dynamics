@@ -248,3 +248,31 @@ def test_failed_scientific_cell_finalizes_run_before_propagating_error(tmp_path)
         assert any(u['kwargs']['metadata']['record_kind'] == 'executed_notebook' for u in client.uploads)
     finally:
         os.chdir(cwd)
+
+
+def test_input_refresh_requires_explicit_choice_between_replacement_assets(tmp_path):
+    from dataerai_project import pin_project_inputs
+    names = ['G1', 'G2', 'G3', 'G4', 'G5', 'C-G6']
+    entries = [SimpleNamespace(relative_path='Plumes--c'+'a'*32+'/'+name+'--a'+'b'*32+'-f'+'c'*16+'.h5',
+               filename=name+'.h5', asset_id=ASSET, size_bytes=8,
+               is_downloadable=True, external=False) for name in names]
+    entries.append(SimpleNamespace(relative_path='Plumes--c'+'a'*32+'/G2--a'+'d'*32+'-f'+'c'*16+'.h5',
+                   filename='G2.h5',asset_id=USER,size_bytes=8,is_downloadable=True,external=False))
+    class ManifestClient(Client):
+        def get_collection_manifest(self, collection):
+            return SimpleNamespace(files=entries)
+    class ContentAPI(API):
+        def get_json(self, method, path):
+            if path.startswith('/api/assets/'):
+                return {'owner_id':PROJECT_ID,'current_content':{'id':CONTENT,'status':'available',
+                    'files':[{'filename':name+'.h5','size':8,'uploaded':True,
+                              'checksum':'sha256:'+hashlib.sha256(b'raw-data').hexdigest()} for name in names]}}
+            return super().get_json(method,path)
+    with pytest.raises(ValueError, match='Ambiguous duplicate input path'):
+        pin_project_inputs(tmp_path,ManifestClient(),rest=ContentAPI())
+    result=pin_project_inputs(tmp_path,ManifestClient(),rest=ContentAPI(),asset_overrides={'Plumes/G2.h5':USER})
+    chosen=next(r for r in result['files'] if r['path']=='Plumes/G2.h5')
+    assert chosen['asset_id']==USER
+    assert result['superseded_files']==[{'path':'Plumes/G2.h5','asset_id':ASSET,
+        'reason':'Explicitly superseded by the verified replacement asset.'}]
+    assert {r['path'] for r in result['files']}=={'Plumes/'+name+'.h5' for name in names}
