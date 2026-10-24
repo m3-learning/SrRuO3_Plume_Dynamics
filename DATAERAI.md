@@ -220,3 +220,37 @@ contains canonical table and notebook views linked to the original execution
 assets; these label-only derivatives are not new scientific executions. See
 `preservation/sample-label-normalization/` for53 passing tests, source readback,
 row-by-row numerical invariance and current content-version receipts.
+
+
+## Updating manuscript text without repeating analyses
+
+The source notebook is `notebooks/1_Abstract.ipynb`. Its title, authors,
+affiliations and abstract follow the September 27, 2026 manuscript. Preserve the
+Markdown headings, bold author line, superscripts and affiliation line breaks.
+The revision provenance is in `preservation/manuscript-update/revision.json`.
+
+After a text-only edit:
+
+1. Commit and push the source change to GitHub.
+2. Run `python scripts/publish_dataerai_notebooks.py --publish` in the authenticated
+   published environment. This creates immutable source and base-notebook content
+   versions; old run versions remain intact. All base notebooks receive updated
+   source pins, but this does not re-execute them.
+3. Sync/open the new `1_Abstract.ipynb` from **Base notebooks** and run all its
+   cells, including the final preservation cell. Verify the completed run and
+   server-saved notebook in **Notebook runs**. No other notebook needs execution
+   when only manuscript text changes.
+4. Build the scientific reading package with
+   `scripts/build_scientific_results.py --results <verified-campaign-results>
+   --abstract-results <verified-abstract-revision-results> --output <new-edition>`.
+   Publish it with `scripts/publish_scientific_results.py --edition <new-edition>
+   --results <verified-campaign-results>`. The original campaign validation stays
+   unchanged; the manifest records the later abstract run separately.
+
+Reading notebooks are presentation copies. Use **Base notebooks** for new runs.
+The sharing package uses G1–G5 and C-G6. Acquisition-name mappings and diagnostic
+comparisons belong in the separate provenance archive, not the scientific ZIP.
+Full-resolution TIFF exports remain in the original versioned output assets;
+the ZIP includes SVG/PNG exports and separately extracted notebook displays.
+A numerical, formula, dependency or input change requires validation of the
+notebooks affected by that change and an explicit record of the new run scope.

@@ -85,7 +85,8 @@ def source_archive():
     for pattern in ('src/**/*.py', 'dataerai_*.py', 'notebooks/*.ipynb',
                     'notebook-environment/*', 'requirements*.txt', 'pyproject.toml',
                     'preservation/project-inputs.json', 'preservation/manifest.json',
-                    'preservation/study.json', 'preservation/key_results.json', 'DATAERAI.md'):
+                    'preservation/study.json', 'preservation/key_results.json',
+                    'preservation/manuscript-update/*.json', 'scripts/*.py', 'DATAERAI.md'):
         paths.update(path for path in ROOT.glob(pattern) if path.is_file())
     archive = ROOT / '.dataerai/publication/workspace-code.tar.gz'
     archive.parent.mkdir(parents=True, exist_ok=True)

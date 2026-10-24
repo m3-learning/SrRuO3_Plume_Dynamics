@@ -1,0 +1,13 @@
+{
+  "manuscript_filename": "Main Text-09_27_2026-YG.docx",
+  "manuscript_sha256": "7ccd580df1e44dd4fa9df4ba364cfb9e24153ce2d9be568f111d12ef118a3066",
+  "notebook": "notebooks/1_Abstract.ipynb",
+  "modified_cells": [
+    0,
+    1
+  ],
+  "scope": "Title, authors, affiliations, correspondence and abstract; original Markdown structure retained. No analysis cells changed.",
+  "title": "From Target Surface to Plume: The Role of Surface Conditioning in SrRuO3 Plume Dynamics and Pulsed-Laser Deposition",
+  "abstract_plaintext_sha256": "69f14bb20c7da5bd994a2149f962cac6a64aefc58427d0f0f91fd87015d05f6f",
+  "notebook_sha256": "3f5d252af562e36b084c3fe46634e8ae75b16c4a8e35aaec09040f681f4dc302"
+}

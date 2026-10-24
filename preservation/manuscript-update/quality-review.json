@@ -1,0 +1,21 @@
+{
+  "scope": "September 27 manuscript synchronization; abstract notebook rerun only; existing scientific analyses retained.",
+  "abstract_run_id": "bc8e278c-a3f9-46dd-ad79-38b341f76a04",
+  "tests_passed": 53,
+  "scientific_image_payloads_preserved": 118,
+  "standalone_notebook_image_displays": 118,
+  "svg_png_figure_exports": 28,
+  "videos_unchanged": 6,
+  "public_intermediate_diagnostics_excluded": true,
+  "public_sample_labels": [
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "C-G6"
+  ],
+  "desktop_mobile_visual_review": "No broken images or horizontal overflow; title/authors/affiliations/abstract inspected.",
+  "zip_sha256": "d8651ad1fba7380b2e95749d1c53e6a602c70d2c1c6daf18255db455a3fa8862",
+  "zip_bytes": 205834982
+}
